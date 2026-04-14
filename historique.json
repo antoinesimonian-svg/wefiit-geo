@@ -1,1 +1,261 @@
-{}
+{
+  "pm-general": {
+    "libelle": "meilleur cabinet conseil product management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 2,
+          "verbatims": [
+            "WeFiiT 👉 Conseil produit complet (strategy, discovery, delivery, product ops). wefiit.com",
+            "5. Wefiit 👉 Expert des environnements complexes (banque, public, grands groupes)"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 2,
+          "McKinsey": 1,
+          "Accenture": 1,
+          "Theodo": 1,
+          "Wivoo": 1,
+          "Delva": 1,
+          "IKXO": 1,
+          "Hubvisory": 1,
+          "Mozza": 1,
+          "Yield Studio": 1,
+          "Yield Advisory": 1,
+          "Stellar": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Bain": 3,
+          "McKinsey": 3,
+          "BCG": 3,
+          "Hubvisory": 3,
+          "Wivoo": 2,
+          "Publicis Sapient": 1,
+          "Capgemini": 1,
+          "Sia Partners": 1,
+          "Wavestone": 1,
+          "Product People": 1,
+          "Mozza": 1,
+          "Yield Studio": 1
+        }
+      }
+    ]
+  },
+  "pm-paris": {
+    "libelle": "top 5 agences product management Paris",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 2,
+          "verbatims": [
+            "3. WeFiiT 👉 Approche full-cycle très solide",
+            "WeFiiT → 100% orientée product"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Octo": 3,
+          "Mozza": 3,
+          "Yield Studio": 3,
+          "Galadrim": 3,
+          "Hubvisory": 1,
+          "Wivoo": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
+      }
+    ]
+  },
+  "pm-ia": {
+    "libelle": "cabinet spécialisé IA product management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "McKinsey": 2,
+          "BCG": 2,
+          "Accenture": 2,
+          "Artefact": 2,
+          "Sia Partners": 1,
+          "Capgemini": 1,
+          "Ekimetrics": 1,
+          "fifty-five": 1,
+          "Thoughtworks": 1,
+          "Thiga": 1,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Eleven Strategy": 1,
+          "Quantmetry": 1,
+          "BAM": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
+      }
+    ]
+  },
+  "pm-data": {
+    "libelle": "cabinet spécialisé data product management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Octo": 3,
+          "OCTO Technology": 3,
+          "McKinsey": 3,
+          "Accenture": 3,
+          "Artefact": 3,
+          "BCG": 2,
+          "fifty-five": 2,
+          "Capgemini": 2,
+          "Ekimetrics": 2,
+          "Devoteam": 1,
+          "Keyrus": 1,
+          "Theodo": 1,
+          "Xebia": 1,
+          "Eleven Strategy": 1,
+          "Quantmetry": 1,
+          "BAM": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 1,
+          "verbatims": [
+            "Gemini a ditLe Data Product Management est une discipline hybride qui demande à la fois une vision stratégique \"Produit\" et une maîtrise technique de la donnée. En 2026, plusieurs cabinets de conseil en France se distinguent par leur capacité à piloter des produits data et IA.Voici les principaux acteurs spécialisés par profil d'expertise :1. Les \"Boutiques\" spécialisées (Product-Centric)Ces cabinets sont nés du Product Management et ont développé des pôles Data/IA très pointus.Wivoo : Très actif sur le triptyque Product, Design et Data. Ils accompagnent des entreprises comme Accor ou la SNCF sur la construction de plateformes data cloud-native et l'optimisation des KPIs produits.Thiga : Pionnier du Product Management en France. Bien que généraliste sur le produit, leur pôle spécialisé aide à structurer des organisations \"Data-Driven\" et à former des Data Product Managers.WeFiiT : Se positionne sur le \"Product with Impact\". Ils interviennent spécifiquement sur le Product Data & IA, notamment pour des projets d'IA générative (ex: cas LexisNexis).2. Les Experts de l'industrialisation (Data-Centric)Ces cabinets viennent du monde de la data science et intègrent la culture produit pour éviter l'effet \"laboratoire\" (projets qui ne sortent jamais en production).Yield Advisory : Une agence qui allie data science et pratiques produit. Leur focus est de transformer la donnée en moteur de croissance via un audit stratégique et une industrialisation rigoureuse.Artefact : Un acteur majeur au niveau international (né en France) qui couple conseil en stratégie data et déploiement opérationnel de produits data (marketing, supply chain, etc.).Ekimetrics : Bien que très orienté Data Science et MMM (Marketing Mix Modeling), ils ont fortement développé une approche \"Product\" pour leurs solutions de mesure de performance.Tableau comparatif des approchesCabinetForce principaleProfil type de missionWivooExpertise hybride Produit/TechMigration de plateformes data, Product Discovery data.ThigaStratégie et OrganisationStructuration d'une équipe de Data PM, formation.WeFiiTAgilité et IA GénérativeIntégration de LLMs dans des produits existants.Yield AdvisoryIndustrialisationPassage du POC (preuve de concept) à la production.Exporter vers SheetsPourquoi faire appel à un cabinet spécialisé ?Contrairement à un cabinet de conseil en data classique, un cabinet de Data Product Management ne se contente pas de \"faire parler les chiffres\". Il s'assure que :La valeur business est définie avant de coder (Discovery).L'utilisabilité du produit data est pensée pour les utilisateurs finaux.La viabilité technique est maintenue sur le long terme (Product Life Cycle).Cherchez-vous un accompagnement plutôt sur la stratégie d'organisation de vos équipes ou sur le delivery opérationnel d'un produit data spécifique ?"
+          ]
+        },
+        "concurrents": {
+          "Artefact": 3,
+          "Thiga": 2,
+          "Accenture": 2,
+          "Ekimetrics": 2,
+          "Converteo": 2,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Capgemini": 1,
+          "Quantmetry": 1,
+          "Wivoo": 1,
+          "Yield Advisory": 1
+        }
+      }
+    ]
+  },
+  "pmm-general": {
+    "libelle": "cabinet conseil product marketing management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Bain": 3,
+          "McKinsey": 3,
+          "Sia Partners": 2,
+          "Wavestone": 2,
+          "Artefact": 2,
+          "Fabernovel": 1,
+          "BCG": 1,
+          "fifty-five": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 1
+        }
+      }
+    ]
+  },
+  "pm-formation": {
+    "libelle": "je cherche un partenaire pour former mes équipes au product management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Theodo": 2,
+          "Xebia": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 2,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Wivoo": 1
+        }
+      }
+    ]
+  }
+}
