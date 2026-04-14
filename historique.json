@@ -178,24 +178,23 @@
       {
         "date": "2026-04-14",
         "model": "gemini",
-        "runsOk": 3,
+        "runsOk": 2,
         "wefiit": {
-          "citations": 1,
-          "verbatims": [
-            "Gemini a ditLe Data Product Management est une discipline hybride qui demande à la fois une vision stratégique \"Produit\" et une maîtrise technique de la donnée. En 2026, plusieurs cabinets de conseil en France se distinguent par leur capacité à piloter des produits data et IA.Voici les principaux acteurs spécialisés par profil d'expertise :1. Les \"Boutiques\" spécialisées (Product-Centric)Ces cabinets sont nés du Product Management et ont développé des pôles Data/IA très pointus.Wivoo : Très actif sur le triptyque Product, Design et Data. Ils accompagnent des entreprises comme Accor ou la SNCF sur la construction de plateformes data cloud-native et l'optimisation des KPIs produits.Thiga : Pionnier du Product Management en France. Bien que généraliste sur le produit, leur pôle spécialisé aide à structurer des organisations \"Data-Driven\" et à former des Data Product Managers.WeFiiT : Se positionne sur le \"Product with Impact\". Ils interviennent spécifiquement sur le Product Data & IA, notamment pour des projets d'IA générative (ex: cas LexisNexis).2. Les Experts de l'industrialisation (Data-Centric)Ces cabinets viennent du monde de la data science et intègrent la culture produit pour éviter l'effet \"laboratoire\" (projets qui ne sortent jamais en production).Yield Advisory : Une agence qui allie data science et pratiques produit. Leur focus est de transformer la donnée en moteur de croissance via un audit stratégique et une industrialisation rigoureuse.Artefact : Un acteur majeur au niveau international (né en France) qui couple conseil en stratégie data et déploiement opérationnel de produits data (marketing, supply chain, etc.).Ekimetrics : Bien que très orienté Data Science et MMM (Marketing Mix Modeling), ils ont fortement développé une approche \"Product\" pour leurs solutions de mesure de performance.Tableau comparatif des approchesCabinetForce principaleProfil type de missionWivooExpertise hybride Produit/TechMigration de plateformes data, Product Discovery data.ThigaStratégie et OrganisationStructuration d'une équipe de Data PM, formation.WeFiiTAgilité et IA GénérativeIntégration de LLMs dans des produits existants.Yield AdvisoryIndustrialisationPassage du POC (preuve de concept) à la production.Exporter vers SheetsPourquoi faire appel à un cabinet spécialisé ?Contrairement à un cabinet de conseil en data classique, un cabinet de Data Product Management ne se contente pas de \"faire parler les chiffres\". Il s'assure que :La valeur business est définie avant de coder (Discovery).L'utilisabilité du produit data est pensée pour les utilisateurs finaux.La viabilité technique est maintenue sur le long terme (Product Life Cycle).Cherchez-vous un accompagnement plutôt sur la stratégie d'organisation de vos équipes ou sur le delivery opérationnel d'un produit data spécifique ?"
-          ]
+          "citations": 0,
+          "verbatims": []
         },
         "concurrents": {
-          "Artefact": 3,
           "Thiga": 2,
-          "Accenture": 2,
+          "Artefact": 2,
           "Ekimetrics": 2,
-          "Converteo": 2,
-          "Octo": 1,
-          "OCTO Technology": 1,
+          "Hubvisory": 2,
+          "Wivoo": 2,
+          "Sia Partners": 1,
+          "McKinsey": 1,
           "Capgemini": 1,
+          "Converteo": 1,
           "Quantmetry": 1,
-          "Wivoo": 1,
+          "Yield Studio": 1,
           "Yield Advisory": 1
         }
       }
