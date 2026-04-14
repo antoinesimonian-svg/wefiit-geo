@@ -126,6 +126,21 @@
           "Quantmetry": 1,
           "BAM": 1
         }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 2,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 2,
+          "Artefact": 1,
+          "Product People": 1,
+          "Wivoo": 1
+        }
       }
     ]
   },
