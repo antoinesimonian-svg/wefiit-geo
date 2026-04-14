@@ -437,7 +437,7 @@ function mettreAJourVerbatims(donnees) {
   container.innerHTML = verbatims.map(v => {
     const [, m, j] = v.date.split('-');
     const dateLabel = j + ' ' + moisNoms[parseInt(m) - 1];
-    const texte = v.texte.length > 220 ? v.texte.substring(0, 220) + '…' : v.texte;
+    const texte = v.texte.length > 500 ? v.texte.substring(0, 500) + '…' : v.texte;
     const badge = `<span class="badge-model badge-${v.model}">${v.model}</span>`;
     return `<div class="verbatim-item ${v.model}">
       <div class="verbatim-date">${dateLabel} ${badge}</div>

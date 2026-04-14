@@ -43,23 +43,36 @@ function dateAujourdhui() {
   return new Date().toISOString().split('T')[0];
 }
 
-function detecterWefiit(texte) {
+function nettoyerTexte(texte) {
+  // Supprimer le préfixe "Gemini a dit" que Gemini injecte dans l'interface web
+  return texte.replace(/^Gemini\s+a\s+dit\s*/i, '').trim();
+}
+
+function detecterWefiit(texteRaw) {
+  const texte = nettoyerTexte(texteRaw);
   for (const regex of MOTS_CLES_WEFIIT) {
     const match = texte.match(regex);
     if (match) {
       const index = match.index;
-      const debutBloc = texte.lastIndexOf('\n', index - 1);
-      const finBloc = texte.indexOf('\n', index);
-      const ligneWefiit = texte.substring(
-        debutBloc === -1 ? 0 : debutBloc + 1,
-        finBloc === -1 ? texte.length : finBloc
+      // Extraire la phrase autour de la mention (entre . ou \n)
+      const debutPhrase = Math.max(
+        texte.lastIndexOf('\n', index - 1),
+        texte.lastIndexOf('. ', index - 1)
+      );
+      const finPhrase = (() => {
+        const nl = texte.indexOf('\n', index);
+        const pt = texte.indexOf('. ', index + 1);
+        if (nl === -1 && pt === -1) return texte.length;
+        if (nl === -1) return pt + 1;
+        if (pt === -1) return nl;
+        return Math.min(nl, pt + 1);
+      })();
+      let verbatim = texte.substring(
+        debutPhrase === -1 ? 0 : debutPhrase + 1,
+        finPhrase
       ).trim();
-      let verbatim = ligneWefiit;
-      if (verbatim.length < 40 && finBloc !== -1) {
-        const finBloc2 = texte.indexOf('\n', finBloc + 1);
-        const ligneSuivante = texte.substring(finBloc + 1, finBloc2 === -1 ? texte.length : finBloc2).trim();
-        if (ligneSuivante.length > 0) verbatim += ' ' + ligneSuivante;
-      }
+      // Tronquer à 500 caractères max
+      if (verbatim.length > 500) verbatim = verbatim.substring(0, 500) + '…';
       return { trouve: true, verbatim };
     }
   }
@@ -129,14 +142,21 @@ async function runChatGPT(page, libelle) {
 // ─────────────────────────────────────────────
 
 async function trouverInputGemini(page) {
+  // Scroll léger pour déclencher le rendu lazy de Gemini
+  await page.evaluate(() => window.scrollTo(0, 100));
+  await page.waitForTimeout(1000);
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(500);
+
   const selecteurs = [
     'rich-textarea p',
     'rich-textarea [contenteditable="true"]',
     'p[data-placeholder]',
     '[data-testid="input-area"] [contenteditable]',
+    'div[contenteditable="true"]',
   ];
   for (const sel of selecteurs) {
-    const el = await page.waitForSelector(sel, { timeout: 3000 }).catch(() => null);
+    const el = await page.waitForSelector(sel, { timeout: 6000 }).catch(() => null);
     if (el) return el;
   }
   return null;
@@ -201,8 +221,8 @@ async function accepterCookiesGemini(page) {
 }
 
 async function runGemini(page, libelle) {
-  await page.goto('https://gemini.google.com/app', { waitUntil: 'domcontentloaded', timeout: 30000 });
-  await page.waitForTimeout(2000);
+  await page.goto('https://gemini.google.com/app', { waitUntil: 'networkidle', timeout: 40000 }).catch(() => null);
+  await page.waitForTimeout(3000);
 
   // Accepter les cookies si la bannière est présente
   await accepterCookiesGemini(page);
