@@ -261,6 +261,20 @@ async function main() {
   // Sauvegarder
   writeFileSync(HISTORIQUE_PATH, JSON.stringify(historique, null, 2), 'utf-8');
   console.log(`\n✅ historique.json mis à jour.`);
+
+  // Auto-push vers GitHub Pages
+  try {
+    const { execSync } = await import('child_process');
+    const date = new Date().toISOString().slice(0, 10);
+    execSync(`git add historique.json && git commit -m "GEO update ${date}" && git push`, {
+      stdio: 'inherit',
+      shell: true,
+      cwd: new URL('.', import.meta.url).pathname.replace(/^\//, '')
+    });
+    console.log('✅ Dashboard GitHub Pages mis à jour');
+  } catch (e) {
+    console.log('⚠️  Push git échoué — mise à jour manuelle requise');
+  }
 }
 
 main().catch(err => {
