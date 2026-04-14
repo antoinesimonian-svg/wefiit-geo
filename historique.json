@@ -81,12 +81,20 @@
       {
         "date": "2026-04-14",
         "model": "gemini",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
           "citations": 0,
           "verbatims": []
         },
-        "concurrents": {}
+        "concurrents": {
+          "Thiga": 3,
+          "Octo": 3,
+          "Hubvisory": 3,
+          "Wivoo": 3,
+          "Delva": 1,
+          "Yield Studio": 1,
+          "Mozza": 1
+        }
       }
     ]
   },
@@ -118,16 +126,6 @@
           "Quantmetry": 1,
           "BAM": 1
         }
-      },
-      {
-        "date": "2026-04-14",
-        "model": "gemini",
-        "runsOk": 0,
-        "wefiit": {
-          "citations": 0,
-          "verbatims": []
-        },
-        "concurrents": {}
       }
     ]
   },
