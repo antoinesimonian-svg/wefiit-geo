@@ -24,6 +24,16 @@
           "BCG": 1,
           "Capgemini": 1
         }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -64,6 +74,16 @@
           "Thiga": 3,
           "Theodo": 1
         }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -125,6 +145,141 @@
           "Onepoint": 1,
           "Stellar": 1
         }
+      }
+    ]
+  },
+  "pm-paris": {
+    "libelle": "top 5 agences product management Paris",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Xebia": 2,
+          "Capgemini": 1,
+          "Theodo": 1,
+          "Valtech": 1,
+          "Ekimetrics": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
+      }
+    ]
+  },
+  "pm-ia": {
+    "libelle": "cabinet spécialisé IA product management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "McKinsey": 2,
+          "BCG": 2,
+          "Sia Partners": 1,
+          "Capgemini": 1,
+          "Bain": 1,
+          "Thoughtworks": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
+      }
+    ]
+  },
+  "pm-data": {
+    "libelle": "cabinet spécialisé data product management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "McKinsey": 1,
+          "BCG": 1,
+          "Artefact": 1,
+          "Ekimetrics": 1,
+          "fifty-five": 1,
+          "Zenika": 1,
+          "Thoughtworks": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
+      }
+    ]
+  },
+  "pmm-general": {
+    "libelle": "cabinet conseil product marketing management",
+    "runs": [
+      {
+        "date": "2026-04-14",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Bain": 3,
+          "McKinsey": 3,
+          "BCG": 2,
+          "Artefact": 2,
+          "Theodo": 2,
+          "Kea": 1,
+          "Sia Partners": 1,
+          "Fabernovel": 1,
+          "Accenture": 1,
+          "Wavestone": 1,
+          "fifty-five": 1
+        }
+      },
+      {
+        "date": "2026-04-14",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
       }
     ]
   }
