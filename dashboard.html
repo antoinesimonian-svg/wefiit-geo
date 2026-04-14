@@ -158,7 +158,6 @@
     <span class="separateur">|</span>
     <label>Modèle :</label>
     <select id="filtre-model">
-      <option value="all">Tous les modèles</option>
       <option value="chatgpt">ChatGPT</option>
       <option value="gemini">Gemini</option>
     </select>
@@ -262,7 +261,7 @@ function initialiser() {
   requeteActive = ids[0];
   selectRequete.value = ids[0];
   reconstruireFiltresMois();
-  rafraichir('all', 'all');
+  rafraichir('all', 'chatgpt');
 }
 
 function runsActifs() {
@@ -348,7 +347,6 @@ function mettreAJourGraphe(donnees, model) {
   const valeurs = donnees.map(e => e.wefiit.citations);
   const maxRuns = donnees.length > 0 ? Math.max(...donnees.map(e => e.runsOk || 3)) : 3;
 
-  // Couleur selon modèle
   const couleur = model === 'gemini' ? '#3949ab' : '#4a90d9';
   const couleurBg = model === 'gemini' ? 'rgba(57,73,171,0.1)' : 'rgba(74,144,217,0.1)';
 
