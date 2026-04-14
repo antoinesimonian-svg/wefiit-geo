@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Dashboard — WeFiiT</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f4f5f7;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1a1a2e;
+      color: white;
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+    header .subtitle { font-size: 13px; color: #8899aa; margin-top: 4px; }
+    header .requete {
+      font-size: 12px;
+      background: rgba(255,255,255,0.08);
+      padding: 6px 14px;
+      border-radius: 20px;
+      color: #aabbcc;
+      max-width: 400px;
+      text-align: right;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+
+    .filtres {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+    .filtres label { font-size: 13px; color: #666; }
+    .filtres select {
+      padding: 6px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 13px;
+      background: white;
+      cursor: pointer;
+    }
+    #filtre-requete { max-width: 320px; font-weight: 600; color: #1a1a2e; }
+    .separateur { color: #ddd; }
+    .badge-runs { margin-left: auto; font-size: 12px; color: #888; }
+
+    .grid { display: grid; gap: 20px; }
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .card h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+
+    .stat-hero { text-align: center; padding: 32px 24px; }
+    .stat-hero .valeur { font-size: 56px; font-weight: 800; color: #1a1a2e; line-height: 1; }
+    .stat-hero .label { font-size: 14px; color: #888; margin-top: 8px; }
+    .stat-hero .delta {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+    .delta.hausse { background: #e8f5e9; color: #2e7d32; }
+    .delta.baisse { background: #fce4ec; color: #c62828; }
+    .delta.stable { background: #f5f5f5; color: #666; }
+
+    .chart-wrapper { position: relative; height: 220px; }
+
+    .verbatim-list { display: flex; flex-direction: column; gap: 12px; }
+    .verbatim-item {
+      background: #f8f9fa;
+      border-left: 3px solid #4a90d9;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+    }
+    .verbatim-date { font-size: 11px; color: #999; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
+    .verbatim-texte { font-size: 13px; color: #444; font-style: italic; line-height: 1.5; }
+
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th {
+      text-align: left; padding: 8px 12px; font-size: 11px; color: #888;
+      text-transform: uppercase; letter-spacing: 0.4px; border-bottom: 2px solid #f0f0f0;
+    }
+    td { padding: 10px 12px; border-bottom: 1px solid #f5f5f5; color: #333; }
+    tr:last-child td { border-bottom: none; }
+    tr.wefiit-row td { background: #e8f0fe; font-weight: 700; color: #1a1a2e; }
+    tr.wefiit-row td:first-child::before { content: '★ '; color: #4a90d9; }
+
+    .barre-container { background: #f0f0f0; border-radius: 4px; height: 6px; width: 100px; display: inline-block; vertical-align: middle; }
+    .barre-fill { height: 100%; border-radius: 4px; background: #4a90d9; }
+    tr.wefiit-row .barre-fill { background: #1a1a2e; }
+
+    .empty { text-align: center; color: #aaa; font-size: 14px; padding: 32px; }
+
+    @media (max-width: 700px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>GEO Dashboard — WeFiiT</h1>
+    <div class="subtitle">Visibilité dans les réponses ChatGPT</div>
+  </div>
+  <div class="requete" id="header-requete">—</div>
+</header>
+
+<div class="container">
+
+  <div class="filtres">
+    <label>Requête :</label>
+    <select id="filtre-requete"></select>
+    <span class="separateur">|</span>
+    <label>Période :</label>
+    <select id="filtre-mois">
+      <option value="all">Tous les runs</option>
+    </select>
+    <span class="badge-runs" id="badge-runs"></span>
+  </div>
+
+  <div class="grid grid-3" style="margin-bottom: 20px;">
+    <div class="card stat-hero">
+      <h2>Citations WeFiiT</h2>
+      <div class="valeur" id="stat-citations">—</div>
+      <div class="label">runs où WeFiiT est cité</div>
+      <div class="delta stable" id="stat-delta">—</div>
+    </div>
+    <div class="card stat-hero">
+      <h2>Taux de présence</h2>
+      <div class="valeur" id="stat-taux">—</div>
+      <div class="label">% des runs sur la période</div>
+    </div>
+    <div class="card stat-hero">
+      <h2>Nb de runs</h2>
+      <div class="valeur" id="stat-runs">—</div>
+      <div class="label">sessions analysées</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-bottom: 20px;">
+    <div class="card">
+      <h2>Évolution citations WeFiiT</h2>
+      <div class="chart-wrapper">
+        <canvas id="chart-citations"></canvas>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Concurrents — fréquence</h2>
+      <div id="tableau-concurrents"><div class="empty">Chargement...</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Verbatims récents — WeFiiT</h2>
+    <div class="verbatim-list" id="verbatims-list"><div class="empty">Chargement...</div></div>
+  </div>
+
+</div>
+
+<script>
+let historiqueComplet = {};   // { "pm-general": { libelle, runs: [...] }, ... }
+let requeteActive = null;
+let chartCitations = null;
+
+async function chargerDonnees() {
+  try {
+    const res = await fetch('historique.json');
+    historiqueComplet = await res.json();
+    initialiser();
+  } catch (e) {
+    document.querySelector('.container').innerHTML = `
+      <div class="card empty">
+        Impossible de charger historique.json.<br>
+        Lance <code>npx serve .</code> dans le dossier geo-monitoring/.
+      </div>`;
+  }
+}
+
+function initialiser() {
+  const selectRequete = document.getElementById('filtre-requete');
+  const ids = Object.keys(historiqueComplet);
+
+  if (ids.length === 0) {
+    document.querySelector('.container').innerHTML = '<div class="card empty">Aucune donnée dans historique.json.</div>';
+    return;
+  }
+
+  // Remplir dropdown requêtes
+  ids.forEach(id => {
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = historiqueComplet[id].libelle;
+    selectRequete.appendChild(opt);
+  });
+
+  selectRequete.addEventListener('change', () => {
+    requeteActive = selectRequete.value;
+    reconstruireFiltresMois();
+    rafraichir('all');
+  });
+
+  document.getElementById('filtre-mois').addEventListener('change', () => {
+    rafraichir(document.getElementById('filtre-mois').value);
+  });
+
+  // Sélectionner la première requête
+  requeteActive = ids[0];
+  selectRequete.value = ids[0];
+  reconstruireFiltresMois();
+  rafraichir('all');
+}
+
+function runsActifs() {
+  return (historiqueComplet[requeteActive]?.runs) || [];
+}
+
+function reconstruireFiltresMois() {
+  const select = document.getElementById('filtre-mois');
+  // Réinitialiser
+  select.innerHTML = '<option value="all">Tous les runs</option>';
+
+  const moisConnus = new Set();
+  runsActifs().forEach(e => moisConnus.add(e.date.substring(0, 7)));
+  const noms = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+  [...moisConnus].sort().reverse().forEach(m => {
+    const opt = document.createElement('option');
+    opt.value = m;
+    const [annee, moisNum] = m.split('-');
+    opt.textContent = noms[parseInt(moisNum) - 1] + ' ' + annee;
+    select.appendChild(opt);
+  });
+}
+
+function filtrer(periode) {
+  const runs = runsActifs();
+  if (periode === 'all') return runs;
+  return runs.filter(e => e.date.startsWith(periode));
+}
+
+function rafraichir(periode) {
+  const donnees = filtrer(periode);
+  const tousRuns = runsActifs();
+
+  // Header requête
+  const libelle = historiqueComplet[requeteActive]?.libelle || '';
+  document.getElementById('header-requete').textContent = '"' + libelle + '"';
+
+  // Badge
+  document.getElementById('badge-runs').textContent = donnees.length + ' run(s)';
+
+  // Stats
+  const totalCitations = donnees.reduce((s, e) => s + (e.wefiit.citations || 0), 0);
+  const totalRunsOk = donnees.reduce((s, e) => s + (e.runsOk || 3), 0);
+  const taux = totalRunsOk > 0 ? Math.round(totalCitations / totalRunsOk * 100) : 0;
+
+  document.getElementById('stat-citations').textContent = totalCitations + '/' + totalRunsOk;
+  document.getElementById('stat-taux').textContent = taux + '%';
+  document.getElementById('stat-runs').textContent = donnees.length;
+
+  // Delta (sur tous les runs de la requête, pas juste la période filtrée)
+  const deltaEl = document.getElementById('stat-delta');
+  if (tousRuns.length >= 2) {
+    const dernier = tousRuns[tousRuns.length - 1];
+    const avantDernier = tousRuns[tousRuns.length - 2];
+    const diff = dernier.wefiit.citations - avantDernier.wefiit.citations;
+    if (diff > 0) { deltaEl.textContent = '↑ +' + diff + ' vs run précédent'; deltaEl.className = 'delta hausse'; }
+    else if (diff < 0) { deltaEl.textContent = '↓ ' + diff + ' vs run précédent'; deltaEl.className = 'delta baisse'; }
+    else { deltaEl.textContent = '→ stable vs run précédent'; deltaEl.className = 'delta stable'; }
+  } else {
+    deltaEl.textContent = tousRuns.length === 0 ? 'Aucun run' : 'Premier run';
+    deltaEl.className = 'delta stable';
+  }
+
+  mettreAJourGraphe(donnees);
+  mettreAJourConcurrents(donnees);
+  mettreAJourVerbatims(donnees);
+}
+
+function mettreAJourGraphe(donnees) {
+  const labels = donnees.map(e => { const [, m, j] = e.date.split('-'); return j + '/' + m; });
+  const valeurs = donnees.map(e => e.wefiit.citations);
+  const maxRuns = donnees.length > 0 ? (donnees[0].runsOk || 3) : 3;
+
+  if (chartCitations) chartCitations.destroy();
+
+  const ctx = document.getElementById('chart-citations').getContext('2d');
+  chartCitations = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Citations WeFiiT',
+        data: valeurs,
+        borderColor: '#4a90d9',
+        backgroundColor: 'rgba(74,144,217,0.1)',
+        borderWidth: 2.5,
+        pointBackgroundColor: '#4a90d9',
+        pointRadius: 5,
+        tension: 0.3,
+        fill: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: { min: 0, max: maxRuns, ticks: { stepSize: 1, font: { size: 11 } }, grid: { color: '#f0f0f0' } },
+        x: { ticks: { font: { size: 11 } }, grid: { display: false } }
+      },
+      plugins: { legend: { display: false } }
+    }
+  });
+}
+
+function mettreAJourConcurrents(donnees) {
+  const freq = {};
+  donnees.forEach(e => {
+    Object.entries(e.concurrents || {}).forEach(([nom, n]) => {
+      freq[nom] = (freq[nom] || 0) + n;
+    });
+  });
+
+  const totalRunsOk = donnees.reduce((s, e) => s + (e.runsOk || 3), 0);
+  const wefiitCitations = donnees.reduce((s, e) => s + (e.wefiit.citations || 0), 0);
+  freq['WeFiiT'] = wefiitCitations;
+
+  const trie = Object.entries(freq).sort((a, b) => b[1] - a[1]);
+  const max = trie[0]?.[1] || 1;
+
+  const container = document.getElementById('tableau-concurrents');
+  if (trie.length === 0) { container.innerHTML = '<div class="empty">Aucune donnée</div>'; return; }
+
+  container.innerHTML = `
+    <table>
+      <thead><tr><th>Cabinet</th><th>Runs cités</th><th>Fréquence</th></tr></thead>
+      <tbody>
+        ${trie.map(([nom, n]) => {
+          const pct = totalRunsOk > 0 ? Math.round(n / totalRunsOk * 100) : 0;
+          const largeur = Math.round(n / max * 100);
+          const isWefiit = nom === 'WeFiiT';
+          return `<tr class="${isWefiit ? 'wefiit-row' : ''}">
+            <td>${nom}</td>
+            <td>${n}/${totalRunsOk}</td>
+            <td>
+              <span class="barre-container"><span class="barre-fill" style="width:${largeur}%"></span></span>
+              <span style="margin-left:8px;font-size:12px;color:#888">${pct}%</span>
+            </td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>`;
+}
+
+function mettreAJourVerbatims(donnees) {
+  const container = document.getElementById('verbatims-list');
+  const verbatims = [];
+  [...donnees].reverse().forEach(e => {
+    (e.wefiit.verbatims || []).forEach(v => {
+      if (v && verbatims.length < 6) verbatims.push({ date: e.date, texte: v });
+    });
+  });
+
+  if (verbatims.length === 0) { container.innerHTML = '<div class="empty">Aucun verbatim disponible</div>'; return; }
+
+  const moisNoms = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+  container.innerHTML = verbatims.map(v => {
+    const [, m, j] = v.date.split('-');
+    const dateLabel = j + ' ' + moisNoms[parseInt(m) - 1];
+    const texte = v.texte.length > 220 ? v.texte.substring(0, 220) + '…' : v.texte;
+    return `<div class="verbatim-item">
+      <div class="verbatim-date">${dateLabel}</div>
+      <div class="verbatim-texte">${texte}</div>
+    </div>`;
+  }).join('');
+}
+
+chargerDonnees();
+</script>
+
+</body>
+</html>

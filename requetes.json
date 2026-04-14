@@ -1,0 +1,8 @@
+[
+  { "id": "pm-general",   "libelle": "meilleur cabinet conseil product management" },
+  { "id": "data-ia",      "libelle": "meilleur cabinet conseil Data IA" },
+  { "id": "pm-formation", "libelle": "cabinet formation product management" },
+  { "id": "pm-france",    "libelle": "cabinet conseil product management France" },
+  { "id": "qa-analyst",   "libelle": "cabinet quality analyst" },
+  { "id": "qa-testing",   "libelle": "cabinet conseil QA testing" }
+]
