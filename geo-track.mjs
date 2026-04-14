@@ -2,8 +2,11 @@
  * GEO Track — Lance 3 runs par requête et archive dans historique.json
  *
  * Usage :
- *   node geo-track.mjs --all          → toutes les requêtes
- *   node geo-track.mjs pm-general     → une requête spécifique
+ *   node geo-track.mjs --all                        → toutes les requêtes (ChatGPT par défaut)
+ *   node geo-track.mjs pm-general                   → une requête spécifique
+ *   node geo-track.mjs --all --model gemini         → toutes les requêtes sur Gemini
+ *   node geo-track.mjs pm-general --model all       → une requête sur ChatGPT + Gemini
+ *   node geo-track.mjs --all --model chatgpt        → explicitement ChatGPT
  */
 
 import { chromium } from 'playwright';
@@ -32,6 +35,10 @@ const CONCURRENTS_CONNUS = [
   'Product People', 'Werin Group',
 ];
 
+// ─────────────────────────────────────────────
+// Utilitaires communs
+// ─────────────────────────────────────────────
+
 function dateAujourdhui() {
   return new Date().toISOString().split('T')[0];
 }
@@ -41,15 +48,12 @@ function detecterWefiit(texte) {
     const match = texte.match(regex);
     if (match) {
       const index = match.index;
-      // Extraire le bloc (paragraphe ou entrée de liste) qui contient la mention
-      // On remonte jusqu'au saut de ligne précédent et on descend jusqu'au suivant
       const debutBloc = texte.lastIndexOf('\n', index - 1);
       const finBloc = texte.indexOf('\n', index);
       const ligneWefiit = texte.substring(
         debutBloc === -1 ? 0 : debutBloc + 1,
         finBloc === -1 ? texte.length : finBloc
       ).trim();
-      // Si la ligne est trop courte (ex: juste "WeFiiT"), prendre aussi la ligne suivante
       let verbatim = ligneWefiit;
       if (verbatim.length < 40 && finBloc !== -1) {
         const finBloc2 = texte.indexOf('\n', finBloc + 1);
@@ -72,6 +76,10 @@ function extraireConcurrents(texte) {
   }
   return trouves;
 }
+
+// ─────────────────────────────────────────────
+// ChatGPT
+// ─────────────────────────────────────────────
 
 async function attendreFinReponse(page, timeout = 90000) {
   const debut = Date.now();
@@ -96,25 +104,155 @@ async function attendreFinReponse(page, timeout = 90000) {
   return textePrec || '';
 }
 
-async function lancerRequete(requete, historique, browser) {
+async function runChatGPT(page, libelle) {
+  await page.goto('https://chatgpt.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+
+  const selecteurInput = '#prompt-textarea, [contenteditable="true"][data-placeholder]';
+  await page.waitForSelector(selecteurInput, { timeout: 20000 });
+
+  const champSaisie = await page.$(selecteurInput);
+  if (!champSaisie) throw new Error('Champ de saisie introuvable');
+
+  await champSaisie.click();
+  await page.keyboard.type(libelle, { delay: 30 });
+  await page.waitForTimeout(500);
+
+  const boutonEnvoi = await page.$('[data-testid="send-button"], button[aria-label="Send prompt"], button[aria-label="Envoyer"]');
+  if (boutonEnvoi) await boutonEnvoi.click();
+  else await page.keyboard.press('Enter');
+
+  return await attendreFinReponse(page);
+}
+
+// ─────────────────────────────────────────────
+// Gemini
+// ─────────────────────────────────────────────
+
+async function trouverInputGemini(page) {
+  const selecteurs = [
+    'rich-textarea p',
+    'rich-textarea [contenteditable="true"]',
+    'p[data-placeholder]',
+    '[data-testid="input-area"] [contenteditable]',
+  ];
+  for (const sel of selecteurs) {
+    const el = await page.waitForSelector(sel, { timeout: 3000 }).catch(() => null);
+    if (el) return el;
+  }
+  return null;
+}
+
+async function attendreFinReponseGemini(page, timeout = 120000) {
+  const debut = Date.now();
+
+  // Attendre qu'un conteneur de réponse apparaisse
+  const selecteursReponse = ['model-response', 'message-content', '.response-container .markdown'];
+  let selecteurUtilise = null;
+  for (const sel of selecteursReponse) {
+    const trouve = await page.waitForSelector(sel, { timeout: 10000 }).catch(() => null);
+    if (trouve) { selecteurUtilise = sel; break; }
+  }
+  if (!selecteurUtilise) return '';
+
+  let textePrec = '';
+  let compteurStable = 0;
+  while (Date.now() - debut < timeout) {
+    await page.waitForTimeout(2000);
+
+    // Gemini affiche un bouton "Stop" pendant la génération
+    const boutonStop = await page.$('button[aria-label*="Stop"], button[aria-label*="Arrêter"], button[aria-label*="stop"]');
+    const generationEnCours = !!boutonStop;
+
+    const elements = await page.$$(selecteurUtilise);
+    if (elements.length === 0) continue;
+
+    const dernierElement = elements[elements.length - 1];
+    const texteActuel = await dernierElement.textContent().catch(() => '');
+
+    if (!generationEnCours && texteActuel === textePrec && texteActuel.length > 20) {
+      compteurStable++;
+      if (compteurStable >= 2) return texteActuel;
+    } else {
+      compteurStable = 0;
+    }
+    textePrec = texteActuel;
+  }
+  return textePrec || '';
+}
+
+async function accepterCookiesGemini(page) {
+  // Bannière de consentement cookies Google — plusieurs variantes selon la langue
+  const selecteursCookies = [
+    'button[aria-label*="Accept all"]',
+    'button[aria-label*="Tout accepter"]',
+    'button[aria-label*="Accepter"]',
+    'form[action*="consent"] button:last-child',
+    '#L2AGLb',  // ID stable du bouton "Tout accepter" Google Consent
+  ];
+  for (const sel of selecteursCookies) {
+    const bouton = await page.$(sel);
+    if (bouton) {
+      await bouton.click();
+      await page.waitForTimeout(1500);
+      return true;
+    }
+  }
+  return false;
+}
+
+async function runGemini(page, libelle) {
+  await page.goto('https://gemini.google.com/app', { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.waitForTimeout(2000);
+
+  // Accepter les cookies si la bannière est présente
+  await accepterCookiesGemini(page);
+
+  // Détecter un vrai mur de connexion
+  const loginWall = await page.$('input[type="email"], form[action*="signin"]');
+  if (loginWall) throw new Error('login-wall');
+
+  // Trouver l'input, taper la requête et envoyer
+  const inputTrouve = await trouverInputGemini(page);
+  if (!inputTrouve) throw new Error('Input Gemini introuvable');
+
+  await inputTrouve.click();
+  await page.keyboard.type(libelle, { delay: 30 });
+  await page.waitForTimeout(500);
+
+  // Bouton envoi
+  const boutonEnvoi = await page.$(
+    'button[aria-label*="Send"], button[aria-label*="Envoyer"], button[mattooltip*="Send"]'
+  );
+  if (boutonEnvoi) await boutonEnvoi.click();
+  else await page.keyboard.press('Enter');
+
+  return await attendreFinReponseGemini(page);
+}
+
+// ─────────────────────────────────────────────
+// Orchestration par requête
+// ─────────────────────────────────────────────
+
+async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
   const { id, libelle } = requete;
   const dateJour = dateAujourdhui();
+  const pauseInterRuns = model === 'gemini' ? 12000 : 8000;
 
   // Initialiser la section si absente
   if (!historique[id]) {
     historique[id] = { libelle, runs: [] };
   }
 
-  // Vérifier doublon
-  if (historique[id].runs.find(r => r.date === dateJour)) {
-    console.log(`⚠️  [${id}] Run déjà effectué aujourd'hui (${dateJour}) — ignoré.`);
+  // Vérifier doublon (par date ET par modèle)
+  if (historique[id].runs.find(r => r.date === dateJour && (r.model ?? 'chatgpt') === model)) {
+    console.log(`⚠️  [${id}/${model}] Run déjà effectué aujourd'hui (${dateJour}) — ignoré.`);
     return;
   }
 
-  console.log(`\n=== [${id}] "${libelle}" ===`);
+  console.log(`\n=== [${id}/${model}] "${libelle}" ===`);
 
-  // Créer dossier screenshots
-  const screenshotDir = `${SCREENSHOTS_BASE}/${id}`;
+  // Créer dossier screenshots (inclut le modèle pour éviter les collisions)
+  const screenshotDir = `${SCREENSHOTS_BASE}/${id}/${model}`;
   if (!existsSync(screenshotDir)) mkdirSync(screenshotDir, { recursive: true });
 
   const context = await browser.newContext({
@@ -130,23 +268,13 @@ async function lancerRequete(requete, historique, browser) {
 
     try {
       const page = await context.newPage();
-      await page.goto('https://chatgpt.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
 
-      const selecteurInput = '#prompt-textarea, [contenteditable="true"][data-placeholder]';
-      await page.waitForSelector(selecteurInput, { timeout: 20000 });
-
-      const champSaisie = await page.$(selecteurInput);
-      if (!champSaisie) throw new Error('Champ de saisie introuvable');
-
-      await champSaisie.click();
-      await page.keyboard.type(libelle, { delay: 30 });
-      await page.waitForTimeout(500);
-
-      const boutonEnvoi = await page.$('[data-testid="send-button"], button[aria-label="Send prompt"], button[aria-label="Envoyer"]');
-      if (boutonEnvoi) await boutonEnvoi.click();
-      else await page.keyboard.press('Enter');
-
-      const reponse = await attendreFinReponse(page);
+      let reponse = '';
+      if (model === 'gemini') {
+        reponse = await runGemini(page, libelle);
+      } else {
+        reponse = await runChatGPT(page, libelle);
+      }
 
       if (!reponse || reponse.length < 20) {
         resultat.statut = 'timeout';
@@ -162,12 +290,17 @@ async function lancerRequete(requete, historique, browser) {
       await page.screenshot({ path: `${screenshotDir}/${dateJour}-run${run}.png`, fullPage: true });
       await page.close();
     } catch (err) {
-      console.log(`  ❌ Erreur run ${run} : ${err.message}`);
-      resultat.statut = 'erreur';
+      if (err.message === 'login-wall') {
+        console.log(`  ⚠️  Login wall Gemini détecté — run ignoré`);
+        resultat.statut = 'login-wall';
+      } else {
+        console.log(`  ❌ Erreur run ${run} : ${err.message}`);
+        resultat.statut = 'erreur';
+      }
     }
 
     runs.push(resultat);
-    if (run < NB_RUNS) await new Promise(r => setTimeout(r, 8000));
+    if (run < NB_RUNS) await new Promise(r => setTimeout(r, pauseInterRuns));
   }
 
   await context.close();
@@ -194,9 +327,10 @@ async function lancerRequete(requete, historique, browser) {
   }
   console.log(`  Concurrents : ${Object.entries(concurrentsTriees).slice(0, 5).map(([n, f]) => `${n} ${f}/${runsOk.length}`).join(', ')}`);
 
-  // Archiver
+  // Archiver (avec champ model)
   historique[id].runs.push({
     date: dateJour,
+    model,
     runsOk: runsOk.length,
     wefiit: { citations: citationsWefiit, verbatims },
     concurrents: concurrentsTriees,
@@ -205,10 +339,23 @@ async function lancerRequete(requete, historique, browser) {
   console.log(`  ✅ Archivé`);
 }
 
+// ─────────────────────────────────────────────
+// Point d'entrée
+// ─────────────────────────────────────────────
+
 async function main() {
   const args = process.argv.slice(2);
   const modeAll = args.includes('--all');
-  const idCible = !modeAll && args[0] ? args[0] : null;
+  const idCible = !modeAll && args.find(a => !a.startsWith('--') && args[args.indexOf(a) - 1] !== '--model') || null;
+
+  // Parsing --model
+  const modelIdx = args.indexOf('--model');
+  const modelArg = modelIdx !== -1 ? args[modelIdx + 1] : 'chatgpt';
+  if (!['chatgpt', 'gemini', 'all'].includes(modelArg)) {
+    console.error('❌ --model doit être : chatgpt | gemini | all');
+    process.exit(1);
+  }
+  const modeles = modelArg === 'all' ? ['chatgpt', 'gemini'] : [modelArg];
 
   // Charger config requêtes
   if (!existsSync(REQUETES_PATH)) {
@@ -221,7 +368,7 @@ async function main() {
   let requetesALancer;
   if (modeAll) {
     requetesALancer = requetes;
-    console.log(`=== GEO Track --all : ${requetes.length} requêtes ===`);
+    console.log(`=== GEO Track --all [${modeles.join('+')}] : ${requetes.length} requêtes ===`);
   } else if (idCible) {
     const req = requetes.find(r => r.id === idCible);
     if (!req) {
@@ -231,7 +378,8 @@ async function main() {
     }
     requetesALancer = [req];
   } else {
-    console.error('Usage : node geo-track.mjs --all   OU   node geo-track.mjs <id-requete>');
+    console.error('Usage : node geo-track.mjs --all [--model chatgpt|gemini|all]');
+    console.error('        node geo-track.mjs <id-requete> [--model chatgpt|gemini|all]');
     process.exit(1);
   }
 
@@ -248,11 +396,16 @@ async function main() {
   });
 
   for (const requete of requetesALancer) {
-    await lancerRequete(requete, historique, browser);
-    // Pause entre requêtes en mode --all
-    if (modeAll && requetesALancer.indexOf(requete) < requetesALancer.length - 1) {
-      console.log('\n⏳ Pause 15s avant la prochaine requête...');
-      await new Promise(r => setTimeout(r, 15000));
+    for (const model of modeles) {
+      await lancerRequete(requete, historique, browser, model);
+
+      // Pause entre les runs (sauf le dernier)
+      const estDernier = requete === requetesALancer[requetesALancer.length - 1] && model === modeles[modeles.length - 1];
+      if (!estDernier) {
+        const pauseDuree = model === 'gemini' ? 20000 : 15000;
+        console.log(`\n⏳ Pause ${pauseDuree / 1000}s...`);
+        await new Promise(r => setTimeout(r, pauseDuree));
+      }
     }
   }
 

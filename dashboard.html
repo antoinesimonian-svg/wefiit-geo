@@ -57,6 +57,21 @@
     .separateur { color: #ddd; }
     .badge-runs { margin-left: auto; font-size: 12px; color: #888; }
 
+    /* Badges modèle */
+    .badge-model {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .badge-chatgpt { background: #e8f5e9; color: #2e7d32; }
+    .badge-gemini  { background: #e8eaf6; color: #3949ab; }
+
     .grid { display: grid; gap: 20px; }
     .grid-2 { grid-template-columns: 1fr 1fr; }
     .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
@@ -100,6 +115,7 @@
       border-radius: 0 8px 8px 0;
       padding: 12px 16px;
     }
+    .verbatim-item.gemini { border-left-color: #3949ab; }
     .verbatim-date { font-size: 11px; color: #999; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
     .verbatim-texte { font-size: 13px; color: #444; font-style: italic; line-height: 1.5; }
 
@@ -129,7 +145,7 @@
 <header>
   <div>
     <h1>GEO Dashboard — WeFiiT</h1>
-    <div class="subtitle">Visibilité dans les réponses ChatGPT</div>
+    <div class="subtitle">Visibilité dans les réponses des IA génératives</div>
   </div>
   <div class="requete" id="header-requete">—</div>
 </header>
@@ -139,6 +155,13 @@
   <div class="filtres">
     <label>Requête :</label>
     <select id="filtre-requete"></select>
+    <span class="separateur">|</span>
+    <label>Modèle :</label>
+    <select id="filtre-model">
+      <option value="all">Tous les modèles</option>
+      <option value="chatgpt">ChatGPT</option>
+      <option value="gemini">Gemini</option>
+    </select>
     <span class="separateur">|</span>
     <label>Période :</label>
     <select id="filtre-mois">
@@ -187,7 +210,7 @@
 </div>
 
 <script>
-let historiqueComplet = {};   // { "pm-general": { libelle, runs: [...] }, ... }
+let historiqueComplet = {};
 let requeteActive = null;
 let chartCitations = null;
 
@@ -214,7 +237,6 @@ function initialiser() {
     return;
   }
 
-  // Remplir dropdown requêtes
   ids.forEach(id => {
     const opt = document.createElement('option');
     opt.value = id;
@@ -225,18 +247,22 @@ function initialiser() {
   selectRequete.addEventListener('change', () => {
     requeteActive = selectRequete.value;
     reconstruireFiltresMois();
-    rafraichir('all');
+    rafraichir('all', document.getElementById('filtre-model').value);
+  });
+
+  document.getElementById('filtre-model').addEventListener('change', () => {
+    reconstruireFiltresMois();
+    rafraichir(document.getElementById('filtre-mois').value, document.getElementById('filtre-model').value);
   });
 
   document.getElementById('filtre-mois').addEventListener('change', () => {
-    rafraichir(document.getElementById('filtre-mois').value);
+    rafraichir(document.getElementById('filtre-mois').value, document.getElementById('filtre-model').value);
   });
 
-  // Sélectionner la première requête
   requeteActive = ids[0];
   selectRequete.value = ids[0];
   reconstruireFiltresMois();
-  rafraichir('all');
+  rafraichir('all', 'all');
 }
 
 function runsActifs() {
@@ -244,12 +270,13 @@ function runsActifs() {
 }
 
 function reconstruireFiltresMois() {
+  const modelFiltre = document.getElementById('filtre-model').value;
   const select = document.getElementById('filtre-mois');
-  // Réinitialiser
   select.innerHTML = '<option value="all">Tous les runs</option>';
 
+  const runs = runsActifs().filter(r => modelFiltre === 'all' || (r.model ?? 'chatgpt') === modelFiltre);
   const moisConnus = new Set();
-  runsActifs().forEach(e => moisConnus.add(e.date.substring(0, 7)));
+  runs.forEach(e => moisConnus.add(e.date.substring(0, 7)));
   const noms = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
   [...moisConnus].sort().reverse().forEach(m => {
     const opt = document.createElement('option');
@@ -260,15 +287,21 @@ function reconstruireFiltresMois() {
   });
 }
 
-function filtrer(periode) {
-  const runs = runsActifs();
-  if (periode === 'all') return runs;
-  return runs.filter(e => e.date.startsWith(periode));
+function filtrer(periode, model) {
+  let runs = runsActifs();
+  if (model !== 'all') runs = runs.filter(r => (r.model ?? 'chatgpt') === model);
+  if (periode !== 'all') runs = runs.filter(e => e.date.startsWith(periode));
+  return runs;
 }
 
-function rafraichir(periode) {
-  const donnees = filtrer(periode);
-  const tousRuns = runsActifs();
+function badgeModel(model) {
+  const m = model ?? 'chatgpt';
+  return `<span class="badge-model badge-${m}">${m}</span>`;
+}
+
+function rafraichir(periode, model) {
+  const donnees = filtrer(periode, model);
+  const tousRunsFiltresModel = filtrer('all', model);
 
   // Header requête
   const libelle = historiqueComplet[requeteActive]?.libelle || '';
@@ -286,29 +319,38 @@ function rafraichir(periode) {
   document.getElementById('stat-taux').textContent = taux + '%';
   document.getElementById('stat-runs').textContent = donnees.length;
 
-  // Delta (sur tous les runs de la requête, pas juste la période filtrée)
+  // Delta (comparaison des 2 derniers runs du même modèle)
   const deltaEl = document.getElementById('stat-delta');
-  if (tousRuns.length >= 2) {
-    const dernier = tousRuns[tousRuns.length - 1];
-    const avantDernier = tousRuns[tousRuns.length - 2];
+  if (tousRunsFiltresModel.length >= 2) {
+    const dernier = tousRunsFiltresModel[tousRunsFiltresModel.length - 1];
+    const avantDernier = tousRunsFiltresModel[tousRunsFiltresModel.length - 2];
     const diff = dernier.wefiit.citations - avantDernier.wefiit.citations;
     if (diff > 0) { deltaEl.textContent = '↑ +' + diff + ' vs run précédent'; deltaEl.className = 'delta hausse'; }
     else if (diff < 0) { deltaEl.textContent = '↓ ' + diff + ' vs run précédent'; deltaEl.className = 'delta baisse'; }
     else { deltaEl.textContent = '→ stable vs run précédent'; deltaEl.className = 'delta stable'; }
   } else {
-    deltaEl.textContent = tousRuns.length === 0 ? 'Aucun run' : 'Premier run';
+    deltaEl.textContent = tousRunsFiltresModel.length === 0 ? 'Aucun run' : 'Premier run';
     deltaEl.className = 'delta stable';
   }
 
-  mettreAJourGraphe(donnees);
+  mettreAJourGraphe(donnees, model);
   mettreAJourConcurrents(donnees);
   mettreAJourVerbatims(donnees);
 }
 
-function mettreAJourGraphe(donnees) {
-  const labels = donnees.map(e => { const [, m, j] = e.date.split('-'); return j + '/' + m; });
+function mettreAJourGraphe(donnees, model) {
+  // Label : date + badge modèle si "tous les modèles"
+  const labels = donnees.map(e => {
+    const [, m, j] = e.date.split('-');
+    const dateStr = j + '/' + m;
+    return model === 'all' ? dateStr + ' (' + (e.model ?? 'chatgpt') + ')' : dateStr;
+  });
   const valeurs = donnees.map(e => e.wefiit.citations);
-  const maxRuns = donnees.length > 0 ? (donnees[0].runsOk || 3) : 3;
+  const maxRuns = donnees.length > 0 ? Math.max(...donnees.map(e => e.runsOk || 3)) : 3;
+
+  // Couleur selon modèle
+  const couleur = model === 'gemini' ? '#3949ab' : '#4a90d9';
+  const couleurBg = model === 'gemini' ? 'rgba(57,73,171,0.1)' : 'rgba(74,144,217,0.1)';
 
   if (chartCitations) chartCitations.destroy();
 
@@ -320,10 +362,10 @@ function mettreAJourGraphe(donnees) {
       datasets: [{
         label: 'Citations WeFiiT',
         data: valeurs,
-        borderColor: '#4a90d9',
-        backgroundColor: 'rgba(74,144,217,0.1)',
+        borderColor: couleur,
+        backgroundColor: couleurBg,
         borderWidth: 2.5,
-        pointBackgroundColor: '#4a90d9',
+        pointBackgroundColor: couleur,
         pointRadius: 5,
         tension: 0.3,
         fill: true,
@@ -385,7 +427,7 @@ function mettreAJourVerbatims(donnees) {
   const verbatims = [];
   [...donnees].reverse().forEach(e => {
     (e.wefiit.verbatims || []).forEach(v => {
-      if (v && verbatims.length < 6) verbatims.push({ date: e.date, texte: v });
+      if (v && verbatims.length < 6) verbatims.push({ date: e.date, texte: v, model: e.model ?? 'chatgpt' });
     });
   });
 
@@ -396,8 +438,9 @@ function mettreAJourVerbatims(donnees) {
     const [, m, j] = v.date.split('-');
     const dateLabel = j + ' ' + moisNoms[parseInt(m) - 1];
     const texte = v.texte.length > 220 ? v.texte.substring(0, 220) + '…' : v.texte;
-    return `<div class="verbatim-item">
-      <div class="verbatim-date">${dateLabel}</div>
+    const badge = `<span class="badge-model badge-${v.model}">${v.model}</span>`;
+    return `<div class="verbatim-item ${v.model}">
+      <div class="verbatim-date">${dateLabel} ${badge}</div>
       <div class="verbatim-texte">${texte}</div>
     </div>`;
   }).join('');
