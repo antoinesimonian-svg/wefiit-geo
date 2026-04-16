@@ -13,7 +13,7 @@ import { chromium } from 'playwright';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 
 const NB_RUNS = 3;
-const BASE_DIR = 'c:/Users/AntoineSIMONIAN/.claude/projects/wefiit/geo-monitoring';
+const BASE_DIR = decodeURIComponent(new URL('.', import.meta.url).pathname.replace(/^\//, '').replace(/\/$/, ''));
 const REQUETES_PATH = `${BASE_DIR}/requetes.json`;
 const HISTORIQUE_PATH = `${BASE_DIR}/historique.json`;
 const SCREENSHOTS_BASE = `${BASE_DIR}/screenshots`;
@@ -54,23 +54,17 @@ function detecterWefiit(texteRaw) {
     const match = texte.match(regex);
     if (match) {
       const index = match.index;
-      // Extraire la phrase autour de la mention (entre . ou \n)
-      const debutPhrase = Math.max(
-        texte.lastIndexOf('\n', index - 1),
-        texte.lastIndexOf('. ', index - 1)
-      );
-      const finPhrase = (() => {
-        const nl = texte.indexOf('\n', index);
-        const pt = texte.indexOf('. ', index + 1);
-        if (nl === -1 && pt === -1) return texte.length;
-        if (nl === -1) return pt + 1;
-        if (pt === -1) return nl;
-        return Math.min(nl, pt + 1);
-      })();
-      let verbatim = texte.substring(
-        debutPhrase === -1 ? 0 : debutPhrase + 1,
-        finPhrase
-      ).trim();
+      // Extraire 3 lignes autour de la mention pour avoir du contexte
+      const lignes = texte.split('\n');
+      let ligneIdx = 0;
+      let cumul = 0;
+      for (let i = 0; i < lignes.length; i++) {
+        cumul += lignes[i].length + 1;
+        if (cumul > index) { ligneIdx = i; break; }
+      }
+      const debut = Math.max(0, ligneIdx - 1);
+      const fin = Math.min(lignes.length, ligneIdx + 3);
+      let verbatim = lignes.slice(debut, fin).join('\n').trim();
       // Tronquer à 500 caractères max
       if (verbatim.length > 500) verbatim = verbatim.substring(0, 500) + '…';
       return { trouve: true, verbatim };
