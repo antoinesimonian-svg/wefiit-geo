@@ -101,6 +101,33 @@
           "OCTO Technology": 1,
           "Wemanity": 1
         }
+      },
+      {
+        "date": "2026-04-16",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 3,
+          "verbatims": [
+            "WeFiiT — accompagnement complet",
+            "WeFiiT",
+            "WeFiiT"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Wivoo": 3,
+          "Delva": 3,
+          "IKXO": 3,
+          "Swood": 2,
+          "TAK": 2,
+          "Hubvisory": 1,
+          "Mozza": 1,
+          "Stellar": 1,
+          "Bain": 1,
+          "McKinsey": 1,
+          "BCG": 1
+        }
       }
     ]
   },
@@ -484,6 +511,29 @@
           "Octo": 1,
           "OCTO Technology": 1,
           "Hubvisory": 1
+        }
+      },
+      {
+        "date": "2026-04-16",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 3,
+          "verbatims": [
+            "WeFiiT",
+            "WeFiiT",
+            "WeFiiT"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Wivoo": 2,
+          "Delva": 2,
+          "Swood": 2,
+          "IKXO": 2,
+          "Hubvisory": 1,
+          "Mozza": 1,
+          "Yield Studio": 1
         }
       }
     ]
