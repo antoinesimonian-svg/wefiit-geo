@@ -44,8 +44,20 @@ function dateAujourdhui() {
 }
 
 function nettoyerTexte(texte) {
-  // Supprimer le préfixe "Gemini a dit" que Gemini injecte dans l'interface web
-  return texte.replace(/^Gemini\s+a\s+dit\s*/i, '').trim();
+  return texte
+    .replace(/^Gemini\s+a\s+dit\s*/i, '')
+    // Supprimer les lignes parasites UI (Mapbox, instructions clavier, notes collées)
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => {
+      if (!l) return false;
+      if (/mapbox|openstreetmap|deux doigts|two fingers|maintenez ctrl|ctrl pour zoom/i.test(l)) return false;
+      // Ligne qui n'est qu'une suite de mots collés avec des chiffres (ex: "Thiga5.0Delva3.8Wivoo")
+      if (/^[\w\s]+\d\.\d[\w\s]+\d\.\d/.test(l)) return false;
+      return true;
+    })
+    .join('\n')
+    .trim();
 }
 
 function detecterWefiit(texteRaw) {
@@ -54,7 +66,7 @@ function detecterWefiit(texteRaw) {
     const match = texte.match(regex);
     if (match) {
       const index = match.index;
-      // Extraire 3 lignes autour de la mention pour avoir du contexte
+      // Trouver la ligne contenant la mention
       const lignes = texte.split('\n');
       let ligneIdx = 0;
       let cumul = 0;
@@ -62,11 +74,15 @@ function detecterWefiit(texteRaw) {
         cumul += lignes[i].length + 1;
         if (cumul > index) { ligneIdx = i; break; }
       }
+      // Prendre 1 ligne avant + la ligne + 1 ligne après (contexte resserré)
       const debut = Math.max(0, ligneIdx - 1);
-      const fin = Math.min(lignes.length, ligneIdx + 3);
-      let verbatim = lignes.slice(debut, fin).join('\n').trim();
-      // Tronquer à 500 caractères max
-      if (verbatim.length > 500) verbatim = verbatim.substring(0, 500) + '…';
+      const fin = Math.min(lignes.length, ligneIdx + 2);
+      let verbatim = lignes.slice(debut, fin)
+        .filter(l => l.trim().length > 3)
+        .join(' | ').trim();
+      // Corriger les mots collés : "WeFiiTUne" → "WeFiiT Une"
+      verbatim = verbatim.replace(/(wefiit)([A-ZÀ-Ü])/gi, '$1 $2');
+      if (verbatim.length > 300) verbatim = verbatim.substring(0, 300) + '…';
       return { trouve: true, verbatim };
     }
   }
@@ -197,20 +213,44 @@ async function attendreFinReponseGemini(page, timeout = 120000) {
 async function accepterCookiesGemini(page) {
   // Bannière de consentement cookies Google — plusieurs variantes selon la langue
   const selecteursCookies = [
+    '#L2AGLb',  // ID stable du bouton "Tout accepter" Google Consent
     'button[aria-label*="Accept all"]',
     'button[aria-label*="Tout accepter"]',
     'button[aria-label*="Accepter"]',
     'form[action*="consent"] button:last-child',
-    '#L2AGLb',  // ID stable du bouton "Tout accepter" Google Consent
   ];
   for (const sel of selecteursCookies) {
     const bouton = await page.$(sel);
     if (bouton) {
       await bouton.click();
-      await page.waitForTimeout(1500);
+      await page.waitForTimeout(2000);
       return true;
     }
   }
+
+  // Variante : overlay cdk-overlay (bannière consentement Angular/Google)
+  // Cherche un bouton contenant "Accepter" ou "Accept" dans l'overlay
+  const overlayBouton = await page.evaluateHandle(() => {
+    const overlay = document.querySelector('.cdk-overlay-container');
+    if (!overlay) return null;
+    const boutons = [...overlay.querySelectorAll('button')];
+    return boutons.find(b =>
+      /accepter|accept|tout accepter|j'accepte|agree/i.test(b.textContent)
+    ) || null;
+  });
+  if (overlayBouton && overlayBouton.asElement()) {
+    await overlayBouton.asElement().click();
+    await page.waitForTimeout(2000);
+    return true;
+  }
+
+  // Dernier recours : appuyer Escape pour fermer l'overlay
+  const overlayPresent = await page.$('.cdk-overlay-container .cdk-overlay-backdrop');
+  if (overlayPresent) {
+    await page.keyboard.press('Escape');
+    await page.waitForTimeout(1000);
+  }
+
   return false;
 }
 
@@ -432,15 +472,16 @@ async function main() {
   // Auto-push vers GitHub Pages
   try {
     const { execSync } = await import('child_process');
+    const { fileURLToPath } = await import('url');
+    const gitDir = fileURLToPath(new URL('.', import.meta.url));
     const date = new Date().toISOString().slice(0, 10);
-    execSync(`git add historique.json && git commit -m "GEO update ${date}" && git push`, {
-      stdio: 'inherit',
-      shell: true,
-      cwd: new URL('.', import.meta.url).pathname.replace(/^\//, '')
-    });
+    const opts = { stdio: 'inherit', shell: true, cwd: gitDir };
+    execSync('git add historique.json', opts);
+    execSync(`git commit -m "GEO update ${date}"`, opts);
+    execSync('git push', opts);
     console.log('✅ Dashboard GitHub Pages mis à jour');
   } catch (e) {
-    console.log('⚠️  Push git échoué — mise à jour manuelle requise');
+    console.log('⚠️  Push git échoué :', e.message?.split('\n')[0] || e);
   }
 }
 

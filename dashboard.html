@@ -435,7 +435,13 @@ function mettreAJourVerbatims(donnees) {
   container.innerHTML = verbatims.map(v => {
     const [, m, j] = v.date.split('-');
     const dateLabel = j + ' ' + moisNoms[parseInt(m) - 1];
-    const texte = v.texte.length > 500 ? v.texte.substring(0, 500) + '…' : v.texte;
+    // Nettoyer les verbatims bruités (Mapbox, instructions clavier, lignes collées avec chiffres)
+    let texte = v.texte
+      .split(/[\n|]+/)
+      .map(l => l.trim())
+      .filter(l => l.length > 5 && !/mapbox|openstreetmap|deux doigts|two fingers|ctrl pour|maintenez/i.test(l) && !/^[\w\s]+\d\.\d[\w\s]+\d\.\d/.test(l))
+      .join(' | ');
+    if (texte.length > 300) texte = texte.substring(0, 300) + '…';
     const badge = `<span class="badge-model badge-${v.model}">${v.model}</span>`;
     return `<div class="verbatim-item ${v.model}">
       <div class="verbatim-date">${dateLabel} ${badge}</div>
