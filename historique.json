@@ -150,6 +150,32 @@
           "Converteo": 1,
           "Wavestone": 1
         }
+      },
+      {
+        "date": "2026-04-29",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 3,
+          "verbatims": [
+            "👉 Modèle hybride conseil + delivery (UX, discovery, MVP). Yield Studio\n✔️ Idéal pour : scale-ups / entreprises qui veulent structurer et exécuter\nWefiit\n👉 Très bon sur les environnements complexes (banque, luxe, médias). Yield Studio+1\n✔️ Idéal pour : grandes organisations, transformation produit dans des systèmes lourds",
+            "Clients grands comptes (Decathlon, Air France, etc.)\n👉 Bon mix entre opérationnel + structuration\n🏢 WeFiiT\nCabinet parisien orienté :\nstructuration d’équipes produit",
+            "Product Ops IKXO\n👉 Bon équilibre entre conseil + exécution\n👉 WeFiiT\nAccompagne grands groupes (Accor, FDJ, etc.) wefiit.com\nPositionnement :"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Stellar": 3,
+          "Converteo": 2,
+          "Wivoo": 2,
+          "Delva": 2,
+          "IKXO": 2,
+          "Hubvisory": 1,
+          "Mozza": 1,
+          "Yield Studio": 1,
+          "Yield Advisory": 1,
+          "Galadrim": 1
+        }
       }
     ]
   },
@@ -276,6 +302,21 @@
           "IKXO": 1,
           "TAK": 1,
           "Yield Advisory": 1
+        }
+      },
+      {
+        "date": "2026-04-29",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Theodo": 2,
+          "Xebia": 1,
+          "Pentalog": 1,
+          "Devoteam": 1
         }
       }
     ]
@@ -406,6 +447,22 @@
           "fifty-five": 1,
           "Thoughtworks": 1,
           "Product People": 1
+        }
+      },
+      {
+        "date": "2026-04-29",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "McKinsey": 2,
+          "BCG": 2,
+          "Quantmetry": 2,
+          "Accenture": 1,
+          "Capgemini": 1
         }
       }
     ]
@@ -544,6 +601,20 @@
           "Bain": 1,
           "Zenika": 1
         }
+      },
+      {
+        "date": "2026-04-29",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "McKinsey": 1,
+          "Accenture": 1,
+          "Capgemini": 1
+        }
       }
     ]
   },
@@ -657,6 +728,18 @@
           "Accenture": 1,
           "Capgemini": 1
         }
+      },
+      {
+        "date": "2026-04-29",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "TAK": 1
+        }
       }
     ]
   },
@@ -756,6 +839,16 @@
           "Octo": 1,
           "OCTO Technology": 1
         }
+      },
+      {
+        "date": "2026-04-29",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
       }
     ]
   }
