@@ -477,7 +477,13 @@ async function main() {
     const date = new Date().toISOString().slice(0, 10);
     const opts = { stdio: 'inherit', shell: true, cwd: gitDir };
     execSync('git add historique.json', opts);
-    execSync(`git commit -m "GEO update ${date}"`, opts);
+    // Commit uniquement s'il y a des changements staged
+    try {
+      execSync(`git commit -m "GEO update ${date}"`, opts);
+    } catch (commitErr) {
+      // "nothing to commit" n'est pas une erreur bloquante
+      if (!commitErr.message?.includes('nothing to commit')) throw commitErr;
+    }
     execSync('git push', opts);
     console.log('✅ Dashboard GitHub Pages mis à jour');
   } catch (e) {
