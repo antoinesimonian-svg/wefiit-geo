@@ -197,6 +197,54 @@
           "Accenture": 1,
           "Wavestone": 1
         }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 3,
+          "verbatims": [
+            "Très orienté impact business wivoo.fr | WeFiiT | Spécialiste du PM avec forte présence grands comptes",
+            "delivery pur (faire avancer le produit) | 👉 WeFiiT | Positionnement end-to-end produit : stratégie → ops → data → marketing wefiit.com",
+            "Impli | 🥈 WeFiiT (très solide et en croissance) | Pure player Product (stratégie, discovery, delivery, data, ops)"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Delva": 3,
+          "Wivoo": 2,
+          "Swood": 2,
+          "Yield Advisory": 2,
+          "IKXO": 2,
+          "Stellar": 2,
+          "TAK": 2,
+          "Yeita": 1,
+          "Accenture": 1,
+          "Capgemini": 1,
+          "McKinsey": 1
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Wivoo": 3,
+          "Accenture": 2,
+          "Theodo": 2,
+          "Hubvisory": 2,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "McKinsey": 1,
+          "BCG": 1,
+          "Yield Studio": 1
+        }
       }
     ]
   },
@@ -356,6 +404,35 @@
           "Wivoo": 2,
           "Yield Studio": 1
         }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 3,
+          "verbatims": [
+            "5 Degrés → produit + data + organisation 5 Degrés | WeFiiT → product consulting orienté impact Sortlist | Upgrade → UX/UI + product management upgrade.fr",
+            "Delva → cabinet 100% Product Management fondé par ex-CPO delva.co | WeFiiT → forte présence grands comptes (Accor, LV…) wefiit.com | Monsieur Guiz → mix product + design + data matchfolio.fr",
+            "🧠 Autres très bons acteurs à connaître (hors top 5) | WeFiiT → ultra-spécialiste product (ex-Accor, FDJ…) wefiit.com | Delva → cabinet 100% product avec ex-CPO delva.co"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "TAK": 3,
+          "IKXO": 2,
+          "Delva": 2
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -522,6 +599,41 @@
           "Yield Studio": 1,
           "Quantmetry": 1
         }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Artefact": 3,
+          "fifty-five": 3,
+          "Thiga": 2,
+          "Octo": 2,
+          "OCTO Technology": 2,
+          "McKinsey": 2,
+          "BCG": 2,
+          "Sia Partners": 2,
+          "Accenture": 1,
+          "BAM": 1,
+          "Ekimetrics": 1,
+          "Quantmetry": 1,
+          "Theodo": 1,
+          "Capgemini": 1
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -694,6 +806,46 @@
           "IKXO": 1,
           "TAK": 1
         }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Artefact": 2,
+          "Ekimetrics": 2,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "McKinsey": 1,
+          "BCG": 1,
+          "Accenture": 1,
+          "fifty-five": 1,
+          "Thiga": 1,
+          "Xebia": 1,
+          "Quantmetry": 1,
+          "Theodo": 1
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Hubvisory": 3,
+          "Wivoo": 3,
+          "Artefact": 2,
+          "IKXO": 1,
+          "McKinsey": 1
+        }
       }
     ]
   },
@@ -829,6 +981,40 @@
           "verbatims": []
         },
         "concurrents": {}
+      },
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Bain": 3,
+          "McKinsey": 3,
+          "Thiga": 2,
+          "BCG": 2,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Artefact": 1,
+          "Fabernovel": 1,
+          "Product People": 1
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 1,
+          "McKinsey": 1,
+          "BCG": 1
+        }
       }
     ]
   },
@@ -950,6 +1136,35 @@
         "concurrents": {
           "Product People": 1,
           "Thiga": 1
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "fifty-five": 2,
+          "Xebia": 1,
+          "Octo": 1,
+          "OCTO Technology": 1
+        }
+      },
+      {
+        "date": "2026-04-30",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "verbatims": []
+        },
+        "concurrents": {
+          "Thiga": 2,
+          "Hubvisory": 1
         }
       }
     ]
