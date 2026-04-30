@@ -4,5 +4,6 @@
   { "id": "pm-ia",        "libelle": "cabinet spécialisé IA product management" },
   { "id": "pm-data",      "libelle": "cabinet spécialisé data product management" },
   { "id": "pmm-general",  "libelle": "cabinet conseil product marketing management" },
-  { "id": "pm-formation", "libelle": "je cherche un partenaire pour former mes équipes au product management" }
+  { "id": "pm-formation", "libelle": "je cherche un partenaire pour former mes équipes au product management" },
+  { "id": "pm-ia-cabinet", "libelle": "cabinet spécialisé product management ia" }
 ]

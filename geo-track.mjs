@@ -17,6 +17,7 @@ const BASE_DIR = decodeURIComponent(new URL('.', import.meta.url).pathname.repla
 const REQUETES_PATH = `${BASE_DIR}/requetes.json`;
 const HISTORIQUE_PATH = `${BASE_DIR}/historique.json`;
 const SCREENSHOTS_BASE = `${BASE_DIR}/screenshots`;
+const RESPONSES_BASE = `${BASE_DIR}/responses`;
 
 const MOTS_CLES_WEFIIT = [/wefiit/i, /we\s*fiit/i, /wefiit\.com/i, /cabinet\s+wefiit/i];
 
@@ -62,31 +63,30 @@ function nettoyerTexte(texte) {
 
 function detecterWefiit(texteRaw) {
   const texte = nettoyerTexte(texteRaw);
-  for (const regex of MOTS_CLES_WEFIIT) {
-    const match = texte.match(regex);
-    if (match) {
-      const index = match.index;
-      // Trouver la ligne contenant la mention
-      const lignes = texte.split('\n');
-      let ligneIdx = 0;
-      let cumul = 0;
-      for (let i = 0; i < lignes.length; i++) {
-        cumul += lignes[i].length + 1;
-        if (cumul > index) { ligneIdx = i; break; }
-      }
-      // Prendre 1 ligne avant + la ligne + 1 ligne après (contexte resserré)
-      const debut = Math.max(0, ligneIdx - 1);
-      const fin = Math.min(lignes.length, ligneIdx + 2);
-      let verbatim = lignes.slice(debut, fin)
-        .filter(l => l.trim().length > 3)
-        .join(' | ').trim();
-      // Corriger les mots collés : "WeFiiTUne" → "WeFiiT Une"
-      verbatim = verbatim.replace(/(wefiit)([A-ZÀ-Ü])/gi, '$1 $2');
-      if (verbatim.length > 300) verbatim = verbatim.substring(0, 300) + '…';
-      return { trouve: true, verbatim };
+  const lignes = texte.split('\n');
+
+  // Trouver toutes les lignes contenant une mention WeFiiT
+  const lignesAvecMention = [];
+  for (let i = 0; i < lignes.length; i++) {
+    if (MOTS_CLES_WEFIIT.some(r => r.test(lignes[i]))) {
+      lignesAvecMention.push(i);
     }
   }
-  return { trouve: false, verbatim: null };
+
+  if (lignesAvecMention.length === 0) return { trouve: false, preview: null };
+
+  // Extraire un preview court autour de la première mention (150 chars)
+  const idxPremiere = lignesAvecMention[0];
+  const debut = Math.max(0, idxPremiere - 1);
+  const fin = Math.min(lignes.length, idxPremiere + 3);
+  let preview = lignes.slice(debut, fin)
+    .filter(l => l.trim().length > 3)
+    .join(' | ')
+    .replace(/(wefiit)([A-ZÀ-Ü])/gi, '$1 $2')
+    .trim();
+  if (preview.length > 150) preview = preview.substring(0, 150) + '…';
+
+  return { trouve: true, preview };
 }
 
 function extraireConcurrents(texte) {
@@ -318,7 +318,7 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
 
   for (let run = 1; run <= NB_RUNS; run++) {
     console.log(`  Run ${run}/${NB_RUNS}...`);
-    let resultat = { run, statut: 'erreur', wefiitMentionne: false, verbatim: null, concurrents: {} };
+    let resultat = { run, statut: 'erreur', wefiitMentionne: false, preview: null, cheminReponse: null, concurrents: {} };
 
     try {
       const page = await context.newPage();
@@ -334,10 +334,18 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
         resultat.statut = 'timeout';
       } else {
         resultat.statut = 'ok';
+        const reponseNettoyee = nettoyerTexte(reponse);
         const detection = detecterWefiit(reponse);
         resultat.wefiitMentionne = detection.trouve;
-        resultat.verbatim = detection.verbatim;
+        resultat.preview = detection.preview;
         resultat.concurrents = extraireConcurrents(reponse);
+
+        // Sauvegarder la réponse complète dans un fichier texte
+        if (!existsSync(RESPONSES_BASE)) mkdirSync(RESPONSES_BASE, { recursive: true });
+        const cheminReponse = `${RESPONSES_BASE}/${id}-${dateJour}-${model}-run${run}.txt`;
+        writeFileSync(cheminReponse, reponseNettoyee, 'utf-8');
+        resultat.cheminReponse = `responses/${id}-${dateJour}-${model}-run${run}.txt`;
+
         console.log(`  ${detection.trouve ? '✅ WeFiiT présent' : '❌ WeFiiT absent'}`);
       }
 
@@ -362,7 +370,8 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
   // Agréger
   const runsOk = runs.filter(r => r.statut === 'ok');
   const citationsWefiit = runsOk.filter(r => r.wefiitMentionne).length;
-  const verbatims = runsOk.filter(r => r.verbatim).map(r => r.verbatim);
+  const previews = runsOk.filter(r => r.preview).map(r => r.preview);
+  const reponsesChemins = runsOk.filter(r => r.cheminReponse).map(r => r.cheminReponse);
 
   const freqConcurrents = {};
   runsOk.forEach(r => {
@@ -376,8 +385,8 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
 
   // Rapport terminal
   console.log(`\n  WeFiiT : cité ${citationsWefiit}/${runsOk.length} fois`);
-  if (verbatims.length > 0) {
-    verbatims.forEach((v, i) => console.log(`  Verbatim ${i + 1} : "${v.substring(0, 100)}..."`));
+  if (previews.length > 0) {
+    previews.forEach((v, i) => console.log(`  Preview ${i + 1} : "${v}"`));
   }
   console.log(`  Concurrents : ${Object.entries(concurrentsTriees).slice(0, 5).map(([n, f]) => `${n} ${f}/${runsOk.length}`).join(', ')}`);
 
@@ -386,7 +395,7 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
     date: dateJour,
     model,
     runsOk: runsOk.length,
-    wefiit: { citations: citationsWefiit, verbatims },
+    wefiit: { citations: citationsWefiit, previews, reponsesChemins },
     concurrents: concurrentsTriees,
   });
 
@@ -476,7 +485,7 @@ async function main() {
     const gitDir = fileURLToPath(new URL('.', import.meta.url));
     const date = new Date().toISOString().slice(0, 10);
     const opts = { stdio: 'inherit', shell: true, cwd: gitDir };
-    execSync('git add historique.json', opts);
+    execSync('git add historique.json responses/', opts);
     // Commit uniquement s'il y a des changements staged
     try {
       execSync(`git commit -m "GEO update ${date}"`, opts);

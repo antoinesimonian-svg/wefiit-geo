@@ -118,6 +118,59 @@
     .verbatim-item.gemini { border-left-color: #3949ab; }
     .verbatim-date { font-size: 11px; color: #999; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
     .verbatim-texte { font-size: 13px; color: #444; font-style: italic; line-height: 1.5; }
+    .verbatim-voir {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      color: #4a90d9;
+      cursor: pointer;
+      text-decoration: underline;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .verbatim-voir:hover { color: #2c6fb5; }
+
+    /* Modal réponse complète */
+    .modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.55);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 32px;
+      max-width: 720px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .modal-title { font-size: 14px; font-weight: 700; color: #333; }
+    .modal-meta { font-size: 11px; color: #999; margin-top: 2px; }
+    .modal-close {
+      background: none; border: none; cursor: pointer;
+      font-size: 20px; color: #999; line-height: 1; padding: 0;
+    }
+    .modal-close:hover { color: #333; }
+    .modal-body {
+      font-size: 13px; color: #444; line-height: 1.7;
+      white-space: pre-wrap;
+      font-family: inherit;
+    }
+    .modal-body mark { background: #fff3cd; border-radius: 3px; padding: 0 2px; }
 
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
     th {
@@ -206,6 +259,20 @@
     <div class="verbatim-list" id="verbatims-list"><div class="empty">Chargement...</div></div>
   </div>
 
+</div>
+
+<!-- Modal réponse complète -->
+<div class="modal-overlay" id="modal-overlay" onclick="fermerModal(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-meta" id="modal-meta"></div>
+      </div>
+      <button class="modal-close" onclick="fermerModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body">Chargement...</div>
+  </div>
 </div>
 
 <script>
@@ -334,7 +401,7 @@ function rafraichir(periode, model) {
 
   mettreAJourGraphe(donnees, model);
   mettreAJourConcurrents(donnees);
-  mettreAJourVerbatims(donnees);
+  mettreAJourVerbatims(donnees, libelle);
 }
 
 function mettreAJourGraphe(donnees, model) {
@@ -420,35 +487,72 @@ function mettreAJourConcurrents(donnees) {
     </table>`;
 }
 
-function mettreAJourVerbatims(donnees) {
+function mettreAJourVerbatims(donnees, requeteLibelle) {
   const container = document.getElementById('verbatims-list');
-  const verbatims = [];
+  const items = [];
   [...donnees].reverse().forEach(e => {
-    (e.wefiit.verbatims || []).forEach(v => {
-      if (v && verbatims.length < 6) verbatims.push({ date: e.date, texte: v, model: e.model ?? 'chatgpt' });
+    const previews = e.wefiit.previews || e.wefiit.verbatims || [];
+    const chemins = e.wefiit.reponsesChemins || [];
+    previews.forEach((preview, i) => {
+      if (preview && items.length < 6) {
+        items.push({
+          date: e.date,
+          preview,
+          cheminReponse: chemins[i] || null,
+          model: e.model ?? 'chatgpt',
+          requete: requeteLibelle || '',
+        });
+      }
     });
   });
 
-  if (verbatims.length === 0) { container.innerHTML = '<div class="empty">Aucun verbatim disponible</div>'; return; }
+  if (items.length === 0) { container.innerHTML = '<div class="empty">Aucun verbatim disponible</div>'; return; }
 
   const moisNoms = ['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
-  container.innerHTML = verbatims.map(v => {
+  container.innerHTML = items.map(v => {
     const [, m, j] = v.date.split('-');
     const dateLabel = j + ' ' + moisNoms[parseInt(m) - 1];
-    // Nettoyer les verbatims bruités (Mapbox, instructions clavier, lignes collées avec chiffres)
-    let texte = v.texte
-      .split(/[\n|]+/)
-      .map(l => l.trim())
-      .filter(l => l.length > 5 && !/mapbox|openstreetmap|deux doigts|two fingers|ctrl pour|maintenez/i.test(l) && !/^[\w\s]+\d\.\d[\w\s]+\d\.\d/.test(l))
-      .join(' | ');
-    if (texte.length > 300) texte = texte.substring(0, 300) + '…';
     const badge = `<span class="badge-model badge-${v.model}">${v.model}</span>`;
+    const chemin = v.cheminReponse ? v.cheminReponse.replace(/'/g, "\\'") : '';
+    const requete = v.requete.replace(/'/g, "\\'");
+    const btnVoir = chemin
+      ? `<button class="verbatim-voir" onclick="ouvrirReponse('${chemin}', '${v.date}', '${v.model}', '${requete}')">Voir la réponse complète →</button>`
+      : '';
     return `<div class="verbatim-item ${v.model}">
       <div class="verbatim-date">${dateLabel} ${badge}</div>
-      <div class="verbatim-texte">${texte}</div>
+      <div class="verbatim-texte">${v.preview}</div>
+      ${btnVoir}
     </div>`;
   }).join('');
 }
+
+async function ouvrirReponse(chemin, date, model, requete) {
+  const overlay = document.getElementById('modal-overlay');
+  const body = document.getElementById('modal-body');
+  document.getElementById('modal-title').textContent = requete || 'Réponse complète';
+  document.getElementById('modal-meta').textContent = `${date} — ${model}`;
+  body.textContent = 'Chargement…';
+  overlay.classList.add('open');
+
+  try {
+    const res = await fetch(chemin);
+    if (!res.ok) throw new Error('Fichier introuvable');
+    const texte = await res.text();
+    body.innerHTML = texte.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/(wefiit)/gi, '<mark>$1</mark>');
+  } catch (e) {
+    body.textContent = 'Impossible de charger la réponse complète.';
+  }
+}
+
+function fermerModal(event) {
+  if (event && event.target !== document.getElementById('modal-overlay')) return;
+  document.getElementById('modal-overlay').classList.remove('open');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open');
+});
 
 chargerDonnees();
 </script>
