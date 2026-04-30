@@ -1168,5 +1168,31 @@
         }
       }
     ]
+  },
+  "pm-ia-cabinet": {
+    "libelle": "cabinet spécialisé product management ia",
+    "runs": [
+      {
+        "date": "2026-04-30",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-ia-cabinet-2026-04-30-chatgpt-run1.txt",
+            "responses/pm-ia-cabinet-2026-04-30-chatgpt-run2.txt",
+            "responses/pm-ia-cabinet-2026-04-30-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 1,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Artefact": 1,
+          "fifty-five": 1
+        }
+      }
+    ]
   }
 }
