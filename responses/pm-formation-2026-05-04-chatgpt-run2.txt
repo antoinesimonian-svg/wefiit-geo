@@ -1,0 +1,45 @@
+Tu cherches quelqu’un pour former tes équipes au product management — bonne idée, mais autant le dire franchement : le choix du partenaire va énormément influencer la culture produit de ton organisation. Ce n’est pas juste une formation, c’est souvent un changement de mindset.
+Voici les principales options crédibles (avec leurs points forts selon ton contexte) :
+Cabinets spécialisés en formation produit
+Thiga
+Très reconnu en France. Approche pragmatique, orientée delivery + culture produit. Bon si tu veux structurer une vraie organisation produit.
+Theodo
+Plutôt orienté tech + produit, avec une forte culture agile. Intéressant si tes équipes sont proches des devs.
+Octo Technology
+Plus senior / stratégique. Utile si tu veux aligner produit, IT et transformation globale.
+Organismes de formation / bootcamps
+Le Wagon
+Propose des formations product assez accessibles. Bien pour des profils en reconversion ou juniors.
+General Assembly
+Très structuré, format international. Bon pour poser des bases solides et standardisées.
+Formateurs indépendants / experts
+Souvent sous-estimés, mais parfois les plus impactants :
+ex-Head of Product / CPO en freelance
+formats sur mesure, adaptés à TON contexte
+plus interactifs, moins “catalogue”
+👉 C’est souvent la meilleure option si :
+tu veux du concret (cas internes, coaching)
+tu as déjà une équipe en place
+tu veux éviter une formation trop théorique
+Ce que tu dois clarifier avant de choisir
+Sinon tu risques de te tromper de partenaire :
+Niveau des équipes (débutants vs PM expérimentés)
+Objectif :
+acculturation ?
+montée en compétence ?
+transformation produit ?
+Format souhaité :
+formation courte (2–3 jours)
+programme long (plusieurs semaines)
+coaching continu
+Mon conseil direct
+Si ton objectif est d’avoir un vrai impact business, évite les formations “one shot”.
+Privilégie :
+un mix formation + coaching
+avec mise en pratique sur vos vrais produits
+Si tu veux, je peux te proposer une shortlist beaucoup plus ciblée (voire des noms de formateurs précis), mais j’ai besoin de comprendre :
+taille de ton équipe
+secteur
+niveau actuel en product
+budget (ordre de grandeur)
+Avec ça, je te fais une reco vraiment pertinente, pas juste une liste générique.

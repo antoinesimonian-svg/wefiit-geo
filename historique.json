@@ -245,6 +245,46 @@
           "BCG": 1,
           "Yield Studio": 1
         }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 2,
+          "previews": [
+            "👉 Idéal si tu veux un mix product + data-driven + execution. | 3. WeFiiT (très orienté impact) | Spécialiste du Product Management depuis 2019 wefiit…",
+            "🚀 Cabinets hybrides (Product + Tech / Data) | WeFiiT | Couverture complète : Product, Data, Marketing, Ops | Clients grands comptes (Accor, LV, etc.)"
+          ],
+          "reponsesChemins": [
+            "responses/pm-general-2026-05-04-chatgpt-run1.txt",
+            "responses/pm-general-2026-05-04-chatgpt-run2.txt",
+            "responses/pm-general-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 2,
+          "Wivoo": 2,
+          "Delva": 2,
+          "Swood": 2,
+          "IKXO": 2,
+          "TAK": 2,
+          "Converteo": 1,
+          "McKinsey": 1,
+          "Yield Advisory": 1,
+          "Yeita": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -431,6 +471,41 @@
         "wefiit": {
           "citations": 0,
           "verbatims": []
+        },
+        "concurrents": {}
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 2,
+          "previews": [
+            "🧠 Autres agences reconnues (à considérer) | WeFiiT → cabinet spécialisé produit avec forte croissance Sortlist | IKXO → expertise en product + data +…",
+            "🔎 Autres agences très crédibles (à considérer) | WeFiiT → cabinet spécialisé Product impact business Sortlist | IKXO → conseil + formation Product Ma…"
+          ],
+          "reponsesChemins": [
+            "responses/pm-paris-2026-05-04-chatgpt-run1.txt",
+            "responses/pm-paris-2026-05-04-chatgpt-run2.txt",
+            "responses/pm-paris-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "IKXO": 3,
+          "TAK": 3,
+          "Delva": 1,
+          "Yeita": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
         },
         "concurrents": {}
       }
@@ -632,6 +707,47 @@
         "wefiit": {
           "citations": 0,
           "verbatims": []
+        },
+        "concurrents": {}
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-ia-2026-05-04-chatgpt-run1.txt",
+            "responses/pm-ia-2026-05-04-chatgpt-run2.txt",
+            "responses/pm-ia-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Octo": 3,
+          "OCTO Technology": 3,
+          "McKinsey": 3,
+          "BCG": 3,
+          "Artefact": 3,
+          "Ekimetrics": 2,
+          "BAM": 2,
+          "Thiga": 2,
+          "Accenture": 1,
+          "fifty-five": 1,
+          "Eleven Strategy": 1,
+          "Bain": 1,
+          "Capgemini": 1,
+          "Quantmetry": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
         },
         "concurrents": {}
       }
@@ -846,6 +962,51 @@
           "IKXO": 1,
           "McKinsey": 1
         }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-data-2026-05-04-chatgpt-run1.txt",
+            "responses/pm-data-2026-05-04-chatgpt-run2.txt",
+            "responses/pm-data-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Octo": 3,
+          "OCTO Technology": 3,
+          "Artefact": 3,
+          "Ekimetrics": 3,
+          "fifty-five": 3,
+          "Thiga": 2,
+          "McKinsey": 2,
+          "Accenture": 2,
+          "Capgemini": 2,
+          "Zenika": 2,
+          "Xebia": 2,
+          "Bain": 2,
+          "Theodo": 1,
+          "BCG": 1,
+          "Quantmetry": 1,
+          "Thoughtworks": 1,
+          "Sia Partners": 1,
+          "Fabernovel": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -1015,6 +1176,43 @@
           "McKinsey": 1,
           "BCG": 1
         }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pmm-general-2026-05-04-chatgpt-run1.txt",
+            "responses/pmm-general-2026-05-04-chatgpt-run2.txt",
+            "responses/pmm-general-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Bain": 3,
+          "McKinsey": 3,
+          "Artefact": 3,
+          "BCG": 2,
+          "Accenture": 2,
+          "Wavestone": 2,
+          "Sia Partners": 2,
+          "Onepoint": 1,
+          "Product People": 1,
+          "fifty-five": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -1166,6 +1364,41 @@
           "Thiga": 2,
           "Hubvisory": 1
         }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-formation-2026-05-04-chatgpt-run1.txt",
+            "responses/pm-formation-2026-05-04-chatgpt-run2.txt",
+            "responses/pm-formation-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Thiga": 3,
+          "Octo": 2,
+          "OCTO Technology": 2,
+          "Xebia": 2,
+          "Accenture": 1,
+          "Theodo": 1,
+          "Bain": 1,
+          "McKinsey": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
+        },
+        "concurrents": {}
       }
     ]
   },
@@ -1192,6 +1425,45 @@
           "Artefact": 1,
           "fifty-five": 1
         }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-ia-cabinet-2026-05-04-chatgpt-run1.txt",
+            "responses/pm-ia-cabinet-2026-05-04-chatgpt-run2.txt",
+            "responses/pm-ia-cabinet-2026-05-04-chatgpt-run3.txt"
+          ]
+        },
+        "concurrents": {
+          "Octo": 3,
+          "OCTO Technology": 3,
+          "Artefact": 3,
+          "fifty-five": 3,
+          "Theodo": 3,
+          "Thiga": 2,
+          "Ekimetrics": 2,
+          "McKinsey": 1,
+          "BCG": 1,
+          "Capgemini": 1,
+          "BAM": 1,
+          "Zenika": 1
+        }
+      },
+      {
+        "date": "2026-05-04",
+        "model": "gemini",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
+        },
+        "concurrents": {}
       }
     ]
   }

@@ -1,0 +1,31 @@
+Si tu cherches un cabinet spécialisé en product management orienté IA, il en existe quelques-uns (ou proches) en France et en Europe, même si peu sont 100% positionnés uniquement là-dessus. Voici des options pertinentes selon ton besoin 👇
+Cabinets orientés product management + IA / data
+55 (Fifty-Five)
+Cabinet français reconnu en data, marketing et IA. Ils travaillent beaucoup sur des produits data-driven et accompagnent aussi la structuration produit autour de l’IA.
+Artefact
+Très fort en IA et transformation data. Ils ont une approche produit (notamment sur les use cases IA en production).
+Octo Technology
+Plutôt orienté product management et tech, avec une expertise croissante en IA. Bon mix discovery / delivery.
+Theodo
+Agence produit/tech qui intègre de plus en plus de projets IA dans ses développements.
+Cabinets plus “product-centric” avec composante IA
+Thiga
+Référence en product management en France. Pas spécialisé IA à la base, mais accompagne de plus en plus de produits intégrant de l’IA.
+UX-Republic
+Focus UX/Product, utile si ton sujet IA nécessite une forte couche d’expérience utilisateur.
+Acteurs très spécialisés IA (moins product, plus technique)
+Dataiku
+Plus éditeur que cabinet, mais intéressant si tu veux structurer un produit IA avec une plateforme.
+Hugging Face
+Pas un cabinet de conseil classique, mais incontournable si ton produit tourne autour des modèles IA.
+Comment choisir ?
+Tout dépend de ton besoin exact :
+👉 Structuration produit + discovery IA → Thiga, Octo
+👉 Use cases IA + industrialisation → Artefact, Fifty-Five
+👉 Build produit IA (hands-on) → Theodo
+👉 Plateforme / stack IA → Dataiku, Hugging Face
+Si tu veux, précise-moi :
+ton stade (idée, MVP, scale)
+ton secteur
+budget / taille de boîte
+Je peux te proposer une shortlist beaucoup plus ciblée.

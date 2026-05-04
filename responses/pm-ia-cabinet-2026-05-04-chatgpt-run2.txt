@@ -1,0 +1,34 @@
+Si tu cherches un cabinet spécialisé en product management orienté IA, il n’y en a pas énormément qui se positionnent exclusivement là-dessus, mais plusieurs cabinets et studios produits sont très solides sur l’intersection produit + data/IA. Voilà les plus pertinents :
+Cabinets de conseil / studios produits (forte expertise IA)
+Artefact
+Basé en France, très reconnu sur la data et l’IA. Ils accompagnent aussi sur la dimension produit (use cases, priorisation, ROI).
+Ekimetrics
+Très orienté data science + IA, avec une approche business/product (notamment sur marketing, pricing, etc.).
+55 (Fifty-Five)
+Spécialiste data/IA avec une forte culture produit et marketing digital.
+Bam.tech
+Studio produit français, très bon en discovery/delivery. Pas pure IA, mais ils bossent souvent avec des features data/ML.
+Theodo
+Approche produit + tech + delivery rapide. Intègrent de plus en plus de cas IA dans leurs projets.
+Cabinets plus “stratégiques” avec pratiques IA solides
+McKinsey & Company (via QuantumBlack)
+Boston Consulting Group (via BCG X)
+Capgemini Invent
+👉 Très forts sur la stratégie produit IA, mais souvent moins “hands-on PM” au quotidien.
+Acteurs plus niche / spécialisés produit + IA
+Alegria.group
+Positionné data/IA avec accompagnement opérationnel.
+Octo Technology
+Bon mix architecture + produit + data.
+Ce que tu dois vérifier (important)
+Tous ne font pas réellement du product management IA au sens strict. Regarde si le cabinet :
+fait de la discovery produit IA (use cases, problem framing)
+aide à prioriser des modèles/features ML
+comprend les contraintes data / MLOps / itération modèle
+travaille avec des PM, data scientists et engineers ensemble
+Si tu veux aller plus précis
+Dis-moi :
+ton besoin (recrutement, mission freelance, transformation produit, audit…)
+ton secteur (SaaS, fintech, retail, santé…)
+ton budget / taille de boîte
+Je peux te proposer une shortlist beaucoup plus ciblée (et vraiment adaptée à ton cas).

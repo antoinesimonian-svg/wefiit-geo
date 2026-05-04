@@ -1,0 +1,39 @@
+Si tu cherches un cabinet spécialisé en IA appliquée au product management, il y a plusieurs types d’acteurs selon ton besoin (stratégie, delivery, coaching, ou recrutement). Voici une sélection solide en Europe (et un peu global) :
+🧠 Cabinets de conseil spécialisés IA & produit
+Artefact
+Très reconnu en France pour la data & l’IA. Ils accompagnent aussi sur la construction de produits data/AI (use cases, roadmap, industrialisation).
+Eleven Strategy
+Cabinet plus boutique, spécialisé en stratégie IA et cas d’usage produit. Approche très orientée valeur business.
+Bain & Company (AI practice)
+Via leur pôle Advanced Analytics / AI, ils travaillent sur des produits data-driven à grande échelle.
+McKinsey & Company (QuantumBlack)
+Leur entité QuantumBlack est dédiée à l’IA et aide à construire des produits AI end-to-end.
+🚀 Studios & agences orientés AI Product
+BCG X
+Combine conseil + build de produits digitaux et IA.
+Octo Technology
+Très bon sur le product management + data/AI, avec une approche pragmatique.
+Thiga
+Pas purement IA, mais très fort en product management avec une montée en puissance sur les produits AI.
+🤖 Cabinets / collectifs spécialisés AI product & GenAI
+NLP People
+Plus communauté à la base, mais donne accès à des experts IA produit.
+Hugging Face
+Pas un cabinet classique, mais propose accompagnement et expertise pour produits basés sur modèles ML / LLM.
+🎯 Freelance / collectif (souvent le plus pointu)
+À Paris en particulier, beaucoup d’expertise se trouve chez :
+PM spécialisés AI / GenAI
+ex-FAANG ou scale-ups
+collectifs type “AI Product Studio”
+(Si tu veux, je peux te faire une shortlist ultra ciblée selon ton budget et ton secteur.)
+👉 Comment choisir ?
+Tout dépend de ton besoin :
+Stratégie / vision AI produit → Artefact, Eleven, Bain
+Build concret (MVP, features AI) → BCG X, Octo
+Structuration product org + AI → Thiga
+Cutting-edge GenAI → Hugging Face / experts indépendants
+Si tu me précises :
+ton secteur (SaaS, fintech, industrie…)
+ton stade (idée, MVP, scale)
+ton budget
+je peux te recommander 2–3 cabinets ultra pertinents plutôt qu’une liste générique.

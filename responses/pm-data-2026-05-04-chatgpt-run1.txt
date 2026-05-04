@@ -1,0 +1,36 @@
+Tu cherches un cabinet spécialisé en data product management — donc plutôt à l’intersection data, produit et stratégie. Il n’y en a pas énormément qui se positionnent uniquement là-dessus, mais plusieurs cabinets reconnus couvrent très bien ce domaine (souvent sous les angles data strategy, data product, ou AI product).
+Voici quelques acteurs pertinents (avec une forte présence en Europe / France) :
+Cabinets spécialisés data / AI / data product
+Artefact
+Très solide sur la data et l’IA, avec une vraie approche data product & use-case driven. Ils travaillent beaucoup sur la mise en production de produits data.
+Ekimetrics
+Positionnement data science + business impact, mais ils évoluent vers des approches data products (industrialisation, ROI, gouvernance).
+Fifty-Five
+Plutôt orienté marketing/data, mais avec une forte culture produit data et activation.
+Cabinets orientés produit + data
+Octo Technology
+Très bon sur le product management et la data platform → intéressant pour du data product structuré.
+Zenika
+Culture produit + tech + data, souvent impliqués sur des sujets de data mesh / data product.
+Thiga
+Spécialistes du product management. Moins “data-native”, mais pertinents si tu veux structurer une approche data product côté organisation / PM.
+Grands cabinets avec offres data product
+Capgemini Invent
+Accenture
+McKinsey & Company
+Ils ont tous des practices data product / data strategy, mais attention : c’est souvent plus macro (transformation, gouvernance) que très opérationnel.
+Acteurs plus pointus / niche (souvent les plus intéressants)
+Theodo Data & AI
+Très orienté delivery produit data (équipes produit + data + dev).
+Dataiku (plutôt éditeur, mais avec une forte approche data product dans leurs méthodos)
+Comment choisir (important)
+Tout dépend de ton besoin réel :
+👉 Créer un data product from scratch → Artefact, Theodo
+👉 Structurer une organisation data product (PM, process) → Thiga, Octo
+👉 Scaler / industrialiser (data platform, AI) → Ekimetrics, Capgemini
+👉 Use cases business rapides / ROI → Fifty-Five, Artefact
+Si tu veux, dis-moi :
+ton secteur
+ton niveau de maturité data
+et si c’est pour recruter, cadrer ou délivrer
+Je peux te faire une shortlist beaucoup plus ciblée (et éviter les cabinets “trop marketing” vs vraiment opérationnels).

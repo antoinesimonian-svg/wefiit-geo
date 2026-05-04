@@ -1,0 +1,38 @@
+Si tu cherches un cabinet spécialisé en IA + product management, il faut savoir qu’il n’existe pas énormément de structures purement dédiées à ce croisement précis — la plupart sont soit des cabinets IA, soit des cabinets de conseil en product, avec une forte pratique data/IA.
+Voici les options les plus pertinentes (en Europe / France et global) 👇
+Cabinets spécialisés IA avec forte dimension produit
+Artefact
+Basé à Paris, très solide en data & IA, avec une vraie approche orientée use cases produits (reco, pricing, personnalisation). Bon choix si tu veux industrialiser des features IA dans un produit.
+Dataiku
+Moins “cabinet pur”, mais accompagne souvent sur des sujets de gouvernance produit + IA (via partenaires). Très orienté plateforme produit IA.
+Ekimetrics
+Data science + IA appliquée au business, avec une approche produit de plus en plus forte (notamment marketing & customer-centric).
+Cabinets product + innovation avec couche IA
+Octo Technology
+Très bon sur le product management, avec des expertises IA/ML intégrées. Approche pragmatique (discovery + delivery).
+Fifty-Five
+Plutôt marketing/data, mais intéressant pour des produits digitaux enrichis par l’IA.
+BAM (Build And Market)
+Agence produit française qui commence à intégrer fortement l’IA dans les produits (UX + features intelligentes).
+Cabinets internationaux (plus stratégiques)
+McKinsey & Company (QuantumBlack)
+Très fort sur la stratégie IA + transformation produit à grande échelle.
+BCG (BCG X)
+Combine design produit, IA et build technique.
+Accenture (Applied Intelligence)
+Très orienté delivery industriel + produits data-driven.
+Acteurs plus “boutiques” / spécialisés (à explorer)
+Nabla (plutôt startup, mais intéressant côté AI product)
+Dust (très produit + IA, approche moderne)
+Studios de startup / venture builders IA (souvent très bons en AI product thinking)
+Comment choisir ?
+Tout dépend de ton besoin réel :
+Construire un produit IA from scratch → BAM, Octo, BCG X
+Scaler / industrialiser de l’IA dans un produit existant → Artefact, Ekimetrics, Accenture
+Stratégie + vision AI product → McKinsey, BCG
+Approche moderne / startup / GenAI → Dust, petits studios
+Si tu veux, précise-moi :
+ton budget
+ton secteur (SaaS, santé, fintech…)
+et si tu cherches du build, du conseil ou du recrutement
+Je peux te faire une shortlist beaucoup plus ciblée (et concrète, avec contacts ou profils types).
