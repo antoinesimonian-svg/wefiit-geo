@@ -338,6 +338,7 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
         const detection = detecterWefiit(reponse);
         resultat.wefiitMentionne = detection.trouve;
         resultat.preview = detection.preview;
+        resultat.verbatim = reponseNettoyee.slice(0, 500).trim();
         resultat.concurrents = extraireConcurrents(reponse);
 
         // Sauvegarder la réponse complète dans un fichier texte
@@ -371,6 +372,7 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
   const runsOk = runs.filter(r => r.statut === 'ok');
   const citationsWefiit = runsOk.filter(r => r.wefiitMentionne).length;
   const previews = runsOk.filter(r => r.preview).map(r => r.preview);
+  const verbatims = runsOk.map(r => r.verbatim).filter(Boolean);
   const reponsesChemins = runsOk.filter(r => r.cheminReponse).map(r => r.cheminReponse);
 
   const freqConcurrents = {};
@@ -396,6 +398,7 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
     model,
     runsOk: runsOk.length,
     wefiit: { citations: citationsWefiit, previews, reponsesChemins },
+    verbatims,
     concurrents: concurrentsTriees,
   });
 
@@ -458,19 +461,13 @@ async function main() {
     args: ['--disable-blink-features=AutomationControlled'],
   });
 
-  for (const requete of requetesALancer) {
-    for (const model of modeles) {
-      await lancerRequete(requete, historique, browser, model);
-
-      // Pause entre les runs (sauf le dernier)
-      const estDernier = requete === requetesALancer[requetesALancer.length - 1] && model === modeles[modeles.length - 1];
-      if (!estDernier) {
-        const pauseDuree = model === 'gemini' ? 20000 : 15000;
-        console.log(`\n⏳ Pause ${pauseDuree / 1000}s...`);
-        await new Promise(r => setTimeout(r, pauseDuree));
-      }
-    }
-  }
+  const taches = requetesALancer.flatMap(requete =>
+    modeles.map(model => lancerRequete(requete, historique, browser, model))
+  );
+  const resultats = await Promise.allSettled(taches);
+  resultats.forEach(r => {
+    if (r.status === 'rejected') console.log('⚠️  Erreur tâche :', r.reason?.message);
+  });
 
   await browser.close();
 
