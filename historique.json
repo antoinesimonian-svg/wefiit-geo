@@ -860,6 +860,18 @@
         },
         "verbatims": [],
         "concurrents": {}
+      },
+      {
+        "date": "2026-05-05",
+        "model": "chatgpt",
+        "runsOk": 0,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": []
+        },
+        "verbatims": [],
+        "concurrents": {}
       }
     ]
   },
