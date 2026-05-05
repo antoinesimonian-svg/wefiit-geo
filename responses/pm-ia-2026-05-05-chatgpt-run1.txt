@@ -1,0 +1,35 @@
+Si tu cherches un cabinet spécialisé en IA orienté product management, il faut viser des structures qui combinent stratégie produit, data/IA et delivery opérationnel. Ce positionnement reste assez niche, donc peu de cabinets sont “100 % AI PM”, mais certains s’en rapprochent fortement.
+Voici des options crédibles (avec différents angles) :
+Cabinets spécialisés IA + produit
+Artefact
+Basé en France, très reconnu en data & IA appliquée au business.
+➜ Fort sur la transformation produit data-driven, use cases IA concrets, et scaling.
+Ekimetrics
+Plus orienté data science & performance, mais avec une vraie capacité à structurer des produits IA.
+➜ Intéressant si ton besoin touche à la mesure, optimisation ou ML produit.
+Fifty-Five
+Très bon sur la data marketing & produit, avec intégration IA.
+➜ Utile pour des produits digitaux avec forte composante user/data.
+Cabinets produit avec forte dimension IA
+Thiga
+Référence en product management en France.
+➜ Pas exclusivement IA, mais ils intègrent de plus en plus AI product strategy.
+Octo Technology
+Très solide sur architecture + produit + data/IA.
+➜ Bon choix pour des produits IA complexes (plateformes, systèmes).
+Big players (si gros projet / scale)
+McKinsey & Company (QuantumBlack)
+BCG (BCG X)
+Accenture (AI & Applied Intelligence)
+➜ Très forts sur AI + product strategy + transformation à grande échelle, mais plus coûteux et parfois moins “hands-on produit”.
+Comment choisir (important)
+Tout dépend de ton besoin réel :
+Construire un produit IA from scratch → Artefact, Octo, Thiga
+Scaler / industrialiser de la data/IA → Ekimetrics, Accenture
+Cadrage stratégique + roadmap IA → BCG, McKinsey
+Structurer une équipe PM IA → Thiga
+Si tu veux, précise :
+ton secteur
+ton stade (idée / MVP / scale)
+et si tu cherches du conseil ou de l’opérationnel
+Je peux te proposer une shortlist beaucoup plus ciblée (voire des profils freelances spécialisés AI PM).

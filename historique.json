@@ -872,6 +872,43 @@
         },
         "verbatims": [],
         "concurrents": {}
+      },
+      {
+        "date": "2026-05-05",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-ia-2026-05-05-chatgpt-run1.txt",
+            "responses/pm-ia-2026-05-05-chatgpt-run2.txt",
+            "responses/pm-ia-2026-05-05-chatgpt-run3.txt"
+          ]
+        },
+        "verbatims": [
+          "Si tu cherches un cabinet spécialisé en IA orienté product management, il faut viser des structures qui combinent stratégie produit, data/IA et delivery opérationnel. Ce positionnement reste assez niche, donc peu de cabinets sont “100 % AI PM”, mais certains s’en rapprochent fortement.\nVoici des options crédibles (avec différents angles) :\nCabinets spécialisés IA + produit\nArtefact\nBasé en France, très reconnu en data & IA appliquée au business.\n➜ Fort sur la transformation produit data-driven,",
+          "Voici quelques cabinets et structures spécialisés en IA appliquée au product management (stratégie produit, data/AI products, transformation digitale) que tu peux regarder selon ton besoin (conseil, accompagnement, recrutement, ou delivery) :\nCabinets de conseil spécialisés AI + Product\nArtefact\nBasé à Paris, très reconnu pour le croisement data / IA / product. Ils travaillent beaucoup sur des produits data-driven (reco, pricing, marketing automation).\nOcto Technology\nMoins pure IA, mais très fo",
+          "Si tu cherches un cabinet spécialisé en IA appliquée au product management, il existe plusieurs types d’acteurs selon ton besoin (conseil stratégique, accompagnement produit, ou build technique). Voici quelques références solides en Europe (et accessibles depuis Paris) :\n🔍 Cabinets de conseil orientés IA + produit\nArtefact\nTrès fort sur la data et l’IA avec une vraie approche product-driven (use cases, ROI, déploiement). Idéal pour transformer une idée IA en produit concret.\nOcto Technology\nMoi"
+        ],
+        "concurrents": {
+          "Octo": 3,
+          "OCTO Technology": 3,
+          "Artefact": 3,
+          "McKinsey": 2,
+          "BCG": 2,
+          "fifty-five": 2,
+          "Eleven Strategy": 2,
+          "Thiga": 1,
+          "Accenture": 1,
+          "Ekimetrics": 1,
+          "Sia Partners": 1,
+          "Capgemini": 1,
+          "Quantmetry": 1,
+          "Theodo": 1,
+          "BAM": 1,
+          "Bain": 1
+        }
       }
     ]
   },
