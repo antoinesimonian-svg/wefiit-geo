@@ -1,0 +1,31 @@
+Si tu cherches un cabinet spécialisé en data product management, il n’y en a pas énormément qui se positionnent uniquement sur ce créneau, mais plusieurs cabinets en conseil data / produit ont une forte expertise dans ce domaine.
+Voici quelques références solides (avec présence en France ou Europe) :
+Cabinets spécialisés data / produit
+Artefact
+Très reconnu en data & AI, avec une vraie approche orientée data products et valeur business. Ils travaillent beaucoup sur la structuration de plateformes data et l’industrialisation.
+Elevate
+Cabinet plus pointu sur le data product management, gouvernance et data mesh. Moins connu mais très spécialisé.
+Fifty-Five
+Axé marketing/data, mais avec une forte maturité produit sur la donnée (tracking, use cases, activation).
+Cabinets produit avec forte composante data
+Thiga
+Référence en product management en France. Ils ont développé une expertise sur les data products (notamment dans des contextes data mesh / plateforme).
+Xebia
+Très solide en data engineering + produit. Bon positionnement pour construire des data platforms comme des produits.
+Octo Technology
+Moins “pure player data product”, mais forte culture produit + architecture data moderne.
+Cabinets data / transformation (plus larges mais pertinents)
+Accenture
+Capgemini Invent
+McKinsey & Company
+Ces acteurs intègrent le data product management dans des transformations plus globales (data strategy, AI, plateforme).
+Comment choisir ?
+Tout dépend de ton besoin réel :
+Structurer une équipe data product / data mesh → Elevate, Thiga
+Construire concrètement des data products (pipelines, use cases) → Artefact, Xebia
+Transformation à grande échelle → Accenture, Capgemini
+Si tu veux, précise :
+ton secteur
+taille de boîte
+niveau de maturité data
+Je peux te proposer une shortlist beaucoup plus ciblée (voire des cabinets plus “niche” en France).

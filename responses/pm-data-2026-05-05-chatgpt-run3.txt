@@ -1,0 +1,39 @@
+Si tu cherches un cabinet spécialisé en data product management (c’est-à-dire à l’intersection data, produit et stratégie), il faut viser des structures qui combinent data consulting + product mindset — ce n’est pas encore une spécialité “pure” pour beaucoup de cabinets.
+Voici des acteurs sérieux à considérer 👇
+Cabinets spécialisés data / product (fort alignement)
+Artefact
+Très reconnu en Europe, notamment en France. Fort en data + business + produit (use cases, AI, data products).
+Elevate
+Cabinet français orienté data transformation & data product avec une approche assez produit.
+Datatorii
+Spécialisé explicitement en data product management, data mesh, gouvernance moderne.
+Fifty-Five
+Très fort en data marketing, mais évolue vers des logiques de produits data.
+Cabinets product (avec forte composante data)
+Octo Technology
+Très solide sur le product management, avec expertise data/tech.
+Thiga
+Référence en product management en France. Pas data-first, mais très pertinent pour structurer des data products.
+BAM
+Agence produit digitale, utile si tu construis des interfaces autour de produits data.
+Grands cabinets avec offres data product
+McKinsey & Company (QuantumBlack)
+BCG (BCG X)
+Capgemini
+Accenture
+Ils proposent des offres “data product” mais souvent plus corporate / transformation globale.
+Ce qu’il faut vérifier (important)
+Tous ne font pas réellement du data product management. Pose ces questions :
+Est-ce qu’ils parlent de data products (et pas juste dashboards ou data platforms) ?
+Ont-ils des data product managers ou seulement des data engineers ?
+Travaillent-ils sur :
+discovery (use cases, valeur métier)
+ownership produit
+adoption & usage
+Mentionnent-ils data mesh / data as a product ?
+Si tu veux affiner
+Dis-moi :
+secteur (banque, retail, SaaS, etc.)
+taille de boîte
+besoin (recruter, mission, audit, formation)
+Je peux te proposer une shortlist beaucoup plus ciblée — voire te dire quels cabinets éviter selon ton cas.

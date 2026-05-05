@@ -1,0 +1,34 @@
+Si tu cherches un cabinet spécialisé en product management orienté IA, il faut distinguer deux types d’acteurs :
+les cabinets de conseil en product management avec une forte expertise data/IA
+les cabinets purement IA qui intègrent une approche produit
+Voici quelques références solides (internationales et présentes en Europe) :
+Cabinets spécialisés Product Management (avec IA)
+Thiga
+Cabinet français très reconnu en product management. Ils ont développé une expertise sur les produits data et IA (product discovery, stratégie IA, gouvernance).
+55
+Cabinet français spécialisé en data & IA. Moins “product pur”, mais très fort pour structurer des produits data-driven et IA à l’échelle.
+Octo Technology
+Très actif sur les sujets d’architecture, data et IA, avec une approche produit de plus en plus présente.
+Cabinets IA avec approche produit
+Artefact
+Un des leaders européens en data/IA. Ils accompagnent souvent la création de produits IA (reco engines, pricing, NLP, etc.).
+Bain & Company (via leur practice AI)
+Plus stratégique, mais avec des offres autour de l’AI product strategy et du scaling produit.
+McKinsey & Company (QuantumBlack)
+Très avancé sur l’industrialisation de produits IA.
+Acteurs “product-first” avec forte culture tech/IA
+Pentalog
+Combine product management + développement + IA.
+BAM
+Plutôt produit digital, mais avec des cas IA (MVP, discovery, etc.).
+Comment choisir ?
+Tout dépend de ton besoin réel :
+Cadrage produit IA (discovery, use cases, roadmap) → Thiga, BAM
+Build & industrialisation IA → Artefact, 55
+Transformation stratégique IA à grande échelle → McKinsey, Bain
+Produit + tech + delivery → Pentalog
+Si tu veux, précise :
+ton secteur (startup, grand groupe, SaaS…)
+ton niveau de maturité IA
+et si tu cherches du conseil ou du recrutement
+Je peux te proposer une shortlist beaucoup plus ciblée.

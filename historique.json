@@ -289,14 +289,35 @@
       {
         "date": "2026-05-05",
         "model": "chatgpt",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
-          "citations": 0,
-          "previews": [],
-          "reponsesChemins": []
+          "citations": 3,
+          "previews": [
+            "➡️ Très bon choix pour scale-ups / grands groupes wivoo.fr | 🥉 WeFiiT | Couverture complète : strategy → discovery → delivery → ops | Travaille avec …",
+            "wivoo.fr | 5. WeFiiT | Positionnement : product management complet (stratégie → ops) | Forces :",
+            "👉 Idéal pour structurer une équipe produit existante. | 5. WeFiiT | 👉 Cabinet français avec clients grands comptes + scale-ups wefiit.com | Position…"
+          ],
+          "reponsesChemins": [
+            "responses/pm-general-2026-05-05-chatgpt-run1.txt",
+            "responses/pm-general-2026-05-05-chatgpt-run2.txt",
+            "responses/pm-general-2026-05-05-chatgpt-run3.txt"
+          ]
         },
-        "verbatims": [],
-        "concurrents": {}
+        "verbatims": [
+          "Voici une sélection solide et reconnue de cabinets de conseil en Product Management (PM) — avec un focus Paris / France 🇫🇷. Je t’ai séparé ça en 3 catégories pour t’aider à choisir selon ton besoin (opérationnel vs stratégie vs hybride).\n🔝 Cabinets spécialisés Product Management (les plus pertinents)\n🥇 Delva\n👉 Ultra-spécialiste PM (rare en France)\n100% dédié au Product Management\nConsultants ex-CPO / Head of Product\nTrès orienté delivery concret (PM/PO en mission)\n➡️ Idéal si tu veux renfor",
+          "Voici une sélection fiable et reconnue de cabinets de conseil en Product Management (surtout à Paris / France), avec différents positionnements selon ton besoin 👇\n🔝 Cabinets spécialisés Product Management (les plus pertinents)\n1. TAK\n5.0•Council\nPositionnement : pur player Product + Data\nForces :\nforte culture delivery (missions concrètes, impact rapide)\nexpertise Product Ops et organisation produit\nIdéal si tu veux accélérer une équipe produit existante\ntak.fr\n2. Delva\nPositionnement : cabine",
+          "Voici une sélection claire des meilleurs cabinets de conseil en Product Management en France (surtout à Paris), avec leurs spécificités — parce que “meilleur” dépend beaucoup de ton besoin (stratégie, opérationnel, freelance-like, scale-up, etc.).\n🥇 Les références incontournables\n1. Thiga\n👉 Le pionnier du Product Management en France Impli\nPositionnement : stratégie + transformation produit + formation\nPoints forts :\nTrès structurant (frameworks, org produit)\nForte crédibilité grands groupes /"
+        ],
+        "concurrents": {
+          "Wivoo": 3,
+          "Delva": 3,
+          "Swood": 3,
+          "IKXO": 3,
+          "TAK": 3,
+          "Thiga": 1,
+          "Mozza": 1,
+          "Yield Studio": 1
+        }
       },
       {
         "date": "2026-05-05",
@@ -536,14 +557,31 @@
       {
         "date": "2026-05-05",
         "model": "chatgpt",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
-          "citations": 0,
-          "previews": [],
-          "reponsesChemins": []
+          "citations": 1,
+          "previews": [
+            "💡 Idéal pour projets complexes et grandes organisations 5 Degrés | 5. WeFiiT | 👉 Spécialiste du scaling produit | Clients : grands groupes (Accor, F…"
+          ],
+          "reponsesChemins": [
+            "responses/pm-paris-2026-05-05-chatgpt-run1.txt",
+            "responses/pm-paris-2026-05-05-chatgpt-run2.txt",
+            "responses/pm-paris-2026-05-05-chatgpt-run3.txt"
+          ]
         },
-        "verbatims": [],
-        "concurrents": {}
+        "verbatims": [
+          "Voici une sélection fiable et actuelle (2025–2026) des top agences de Product Management à Paris, basée sur leur spécialisation produit, leur réputation et leurs cas clients 👇\n🥇 1. Thiga\n👉 Référence incontournable en France\nCabinet pionnier du Product Management\nOffre complète : stratégie, ops, product design, formation\nTravaille avec grands groupes + scale-ups\nDispose de sa propre academy produit\n💡 Idéal si tu veux structurer une orga produit de A à Z Impli\n🥈 2. Delva\n👉 Cabinet 100% spéci",
+          "Voici une sélection fiable et actuelle des 5 meilleures agences de Product Management à Paris, basée sur leur spécialisation, réputation et positionnement (cabinet pur produit vs agence hybride design/dev 👇).\n🥇 Top 5 agences Product Management à Paris\n1.",
+          "Voici une sélection solide de 5 agences de Product Management à Paris, reconnues pour leur expertise (mix entre cabinets spécialisés, pure players product et conseil digital). Je t’ai mis les plus pertinentes selon le marché actuel 👇\n🥇 Top agences Product Management à Paris\n1. Thiga\n4.8•Council•Ouverture\n👉 Probablement la référence en France\nCabinet pionnier du Product Management\nIntervient sur stratégie, discovery, delivery + formation (Thiga Academy)\nTrès fort sur la structuration produit d"
+        ],
+        "concurrents": {
+          "Thiga": 2,
+          "Delva": 2,
+          "IKXO": 2,
+          "TAK": 2,
+          "Galadrim": 1,
+          "Yeita": 1
+        }
       },
       {
         "date": "2026-05-05",
@@ -1083,14 +1121,36 @@
       {
         "date": "2026-05-05",
         "model": "chatgpt",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
           "citations": 0,
           "previews": [],
-          "reponsesChemins": []
+          "reponsesChemins": [
+            "responses/pm-data-2026-05-05-chatgpt-run1.txt",
+            "responses/pm-data-2026-05-05-chatgpt-run2.txt",
+            "responses/pm-data-2026-05-05-chatgpt-run3.txt"
+          ]
         },
-        "verbatims": [],
-        "concurrents": {}
+        "verbatims": [
+          "Si tu cherches un cabinet spécialisé en data product management, il n’y en a pas énormément qui se positionnent uniquement sur ce créneau, mais plusieurs cabinets en conseil data / produit ont une forte expertise dans ce domaine.\nVoici quelques références solides (avec présence en France ou Europe) :\nCabinets spécialisés data / produit\nArtefact\nTrès reconnu en data & AI, avec une vraie approche orientée data products et valeur business. Ils travaillent beaucoup sur la structuration de plateforme",
+          "Voici une sélection pertinente de cabinets spécialisés en Data Product Management / Product + Data (notamment à Paris et en France), avec différents positionnements selon ton besoin 👇\n🔎 Cabinets spécialisés Data Product / Product Data\n🧠 Pure players Product + Data\nWivoo\n→ Très orienté Product Management + Data + IA\n→ Intervient sur discovery, roadmap, delivery et produits data\nTAK\n→ Positionnement clair sur Data Product Management & Product Ops\n→ Missions opérationnelles (PM / PO data)\nUnnest",
+          "Si tu cherches un cabinet spécialisé en data product management (c’est-à-dire à l’intersection data, produit et stratégie), il faut viser des structures qui combinent data consulting + product mindset — ce n’est pas encore une spécialité “pure” pour beaucoup de cabinets.\nVoici des acteurs sérieux à considérer 👇\nCabinets spécialisés data / product (fort alignement)\nArtefact\nTrès reconnu en Europe, notamment en France. Fort en data + business + produit (use cases, AI, data products).\nElevate\nCabi"
+        ],
+        "concurrents": {
+          "Thiga": 2,
+          "Octo": 2,
+          "OCTO Technology": 2,
+          "McKinsey": 2,
+          "Accenture": 2,
+          "Capgemini": 2,
+          "Artefact": 2,
+          "fifty-five": 2,
+          "Xebia": 1,
+          "Wivoo": 1,
+          "TAK": 1,
+          "BCG": 1,
+          "BAM": 1
+        }
       },
       {
         "date": "2026-05-05",
@@ -1313,14 +1373,33 @@
       {
         "date": "2026-05-05",
         "model": "chatgpt",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
           "citations": 0,
           "previews": [],
-          "reponsesChemins": []
+          "reponsesChemins": [
+            "responses/pmm-general-2026-05-05-chatgpt-run1.txt",
+            "responses/pmm-general-2026-05-05-chatgpt-run2.txt",
+            "responses/pmm-general-2026-05-05-chatgpt-run3.txt"
+          ]
         },
-        "verbatims": [],
-        "concurrents": {}
+        "verbatims": [
+          "Un cabinet de conseil en Product Marketing Management (PMM) accompagne les entreprises pour mieux positionner, lancer et développer leurs produits. Concrètement, ces cabinets interviennent à l’intersection du produit, du marketing et des ventes.\n🎯 Ce qu’ils font\nUn cabinet PMM peut t’aider sur plusieurs axes clés :\n1. Positionnement & messaging\nDéfinir la proposition de valeur\nClarifier le positionnement marché\nConstruire un discours différenciant\n2. Go-to-market (GTM)\nStratégie de lancement pr",
+          "Un cabinet de conseil en Product Marketing Management (PMM) aide les entreprises à mieux positionner leurs produits, structurer leur go-to-market et aligner marketing, produit et ventes. Si tu cherches des références sérieuses (en France ou à l’international), voici quelques cabinets reconnus :\n🔹 Cabinets spécialisés ou forts en PMM / marketing produit\nProduct Marketing Alliance\nPlutôt une communauté + ressources + formations, mais très influente en PMM. Utile pour structurer une stratégie ou t",
+          "Si tu cherches un cabinet de conseil en product marketing management, il y a plusieurs options solides selon ton besoin (stratégie produit, go-to-market, pricing, growth, etc.). Voilà un aperçu clair pour t’orienter 👇\n🔝 Cabinets internationaux (stratégie + product marketing)\nMcKinsey & Company\nTrès fort sur la stratégie produit, le pricing et le lancement à grande échelle.\nBoston Consulting Group (BCG)\nBon mix entre stratégie, innovation produit et transformation digitale.\nBain & Company\nExcel"
+        ],
+        "concurrents": {
+          "Bain": 3,
+          "McKinsey": 3,
+          "Octo": 2,
+          "OCTO Technology": 2,
+          "Fabernovel": 2,
+          "BCG": 2,
+          "Thiga": 1,
+          "Artefact": 1,
+          "Wavestone": 1,
+          "Onepoint": 1
+        }
       },
       {
         "date": "2026-05-05",
@@ -1523,14 +1602,29 @@
       {
         "date": "2026-05-05",
         "model": "chatgpt",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
           "citations": 0,
           "previews": [],
-          "reponsesChemins": []
+          "reponsesChemins": [
+            "responses/pm-formation-2026-05-05-chatgpt-run1.txt",
+            "responses/pm-formation-2026-05-05-chatgpt-run2.txt",
+            "responses/pm-formation-2026-05-05-chatgpt-run3.txt"
+          ]
         },
-        "verbatims": [],
-        "concurrents": {}
+        "verbatims": [
+          "Trouver le bon partenaire pour former tes équipes en product management dépend surtout de ton contexte (taille de l’équipe, niveau actuel, objectifs business, etc.). Je peux déjà te donner quelques pistes solides — et ensuite affiner si tu veux.\nCabinets et organismes reconnus\nThiga Academy\nTrès connu en France, orienté product management moderne (discovery, delivery, product culture). Bonne option pour des équipes produit déjà en place.\nTheodo\nPropose des formations liées au product management",
+          "Tu vas devoir être un peu plus précis, sinon tu risques de tomber sur des prestataires très génériques qui font du “product management” à toutes les sauces sans réel impact.\nPour bien choisir un partenaire de formation en product management, regarde surtout trois choses : leur approche (théorique vs terrain), leur expérience produit réelle, et leur capacité à s’adapter à ton contexte (taille d’équipe, maturité produit, secteur).\nVoici quelques options solides que tu peux explorer en France et en",
+          "Trouver un bon partenaire pour former tes équipes en product management demande surtout de clarifier ton besoin (niveau des équipes, culture produit actuelle, objectifs concrets). Voici quelques options solides — avec des approches différentes selon ce que tu recherches :\n🎓 Cabinets et organismes spécialisés\nThiga\nTrès reconnu en France. Ils font à la fois du conseil et de la formation, avec une approche très opérationnelle (product discovery, delivery, org produit). Adapté si tu veux transform"
+        ],
+        "concurrents": {
+          "Thiga": 3,
+          "Xebia": 2,
+          "Theodo": 2,
+          "Octo": 2,
+          "OCTO Technology": 2,
+          "fifty-five": 1
+        }
       },
       {
         "date": "2026-05-05",
@@ -1612,14 +1706,36 @@
       {
         "date": "2026-05-05",
         "model": "chatgpt",
-        "runsOk": 0,
+        "runsOk": 3,
         "wefiit": {
           "citations": 0,
           "previews": [],
-          "reponsesChemins": []
+          "reponsesChemins": [
+            "responses/pm-ia-cabinet-2026-05-05-chatgpt-run1.txt",
+            "responses/pm-ia-cabinet-2026-05-05-chatgpt-run2.txt",
+            "responses/pm-ia-cabinet-2026-05-05-chatgpt-run3.txt"
+          ]
         },
-        "verbatims": [],
-        "concurrents": {}
+        "verbatims": [
+          "Voici quelques cabinets et structures spécialisés en product management orienté IA (conseil, accompagnement produit, stratégie data/ML), avec des positionnements différents selon tes besoins :\nCabinets de conseil spécialisés IA + produit\nArtefact\nTrès présent en Europe (dont Paris). Combine data, IA et product thinking. Bon choix pour construire des produits IA à l’échelle (data platforms, use cases métier).\nSia Partners\nCabinet de conseil avec une forte practice IA (Sia AI). Approche orientée t",
+          "Si tu cherches un cabinet spécialisé en product management orienté IA, il faut distinguer deux types d’acteurs :\nles cabinets de conseil en product management avec une forte expertise data/IA\nles cabinets purement IA qui intègrent une approche produit\nVoici quelques références solides (internationales et présentes en Europe) :\nCabinets spécialisés Product Management (avec IA)\nThiga\nCabinet français très reconnu en product management. Ils ont développé une expertise sur les produits data et IA (p",
+          "Si tu cherches un cabinet spécialisé en product management orienté IA, il y a quelques acteurs sérieux (surtout en France et en Europe) qui combinent stratégie produit + data/AI :\nCabinets et studios spécialisés\nArtefact\nTrès reconnu en data et IA. Ils font aussi du product thinking appliqué aux produits data/AI (use cases, roadmap, déploiement).\nFifty-Five\nPlutôt axé data marketing à l’origine, mais avec une forte compétence en produits data/IA et structuration produit.\nBAM\nProduct studio paris"
+        ],
+        "concurrents": {
+          "Octo": 3,
+          "OCTO Technology": 3,
+          "Artefact": 3,
+          "Thiga": 2,
+          "McKinsey": 2,
+          "fifty-five": 2,
+          "BAM": 2,
+          "Sia Partners": 1,
+          "BCG": 1,
+          "Accenture": 1,
+          "Bain": 1,
+          "Pentalog": 1,
+          "Theodo": 1
+        }
       },
       {
         "date": "2026-05-05",
