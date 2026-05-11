@@ -1081,6 +1081,36 @@
           "Theodo": 1,
           "BAM": 1
         }
+      },
+      {
+        "date": "2026-05-11",
+        "model": "gemini",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-ia-2026-05-11-gemini-run1.txt",
+            "responses/pm-ia-2026-05-11-gemini-run2.txt",
+            "responses/pm-ia-2026-05-11-gemini-run3.txt"
+          ]
+        },
+        "verbatims": [
+          "Le domaine du Product Management (PM) spécialisé en Intelligence Artificielle est en pleine explosion. Contrairement au PM traditionnel, l'IA impose de gérer l'incertitude des modèles, la qualité des données et",
+          "Le domaine du Product Management (PM) spécialisé en Intelligence Artificielle est en pleine explosion. Contrairement au PM traditionnel, l’IA nécessite une compréhension profonde du cycle de vie de la donnée, de l'incertitude des modèles et des enjeux éthiques.Voici une segmentation des cabinets et ressources incontournables pour structurer ou recruter dans ce secteur :1. Cabinets de Conseil & Stratégie IACes cabinets interviennent pour aider les entreprises à définir leur \"AI Roadmap\" et à stru",
+          "Le domaine du Product Management (PM) spécialisé en Intelligence Artificielle est en pleine explosion. Contrairement au PM traditionnel, l'IA nécessite une compréhension profonde du cycle de vie des données, de l'incertitude des modèles et des enjeux éthiques.Si vous cherchez un cabinet pour accompagner votre transformation, recruter des talents ou former vos équipes, voici les types d'acteurs qui dominent le marché en 2026 :1. Les Cabinets de Conseil en Stratégie & ProduitCes structures aident"
+        ],
+        "concurrents": {
+          "Thiga": 2,
+          "Artefact": 2,
+          "Eleven Strategy": 1,
+          "McKinsey": 1,
+          "BCG": 1,
+          "Theodo": 1,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Accenture": 1
+        }
       }
     ]
   },
