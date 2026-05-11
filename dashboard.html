@@ -116,8 +116,25 @@
       padding: 12px 16px;
     }
     .verbatim-item.gemini { border-left-color: #3949ab; }
-    .verbatim-item.wefiit-cite { background: #f0faf4; }
-    .verbatim-item.wefiit-absent { background: #f8f9fa; opacity: 0.75; }
+    .verbatim-item.wefiit-cite {
+      background: #edfaf3;
+      border-left: 4px solid #22c55e;
+      box-shadow: 0 0 0 1px #bbf0d0;
+    }
+    .verbatim-item.wefiit-cite .verbatim-texte { color: #1a3a2a; }
+    .verbatim-item.wefiit-absent { background: #f8f9fa; opacity: 0.65; }
+    .verbatim-badge-wefiit {
+      display: inline-block;
+      background: #22c55e;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
     .verbatim-date { font-size: 11px; color: #999; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
     .verbatim-texte { font-size: 13px; color: #444; font-style: italic; line-height: 1.5; }
     .verbatim-voir {
@@ -524,8 +541,9 @@ function mettreAJourVerbatims(donnees, requeteLibelle) {
       ? `<button class="verbatim-voir" onclick="ouvrirReponse('${chemin}', '${v.date}', '${v.model}', '${requete}')">Voir la réponse complète →</button>`
       : '';
     const classeWefiit = v.wefiitCite ? 'wefiit-cite' : 'wefiit-absent';
+    const badgeWefiit = v.wefiitCite ? '<span class="verbatim-badge-wefiit">WeFiiT ✓</span>' : '';
     return `<div class="verbatim-item ${v.model} ${classeWefiit}">
-      <div class="verbatim-date">${dateLabel} ${badge}</div>
+      <div class="verbatim-date">${dateLabel} ${badge}${badgeWefiit}</div>
       <div class="verbatim-texte">${v.preview}</div>
       ${btnVoir}
     </div>`;
