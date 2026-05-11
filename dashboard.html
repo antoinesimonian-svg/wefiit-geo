@@ -491,13 +491,13 @@ function mettreAJourVerbatims(donnees, requeteLibelle) {
   const container = document.getElementById('verbatims-list');
   const items = [];
   [...donnees].reverse().forEach(e => {
-    const previews = e.wefiit.previews || e.wefiit.verbatims || [];
+    const verbatims = e.verbatims || e.wefiit.previews || [];
     const chemins = e.wefiit.reponsesChemins || [];
-    previews.forEach((preview, i) => {
-      if (preview && items.length < 6) {
+    verbatims.forEach((texte, i) => {
+      if (texte && items.length < 9) {
         items.push({
           date: e.date,
-          preview,
+          preview: texte,
           cheminReponse: chemins[i] || null,
           model: e.model ?? 'chatgpt',
           requete: requeteLibelle || '',

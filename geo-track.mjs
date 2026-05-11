@@ -18,6 +18,7 @@ const REQUETES_PATH = `${BASE_DIR}/requetes.json`;
 const HISTORIQUE_PATH = `${BASE_DIR}/historique.json`;
 const SCREENSHOTS_BASE = `${BASE_DIR}/screenshots`;
 const RESPONSES_BASE = `${BASE_DIR}/responses`;
+const GEMINI_SESSION_PATH = `${BASE_DIR}/gemini-session.json`;
 
 const MOTS_CLES_WEFIIT = [/wefiit/i, /we\s*fiit/i, /wefiit\.com/i, /cabinet\s+wefiit/i];
 
@@ -75,16 +76,11 @@ function detecterWefiit(texteRaw) {
 
   if (lignesAvecMention.length === 0) return { trouve: false, preview: null };
 
-  // Extraire un preview court autour de la première mention (150 chars)
-  const idxPremiere = lignesAvecMention[0];
-  const debut = Math.max(0, idxPremiere - 1);
-  const fin = Math.min(lignes.length, idxPremiere + 3);
-  let preview = lignes.slice(debut, fin)
-    .filter(l => l.trim().length > 3)
-    .join(' | ')
+  // Extraire la ligne exacte contenant la première mention WeFiiT (200 chars max)
+  let preview = lignes[lignesAvecMention[0]]
     .replace(/(wefiit)([A-ZÀ-Ü])/gi, '$1 $2')
     .trim();
-  if (preview.length > 150) preview = preview.substring(0, 150) + '…';
+  if (preview.length > 200) preview = preview.substring(0, 200) + '…';
 
   return { trouve: true, preview };
 }
@@ -129,12 +125,20 @@ async function attendreFinReponse(page, timeout = 90000) {
 
 async function runChatGPT(page, libelle) {
   await page.goto('https://chatgpt.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+  await page.waitForTimeout(2000);
 
-  const selecteurInput = '#prompt-textarea, [contenteditable="true"][data-placeholder]';
-  await page.waitForSelector(selecteurInput, { timeout: 20000 });
+  // Chercher le premier élément de saisie visible (exclure les fallback cachés)
+  const champSaisie = await page.evaluateHandle(() => {
+    const candidats = [
+      ...document.querySelectorAll('#prompt-textarea, [contenteditable="true"][data-placeholder], div[contenteditable="true"]')
+    ];
+    return candidats.find(el => {
+      const style = window.getComputedStyle(el);
+      return style.display !== 'none' && style.visibility !== 'hidden' && el.offsetParent !== null;
+    }) || null;
+  });
 
-  const champSaisie = await page.$(selecteurInput);
-  if (!champSaisie) throw new Error('Champ de saisie introuvable');
+  if (!champSaisie || !champSaisie.asElement()) throw new Error('Champ de saisie introuvable');
 
   await champSaisie.click();
   await page.keyboard.type(libelle, { delay: 30 });
@@ -154,19 +158,20 @@ async function runChatGPT(page, libelle) {
 async function trouverInputGemini(page) {
   // Scroll léger pour déclencher le rendu lazy de Gemini
   await page.evaluate(() => window.scrollTo(0, 100));
-  await page.waitForTimeout(1000);
+  await page.waitForTimeout(1500);
   await page.evaluate(() => window.scrollTo(0, 0));
-  await page.waitForTimeout(500);
+  await page.waitForTimeout(1000);
 
+  // Cibler le div.ql-editor (Quill) qui est le vrai champ de saisie Gemini
   const selecteurs = [
-    'rich-textarea p',
-    'rich-textarea [contenteditable="true"]',
+    'div.ql-editor',
+    'rich-textarea div[contenteditable="true"]',
+    'rich-textarea [contenteditable]',
     'p[data-placeholder]',
-    '[data-testid="input-area"] [contenteditable]',
     'div[contenteditable="true"]',
   ];
   for (const sel of selecteurs) {
-    const el = await page.waitForSelector(sel, { timeout: 6000 }).catch(() => null);
+    const el = await page.waitForSelector(sel, { timeout: 8000, state: 'visible' }).catch(() => null);
     if (el) return el;
   }
   return null;
@@ -211,44 +216,30 @@ async function attendreFinReponseGemini(page, timeout = 120000) {
 }
 
 async function accepterCookiesGemini(page) {
-  // Bannière de consentement cookies Google — plusieurs variantes selon la langue
-  const selecteursCookies = [
-    '#L2AGLb',  // ID stable du bouton "Tout accepter" Google Consent
-    'button[aria-label*="Accept all"]',
-    'button[aria-label*="Tout accepter"]',
-    'button[aria-label*="Accepter"]',
-    'form[action*="consent"] button:last-child',
-  ];
+  // Chercher "Tout accepter" par texte visible dans tous les boutons de la page
+  const clique = await page.evaluate(() => {
+    const boutons = [...document.querySelectorAll('button')];
+    const cible = boutons.find(b =>
+      /tout accepter|accept all|j'accepte|agree/i.test(b.textContent?.trim())
+    );
+    if (cible) { cible.click(); return true; }
+    return false;
+  });
+
+  if (clique) {
+    await page.waitForTimeout(3000);
+    return true;
+  }
+
+  // Fallback sélecteurs ID stables Google Consent
+  const selecteursCookies = ['#L2AGLb', 'form[action*="consent"] button:last-child'];
   for (const sel of selecteursCookies) {
     const bouton = await page.$(sel);
     if (bouton) {
       await bouton.click();
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(3000);
       return true;
     }
-  }
-
-  // Variante : overlay cdk-overlay (bannière consentement Angular/Google)
-  // Cherche un bouton contenant "Accepter" ou "Accept" dans l'overlay
-  const overlayBouton = await page.evaluateHandle(() => {
-    const overlay = document.querySelector('.cdk-overlay-container');
-    if (!overlay) return null;
-    const boutons = [...overlay.querySelectorAll('button')];
-    return boutons.find(b =>
-      /accepter|accept|tout accepter|j'accepte|agree/i.test(b.textContent)
-    ) || null;
-  });
-  if (overlayBouton && overlayBouton.asElement()) {
-    await overlayBouton.asElement().click();
-    await page.waitForTimeout(2000);
-    return true;
-  }
-
-  // Dernier recours : appuyer Escape pour fermer l'overlay
-  const overlayPresent = await page.$('.cdk-overlay-container .cdk-overlay-backdrop');
-  if (overlayPresent) {
-    await page.keyboard.press('Escape');
-    await page.waitForTimeout(1000);
   }
 
   return false;
@@ -256,29 +247,31 @@ async function accepterCookiesGemini(page) {
 
 async function runGemini(page, libelle) {
   await page.goto('https://gemini.google.com/app', { waitUntil: 'networkidle', timeout: 40000 }).catch(() => null);
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(2000);
 
-  // Accepter les cookies si la bannière est présente
+  // Accepter les cookies si la bannière réapparaît (normalement déjà fait au démarrage)
   await accepterCookiesGemini(page);
 
   // Détecter un vrai mur de connexion
   const loginWall = await page.$('input[type="email"], form[action*="signin"]');
   if (loginWall) throw new Error('login-wall');
 
-  // Trouver l'input, taper la requête et envoyer
-  const inputTrouve = await trouverInputGemini(page);
-  if (!inputTrouve) throw new Error('Input Gemini introuvable');
+  // Taper directement via le locator Playwright (contourne les checks elementHandle)
+  const inputSel = 'div.ql-editor';
+  await page.click(inputSel, { force: true });
+  await page.waitForTimeout(300);
+  await page.type(inputSel, libelle, { delay: 30 });
+  await page.waitForTimeout(800);
 
-  await inputTrouve.click();
-  await page.keyboard.type(libelle, { delay: 30 });
-  await page.waitForTimeout(500);
-
-  // Bouton envoi
-  const boutonEnvoi = await page.$(
-    'button[aria-label*="Send"], button[aria-label*="Envoyer"], button[mattooltip*="Send"]'
-  );
-  if (boutonEnvoi) await boutonEnvoi.click();
-  else await page.keyboard.press('Enter');
+  // Bouton envoi — forcer aussi avec JS si disabled
+  const boutonEnvoiEnvoye = await page.evaluate(() => {
+    const btn = document.querySelector(
+      'button[aria-label*="Send"], button[aria-label*="Envoyer"], button[mattooltip*="Send"], button[data-test-id*="send"]'
+    );
+    if (btn) { btn.click(); return true; }
+    return false;
+  });
+  if (!boutonEnvoiEnvoye) await page.keyboard.press('Enter');
 
   return await attendreFinReponseGemini(page);
 }
@@ -287,7 +280,8 @@ async function runGemini(page, libelle) {
 // Orchestration par requête
 // ─────────────────────────────────────────────
 
-async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
+// context est soit un BrowserContext partagé (Gemini), soit un Browser (ChatGPT — crée un context par requête)
+async function lancerRequete(requete, historique, browserOrContext, model = 'chatgpt') {
   const { id, libelle } = requete;
   const dateJour = dateAujourdhui();
   const pauseInterRuns = model === 'gemini' ? 12000 : 8000;
@@ -297,8 +291,8 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
     historique[id] = { libelle, runs: [] };
   }
 
-  // Vérifier doublon (par date ET par modèle)
-  if (historique[id].runs.find(r => r.date === dateJour && (r.model ?? 'chatgpt') === model)) {
+  // Vérifier doublon (par date ET par modèle) — ignorer les entrées fantômes (runsOk: 0)
+  if (historique[id].runs.find(r => r.date === dateJour && (r.model ?? 'chatgpt') === model && r.runsOk > 0)) {
     console.log(`⚠️  [${id}/${model}] Run déjà effectué aujourd'hui (${dateJour}) — ignoré.`);
     return;
   }
@@ -309,10 +303,14 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
   const screenshotDir = `${SCREENSHOTS_BASE}/${id}/${model}`;
   if (!existsSync(screenshotDir)) mkdirSync(screenshotDir, { recursive: true });
 
-  const context = await browser.newContext({
-    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-    viewport: { width: 1280, height: 900 },
-  });
+  // Gemini : réutilise le context partagé (cookies déjà acceptés)
+  // ChatGPT : crée un context frais par requête
+  const context = model === 'gemini'
+    ? browserOrContext
+    : await browserOrContext.newContext({
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        viewport: { width: 1280, height: 900 },
+      });
 
   const runs = [];
 
@@ -366,7 +364,8 @@ async function lancerRequete(requete, historique, browser, model = 'chatgpt') {
     if (run < NB_RUNS) await new Promise(r => setTimeout(r, pauseInterRuns));
   }
 
-  await context.close();
+  // Ne pas fermer le context Gemini partagé — il sera fermé dans main()
+  if (model !== 'gemini') await context.close();
 
   // Agréger
   const runsOk = runs.filter(r => r.statut === 'ok');
@@ -455,21 +454,61 @@ async function main() {
     historique = JSON.parse(readFileSync(HISTORIQUE_PATH, 'utf-8'));
   }
 
-  // Lancer le navigateur (partagé entre requêtes)
-  const browser = await chromium.launch({
+  const optsBrowser = {
     headless: false,
     args: ['--disable-blink-features=AutomationControlled'],
-  });
+  };
 
-  const taches = requetesALancer.flatMap(requete =>
-    modeles.map(model => lancerRequete(requete, historique, browser, model))
-  );
-  const resultats = await Promise.allSettled(taches);
-  resultats.forEach(r => {
-    if (r.status === 'rejected') console.log('⚠️  Erreur tâche :', r.reason?.message);
-  });
+  // Un navigateur dédié par modèle — évite les conflits de contexte entre ChatGPT et Gemini
+  const browsers = {};
+  for (const model of modeles) {
+    browsers[model] = await chromium.launch(optsBrowser);
+  }
 
-  await browser.close();
+  // Pour Gemini : créer un context partagé unique et accepter les cookies une seule fois
+  const contextes = {};
+  if (modeles.includes('gemini')) {
+    const sessionExiste = existsSync(GEMINI_SESSION_PATH);
+    const ctxGemini = await browsers['gemini'].newContext({
+      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+      viewport: { width: 1280, height: 900 },
+      ...(sessionExiste ? { storageState: GEMINI_SESSION_PATH } : {}),
+    });
+    // Accepter les cookies une seule fois sur une page temporaire
+    const pageInit = await ctxGemini.newPage();
+    await pageInit.goto('https://gemini.google.com/app', { waitUntil: 'networkidle', timeout: 40000 }).catch(() => null);
+    await pageInit.waitForTimeout(3000);
+    const cookiesCliques = await accepterCookiesGemini(pageInit);
+    await pageInit.waitForTimeout(2000);
+    await pageInit.close();
+    // Sauvegarder la session après acceptation des cookies (pour les prochains runs)
+    await ctxGemini.storageState({ path: GEMINI_SESSION_PATH });
+    contextes['gemini'] = ctxGemini;
+    if (cookiesCliques) {
+      console.log('✅ Cookies Gemini acceptés et session sauvegardée');
+    } else if (sessionExiste) {
+      console.log('✅ Session Gemini restaurée depuis gemini-session.json');
+    } else {
+      console.log('✅ Context Gemini prêt (pas de bannière détectée)');
+    }
+  }
+
+  // Requêtes en séquentiel, ChatGPT + Gemini en parallèle (chacun dans son propre navigateur)
+  for (const requete of requetesALancer) {
+    const taches = modeles.map(model => {
+      const browserOrCtx = model === 'gemini' ? contextes['gemini'] : browsers[model];
+      return lancerRequete(requete, historique, browserOrCtx, model).catch(err =>
+        console.log(`⚠️  Erreur [${requete.id}/${model}] :`, err.message)
+      );
+    });
+    await Promise.all(taches);
+  }
+
+  // Fermer les contextes Gemini partagés
+  for (const ctx of Object.values(contextes)) await ctx.close();
+  for (const model of modeles) {
+    await browsers[model].close();
+  }
 
   // Sauvegarder
   writeFileSync(HISTORIQUE_PATH, JSON.stringify(historique, null, 2), 'utf-8');
