@@ -116,6 +116,8 @@
       padding: 12px 16px;
     }
     .verbatim-item.gemini { border-left-color: #3949ab; }
+    .verbatim-item.wefiit-cite { background: #f0faf4; }
+    .verbatim-item.wefiit-absent { background: #f8f9fa; opacity: 0.75; }
     .verbatim-date { font-size: 11px; color: #999; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
     .verbatim-texte { font-size: 13px; color: #444; font-style: italic; line-height: 1.5; }
     .verbatim-voir {
@@ -490,7 +492,9 @@ function mettreAJourConcurrents(donnees) {
 function mettreAJourVerbatims(donnees, requeteLibelle) {
   const container = document.getElementById('verbatims-list');
   const items = [];
+  const wefiitRegex = /wefiit/i;
   [...donnees].reverse().forEach(e => {
+    if (!e.runsOk || e.runsOk === 0) return;
     const verbatims = e.verbatims || e.wefiit.previews || [];
     const chemins = e.wefiit.reponsesChemins || [];
     verbatims.forEach((texte, i) => {
@@ -501,6 +505,7 @@ function mettreAJourVerbatims(donnees, requeteLibelle) {
           cheminReponse: chemins[i] || null,
           model: e.model ?? 'chatgpt',
           requete: requeteLibelle || '',
+          wefiitCite: wefiitRegex.test(texte),
         });
       }
     });
@@ -518,7 +523,8 @@ function mettreAJourVerbatims(donnees, requeteLibelle) {
     const btnVoir = chemin
       ? `<button class="verbatim-voir" onclick="ouvrirReponse('${chemin}', '${v.date}', '${v.model}', '${requete}')">Voir la réponse complète →</button>`
       : '';
-    return `<div class="verbatim-item ${v.model}">
+    const classeWefiit = v.wefiitCite ? 'wefiit-cite' : 'wefiit-absent';
+    return `<div class="verbatim-item ${v.model} ${classeWefiit}">
       <div class="verbatim-date">${dateLabel} ${badge}</div>
       <div class="verbatim-texte">${v.preview}</div>
       ${btnVoir}
