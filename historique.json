@@ -684,34 +684,6 @@
       },
       {
         "date": "2026-05-11",
-        "model": "gemini",
-        "runsOk": 3,
-        "wefiit": {
-          "citations": 0,
-          "previews": [],
-          "reponsesChemins": [
-            "responses/pm-paris-2026-05-11-gemini-run1.txt",
-            "responses/pm-paris-2026-05-11-gemini-run2.txt",
-            "responses/pm-paris-2026-05-11-gemini-run3.txt"
-          ]
-        },
-        "verbatims": [
-          "Voici une sélection des 5 meilleures agences de Product Management à Paris en 2026. Ces cabinets sont reconnus pour leur capacité à intervenir tant sur la stratégie de haut niveau que sur l'exécution opérationnelle au sein des équipes (Product Discovery, Delivery, Coaching).1. ThigaConsidérée comme la pionnière et la référence du Product Management en France. Thiga ne se contente pas de placer des consultants ; ils ont structuré la communauté avec des événements comme la La Conf' et leur centre",
-          "À Paris, le marché des agences de Product Management s'est structuré autour de deux modèles : les Product Studios (qui construisent le produit de A à Z) et les Agences de Conseil/Staffing (qui intègrent des experts chez vous).Voici les 5 agences incontournables en 2026 selon leur spécialisation :1. Mozza : La \"Product Squad\" d'éliteC'est sans doute l'acteur le plus réputé pour les startups et scale-ups. Mozza ne se contente pas de conseiller ; ils déploient des squads (PM, Designer, Tech) pour l",
-          "Paris regorge d'agences spécialisées en Product Management, allant du conseil stratégique au renforcement opérationnel d'équipes. Voici les 5 agences incontournables en 2026, sélectionnées pour leur réputation, leur expertise et la qualité de leurs consultants.1. ThigaConsidérée comme la pionnière du Product Management en France, Thiga reste la référence absolue.Point fort : Une approche holistique (conseil, recrutement, formation via la Thiga Academy).Pour qui : Les entreprises qui souhaitent t"
-        ],
-        "concurrents": {
-          "Thiga": 3,
-          "Octo": 2,
-          "Hubvisory": 2,
-          "Wivoo": 2,
-          "Mozza": 1,
-          "Polara Studio": 1,
-          "Delva": 1
-        }
-      },
-      {
-        "date": "2026-05-11",
         "model": "chatgpt",
         "runsOk": 3,
         "wefiit": {
@@ -735,6 +707,31 @@
           "Delva": 1,
           "IKXO": 1,
           "TAK": 1
+        }
+      },
+      {
+        "date": "2026-05-11",
+        "model": "gemini",
+        "runsOk": 2,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-paris-2026-05-11-gemini-run1.txt",
+            "responses/pm-paris-2026-05-11-gemini-run2.txt"
+          ]
+        },
+        "verbatims": [
+          "Le marché du Product Management à Paris est aujourd'hui structuré autour de trois types d'acteurs : les Product Studios (qui construisent le produit de A à Z), les cabinets de conseil spécialisés (qui placent des experts en immersion) et les agences de recrutement d'élite.Voici le top 5 des agences et cabinets incontournables en 2026, selon leur spécialité :1. Mozza : L'élite du Product Design & DiscoveryConsidérée comme la \"Product Squad\" de référence, Mozza accompagne principalement les startu",
+          "Le marché du conseil en Product Management (PM) à Paris est particulièrement mature. Pour 2026, cinq acteurs se distinguent par leur expertise, leur capacité à transformer les organisations et leur influence au sein de la communauté produit.Voici le top 5 des agences de Product Management à Paris :1. ThigaConsidérée comme la pionnière et la référence absolue en France. Thiga ne se contente pas de placer des consultants ; ils ont structuré la pensée produit via leur blog, leurs livres blancs et l"
+        ],
+        "concurrents": {
+          "Thiga": 2,
+          "Mozza": 1,
+          "Polara Studio": 1,
+          "Octo": 1,
+          "Hubvisory": 1,
+          "Wivoo": 1
         }
       }
     ]
@@ -1083,36 +1080,6 @@
           "Artefact": 1,
           "Theodo": 1,
           "BAM": 1
-        }
-      },
-      {
-        "date": "2026-05-11",
-        "model": "gemini",
-        "runsOk": 3,
-        "wefiit": {
-          "citations": 0,
-          "previews": [],
-          "reponsesChemins": [
-            "responses/pm-ia-2026-05-11-gemini-run1.txt",
-            "responses/pm-ia-2026-05-11-gemini-run2.txt",
-            "responses/pm-ia-2026-05-11-gemini-run3.txt"
-          ]
-        },
-        "verbatims": [
-          "Le domaine du Product Management (PM) spécialisé en Intelligence Artificielle est en pleine explosion. Contrairement au PM traditionnel, l'IA nécessite une compréhension profonde de l'incertitude des données, des cycles de vie des modèles et de l'éthique algorithmique.Voici les différents types de cabinets et acteurs qui dominent ce segment, selon vos besoins :1. Cabinets de Conseil en Stratégie et DeliveryCes cabinets aident les entreprises à définir leur \"AI Roadmap\" et à intégrer des PM spéci",
-          "Le domaine du Product Management (PM) spécialisé en Intelligence Artificielle est en pleine explosion. Contrairement au PM traditionnel, le \"AI Product Manager\" doit jongler avec l'incertitude des modèles stochastiques, la gestion des données et les cycles de vie spécifiques au Machine Learning.Si vous cherchez un cabinet (que ce soit pour du conseil, de la formation ou du recrutement), voici les principaux acteurs et types de structures qui dominent le marché en 2026 :1. Cabinets de Conseil en",
-          "L'écosystème des cabinets spécialisés en IA Product Management est en pleine explosion. Ces structures interviennent généralement sur trois piliers : la stratégie produit (discovery), l'implémentation technique (delivery) et la montée en compétences des équipes.Voici une sélection des acteurs de référence et des types de structures que vous pouvez solliciter selon votre besoin :1. Cabinets de Conseil Pure-Player IA & ProduitCes cabinets se concentrent exclusivement sur l'intersection entre le Pr"
-        ],
-        "concurrents": {
-          "Thiga": 3,
-          "Artefact": 3,
-          "Ekimetrics": 2,
-          "Theodo": 2,
-          "McKinsey": 1,
-          "BCG": 1,
-          "Product People": 1,
-          "Capgemini": 1,
-          "Eleven Strategy": 1
         }
       }
     ]
