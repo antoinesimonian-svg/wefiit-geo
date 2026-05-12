@@ -522,7 +522,7 @@ function mettreAJourVerbatims(donnees, requeteLibelle) {
           cheminReponse: chemins[i] || null,
           model: e.model ?? 'chatgpt',
           requete: requeteLibelle || '',
-          wefiitCite: wefiitRegex.test(texte),
+          wefiitCite: e.wefiit.citations > 0,
         });
       }
     });
