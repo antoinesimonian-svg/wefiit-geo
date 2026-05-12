@@ -34,5 +34,24 @@
       "erreur": 0,
       "ignoré": 0
     }
+  },
+  {
+    "jobId": "job-20260512-080203-ac2a7d",
+    "démarré": "2026-05-12T08:02:03.897Z",
+    "terminé": "2026-05-12T08:16:35.596Z",
+    "durée": 872,
+    "mode": "--all --model all",
+    "requêtes": 7,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 42,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    }
   }
 ]

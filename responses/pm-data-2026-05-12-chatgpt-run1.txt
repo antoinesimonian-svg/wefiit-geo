@@ -1,0 +1,23 @@
+Voici quelques cabinets reconnus en France spécialisés en Data Product Management, avec des approches différentes selon votre besoin (stratégie produit data, delivery, gouvernance, IA, staffing d’équipes produit, etc.) :
+Cabinets orientés Product + Data
+Wivoo — très orienté Product Management, Data & IA, avec accompagnement discovery/delivery et produits data. Wivoo
+TAK — cabinet spécialisé Product & Data Management, fort focus delivery et organisation produit/data. TAK
+IKXO — conseil et renfort opérationnel en Product Management avec intégration des sujets data/IA. IKXO
+Delva — cabinet 100% Product Management, intéressant pour structurer une organisation produit autour de la data. Delva
+Cabinets plus “Data / IA / Gouvernance”
+Limpida — très bon positionnement gouvernance, data strategy, data product et acculturation. Limpida
+Lincoln — cabinet data & IA plus mature/enterprise, adapté aux grands programmes data platform et data governance. Lincoln
+TRIMANE — expertise historique Data Intelligence / IA / plateformes data. Trimane
+SOMA Smart — cabinet orienté impact business des produits data et IA. Soma Smart
+Cabinets plus “startup / modern data stack”
+Bomzai — approche très opérationnelle “data as a product”, industrialisation IA/data. Bomzai
+Datenscia — data management + pilotage projets data/IT. Datenscia
+Si vous voulez, je peux aussi vous faire :
+un top 5 selon votre contexte (startup, scale-up, grand groupe, secteur bancaire, retail, SaaS…),
+une sélection freelance vs cabinet,
+les cabinets les plus adaptés pour :
+construire un Data Product Office,
+recruter des Data PM / Analytics PM,
+mettre en place une Data Platform,
+structurer une gouvernance data orientée produit,
+ou lancer des produits IA/GenAI.
