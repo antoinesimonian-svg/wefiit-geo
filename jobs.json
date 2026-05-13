@@ -136,5 +136,24 @@
         "dateApres": "2026-05-13"
       }
     ]
+  },
+  {
+    "jobId": "job-20260513-064828-595b02",
+    "démarré": "2026-05-13T06:48:28.788Z",
+    "terminé": "2026-05-13T06:48:50.272Z",
+    "durée": 21,
+    "mode": "pm-general --model gemini --force",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 0,
+      "timeout": 0,
+      "erreur": 3,
+      "ignoré": 0
+    },
+    "regressions": null
   }
 ]

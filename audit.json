@@ -1492,5 +1492,39 @@
     "cheminReponse": null,
     "ignoré": false,
     "raisonIgnoré": null
+  },
+  {
+    "jobId": "job-20260513-064828-595b02",
+    "requêteId": "pm-general",
+    "modèle": "gemini",
+    "source": "api",
+    "run": 2,
+    "démarré": "2026-05-13T06:48:37.303Z",
+    "terminé": "2026-05-13T06:48:41.740Z",
+    "durée": 4,
+    "statut": "erreur",
+    "wefiit": false,
+    "erreurDétail": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.",
+    "timeoutRaison": null,
+    "cheminReponse": null,
+    "ignoré": false,
+    "raisonIgnoré": null
+  },
+  {
+    "jobId": "job-20260513-064828-595b02",
+    "requêteId": "pm-general",
+    "modèle": "gemini",
+    "source": "api",
+    "run": 3,
+    "démarré": "2026-05-13T06:48:45.774Z",
+    "terminé": "2026-05-13T06:48:50.230Z",
+    "durée": 4,
+    "statut": "erreur",
+    "wefiit": false,
+    "erreurDétail": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [404 Not Found] This model models/gemini-2.0-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.",
+    "timeoutRaison": null,
+    "cheminReponse": null,
+    "ignoré": false,
+    "raisonIgnoré": null
   }
 ]
