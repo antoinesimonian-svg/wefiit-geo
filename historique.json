@@ -680,23 +680,26 @@
         "wefiit": {
           "citations": 1,
           "previews": [
-            "2. WeFiiT"
+            "WeFiiT"
           ],
           "reponsesChemins": [
-            "responses/pm-general-2026-05-15-chatgpt-run1.txt"
+            "responses/pm-general-2026-05-15-chatgpt-run3.txt"
           ]
         },
         "verbatims": [
-          "Si tu cherches un cabinet de conseil spécialisé en Product Management en France, le “meilleur” dépend surtout de ton besoin : transformation produit à grande échelle, renfort opérationnel, coaching PM, discovery, product strategy, ou delivery.\nVoici les cabinets les plus reconnus aujourd’hui :\n1. Thiga\nLe leader historique du Product Management en France. Très fort sur :\ntransformation produit,\ncoaching PM/PO,\norganisation produit,\nculture product.\nIls sont souvent choisis par les scale-ups et g"
+          "Si tu cherches un cabinet vraiment reconnu en Product Management en France (et particulièrement à Paris), les références les plus solides aujourd’hui sont :\nThiga\nWeFiiT\nMozza\nFifty-Five\nOcto Technology\nEleven Labs\nLes meilleurs selon le besoin\nBesoinCabinet recommandéPourquoiStructurer une organisation produitThigaRéférence historique du Product Management en France, très fort en coaching PM, discovery, operating modelRenfort opérationnel PM/POWeFiiTTrès apprécié pour placer des profils seniors"
         ],
         "concurrents": {
           "Thiga": 1,
+          "Octo": 1,
+          "OCTO Technology": 1,
+          "Capgemini": 1,
+          "fifty-five": 1,
           "Mozza": 1,
-          "Yield Studio": 1,
-          "Galadrim": 1
+          "Yield Studio": 1
         },
-        "rang": 2,
-        "totalCabinets": 5
+        "rang": null,
+        "totalCabinets": null
       }
     ]
   },

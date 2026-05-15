@@ -295,5 +295,24 @@
       "ignoré": 0
     },
     "regressions": null
+  },
+  {
+    "jobId": "job-20260515-100418-878e1d",
+    "démarré": "2026-05-15T10:04:18.226Z",
+    "terminé": "2026-05-15T10:05:40.002Z",
+    "durée": 82,
+    "mode": "pm-general --model chatgpt",
+    "requêtes": 1,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 1,
+      "timeout": 0,
+      "erreur": 2,
+      "ignoré": 0
+    },
+    "regressions": null
   }
 ]
