@@ -276,5 +276,24 @@
         "dateApres": "2026-05-15"
       }
     ]
+  },
+  {
+    "jobId": "job-20260515-100051-00aa1a",
+    "démarré": "2026-05-15T10:00:51.845Z",
+    "terminé": "2026-05-15T10:02:06.703Z",
+    "durée": 75,
+    "mode": "pm-general --model chatgpt",
+    "requêtes": 1,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 1,
+      "timeout": 0,
+      "erreur": 2,
+      "ignoré": 0
+    },
+    "regressions": null
   }
 ]
