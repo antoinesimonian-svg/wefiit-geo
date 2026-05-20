@@ -115,13 +115,50 @@ Trois modes configurables via `AUTH_MODE` :
 
 ## Déploiement
 
-Cloudflare Workers via `wrangler.jsonc`. Ressources attachées :
-- **D1** (base SQL SQLite) — `DB`
-- **KV** — sessions, cache
-- **R2** — fichiers statiques lourds
-- **Cron** — `*/15 * * * *` (rank checks)
+### Infrastructure WeFiiT (mise en place le 2026-05-20)
 
-CI/CD : GitHub Actions sur PR + push `main` (lint → test → build → Docker image).
+| Ressource | Valeur |
+|---|---|
+| **URL prod** | https://open-seo.wefiit-dash.workers.dev |
+| **Compte Cloudflare** | antoine.simonian@wefiit.com |
+| **Account ID** | 2c7270eaa80f93d3de09fd91284909b0 |
+| **Repo GitHub** | github.com/antoinesimonian-svg/dash-acquisition-wefiit |
+| **Auth mode** | `local_noauth` (temporaire — passer à `cloudflare_access` avant partage équipe) |
+
+### Ressources Cloudflare
+
+| Service | Nom | ID |
+|---|---|---|
+| **D1** (base de données) | open-seo | ad0d5887-8d44-4ce5-a941-730cf03b33bf |
+| **KV** (cache sessions) | KV | 4539ba20c6634b3aaec0499125b7e995 |
+| **KV** (OAuth) | OAUTH_KV | 2ae43daf1b18463c97a85094e8a7154c |
+| **R2** (stockage) | open-seo | — |
+| **Cron** | rank checks | `*/15 * * * *` |
+
+### Secrets configurés sur le Worker
+
+- `AUTH_MODE` — mode d'authentification (`local_noauth` actuellement)
+- `DATAFORSEO_API_KEY` — clé API DataForSEO (base64 login:password)
+
+### CI/CD — GitHub Actions
+
+**Déploiement automatique** : chaque `git push` sur `main` déclenche `.github/workflows/deploy.yml` qui exécute :
+1. `pnpm db:migrate:prod` — migrations D1
+2. `pnpm build` — build Vite + typecheck
+3. `wrangler deploy` — déploiement sur Cloudflare
+
+**Secrets GitHub requis** :
+- `CLOUDFLARE_API_TOKEN` — token custom avec D1:Edit, Workers Scripts:Edit, Workers KV:Edit, Workers R2:Edit
+- `CLOUDFLARE_ACCOUNT_ID` — `2c7270eaa80f93d3de09fd91284909b0`
+
+### Prochaine étape sécurité
+
+Avant de partager l'URL à l'équipe, configurer **Cloudflare Access** :
+1. Dashboard Cloudflare → Zero Trust → Access → Applications
+2. Créer une app "Self-hosted" sur `open-seo.wefiit-dash.workers.dev`
+3. Policy : autoriser les emails de l'équipe WeFiiT
+4. Récupérer le AUD tag
+5. Ajouter secrets Worker : `AUTH_MODE=cloudflare_access`, `TEAM_DOMAIN`, `POLICY_AUD`
 
 ---
 
