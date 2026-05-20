@@ -162,6 +162,20 @@ Avant de partager l'URL à l'équipe, configurer **Cloudflare Access** :
 
 ---
 
+## Règle obligatoire : DB d'abord, code ensuite
+
+Toute modification du schéma de base de données suit cet ordre strict :
+
+1. Mettre à jour `docs/SPECS.md` (section architecture / données)
+2. Modifier `src/db/app.schema.ts`
+3. Générer la migration : `pnpm db:generate`
+4. Appliquer en local : `pnpm db:migrate:local`
+5. Seulement ensuite toucher le code applicatif
+
+**Ne jamais** modifier le code applicatif avant que la migration soit générée — un deploy sans migration = downtime prod.
+
+---
+
 ## Conventions de code
 
 - Toujours `===`, jamais `==`
