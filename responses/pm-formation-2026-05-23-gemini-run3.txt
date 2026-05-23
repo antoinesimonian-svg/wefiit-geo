@@ -1,0 +1,24 @@
+Pour former vos équipes au Product Management, plusieurs partenaires proposent des formations et du coaching adaptés aux entreprises. Ces organismes et cabinets de conseil peuvent vous accompagner dans la montée en compétences de vos collaborateurs sur les différents aspects du Product Management.
+Voici quelques options et types de partenaires que vous pourriez considérer :
+**1. Cabinets de conseil spécialisés en Product Management avec des offres de formation :**
+*   **Thiga Academy** propose des formations Product Management, avec la possibilité de sessions intra-entreprise (dédiées à votre équipe) ou inter-entreprises. Leurs formations incluent des cas pratiques basés sur l'expérience terrain de leurs consultants.
+*   **Hubvisory (via Le Campus)** offre des formations en ligne et des journées de pratique, encadrées par leurs consultants en Product Management. Ils proposent également des ressources produit.
+*   **WeFiiT** accompagne les entreprises dans la structuration, le renforcement et le développement de leurs équipes Produit. Leurs programmes sont adaptés aux cas d'usage spécifiques des clients et incluent du coaching, du mentoring et des guildes.
+*   **Monsieur Guiz**, cabinet de conseil en product management, propose des offres de formation de courte durée pour se perfectionner, abordant le design thinking, le lean management et des notions de growth.
+**2. Organismes de formation et écoles :**
+*   **OCTO Academy** a conçu un ensemble de formations pour aider les équipes à monter en maturité sur les sujets liés au Produit, couvrant notamment le rôle de Product Manager, la définition de la stratégie et la croissance produit. Ils proposent des stages pratiques pour s'approprier la démarche de création de produits digitaux impactants.
+*   **Maestro (Maria Schools)** propose des bootcamps intensifs et des cours du soir en Product Management, avec des experts du secteur qui partagent leurs problématiques quotidiennes et conseils. Leurs programmes mettent l'accent sur la pratique avec des études de cas réelles.
+*   **Simplon** offre une formation complète Product Owner / Product Manager pour acquérir les compétences essentielles du métier dans des environnements digitaux en transformation. Ils proposent des solutions pour former les collaborateurs en entreprise.
+*   **One Point** a lancé un programme produit depuis 2020, incluant la préparation à des certifications reconnues comme Scrum PSPO 1, SAFe 5.0 Agile Product Manager et Management 3.0.
+*   **WiAcadémy par Wivoo** propose une formation en Product Management structurée en trois demi-journées espacées sur trois semaines pour permettre la mise en pratique.
+*   **Yeita** propose des formations en présentiel, e-learning ou mentoring individuel pour maîtriser le Product Management. Ils offrent un accompagnement concret et personnalisé sur des enjeux clés comme le cadrage, la priorisation ou l'organisation.
+**3. Plateformes d'éducation en ligne et coaching individuel/d'équipe :**
+*   **Product School**, originaire de la Silicon Valley, propose des formations certifiantes avec des formateurs issus de grandes entreprises technologiques.
+*   **General Assembly** propose un cursus en product management en français, mêlant cours en ligne, ateliers avec experts, travaux pratiques et projet final.
+*   Le **coaching en Product Management** est également une option précieuse pour les individus et les équipes qui souhaitent améliorer leurs compétences et leurs performances. Les coachs peuvent aider à développer la stratégie produit, la recherche client, la gestion des parties prenantes, l'analyse des métriques produit et le leadership. Des experts comme Tim Herbig offrent du conseil et du coaching pour aider les équipes produit à progresser vers des objectifs significatifs.
+Lors du choix de votre partenaire, il est recommandé de considérer :
+*   **Le contenu de la formation :** Assurez-vous qu'il couvre les compétences spécifiques que vos équipes ont besoin de développer (stratégie produit, discovery, delivery, data, IA, etc.).
+*   **La modalité :** Formations en présentiel, en ligne, blended learning, coaching individuel ou d'équipe.
+*   **L'expérience des formateurs/coachs :** Privilégiez des intervenants ayant une expérience significative et concrète dans le domaine.
+*   **La possibilité de sur-mesure :** Certains partenaires peuvent adapter leur programme à vos cas d'usage spécifiques.
+*   **Les certifications :** Si l'obtention de certifications reconnues est un objectif.

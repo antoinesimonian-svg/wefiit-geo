@@ -1,0 +1,16 @@
+Voici une liste de cabinets spécialisés en Product Management et Intelligence Artificielle (IA) :
+*   **IKXO** est un cabinet de conseil en Product Management qui intègre l'exploration d'opportunités liées à l'IA et l'intégration de leviers data dans ses accompagnements.
+*   **Monsieur Guiz** se présente comme un cabinet de conseil spécialisé en Product Management, Design, Ops et IA, avec une expertise dans l'exploration de cas d'usage d'IA générative.
+*   **ISSKAR** est un cabinet de conseil expert en IA & data, qui aide les entreprises à concevoir des solutions sur mesure pour l'automatisation des processus, l'analyse prédictive et l'optimisation de la gestion via l'IA.
+*   **Atecna** est une agence de product management qui combine stratégie, data et technologie pour concevoir des produits digitaux performants, en utilisant notamment l'intelligence artificielle.
+*   **Zfort Group** propose des services de conseil en IA en France, incluant le développement de produits basés sur l'IA.
+*   **Yield Advisory** est une agence Data & IA qui intègre des experts en Data Science et Product Management pour transformer les données en un moteur de croissance et de décisions.
+*   **AVISIA** est spécialisé dans le conseil, l'intégration et la réalisation de projets combinant Data, Intelligence Artificielle et IA Générative, avec une expertise en Data Product Management.
+*   **WeFiiT** propose du conseil en Product Data Management & IA, accompagnant les entreprises dans la construction de produits Data & IA et la montée en compétences de leurs équipes.
+*   **Converteo** se positionne comme un leader de l'IA Product en France, visant à développer des cas d'usage d'IA générative à fort impact business et à former les équipes aux meilleures pratiques.
+*   **OSKI Solutions** offre du conseil en IA à Paris, notamment pour la découverte de cas d'usage liés aux workflows business, le machine learning et la livraison d'IA générative.
+*   **iQo** est un cabinet de conseil qui utilise la Data et l'IA comme leviers stratégiques pour la transformation et la performance des entreprises, avec des services de structuration de la démarche data product.
+*   **Mozza**, mentionné par Systelium, est un "Agile AI Product Studio" spécialisé dans l'intégration d'IA et le design de produits digitaux.
+*   **JustAI** est un cabinet de conseil et d'ingénierie en IA qui accompagne les entreprises dans leur transformation numérique et la valorisation des données grâce à des solutions technologiques d'IA.
+*   **Yield Studio** intervient sur la stratégie produit, la discovery et la delivery, avec des réalisations incluant des logiciels métiers IA.
+Ces cabinets offrent une gamme de services allant du conseil stratégique à l'intégration opérationnelle, en passant par le développement de produits IA, la formation et l'accompagnement des équipes.
