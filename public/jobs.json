@@ -1,0 +1,505 @@
+[
+  {
+    "jobId": "job-20260511-182230-5f282e",
+    "démarré": "2026-05-11T18:22:30.565Z",
+    "terminé": "2026-05-11T18:24:20.144Z",
+    "durée": 110,
+    "mode": "pm-paris --model gemini",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 3,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    }
+  },
+  {
+    "jobId": "job-20260511-190029-0f335e",
+    "démarré": "2026-05-11T19:00:29.063Z",
+    "terminé": "2026-05-11T19:02:02.673Z",
+    "durée": 94,
+    "mode": "pm-ia-cabinet --model gemini",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 3,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    }
+  },
+  {
+    "jobId": "job-20260512-080203-ac2a7d",
+    "démarré": "2026-05-12T08:02:03.897Z",
+    "terminé": "2026-05-12T08:16:35.596Z",
+    "durée": 872,
+    "mode": "--all --model all",
+    "requêtes": 7,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 42,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    }
+  },
+  {
+    "jobId": "job-20260513-064438-85e2de",
+    "démarré": "2026-05-13T06:44:38.589Z",
+    "terminé": "2026-05-13T06:45:00.225Z",
+    "durée": 22,
+    "mode": "pm-general --model gemini",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 0,
+      "timeout": 0,
+      "erreur": 3,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260513-064746-2c3b9e",
+    "démarré": "2026-05-13T06:47:46.867Z",
+    "terminé": "2026-05-13T06:48:07.639Z",
+    "durée": 21,
+    "mode": "pm-general --model gemini --force",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 0,
+      "timeout": 0,
+      "erreur": 3,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260513-063849-61f637",
+    "démarré": "2026-05-13T06:38:49.192Z",
+    "terminé": "2026-05-13T06:48:33.710Z",
+    "durée": 585,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 33,
+      "timeout": 3,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pm-general",
+        "model": "chatgpt",
+        "avant": "3/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      },
+      {
+        "id": "pm-formation",
+        "model": "chatgpt",
+        "avant": "1/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      },
+      {
+        "id": "pm-ia-cabinet",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "0/2",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260513-064828-595b02",
+    "démarré": "2026-05-13T06:48:28.788Z",
+    "terminé": "2026-05-13T06:48:50.272Z",
+    "durée": 21,
+    "mode": "pm-general --model gemini --force",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 0,
+      "timeout": 0,
+      "erreur": 3,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260513-064900-d177a6",
+    "démarré": "2026-05-13T06:49:00.091Z",
+    "terminé": "2026-05-13T06:49:30.147Z",
+    "durée": 30,
+    "mode": "pm-general --model gemini --force",
+    "requêtes": 1,
+    "modèles": [
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 3,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260513-065331-1baed2",
+    "démarré": "2026-05-13T06:53:31.271Z",
+    "terminé": "2026-05-13T07:01:34.117Z",
+    "durée": 483,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 33,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 1
+    },
+    "regressions": [
+      {
+        "id": "pm-general",
+        "model": "chatgpt",
+        "avant": "3/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      },
+      {
+        "id": "pm-formation",
+        "model": "chatgpt",
+        "avant": "1/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      },
+      {
+        "id": "pm-ia-cabinet",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "1/3",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260513-070852-181e1f",
+    "démarré": "2026-05-13T07:08:52.375Z",
+    "terminé": "2026-05-13T07:17:50.091Z",
+    "durée": 538,
+    "mode": "--all --model chatgpt --force",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 18,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pm-ia-cabinet",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "1/3",
+        "dateAvant": "2026-05-12",
+        "dateApres": "2026-05-13"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260515-093537-af52a9",
+    "démarré": "2026-05-15T09:35:38.074Z",
+    "terminé": "2026-05-15T09:49:18.965Z",
+    "durée": 821,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 33,
+      "timeout": 0,
+      "erreur": 3,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pm-data",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "2/3",
+        "dateAvant": "2026-05-13",
+        "dateApres": "2026-05-15"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260515-100051-00aa1a",
+    "démarré": "2026-05-15T10:00:51.845Z",
+    "terminé": "2026-05-15T10:02:06.703Z",
+    "durée": 75,
+    "mode": "pm-general --model chatgpt",
+    "requêtes": 1,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 1,
+      "timeout": 0,
+      "erreur": 2,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260515-100418-878e1d",
+    "démarré": "2026-05-15T10:04:18.226Z",
+    "terminé": "2026-05-15T10:05:40.002Z",
+    "durée": 82,
+    "mode": "pm-general --model chatgpt",
+    "requêtes": 1,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 1,
+      "timeout": 0,
+      "erreur": 2,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260515-100740-b2e017",
+    "démarré": "2026-05-15T10:07:40.382Z",
+    "terminé": "2026-05-15T10:09:03.083Z",
+    "durée": 83,
+    "mode": "pm-general --model chatgpt",
+    "requêtes": 1,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 3,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260516-153713-9017f4",
+    "démarré": "2026-05-16T15:37:13.357Z",
+    "terminé": "2026-05-16T15:45:23.343Z",
+    "durée": 490,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 36,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pm-general",
+        "model": "chatgpt",
+        "avant": "3/3",
+        "apres": "1/3",
+        "dateAvant": "2026-05-15",
+        "dateApres": "2026-05-16"
+      },
+      {
+        "id": "pm-paris",
+        "model": "chatgpt",
+        "avant": "3/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-15",
+        "dateApres": "2026-05-16"
+      },
+      {
+        "id": "pm-paris",
+        "model": "gemini",
+        "avant": "2/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-15",
+        "dateApres": "2026-05-16"
+      },
+      {
+        "id": "pm-ia-cabinet",
+        "model": "chatgpt",
+        "avant": "3/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-15",
+        "dateApres": "2026-05-16"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260518-064949-f2cbd3",
+    "démarré": "2026-05-18T06:49:49.985Z",
+    "terminé": "2026-05-18T07:01:52.742Z",
+    "durée": 723,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 36,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pmm-general",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "1/3",
+        "dateAvant": "2026-05-16",
+        "dateApres": "2026-05-18"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260519-124552-a1c315",
+    "démarré": "2026-05-19T12:45:52.577Z",
+    "terminé": "2026-05-19T12:58:07.330Z",
+    "durée": 735,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 36,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pm-general",
+        "model": "chatgpt",
+        "avant": "2/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-18",
+        "dateApres": "2026-05-19"
+      }
+    ]
+  },
+  {
+    "jobId": "job-20260520-132658-2d9381",
+    "démarré": "2026-05-20T13:26:58.448Z",
+    "terminé": "2026-05-20T13:47:12.487Z",
+    "durée": 1214,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 36,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "regressions": null
+  },
+  {
+    "jobId": "job-20260523-145422-77aa69",
+    "démarré": "2026-05-23T14:54:22.505Z",
+    "terminé": "2026-05-23T15:04:04.256Z",
+    "durée": 582,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "partiel",
+    "résumé": {
+      "ok": 20,
+      "timeout": 0,
+      "erreur": 16,
+      "ignoré": 0
+    },
+    "regressions": [
+      {
+        "id": "pm-data",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "1/1",
+        "dateAvant": "2026-05-20",
+        "dateApres": "2026-05-23"
+      },
+      {
+        "id": "pmm-general",
+        "model": "gemini",
+        "avant": "3/3",
+        "apres": "2/3",
+        "dateAvant": "2026-05-20",
+        "dateApres": "2026-05-23"
+      }
+    ]
+  }
+]
