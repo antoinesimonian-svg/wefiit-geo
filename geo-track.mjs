@@ -10,35 +10,32 @@
  */
 
 import { chromium } from 'playwright';
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, renameSync, copyFileSync, existsSync, mkdirSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import { randomBytes } from 'crypto';
+import { nettoyerTexte, detecterWefiit, extraireConcurrents, attendreFinReponseChatGPT, detecterRang } from './lib/geo-utils.mjs';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 const NB_RUNS = 3;
-const BASE_DIR = decodeURIComponent(new URL('.', import.meta.url).pathname.replace(/^\//, '').replace(/\/$/, ''));
+const BASE_DIR = dirname(fileURLToPath(import.meta.url));
 const REQUETES_PATH = `${BASE_DIR}/requetes.json`;
 const HISTORIQUE_PATH = `${BASE_DIR}/historique.json`;
 const SCREENSHOTS_BASE = `${BASE_DIR}/screenshots`;
 const RESPONSES_BASE = `${BASE_DIR}/responses`;
-const GEMINI_SESSION_PATH = `${BASE_DIR}/gemini-session.json`;
 const JOBS_PATH  = `${BASE_DIR}/jobs.json`;
 const AUDIT_PATH = `${BASE_DIR}/audit.json`;
+const RETRY_PENDING_PATH = `${BASE_DIR}/retry-pending.json`;
+const RETRY_DELAY_MS = 60_000; // 1 minute
 
-const MOTS_CLES_WEFIIT = [/wefiit/i, /we\s*fiit/i, /wefiit\.com/i, /cabinet\s+wefiit/i];
-
-const CONCURRENTS_CONNUS = [
-  'Thiga', 'Octo', 'OCTO Technology', 'Xebia', 'Publicis Sapient',
-  'Kea & Partners', 'Kea', 'Sia Partners', 'Eleven Strategy',
-  'Fabernovel', 'Bain', 'McKinsey', 'BCG', 'Accenture',
-  'Capgemini', 'Sopra Steria', 'Wavestone', 'Devoteam',
-  'Valtech', 'Artefact', 'Ekimetrics', 'Converteo',
-  'fifty-five', 'Data4', 'Keyrus', 'Quantmetry',
-  'Theodo', 'Ippon', 'Zenika', 'Onepoint',
-  'Wemanity', 'Hubvisory', 'Pentalog', 'Soat',
-  'Mind7', 'Ideo', 'Pivotal', 'Thoughtworks',
-  'Wivoo', 'Mozza', 'Delva', 'Swood', 'Yield Studio', 'Yield Advisory', 'Yeita', 'IKXO',
-  'BAM', 'Niji', 'Stellar', 'TAK', 'Galadrim', 'Polara Studio',
-  'Product People', 'Werin Group',
-];
+// Charger .env si présent
+const ENV_PATH = `${BASE_DIR}/.env`;
+if (existsSync(ENV_PATH)) {
+  for (const ligne of readFileSync(ENV_PATH, 'utf-8').split('\n')) {
+    const m = ligne.match(/^\s*([A-Z_][A-Z0-9_]*)\s*=\s*(.+)\s*$/);
+    if (m) process.env[m[1]] = m[2].trim();
+  }
+}
 
 // ─────────────────────────────────────────────
 // Utilitaires communs
@@ -48,55 +45,25 @@ function dateAujourdhui() {
   return new Date().toISOString().split('T')[0];
 }
 
-function nettoyerTexte(texte) {
-  return texte
-    .replace(/^Gemini\s+a\s+dit\s*/i, '')
-    // Supprimer les lignes parasites UI (Mapbox, instructions clavier, notes collées)
-    .split('\n')
-    .map(l => l.trim())
-    .filter(l => {
-      if (!l) return false;
-      if (/mapbox|openstreetmap|deux doigts|two fingers|maintenez ctrl|ctrl pour zoom/i.test(l)) return false;
-      // Ligne qui n'est qu'une suite de mots collés avec des chiffres (ex: "Thiga5.0Delva3.8Wivoo")
-      if (/^[\w\s]+\d\.\d[\w\s]+\d\.\d/.test(l)) return false;
-      return true;
-    })
-    .join('\n')
-    .trim();
-}
+// ─────────────────────────────────────────────
+// Telegram
+// ─────────────────────────────────────────────
 
-function detecterWefiit(texteRaw) {
-  const texte = nettoyerTexte(texteRaw);
-  const lignes = texte.split('\n');
-
-  // Trouver toutes les lignes contenant une mention WeFiiT
-  const lignesAvecMention = [];
-  for (let i = 0; i < lignes.length; i++) {
-    if (MOTS_CLES_WEFIIT.some(r => r.test(lignes[i]))) {
-      lignesAvecMention.push(i);
-    }
+async function notifierTelegram(message) {
+  const token = process.env.TELEGRAM_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!token || !chatId) return; // silencieux si non configuré
+  try {
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: 'HTML' }),
+    });
+    if (!res.ok) console.log(`⚠️  Telegram : erreur ${res.status}`);
+  } catch (err) {
+    console.log(`⚠️  Telegram échoué : ${err.message}`);
   }
-
-  if (lignesAvecMention.length === 0) return { trouve: false, preview: null };
-
-  // Extraire la ligne exacte contenant la première mention WeFiiT (200 chars max)
-  let preview = lignes[lignesAvecMention[0]]
-    .replace(/(wefiit)([A-ZÀ-Ü])/gi, '$1 $2')
-    .trim();
-  if (preview.length > 200) preview = preview.substring(0, 200) + '…';
-
-  return { trouve: true, preview };
-}
-
-function extraireConcurrents(texte) {
-  const trouves = {};
-  for (const nom of CONCURRENTS_CONNUS) {
-    const regex = new RegExp(nom.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-    if (regex.test(texte)) {
-      trouves[nom] = (trouves[nom] || 0) + 1;
-    }
-  }
-  return trouves;
 }
 
 // ─────────────────────────────────────────────
@@ -127,47 +94,19 @@ function safeAppendToLog(filePath, entry) {
 // ChatGPT
 // ─────────────────────────────────────────────
 
-async function attendreFinReponse(page, timeout = 90000) {
-  const debut = Date.now();
-  await page.waitForSelector('[data-message-author-role="assistant"]', { timeout: 30000 }).catch(() => null);
-
-  let textePrec = '';
-  let compteurStable = 0;
-  while (Date.now() - debut < timeout) {
-    await page.waitForTimeout(2000);
-    const messages = await page.$$('[data-message-author-role="assistant"]');
-    if (messages.length === 0) continue;
-    const dernierMessage = messages[messages.length - 1];
-    const texteActuel = await dernierMessage.textContent();
-    if (texteActuel === textePrec && texteActuel.length > 20) {
-      compteurStable++;
-      if (compteurStable >= 2) return texteActuel;
-    } else {
-      compteurStable = 0;
-    }
-    textePrec = texteActuel;
-  }
-  return textePrec || '';
-}
-
 async function runChatGPT(page, libelle) {
   await page.goto('https://chatgpt.com/', { waitUntil: 'domcontentloaded', timeout: 30000 });
   await page.waitForTimeout(2000);
 
-  // Chercher le premier élément de saisie visible (exclure les fallback cachés)
-  const champSaisie = await page.evaluateHandle(() => {
-    const candidats = [
-      ...document.querySelectorAll('#prompt-textarea, [contenteditable="true"][data-placeholder], div[contenteditable="true"]')
-    ];
-    return candidats.find(el => {
-      const style = window.getComputedStyle(el);
-      return style.display !== 'none' && style.visibility !== 'hidden' && el.offsetParent !== null;
-    }) || null;
-  });
+  // ChatGPT utilise ProseMirror (#prompt-textarea.ProseMirror) — pas de data-placeholder
+  // On attend que l'éditeur soit visible avant d'interagir
+  const locator = page.locator('#prompt-textarea').first();
+  await locator.waitFor({ state: 'visible', timeout: 15000 }).catch(() => null);
 
-  if (!champSaisie || !champSaisie.asElement()) throw new Error('Champ de saisie introuvable');
+  const visible = await locator.isVisible().catch(() => false);
+  if (!visible) throw new Error('Champ de saisie introuvable');
 
-  await champSaisie.click();
+  await locator.click();
   await page.keyboard.type(libelle, { delay: 30 });
   await page.waitForTimeout(500);
 
@@ -175,145 +114,38 @@ async function runChatGPT(page, libelle) {
   if (boutonEnvoi) await boutonEnvoi.click();
   else await page.keyboard.press('Enter');
 
-  return await attendreFinReponse(page);
+  return await attendreFinReponseChatGPT(page);
 }
 
 // ─────────────────────────────────────────────
-// Gemini
+// Gemini API (officielle)
 // ─────────────────────────────────────────────
 
-async function trouverInputGemini(page) {
-  // Scroll léger pour déclencher le rendu lazy de Gemini
-  await page.evaluate(() => window.scrollTo(0, 100));
-  await page.waitForTimeout(1500);
-  await page.evaluate(() => window.scrollTo(0, 0));
-  await page.waitForTimeout(1000);
-
-  // Cibler le div.ql-editor (Quill) qui est le vrai champ de saisie Gemini
-  const selecteurs = [
-    'div.ql-editor',
-    'rich-textarea div[contenteditable="true"]',
-    'rich-textarea [contenteditable]',
-    'p[data-placeholder]',
-    'div[contenteditable="true"]',
-  ];
-  for (const sel of selecteurs) {
-    const el = await page.waitForSelector(sel, { timeout: 8000, state: 'visible' }).catch(() => null);
-    if (el) return el;
-  }
-  return null;
-}
-
-async function attendreFinReponseGemini(page, timeout = 120000) {
-  const debut = Date.now();
-
-  // Attendre qu'un conteneur de réponse apparaisse
-  const selecteursReponse = ['model-response', 'message-content', '.response-container .markdown'];
-  let selecteurUtilise = null;
-  for (const sel of selecteursReponse) {
-    const trouve = await page.waitForSelector(sel, { timeout: 10000 }).catch(() => null);
-    if (trouve) { selecteurUtilise = sel; break; }
-  }
-  if (!selecteurUtilise) return '';
-
-  let textePrec = '';
-  let compteurStable = 0;
-  while (Date.now() - debut < timeout) {
-    await page.waitForTimeout(2000);
-
-    // Gemini affiche un bouton "Stop" pendant la génération
-    const boutonStop = await page.$('button[aria-label*="Stop"], button[aria-label*="Arrêter"], button[aria-label*="stop"]');
-    const generationEnCours = !!boutonStop;
-
-    const elements = await page.$$(selecteurUtilise);
-    if (elements.length === 0) continue;
-
-    const dernierElement = elements[elements.length - 1];
-    const texteActuel = await dernierElement.textContent().catch(() => '');
-
-    if (!generationEnCours && texteActuel === textePrec && texteActuel.length > 20) {
-      compteurStable++;
-      if (compteurStable >= 2) return texteActuel;
-    } else {
-      compteurStable = 0;
-    }
-    textePrec = texteActuel;
-  }
-  return textePrec || '';
-}
-
-async function accepterCookiesGemini(page) {
-  // Chercher "Tout accepter" par texte visible dans tous les boutons de la page
-  const clique = await page.evaluate(() => {
-    const boutons = [...document.querySelectorAll('button')];
-    const cible = boutons.find(b =>
-      /tout accepter|accept all|j'accepte|agree/i.test(b.textContent?.trim())
-    );
-    if (cible) { cible.click(); return true; }
-    return false;
+async function runGeminiAPI(libelle) {
+  const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+  const model = genAI.getGenerativeModel({
+    model: 'gemini-2.5-flash',
+    tools: [{ googleSearch: {} }],
   });
 
-  if (clique) {
-    await page.waitForTimeout(3000);
-    return true;
-  }
-
-  // Fallback sélecteurs ID stables Google Consent
-  const selecteursCookies = ['#L2AGLb', 'form[action*="consent"] button:last-child'];
-  for (const sel of selecteursCookies) {
-    const bouton = await page.$(sel);
-    if (bouton) {
-      await bouton.click();
-      await page.waitForTimeout(3000);
-      return true;
-    }
-  }
-
-  return false;
+  const result = await model.generateContent(libelle);
+  const response = result.response;
+  const texte = response.text();
+  const groundingSources = response.candidates?.[0]?.groundingMetadata?.groundingChunks ?? [];
+  console.log(`  🔍 Grounding: ${groundingSources.length} sources`);
+  return { texte, groundingSources };
 }
 
-async function runGemini(page, libelle) {
-  await page.goto('https://gemini.google.com/app', { waitUntil: 'networkidle', timeout: 40000 }).catch(() => null);
-  await page.waitForTimeout(2000);
-
-  // Accepter les cookies si la bannière réapparaît (normalement déjà fait au démarrage)
-  await accepterCookiesGemini(page);
-
-  // Détecter un vrai mur de connexion
-  const loginWall = await page.$('input[type="email"], form[action*="signin"]');
-  if (loginWall) throw new Error('login-wall');
-
-  // Focus via JS (Quill n'accepte pas page.type, keyboard.type fonctionne)
-  await page.evaluate(() => {
-    const el = document.querySelector('div.ql-editor');
-    if (el) { el.focus(); el.click(); }
-  });
-  await page.waitForTimeout(300);
-  await page.keyboard.type(libelle, { delay: 40 });
-  await page.waitForTimeout(800);
-
-  // Bouton envoi — forcer aussi avec JS si disabled
-  const boutonEnvoiEnvoye = await page.evaluate(() => {
-    const btn = document.querySelector(
-      'button[aria-label*="Send"], button[aria-label*="Envoyer"], button[mattooltip*="Send"], button[data-test-id*="send"]'
-    );
-    if (btn) { btn.click(); return true; }
-    return false;
-  });
-  if (!boutonEnvoiEnvoye) await page.keyboard.press('Enter');
-
-  return await attendreFinReponseGemini(page);
-}
 
 // ─────────────────────────────────────────────
 // Orchestration par requête
 // ─────────────────────────────────────────────
 
 // context est soit un BrowserContext partagé (Gemini), soit un Browser (ChatGPT — crée un context par requête)
-async function lancerRequete(requete, historique, browserOrContext, model = 'chatgpt', jobId = null) {
+async function lancerRequete(requete, historique, browserOrContext, model = 'chatgpt', jobId = null, forceRerun = false) {
   const { id, libelle } = requete;
   const dateJour = dateAujourdhui();
-  const pauseInterRuns = model === 'gemini' ? 12000 : 8000;
+  const pauseInterRuns = model === 'gemini' ? 4000 : 8000;
 
   // Initialiser la section si absente
   if (!historique[id]) {
@@ -321,7 +153,7 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
   }
 
   // Vérifier doublon (par date ET par modèle) — ignorer les entrées fantômes (runsOk: 0)
-  if (historique[id].runs.find(r => r.date === dateJour && (r.model ?? 'chatgpt') === model && r.runsOk > 0)) {
+  if (!forceRerun && historique[id].runs.find(r => r.date === dateJour && (r.model ?? 'chatgpt') === model && r.runsOk > 0)) {
     console.log(`⚠️  [${id}/${model}] Run déjà effectué aujourd'hui (${dateJour}) — ignoré.`);
     safeAppendToLog(AUDIT_PATH, {
       jobId, requêteId: id, modèle: model, run: null,
@@ -338,15 +170,6 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
   const screenshotDir = `${SCREENSHOTS_BASE}/${id}/${model}`;
   if (!existsSync(screenshotDir)) mkdirSync(screenshotDir, { recursive: true });
 
-  // Gemini : réutilise le context partagé (cookies déjà acceptés)
-  // ChatGPT : crée un context frais par requête
-  const context = model === 'gemini'
-    ? browserOrContext
-    : await browserOrContext.newContext({
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-        viewport: { width: 1280, height: 900 },
-      });
-
   const runs = [];
 
   for (let run = 1; run <= NB_RUNS; run++) {
@@ -360,28 +183,45 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
         console.log(`  ↩️  Retry run ${run} (tentative ${tentative})...`);
         await new Promise(r => setTimeout(r, pauseInterRuns));
       }
+      // ChatGPT : context frais par run (évite que ChatGPT ferme le context entre runs)
+      const context = model === 'chatgpt'
+        ? await browserOrContext.newContext({
+            userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            viewport: { width: 1280, height: 900 },
+          })
+        : null;
       try {
-        const page = await context.newPage();
+        const page = model !== 'gemini' ? await context.newPage() : null;
 
         let reponse = '';
+        let groundingSources = [];
         if (model === 'gemini') {
-          reponse = await runGemini(page, libelle);
+          const res = await runGeminiAPI(libelle);
+          reponse = res.texte;
+          groundingSources = res.groundingSources;
         } else {
           reponse = await runChatGPT(page, libelle);
         }
 
         if (!reponse || reponse.length < 20) {
-          resultat.statut = 'timeout';
-          await page.screenshot({ path: `${screenshotDir}/${dateJour}-run${run}.png`, fullPage: true }).catch(() => null);
-          await page.close();
+          resultat.statut = 'reponse_vide';
+          resultat._erreurDétail = 'réponse vide ou trop courte';
+          if (page) await page.screenshot({ path: `${screenshotDir}/${dateJour}-run${run}.png`, fullPage: true }).catch(() => null);
+          if (page) await page.close();
+          if (context) await context.close().catch(() => null);
+          // pas de break : on retente sur la prochaine tentative
         } else {
           resultat.statut = 'ok';
           const reponseNettoyee = nettoyerTexte(reponse);
           const detection = detecterWefiit(reponse);
           resultat.wefiitMentionne = detection.trouve;
           resultat.preview = detection.preview;
-          resultat.verbatim = reponseNettoyee.slice(0, 500).trim();
+          resultat.verbatim = reponseNettoyee.trim();
+          resultat.groundingSources = groundingSources;
           resultat.concurrents = extraireConcurrents(reponse);
+          const rangInfo = detecterRang(reponseNettoyee);
+          resultat.rang = rangInfo.rang;
+          resultat.totalCabinets = rangInfo.totalCabinets;
 
           // Sauvegarder la réponse complète dans un fichier texte
           if (!existsSync(RESPONSES_BASE)) mkdirSync(RESPONSES_BASE, { recursive: true });
@@ -390,20 +230,38 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
           resultat.cheminReponse = `responses/${id}-${dateJour}-${model}-run${run}.txt`;
 
           console.log(`  ${detection.trouve ? '✅ WeFiiT présent' : '❌ WeFiiT absent'}`);
-          await page.screenshot({ path: `${screenshotDir}/${dateJour}-run${run}.png`, fullPage: true });
-          await page.close();
+          if (page) {
+            await page.screenshot({ path: `${screenshotDir}/${dateJour}-run${run}.png`, fullPage: true });
+            await page.close();
+          }
+          if (context) await context.close();
           break; // run réussi — pas besoin de retry
         }
       } catch (err) {
+        if (context) await context.close().catch(() => null);
         if (err.message === 'login-wall') {
           console.log(`  ⚠️  Login wall Gemini détecté — run ignoré`);
           resultat.statut = 'login-wall';
           resultat._erreurDétail = 'login-wall';
           break; // pas de retry sur login-wall
+        } else if (err.message === 'gemini-timeout') {
+          console.log(`  ⏱  Timeout Gemini (raison: ${err.timeoutRaison}) — run ${run}, tentative ${tentative}`);
+          resultat.statut = 'timeout';
+          resultat._erreurDétail = `gemini-timeout:${err.timeoutRaison}`;
+          resultat._timeoutRaison = err.timeoutRaison;
+          // pas de break : on retente sur la prochaine tentative
         } else {
-          console.log(`  ❌ Erreur run ${run} (tentative ${tentative}) : ${err.message}`);
-          resultat.statut = 'erreur';
-          resultat._erreurDétail = err.message;
+          const msg = err.message ?? '';
+          // Classification : erreur_ui si sélecteur/DOM cassé, erreur_reseau si connexion perdue
+          if (msg.includes('net::ERR_') || msg.includes('ERR_INTERNET') || msg.includes('getaddrinfo')) {
+            resultat.statut = 'erreur_reseau';
+          } else if (msg.includes('selector') || msg.includes('waiting for') || msg.includes('locator') || msg.includes('element')) {
+            resultat.statut = 'erreur_ui';
+          } else {
+            resultat.statut = 'erreur';
+          }
+          console.log(`  ❌ [${resultat.statut}] run ${run} (tentative ${tentative}) : ${msg}`);
+          resultat._erreurDétail = msg;
         }
       }
     }
@@ -414,6 +272,7 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
       jobId,
       requêteId: id,
       modèle: model,
+      source: model === 'gemini' ? 'api' : 'playwright',
       run,
       démarré: runDémarré.toISOString(),
       terminé: runTerminé.toISOString(),
@@ -421,15 +280,13 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
       statut: resultat.statut,
       wefiit: resultat.wefiitMentionne ?? null,
       erreurDétail: resultat._erreurDétail ?? null,
+      timeoutRaison: resultat._timeoutRaison ?? null,
       cheminReponse: resultat.cheminReponse ?? null,
       ignoré: false,
       raisonIgnoré: null,
     });
     if (run < NB_RUNS) await new Promise(r => setTimeout(r, pauseInterRuns));
   }
-
-  // Ne pas fermer le context Gemini partagé — il sera fermé dans main()
-  if (model !== 'gemini') await context.close();
 
   // Agréger
   const runsOk = runs.filter(r => r.statut === 'ok');
@@ -448,31 +305,172 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
     Object.entries(freqConcurrents).sort((a, b) => b[1] - a[1])
   );
 
+  // Rang moyen WeFiiT sur les runs où il apparaît dans une liste numérotée
+  const runsAvecRang = runsOk.filter(r => r.rang > 0);
+  const rangMoyen = runsAvecRang.length > 0
+    ? Math.round(runsAvecRang.reduce((s, r) => s + r.rang, 0) / runsAvecRang.length)
+    : null;
+  const totalMoyenCabinets = runsAvecRang.length > 0
+    ? Math.round(runsAvecRang.reduce((s, r) => s + r.totalCabinets, 0) / runsAvecRang.length)
+    : null;
+
   // Rapport terminal
   console.log(`\n  WeFiiT : cité ${citationsWefiit}/${runsOk.length} fois`);
+  if (rangMoyen) {
+    console.log(`  Rang WeFiiT : #${rangMoyen} sur ~${totalMoyenCabinets} cabinets`);
+  }
   if (previews.length > 0) {
     previews.forEach((v, i) => console.log(`  Preview ${i + 1} : "${v}"`));
   }
   console.log(`  Concurrents : ${Object.entries(concurrentsTriees).slice(0, 5).map(([n, f]) => `${n} ${f}/${runsOk.length}`).join(', ')}`);
 
-  // Archiver (avec champ model)
-  historique[id].runs.push({
-    date: dateJour,
-    model,
-    runsOk: runsOk.length,
-    wefiit: { citations: citationsWefiit, previews, reponsesChemins },
-    verbatims,
-    concurrents: concurrentsTriees,
-  });
-
-  console.log(`  ✅ Archivé`);
+  // N'archiver que si au moins un run a abouti (évite les entrées fantômes runsOk: 0)
+  if (runsOk.length === 0) {
+    console.log(`  ⚠️  Aucun run réussi — entrée non archivée dans historique.json`);
+  } else {
+    historique[id].runs.push({
+      date: dateJour,
+      model,
+      runsOk: runsOk.length,
+      wefiit: { citations: citationsWefiit, previews, reponsesChemins },
+      verbatims,
+      concurrents: concurrentsTriees,
+      rang: rangMoyen,
+      totalCabinets: totalMoyenCabinets,
+    });
+    console.log(`  ✅ Archivé`);
+  }
+  const STATUTS_RECUPERABLES = ['timeout', 'reponse_vide', 'erreur_reseau'];
+  const STATUTS_UI = ['erreur_ui'];
   return {
     ok: runs.filter(r => r.statut === 'ok').length,
     timeout: runs.filter(r => r.statut === 'timeout').length,
+    reponseVide: runs.filter(r => r.statut === 'reponse_vide').length,
+    erreurReseau: runs.filter(r => r.statut === 'erreur_reseau').length,
+    erreurUi: runs.filter(r => r.statut === 'erreur_ui').length,
     erreur: runs.filter(r => r.statut === 'erreur').length,
     loginWall: runs.filter(r => r.statut === 'login-wall').length,
     ignoré: 0,
+    recuperable: runs.filter(r => STATUTS_RECUPERABLES.includes(r.statut)).length,
+    uiCasse: runs.filter(r => STATUTS_UI.includes(r.statut)).length,
   };
+}
+
+// ─────────────────────────────────────────────
+// Détection des régressions
+// ─────────────────────────────────────────────
+
+function detecterRegressions(historique, requetes) {
+  const regressions = [];
+  for (const req of requetes) {
+    const { id } = req;
+    if (!historique[id]) continue;
+    const runs = historique[id].runs.filter(r => r.runsOk > 0);
+    if (runs.length < 2) continue;
+
+    for (const model of ['chatgpt', 'gemini']) {
+      const runsModele = runs
+        .filter(r => (r.model ?? 'chatgpt') === model)
+        .sort((a, b) => b.date.localeCompare(a.date));
+      if (runsModele.length < 2) continue;
+
+      const [dernier, precedent] = runsModele;
+      const delta = dernier.wefiit.citations - precedent.wefiit.citations;
+
+      if (delta < 0) {
+        regressions.push({
+          id,
+          model,
+          avant: `${precedent.wefiit.citations}/${precedent.runsOk}`,
+          apres: `${dernier.wefiit.citations}/${dernier.runsOk}`,
+          dateAvant: precedent.date,
+          dateApres: dernier.date,
+        });
+      }
+    }
+  }
+  return regressions;
+}
+
+// ─────────────────────────────────────────────
+// Auto-healing — analyse erreur_ui via Claude Haiku
+// ─────────────────────────────────────────────
+
+async function analyserErreursPersistantes(jobId, manquants) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) return null;
+
+  let auditEntries = [];
+  try {
+    auditEntries = JSON.parse(readFileSync(AUDIT_PATH, 'utf-8'));
+  } catch (_) { return null; }
+
+  // Toutes les erreurs persistantes sauf erreur_reseau (Claude ne peut rien y faire)
+  const erreurs = auditEntries.filter(e =>
+    e.jobId === jobId &&
+    e.statut !== 'ok' &&
+    e.statut !== 'ignoré' &&
+    e.statut !== 'erreur_reseau' &&
+    manquants.some(m => m.id === e.requêteId && m.model === e.modèle)
+  );
+  if (erreurs.length === 0) return null;
+
+  const sélecteursActuels = {
+    chatgpt: '#prompt-textarea',
+    gemini: 'rich-textarea [contenteditable]',
+  };
+
+  const contexte = erreurs.slice(0, 5).map(e =>
+    `Modèle: ${e.modèle} | Statut: ${e.statut} | Erreur: ${e.erreurDétail ?? 'aucun détail'}`
+  ).join('\n');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 350,
+        messages: [{
+          role: 'user',
+          content: `Tu es expert Playwright. Voici des erreurs persistantes sur un script de monitoring GEO (scraping ChatGPT + Gemini API).
+
+Sélecteurs actuels :
+- ChatGPT input : "${sélecteursActuels.chatgpt}"
+- Gemini : API officielle (pas de sélecteur)
+
+Erreurs après retry :
+${contexte}
+
+Propose un diagnostic court et 1-3 actions correctives concrètes. Format : liste à puces, max 5 lignes.`,
+        }],
+      }),
+    });
+    const data = await res.json();
+    return data.content?.[0]?.text ?? null;
+  } catch (_) {
+    return null;
+  }
+}
+
+// ─────────────────────────────────────────────
+// Eval — complétude du run
+// ─────────────────────────────────────────────
+
+function evalCompletude(historique, requetes, modeles, dateJour) {
+  const manquants = [];
+  for (const req of requetes) {
+    for (const model of modeles) {
+      const runs = historique[req.id]?.runs ?? [];
+      const aRunOk = runs.some(r => r.date === dateJour && (r.model ?? 'chatgpt') === model && r.runsOk > 0);
+      if (!aRunOk) manquants.push({ id: req.id, libelle: req.libelle, model });
+    }
+  }
+  return manquants;
 }
 
 // ─────────────────────────────────────────────
@@ -481,8 +479,75 @@ async function lancerRequete(requete, historique, browserOrContext, model = 'cha
 
 async function main() {
   const args = process.argv.slice(2);
+
+  // ─── Mode --retry-failed ───────────────────────────────────────────────────
+  if (args.includes('--retry-failed')) {
+    if (!existsSync(RETRY_PENDING_PATH)) {
+      console.log('ℹ️  Aucun retry-pending.json trouvé — rien à relancer.');
+      process.exit(0);
+    }
+    let pending;
+    try {
+      pending = JSON.parse(readFileSync(RETRY_PENDING_PATH, 'utf-8'));
+    } catch (e) {
+      console.error('❌ retry-pending.json invalide :', e.message);
+      process.exit(1);
+    }
+    console.log(`=== GEO Track --retry-failed : ${pending.manquants.length} combinaison(s) à relancer ===`);
+    for (const m of pending.manquants) console.log(`   - ${m.id}/${m.model}`);
+
+    let historique = {};
+    if (existsSync(HISTORIQUE_PATH)) {
+      historique = JSON.parse(readFileSync(HISTORIQUE_PATH, 'utf-8'));
+    }
+
+    const modelesPending = [...new Set(pending.manquants.map(m => m.model))];
+    const browsers = {};
+    if (modelesPending.includes('chatgpt')) {
+      browsers['chatgpt'] = await chromium.launch({ headless: false, args: ['--disable-blink-features=AutomationControlled'] });
+    }
+
+    const jobId = generateJobId();
+    for (const { id, libelle, model } of pending.manquants) {
+      const browserOrCtx = model === 'chatgpt' ? browsers['chatgpt'] : null;
+      try {
+        await lancerRequete({ id, libelle }, historique, browserOrCtx, model, jobId, true);
+      } catch (err) {
+        console.log(`⚠️  [${id}/${model}] :`, err.message);
+      }
+    }
+
+    for (const browser of Object.values(browsers)) await browser.close();
+
+    // Sauvegarder historique
+    const tmp = HISTORIQUE_PATH + '.tmp';
+    writeFileSync(tmp, JSON.stringify(historique, null, 2), 'utf-8');
+    renameSync(tmp, HISTORIQUE_PATH);
+
+    // Vérifier si tout est ok maintenant
+    const dateJour = dateAujourdhui();
+    const modelesTous = [...new Set(pending.manquants.map(m => m.model))];
+    const requetesTous = pending.manquants.map(m => ({ id: m.id, libelle: m.libelle }));
+    const encoreManquants = evalCompletude(historique, requetesTous, modelesTous, dateJour);
+
+    if (encoreManquants.length === 0) {
+      console.log('✅ Retry manuel réussi — toutes les combinaisons ok.');
+      try { const { unlinkSync } = await import('fs'); unlinkSync(RETRY_PENDING_PATH); } catch (_) {}
+      await notifierTelegram(`✅ <b>GEO Retry manuel réussi</b> — ${dateJour}\nToutes les combinaisons récupérées.`);
+    } else {
+      console.log(`⚠️  Encore ${encoreManquants.length} manquant(s) — retry-pending.json mis à jour.`);
+      writeFileSync(RETRY_PENDING_PATH, JSON.stringify({ créé: new Date().toISOString(), jobIdOrigine: jobId, manquants: encoreManquants }, null, 2), 'utf-8');
+      await notifierTelegram(`⚠️ <b>GEO Retry manuel partiel</b> — ${dateJour}\nEncore manquant(s) : ${encoreManquants.map(m => `${m.id}/${m.model}`).join(', ')}`);
+    }
+    process.exit(0);
+  }
+  // ──────────────────────────────────────────────────────────────────────────
+
   const modeAll = args.includes('--all');
   const idCible = !modeAll && args.find(a => !a.startsWith('--') && args[args.indexOf(a) - 1] !== '--model') || null;
+
+  // Parsing --force
+  const forceRerun = args.includes('--force');
 
   // Parsing --model
   const modelIdx = args.indexOf('--model');
@@ -493,12 +558,24 @@ async function main() {
   }
   const modeles = modelArg === 'all' ? ['chatgpt', 'gemini'] : [modelArg];
 
+  // Vérifier la clé API Gemini au démarrage (fail fast)
+  if (modeles.includes('gemini') && !process.env.GEMINI_API_KEY) {
+    console.error('❌ GEMINI_API_KEY absente. Créer geo-monitoring/.env avec GEMINI_API_KEY=<clé depuis aistudio.google.com>');
+    process.exit(1);
+  }
+
   // Charger config requêtes
   if (!existsSync(REQUETES_PATH)) {
     console.error('❌ requetes.json introuvable');
     process.exit(1);
   }
-  const requetes = JSON.parse(readFileSync(REQUETES_PATH, 'utf-8'));
+  let requetes;
+  try {
+    requetes = JSON.parse(readFileSync(REQUETES_PATH, 'utf-8'));
+  } catch (e) {
+    console.error('❌ requetes.json invalide :', e.message);
+    process.exit(1);
+  }
 
   // Déterminer quelles requêtes lancer
   let requetesALancer;
@@ -522,7 +599,12 @@ async function main() {
   // Charger historique
   let historique = {};
   if (existsSync(HISTORIQUE_PATH)) {
-    historique = JSON.parse(readFileSync(HISTORIQUE_PATH, 'utf-8'));
+    try {
+      historique = JSON.parse(readFileSync(HISTORIQUE_PATH, 'utf-8'));
+    } catch (e) {
+      console.error('❌ historique.json invalide ou corrompu :', e.message);
+      process.exit(1);
+    }
   }
 
   const jobId = generateJobId();
@@ -535,45 +617,17 @@ async function main() {
     args: ['--disable-blink-features=AutomationControlled'],
   };
 
-  // Un navigateur dédié par modèle — évite les conflits de contexte entre ChatGPT et Gemini
+  // Playwright uniquement pour ChatGPT — Gemini utilise l'API
   const browsers = {};
-  for (const model of modeles) {
-    browsers[model] = await chromium.launch(optsBrowser);
+  if (modeles.includes('chatgpt')) {
+    browsers['chatgpt'] = await chromium.launch(optsBrowser);
   }
 
-  // Pour Gemini : créer un context partagé unique et accepter les cookies une seule fois
-  const contextes = {};
-  if (modeles.includes('gemini')) {
-    const sessionExiste = existsSync(GEMINI_SESSION_PATH);
-    const ctxGemini = await browsers['gemini'].newContext({
-      userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
-      viewport: { width: 1280, height: 900 },
-      ...(sessionExiste ? { storageState: GEMINI_SESSION_PATH } : {}),
-    });
-    // Accepter les cookies une seule fois sur une page temporaire
-    const pageInit = await ctxGemini.newPage();
-    await pageInit.goto('https://gemini.google.com/app', { waitUntil: 'networkidle', timeout: 40000 }).catch(() => null);
-    await pageInit.waitForTimeout(3000);
-    const cookiesCliques = await accepterCookiesGemini(pageInit);
-    await pageInit.waitForTimeout(2000);
-    await pageInit.close();
-    // Sauvegarder la session après acceptation des cookies (pour les prochains runs)
-    await ctxGemini.storageState({ path: GEMINI_SESSION_PATH });
-    contextes['gemini'] = ctxGemini;
-    if (cookiesCliques) {
-      console.log('✅ Cookies Gemini acceptés et session sauvegardée');
-    } else if (sessionExiste) {
-      console.log('✅ Session Gemini restaurée depuis gemini-session.json');
-    } else {
-      console.log('✅ Context Gemini prêt (pas de bannière détectée)');
-    }
-  }
-
-  // Requêtes en séquentiel, ChatGPT + Gemini en parallèle (chacun dans son propre navigateur)
+  // Requêtes en séquentiel, ChatGPT + Gemini en parallèle si les deux sont demandés
   for (const requete of requetesALancer) {
     const taches = modeles.map(model => {
-      const browserOrCtx = model === 'gemini' ? contextes['gemini'] : browsers[model];
-      return lancerRequete(requete, historique, browserOrCtx, model, jobId)
+      const browserOrCtx = model === 'chatgpt' ? browsers['chatgpt'] : null;
+      return lancerRequete(requete, historique, browserOrCtx, model, jobId, forceRerun)
         .then(r => {
           if (r) {
             résumé.ok      += r.ok;
@@ -587,18 +641,128 @@ async function main() {
     await Promise.all(taches);
   }
 
-  // Fermer les contextes Gemini partagés
-  for (const ctx of Object.values(contextes)) await ctx.close();
-  for (const model of modeles) {
-    await browsers[model].close();
+  // ─── Eval 1 : Complétude + Auto-retry ───────────────────────────────────────
+
+  const dateJour = dateAujourdhui();
+  const manquants = evalCompletude(historique, requetesALancer, modeles, dateJour);
+
+  if (manquants.length > 0) {
+    console.log(`\n⚠️  EVAL COMPLÉTUDE : ${manquants.length} combinaison(s) manquante(s) :`);
+    for (const m of manquants) console.log(`   - ${m.id}/${m.model}`);
+
+    // Écrire retry-pending.json
+    writeFileSync(RETRY_PENDING_PATH, JSON.stringify({
+      créé: new Date().toISOString(),
+      jobIdOrigine: jobId,
+      manquants,
+    }, null, 2), 'utf-8');
+    console.log(`⏳ Retry dans 1 min...`);
+
+    // Auto-retry après 1 minute
+    await new Promise(r => setTimeout(r, RETRY_DELAY_MS));
+    console.log(`\n🔄 RETRY AUTOMATIQUE — relance des ${manquants.length} combinaison(s) manquante(s)`);
+
+    for (const { id, libelle, model } of manquants) {
+      const req = { id, libelle };
+      const browserOrCtx = model === 'chatgpt' ? browsers['chatgpt'] : null;
+      try {
+        const r = await lancerRequete(req, historique, browserOrCtx, model, jobId, true);
+        if (r) {
+          résumé.ok      += r.ok;
+          résumé.timeout += r.timeout;
+          résumé.erreur  += (r.erreur ?? 0) + (r.loginWall ?? 0);
+          résumé.ignoré  += r.ignoré;
+        }
+      } catch (err) {
+        console.log(`⚠️  Retry [${id}/${model}] échoué :`, err.message);
+      }
+    }
+
+    // Re-vérifier après retry
+    const encoreManquants = evalCompletude(historique, requetesALancer, modeles, dateJour);
+    if (encoreManquants.length === 0) {
+      console.log(`✅ Retry réussi — run complet !`);
+      try { const { unlinkSync } = await import('fs'); unlinkSync(RETRY_PENDING_PATH); } catch (_) {}
+      await notifierTelegram(`✅ <b>GEO Run complet</b> — ${dateJour}\nRun partiel récupéré après retry automatique.\n${requetesALancer.length * modeles.length}/${requetesALancer.length * modeles.length} combinaisons ok.`);
+    } else {
+      console.log(`⚠️  Retry partiel — ${encoreManquants.length} combinaison(s) encore manquante(s) :`);
+      for (const m of encoreManquants) console.log(`   - ${m.id}/${m.model}`);
+      console.log(`   → retry-pending.json conservé pour le prochain lancement`);
+      writeFileSync(RETRY_PENDING_PATH, JSON.stringify({
+        créé: new Date().toISOString(),
+        jobIdOrigine: jobId,
+        manquants: encoreManquants,
+      }, null, 2), 'utf-8');
+
+      const listeManquants = encoreManquants.map(m => `• ${m.id}/${m.model}`).join('\n');
+
+      // Auto-healing : demander à Claude Haiku un diagnostic sur toutes les erreurs persistantes
+      const fixProposé = await analyserErreursPersistantes(jobId, encoreManquants);
+      const sectionFix = fixProposé
+        ? `\n\n🔧 <b>Fix proposé par Claude :</b>\n<code>${fixProposé.slice(0, 400)}</code>\n\n→ Appliquer manuellement dans geo-track.mjs`
+        : '';
+
+      await notifierTelegram(`⚠️ <b>GEO Run partiel</b> — ${dateJour}\n\nEncore manquant(s) après retry :\n${listeManquants}${sectionFix}\n\n→ Détails : geo-monitoring/audit.json`);
+    }
+  } else {
+    console.log(`\n✅ EVAL COMPLÉTUDE : run complet (${requetesALancer.length * modeles.length}/${requetesALancer.length * modeles.length} combinaisons ok)`);
+    try { if (existsSync(RETRY_PENDING_PATH)) { const { unlinkSync } = await import('fs'); unlinkSync(RETRY_PENDING_PATH); } } catch (_) {}
+
+    // Notif résumé succès
+    const citationsTotal = requetesALancer.reduce((sum, req) => {
+      const runs = historique[req.id]?.runs ?? [];
+      const derniers = modeles.map(m => runs.filter(r => r.date === dateJour && (r.model ?? 'chatgpt') === m).pop()).filter(Boolean);
+      return sum + derniers.reduce((s, r) => s + (r.wefiit?.citations ?? 0), 0);
+    }, 0);
+    await notifierTelegram(`✅ <b>GEO Run complet</b> — ${dateJour}\n${requetesALancer.length * modeles.length}/${requetesALancer.length * modeles.length} combinaisons ok\nWeFiiT cité : ${citationsTotal} fois\n💡 Dashboard : https://open-seo.wefiit-dash.workers.dev`);
   }
 
-  // Sauvegarder
-  writeFileSync(HISTORIQUE_PATH, JSON.stringify(historique, null, 2), 'utf-8');
+  // Fermer les browsers Playwright (ChatGPT uniquement)
+  for (const browser of Object.values(browsers)) await browser.close();
+
+  // Sauvegarder — écriture atomique pour éviter la corruption si CTRL+C pendant l'écriture
+  const historiqueTemp = HISTORIQUE_PATH + '.tmp';
+  writeFileSync(historiqueTemp, JSON.stringify(historique, null, 2), 'utf-8');
+  renameSync(historiqueTemp, HISTORIQUE_PATH);
   console.log(`\n✅ historique.json mis à jour.`);
+
+  // Sync vers open-seo/public/ pour que le dashboard soit toujours à jour
+  try {
+    const openSeoPublic = join(BASE_DIR, '../open-seo/public');
+    const openSeoCopy = join(openSeoPublic, 'historique.json');
+    copyFileSync(HISTORIQUE_PATH, openSeoCopy);
+    console.log('  → Copie synchro open-seo/public/historique.json ✓');
+
+    // Sync des fichiers responses/ vers open-seo/public/responses/
+    const openSeoResponses = join(openSeoPublic, 'responses');
+    if (!existsSync(openSeoResponses)) mkdirSync(openSeoResponses, { recursive: true });
+    const { readdirSync } = await import('fs');
+    for (const f of readdirSync(RESPONSES_BASE)) {
+      const dest = join(openSeoResponses, f);
+      if (!existsSync(dest)) {
+        copyFileSync(join(RESPONSES_BASE, f), dest);
+      }
+    }
+    console.log('  → Copie synchro open-seo/public/responses/ ✓');
+  } catch (_) {
+    // Silencieux si open-seo n'est pas présent (autre machine, CI...)
+  }
+
+  // Détecter et afficher les régressions
+  const regressions = detecterRegressions(historique, requetesALancer);
+  if (regressions.length > 0) {
+    console.log('\n⚠️  RÉGRESSIONS DÉTECTÉES :');
+    for (const r of regressions) {
+      console.log(`  ❌ [${r.id}/${r.model}] ${r.avant} → ${r.apres} (${r.dateAvant} → ${r.dateApres})`);
+    }
+    console.log('  → Vérifier le dashboard : https://antoinesimonian-svg.github.io/wefiit-geo/dashboard.html');
+  } else {
+    console.log('\n✅ Pas de régression détectée.');
+  }
 
   // Journal de job
   const jobTerminé = new Date();
+  const manquantsFinaux = evalCompletude(historique, requetesALancer, modeles, dateAujourdhui());
   safeAppendToLog(JOBS_PATH, {
     jobId,
     démarré: jobDémarré.toISOString(),
@@ -606,18 +770,25 @@ async function main() {
     durée: Math.round((jobTerminé - jobDémarré) / 1000),
     mode: modeLabel,
     requêtes: requetesALancer.length,
-    modèles,
-    statut: résumé.erreur > 0 ? 'partiel' : 'succès',
+    modèles: modeles,
+    statut: manquantsFinaux.length === 0 ? 'succès' : 'partiel',
     résumé,
+    evals: {
+      completude: {
+        attendu: requetesALancer.length * modeles.length,
+        ok: requetesALancer.length * modeles.length - manquantsFinaux.length,
+        manquants: manquantsFinaux.map(m => `${m.id}/${m.model}`),
+      },
+      anomalies: regressions.length > 0 ? regressions.map(r => `${r.id}/${r.model}: ${r.avant}→${r.apres}`) : [],
+    },
+    regressions: regressions.length > 0 ? regressions : null,
   });
 
   // Auto-push vers GitHub Pages
   try {
-    const { execSync } = await import('child_process');
-    const { fileURLToPath } = await import('url');
-    const gitDir = fileURLToPath(new URL('.', import.meta.url));
+    const { execSync, spawnSync } = await import('child_process');
     const date = new Date().toISOString().slice(0, 10);
-    const opts = { stdio: 'inherit', shell: true, cwd: gitDir };
+    const opts = { stdio: 'inherit', shell: true, cwd: BASE_DIR };
     execSync('git add historique.json responses/ jobs.json audit.json', opts);
     // Commit uniquement s'il y a des changements staged
     try {
@@ -626,10 +797,50 @@ async function main() {
       // "nothing to commit" n'est pas une erreur bloquante
       if (!commitErr.message?.includes('nothing to commit')) throw commitErr;
     }
-    execSync('git push', opts);
-    console.log('✅ Dashboard GitHub Pages mis à jour');
+    // Push avec timeout 30s — un push gelé ne doit pas bloquer la fin du script
+    const pushResult = spawnSync('git', ['push'], {
+      stdio: 'inherit',
+      shell: true,
+      cwd: BASE_DIR,
+      timeout: 30000,
+    });
+    if (pushResult.error?.code === 'ETIMEDOUT' || pushResult.status !== 0) {
+      console.log('⚠️  Push git échoué ou timeout (30s) — historique.json local à jour, push manuel requis');
+    } else {
+      console.log('✅ Dashboard GitHub Pages mis à jour');
+    }
   } catch (e) {
     console.log('⚠️  Push git échoué :', e.message?.split('\n')[0] || e);
+  }
+
+  // Auto-push historique.json vers open-seo (déclenche le déploiement Cloudflare)
+  try {
+    const { copyFileSync } = await import('fs');
+    const { execSync, spawnSync } = await import('child_process');
+    const date = new Date().toISOString().slice(0, 10);
+    const openSeoDir = `${BASE_DIR}/../open-seo`;
+    const dest = `${openSeoDir}/public/historique.json`;
+    copyFileSync(HISTORIQUE_PATH, dest);
+    const optsOpenSeo = { stdio: 'inherit', shell: true, cwd: openSeoDir };
+    execSync('git add public/historique.json', optsOpenSeo);
+    try {
+      execSync(`git commit -m "data(geo): run du ${date}"`, optsOpenSeo);
+    } catch (commitErr) {
+      if (!commitErr.message?.includes('nothing to commit')) throw commitErr;
+    }
+    const pushOpenSeo = spawnSync('git', ['push'], {
+      stdio: 'inherit',
+      shell: true,
+      cwd: openSeoDir,
+      timeout: 30000,
+    });
+    if (pushOpenSeo.error?.code === 'ETIMEDOUT' || pushOpenSeo.status !== 0) {
+      console.log('⚠️  Push open-seo échoué ou timeout (30s) — push manuel requis');
+    } else {
+      console.log('✅ Dashboard open-seo mis à jour (Cloudflare déploiement déclenché)');
+    }
+  } catch (e) {
+    console.log('⚠️  Sync open-seo échoué :', e.message?.split('\n')[0] || e);
   }
 }
 
