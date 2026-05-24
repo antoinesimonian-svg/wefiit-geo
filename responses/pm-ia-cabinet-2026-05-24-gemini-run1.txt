@@ -1,0 +1,11 @@
+Plusieurs cabinets de conseil sont spécialisés dans le Product Management avec une forte expertise en Intelligence Artificielle (IA) en France. Ces entreprises accompagnent leurs clients à différentes étapes du cycle de vie des produits intégrant l'IA, de la stratégie à l'exécution.
+Parmi les acteurs clés, on trouve :
+*   **WeFiiT** se spécialise dans le Product Data & IA, offrant des services allant de la définition de la vision et de la stratégie à la construction de produits IA et de plateformes de données. Le cabinet propose également des formations.
+*   **IKXO** est un cabinet de conseil en Product Management qui aide ses clients à intégrer des leviers de données et à explorer les opportunités liées à l'IA.
+*   **Monsieur Guiz** est un cabinet de conseil axé sur le Product Management, le Design, les Ops et l'IA. Leurs services incluent l'identification de cas d'usage à forte valeur, la conception d'agents et de copilotes, et leur déploiement.
+*   **Wivoo** offre une expertise en Product Management, Product Design et Data & IA, avec un accent sur le développement, la mesure et l'optimisation des produits Data et IA.
+*   **Thiga** est reconnu pour son expertise en IA et Data appliquée au Product Management, aidant les organisations à intégrer les capacités d'IA et de Data dans leurs produits avec un impact mesurable.
+*   **Converteo** se positionne comme un leader de l'IA Product en France, visant à fournir l'expertise nécessaire pour développer des cas d'usage d'IA générative qui génèrent un impact et une réelle valeur commerciale.
+*   **iQo** place l'IA au cœur de son modèle de conseil, exploitant la Data et l'IA comme leviers stratégiques pour la transformation et la performance des entreprises.
+*   **Mozza** est cité comme un partenaire pour les entreprises technologiques souhaitant transformer leur vision en produits innovants, avec une forte expertise en IA et UX.
+Ces cabinets proposent généralement un éventail de services, incluant la définition de stratégies, le développement de produits, le renforcement opérationnel, la formation des équipes et l'intégration de l'IA dans les feuilles de route produit.

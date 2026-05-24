@@ -501,5 +501,53 @@
         "dateApres": "2026-05-23"
       }
     ]
+  },
+  {
+    "jobId": "job-20260524-082128-3881bb",
+    "démarré": "2026-05-24T08:21:29.074Z",
+    "terminé": "2026-05-24T08:36:19.343Z",
+    "durée": 890,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 35,
+      "timeout": 0,
+      "erreur": 6,
+      "ignoré": 0
+    },
+    "evals": {
+      "completude": {
+        "attendu": 12,
+        "ok": 12,
+        "manquants": []
+      },
+      "anomalies": [
+        "pm-general/chatgpt: 3/3→0/3",
+        "pmm-general/chatgpt: 1/3→0/3"
+      ]
+    },
+    "regressions": [
+      {
+        "id": "pm-general",
+        "model": "chatgpt",
+        "avant": "3/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-23",
+        "dateApres": "2026-05-24"
+      },
+      {
+        "id": "pmm-general",
+        "model": "chatgpt",
+        "avant": "1/3",
+        "apres": "0/3",
+        "dateAvant": "2026-05-23",
+        "dateApres": "2026-05-24"
+      }
+    ]
   }
 ]
