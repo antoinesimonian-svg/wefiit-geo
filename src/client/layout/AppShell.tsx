@@ -3,12 +3,7 @@ import { Link, useLocation } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import {
   ChevronDown,
-  ChevronsUpDown,
-  CircleHelp,
-  CreditCard,
   Menu,
-  Settings,
-  User,
 } from "lucide-react";
 import {
   AppContent,
@@ -16,15 +11,24 @@ import {
   SeoApiStatusBanners,
 } from "@/client/layout/AppShellParts";
 import { getProjectNavGroups } from "@/client/navigation/items";
-import { signOutAndRedirect, useSession } from "@/lib/auth-client";
-import { isHostedClientAuthMode } from "@/lib/auth-mode";
-import { BILLING_ROUTE } from "@/shared/billing";
 import { getSeoApiKeyStatus } from "@/serverFunctions/config";
 import { getOrCreateDefaultProject } from "@/serverFunctions/projects";
 
 const DATAFORSEO_HELP_PATH = "/help/dataforseo-api-key";
-const SUPPORT_PATH = "/support";
 
+/** Favicon WeFiiT — logo image de la marque */
+function WeFiiTFavicon() {
+  return (
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GgsS4gnbVgzHjynixRKNWUx3hjzUcYJwsQ&s"
+      alt="WeFiiT"
+      className="h-7 w-7 shrink-0 rounded-lg object-cover"
+      onError={(e) => {
+        (e.target as HTMLImageElement).style.display = "none";
+      }}
+    />
+  );
+}
 export function AuthenticatedAppLayout({
   children,
   projectId,
@@ -45,7 +49,7 @@ export function AuthenticatedAppLayout({
     enabled: !projectId,
   });
   const headerProjectId = projectId ?? defaultProjectQuery.data?.id ?? null;
-  const shouldCheckSeoApiKeyStatus = location.pathname !== BILLING_ROUTE;
+  const shouldCheckSeoApiKeyStatus = true;
   const seoApiKeyStatusQuery = useQuery({
     queryKey: ["seoApiKeyStatus"],
     queryFn: () => getSeoApiKeyStatus(),
@@ -154,7 +158,6 @@ function TopNav({
   onOpenDrawer: () => void;
 }) {
   const navGroups = projectId ? getProjectNavGroups(projectId) : [];
-  const isSupportActive = pathname === SUPPORT_PATH;
 
   return (
     <div className="navbar shrink-0 gap-2 border-b border-base-300 bg-base-100">
@@ -170,14 +173,16 @@ function TopNav({
             <Menu className="h-6 w-6" />
           </button>
         ) : null}
-        <Link to="/" className="ml-1 font-semibold text-base-content">
-          OpenSEO
+        <Link to="/" className="ml-1 flex items-center gap-2">
+          <WeFiiTFavicon />
+          <span className="font-semibold text-base-content">Dashboard GEO & SEO</span>
         </Link>
       </div>
 
       <div className="hidden items-center gap-1 md:flex">
-        <Link to="/" className="px-2 text-lg font-semibold text-base-content">
-          OpenSEO
+        <Link to="/" className="flex items-center gap-2 px-2">
+          <WeFiiTFavicon />
+          <span className="text-base font-semibold text-base-content">Dashboard GEO & SEO</span>
         </Link>
         {projectId
           ? navGroups.map((entry) => {
@@ -258,122 +263,6 @@ function TopNav({
       </div>
 
       <div className="flex-1" />
-
-      <div className="hidden flex-none items-center gap-2 md:flex">
-        <div className="tooltip tooltip-bottom" data-tip="Help & Community">
-          <Link
-            to={SUPPORT_PATH}
-            className={`btn btn-ghost btn-circle btn-sm ${
-              isSupportActive
-                ? "bg-primary/10 text-primary"
-                : "text-base-content/60 hover:text-base-content"
-            }`}
-          >
-            <CircleHelp className="h-4 w-4" />
-          </Link>
-        </div>
-
-        <div className="flex items-center rounded-full border border-base-300 bg-base-100/70 px-1 py-1 shadow-sm">
-          <div
-            className="tooltip tooltip-left before:whitespace-nowrap"
-            data-tip="Multiple projects coming soon"
-          >
-            <button
-              type="button"
-              className="flex h-10 cursor-default items-center gap-2 rounded-full px-3 text-left transition-colors hover:bg-base-200/80"
-              aria-label="Current project"
-            >
-              <span className="max-w-28 truncate text-sm font-medium text-base-content">
-                Default
-              </span>
-              <ChevronsUpDown className="size-3.5 shrink-0 text-base-content/35" />
-            </button>
-          </div>
-
-          <AccountMenu />
-        </div>
-      </div>
-
-      <AccountMenu mobileOnly />
     </div>
-  );
-}
-
-function AccountMenu({ mobileOnly = false }: { mobileOnly?: boolean }) {
-  const { data: session } = useSession();
-  const isHostedMode = isHostedClientAuthMode();
-  const email = session?.user?.email;
-
-  const handleSignOut = () => signOutAndRedirect();
-
-  const menu = (
-    <div className={mobileOnly ? "ml-2 flex-none md:hidden" : "flex-none"}>
-      <div className="dropdown dropdown-end">
-        <button
-          type="button"
-          tabIndex={0}
-          className={`btn btn-ghost btn-circle ${mobileOnly ? "" : "hover:bg-base-200/80"}`}
-          aria-label="Open account menu"
-        >
-          <User className="h-5 w-5" />
-        </button>
-        <ul
-          tabIndex={0}
-          className="dropdown-content z-20 menu mt-3 min-w-56 rounded-box border border-base-300 bg-base-100 p-2 shadow-lg"
-        >
-          {email ? (
-            <li className="menu-title max-w-full">
-              <span className="truncate text-base-content" data-ph-mask>
-                {email}
-              </span>
-            </li>
-          ) : null}
-          {mobileOnly ? (
-            <li>
-              <Link to={SUPPORT_PATH} className="flex items-center gap-2">
-                <CircleHelp className="h-4 w-4" />
-                Help & Community
-              </Link>
-            </li>
-          ) : null}
-          {isHostedMode ? (
-            <li>
-              <a href={BILLING_ROUTE} className="flex items-center gap-2">
-                <CreditCard className="h-4 w-4" />
-                Billing
-              </a>
-            </li>
-          ) : null}
-          <li>
-            <Link to="/settings" className="flex items-center gap-2">
-              <Settings className="h-4 w-4" />
-              Settings
-            </Link>
-          </li>
-          {isHostedMode && email ? (
-            <li>
-              <button
-                type="button"
-                className="text-error"
-                onClick={handleSignOut}
-              >
-                Sign out
-              </button>
-            </li>
-          ) : null}
-        </ul>
-      </div>
-    </div>
-  );
-
-  if (mobileOnly) {
-    return menu;
-  }
-
-  return (
-    <>
-      <div className="mx-1 h-6 w-px bg-base-300" />
-      {menu}
-    </>
   );
 }
