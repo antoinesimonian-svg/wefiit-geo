@@ -19,32 +19,43 @@
   exclude: properties;
 }
 
-/* Light theme */
+/* Light theme — WeFiiT Design System
+   Source : DESIGN.md (navy #002882, orange #f98f03, surface-alt #f2f4ff) */
 @plugin "daisyui/theme" {
   name: "openseo";
   default: true;
   prefersdark: false;
   color-scheme: light;
-  --color-base-100: oklch(100% 0 0);
-  --color-base-200: oklch(97% 0 0);
-  --color-base-300: oklch(92% 0 0);
-  --color-base-content: oklch(20% 0 0);
-  --color-primary: oklch(55% 0.18 260);
+
+  /* Surfaces — fond bleu clair WeFiiT (surface-alt #f2f4ff) */
+  --color-base-100: oklch(100% 0 0);               /* #ffffff — cards, navbar */
+  --color-base-200: oklch(96.5% 0.01 265);         /* #f2f4ff — fond global */
+  --color-base-300: oklch(92% 0.012 265);          /* #e4e7ff — hover, séparateurs */
+  --color-base-content: oklch(18% 0.04 265);       /* proche #1a1c30 — texte principal */
+
+  /* Primary — Deep Navy WeFiiT #002882 */
+  --color-primary: oklch(33% 0.15 265);
   --color-primary-content: oklch(100% 0 0);
-  --color-secondary: oklch(55% 0.15 145);
+
+  /* Secondary — Slate Blue WeFiiT #2a4cff */
+  --color-secondary: oklch(55% 0.25 265);
   --color-secondary-content: oklch(100% 0 0);
-  --color-accent: oklch(55% 0.18 260);
+
+  /* Accent — Orange WeFiiT #f98f03 (CTA start) */
+  --color-accent: oklch(74% 0.17 60);
   --color-accent-content: oklch(100% 0 0);
+
   --color-neutral: oklch(25% 0 0);
   --color-neutral-content: oklch(100% 0 0);
   --color-info: oklch(70% 0.15 230);
   --color-info-content: oklch(100% 0 0);
-  --color-success: oklch(65% 0.18 145);
+  --color-success: oklch(55% 0.18 145);
   --color-success-content: oklch(100% 0 0);
-  --color-warning: oklch(80% 0.15 80);
+  --color-warning: oklch(74% 0.17 60);             /* orange WeFiiT aussi pour warning */
   --color-warning-content: oklch(100% 0 0);
-  --color-error: oklch(65% 0.2 25);
+  --color-error: oklch(55% 0.22 25);
   --color-error-content: oklch(100% 0 0);
+
   --radius-selector: 0.5rem;
   --radius-field: 0.5rem;
   --radius-box: 0.75rem;
@@ -124,6 +135,15 @@ select {
   .pt-safe {
     padding-top: max(env(safe-area-inset-top, 0), 12px);
   }
+}
+
+/* Bar grow animation — utilisé pour les barres concurrents GEO */
+@keyframes barGrow {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+.bar-grow {
+  animation: barGrow 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 /* Override DaisyUI dock's fixed positioning to use flex layout instead */

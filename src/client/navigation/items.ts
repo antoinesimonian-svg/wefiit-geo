@@ -1,7 +1,6 @@
 import {
   Bookmark,
   Bot,
-  Brain,
   ClipboardCheck,
   Globe,
   Link2,
@@ -64,7 +63,7 @@ const projectNavItems = [
   {
     to: "/p/$projectId/geo" as const,
     label: "GEO",
-    icon: Brain,
+    icon: Sparkles,
     matchSegment: "/geo",
   },
 ] as const;
@@ -93,7 +92,7 @@ export function getProjectNavGroups(projectId: string) {
   const geoItem = linkOptions({
     to: "/p/$projectId/geo" as const,
     label: "GEO",
-    icon: Brain,
+    icon: Sparkles,
     matchSegment: "/geo",
     params: { projectId },
     search: {},

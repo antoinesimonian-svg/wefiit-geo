@@ -20,10 +20,15 @@ export function GeoConcurrents({ topConcurrents, maxConcurrent }: Props) {
               >
                 {nom}
               </span>
-              <div className="flex-1 rounded-full bg-base-200 h-2">
+              <div className="flex-1 rounded-full bg-base-200 h-2 overflow-hidden">
                 <div
-                  className={`h-2 rounded-full ${isWefiit ? "bg-warning" : "bg-primary/60"}`}
-                  style={{ width: `${(total / maxConcurrent) * 100}%` }}
+                  className="h-2 rounded-full bar-grow"
+                  style={{
+                    width: `${(total / maxConcurrent) * 100}%`,
+                    background: isWefiit
+                      ? "linear-gradient(90deg, #f98f03, #e95400)"
+                      : "linear-gradient(90deg, #f98f03cc, #e95400aa)",
+                  }}
                 />
               </div>
               <span className="w-8 text-right text-xs tabular-nums text-base-content/60">{freq}%</span>

@@ -61,10 +61,13 @@ function VerbatimModal({ v, onClose }: { v: Verbatim; onClose: () => void }) {
 
 function VerbatimCard({ v, onOpen }: { v: Verbatim; onOpen: () => void }) {
   const long = v.texte.length > 200;
-  const bg = v.wefiitCite ? "bg-[#f0faf4]" : "bg-[#f8f9fa] opacity-80";
+  const bgClass = v.wefiitCite ? "" : "bg-[#f8f9fa] opacity-80";
+  const bgStyle = v.wefiitCite
+    ? { background: "rgba(249,143,3,0.07)", border: "1px solid rgba(249,143,3,0.2)" }
+    : {};
 
   return (
-    <div className={`rounded-lg border border-base-200 p-3 space-y-2 ${bg}`}>
+    <div className={`rounded-lg border border-base-200 p-3 space-y-2 ${bgClass}`} style={bgStyle}>
       <p className="text-sm leading-relaxed text-base-content/90 line-clamp-3">
         "{v.texte}"
       </p>
@@ -78,10 +81,21 @@ function VerbatimCard({ v, onOpen }: { v: Verbatim; onOpen: () => void }) {
       )}
       <div className="flex flex-wrap items-center gap-2">
         <BadgeModele modele={v.modele} />
-        {v.wefiitCite
-          ? <span className="badge badge-sm badge-success">WeFiiT cité</span>
-          : <span className="badge badge-sm badge-ghost text-base-content/40">Non cité</span>
-        }
+        {v.wefiitCite ? (
+          <span className="inline-flex items-center gap-1 text-xs font-medium text-[#e95400]">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3GgsS4gnbVgzHjynixRKNWUx3hjzUcYJwsQ&s"
+              alt="WeFiiT"
+              className="h-4 w-4 rounded object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
+            />
+            cité
+          </span>
+        ) : (
+          <span className="badge badge-sm badge-ghost text-base-content/40">Non cité</span>
+        )}
         <span className="text-xs text-base-content/50">{v.requete}</span>
         <span className="ml-auto text-xs text-base-content/40">{v.date}</span>
       </div>
