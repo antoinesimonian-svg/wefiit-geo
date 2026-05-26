@@ -41,7 +41,7 @@ export function GeoEvolutionChart({ evolutionParRun, modele }: Props) {
               contentStyle={{ fontSize: 12 }}
               cursor={{ stroke: "currentColor", strokeOpacity: 0.2 }}
               labelFormatter={(label, payload) => payload?.[0]?.payload?.date ?? label}
-              formatter={(value: number) => [`${value}%`]}
+              formatter={(value: number | string) => [`${value}%`]}
             />
             <Legend wrapperStyle={{ fontSize: 12 }} />
             {(!modele || modele === "chatgpt") && (
