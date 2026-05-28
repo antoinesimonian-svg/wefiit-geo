@@ -103,8 +103,11 @@ function VerbatimCard({ v, onOpen }: { v: Verbatim; onOpen: () => void }) {
   );
 }
 
+const PAR_PAGE = 9;
+
 export function GeoVerbatims({ verbatims }: Props) {
   const [selected, setSelected] = useState<Verbatim | null>(null);
+  const [page, setPage] = useState(0);
 
   if (verbatims.length === 0) {
     return (
@@ -114,15 +117,43 @@ export function GeoVerbatims({ verbatims }: Props) {
     );
   }
 
+  const totalPages = Math.ceil(verbatims.length / PAR_PAGE);
+  const debut = page * PAR_PAGE;
+  const pageVerbatims = verbatims.slice(debut, debut + PAR_PAGE);
+
   return (
     <>
       <div className="card bg-base-100 border border-base-200 p-4 space-y-3">
-        <p className="text-sm font-semibold">Verbatims WeFiiT récents</p>
+        <div className="flex items-center justify-between">
+          <p className="text-sm font-semibold">Verbatims WeFiiT récents</p>
+          <span className="text-xs text-base-content/40">{verbatims.length} verbatim{verbatims.length > 1 ? "s" : ""}</span>
+        </div>
         <div className="flex flex-col gap-3">
-          {verbatims.slice(0, 9).map((v, i) => (
-            <VerbatimCard key={i} v={v} onOpen={() => setSelected(v)} />
+          {pageVerbatims.map((v, i) => (
+            <VerbatimCard key={debut + i} v={v} onOpen={() => setSelected(v)} />
           ))}
         </div>
+        {totalPages > 1 && (
+          <div className="flex items-center justify-between pt-2 border-t border-base-200">
+            <button
+              className="btn btn-sm btn-ghost"
+              disabled={page === 0}
+              onClick={() => setPage((p) => p - 1)}
+            >
+              ← Précédent
+            </button>
+            <span className="text-xs text-base-content/50">
+              Page {page + 1} / {totalPages}
+            </span>
+            <button
+              className="btn btn-sm btn-ghost"
+              disabled={page >= totalPages - 1}
+              onClick={() => setPage((p) => p + 1)}
+            >
+              Suivant →
+            </button>
+          </div>
+        )}
       </div>
       {selected && <VerbatimModal v={selected} onClose={() => setSelected(null)} />}
     </>

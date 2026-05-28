@@ -151,6 +151,8 @@ Trois modes configurables via `AUTH_MODE` :
 - `CLOUDFLARE_API_TOKEN` — token custom avec D1:Edit, Workers Scripts:Edit, Workers KV:Edit, Workers R2:Edit
 - `CLOUDFLARE_ACCOUNT_ID` — `2c7270eaa80f93d3de09fd91284909b0`
 
+**Règle obligatoire avant tout push** : toujours lancer `pnpm build` en local et vérifier qu'il passe sans erreur TypeScript avant de committer. Le CI fait la même chose — un build local raté = un deploy raté garanti.
+
 ### Prochaine étape sécurité
 
 Avant de partager l'URL à l'équipe, configurer **Cloudflare Access** :
@@ -159,6 +161,29 @@ Avant de partager l'URL à l'équipe, configurer **Cloudflare Access** :
 3. Policy : autoriser les emails de l'équipe WeFiiT
 4. Récupérer le AUD tag
 5. Ajouter secrets Worker : `AUTH_MODE=cloudflare_access`, `TEAM_DOMAIN`, `POLICY_AUD`
+
+---
+
+## Workflow nouvelle feature
+
+**Toujours en 2 temps — ne jamais sauter l'étape 1.**
+
+### Étape 1 — Plan (obligatoire)
+Avant tout code, générer un plan :
+> "Planifie [feature X] et écris-le dans docs/PLAN-[feature].md"
+
+Le plan doit contenir :
+- Objectif en 1 phrase
+- Fichiers à créer / modifier (dont migrations DB si applicable)
+- Étapes dans l'ordre (3-5 max)
+- Ce qui ne change PAS
+
+**Attendre validation avant de passer à l'étape 2.**
+
+### Étape 2 — Exécution
+> "Exécute le plan docs/PLAN-[feature].md, étape par étape"
+
+Demander confirmation après chaque étape.
 
 ---
 

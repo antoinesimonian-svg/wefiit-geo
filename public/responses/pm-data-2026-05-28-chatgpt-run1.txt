@@ -1,0 +1,28 @@
+Si vous cherchez un cabinet spécialisé en Data Product Management en France (ou à Paris), voici une sélection de structures reconnues selon différents besoins : stratégie produit data/IA, gouvernance, plateformes data, organisation produit, ou transformation digitale.
+Cabinets spécialisés Data / AI / Product
+Artefact — Très fort sur les produits data et IA, avec des équipes mêlant stratégie, data science et product management.
+55 (fifty-five) — Cabinet français spécialisé data marketing, analytics et activation produit data.
+OCTO Technology — Expertise reconnue en product management, plateformes data et organisation produit.
+Theodo Data & AI — Positionnement très orienté delivery agile, AI products et équipes produit-tech.
+Quantmetry — Conseil IA & data avec forte dimension produit et industrialisation.
+Dataiku Services — Plutôt plateforme/enablement, mais intéressant pour structurer une organisation data product.
+Capgemini Invent — Bon niveau sur la transformation data-driven et operating model produit.
+BearingPoint — Conseil en gouvernance data, data office et pilotage produit data.
+Onepoint — Très présent sur les sujets plateforme data, produit et transformation numérique.
+Cabinets plus “Product-centric”
+Si votre enjeu est surtout le Product Management appliqué à la data (Data PM, AI PM, plateforme interne, self-service analytics) :
+Thiga — Référence française du product management ; intervient aussi sur les produits data/IA.
+M33 — Conseil spécialisé product management et product ops.
+Xebia — Expertise produit + engineering + data.
+Selon votre besoin précis
+Structurer un Data Product Operating Model → Thiga, OCTO, Capgemini Invent
+Créer des produits IA/Data à impact business → Artefact, Quantmetry, Theodo
+Plateforme data / self-service / data mesh → Onepoint, Xebia, OCTO
+Data governance & organisation → BearingPoint, Capgemini Invent
+Delivery rapide / startup studio data → Theodo, M33
+Si vous voulez, je peux aussi vous aider à :
+comparer ces cabinets selon budget et taille,
+identifier les meilleurs à Paris,
+trouver des cabinets plus “boutique”,
+préparer un brief/RFP,
+ou lister ceux qui recrutent des Data Product Managers actuellement.

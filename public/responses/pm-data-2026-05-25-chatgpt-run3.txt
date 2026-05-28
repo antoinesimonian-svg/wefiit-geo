@@ -1,0 +1,44 @@
+Si vous cherchez un cabinet spécialisé en Data Product Management en France (ou à Paris), voici quelques acteurs reconnus selon le type d’accompagnement recherché :
+Cabinets orientés stratégie + transformation data
+Artefact — fort positionnement data/AI product, gouvernance, use cases business.
+Onepoint — transformation numérique avec pratiques data product et product operating model.
+Capgemini Invent — data strategy, AI products, organisation produit.
+Wavestone — gouvernance data, operating model, product management data platforms.
+Quantmetry — spécialisé AI/data products, désormais intégré à Capgemini.
+Cabinets plus “product-centric”
+55 (fifty-five) — analytics, marketing data products, activation business.
+Malt Strategy & Product Experts — accès à des freelance Lead Data PM / CPO data.
+Thiga — culture product management avec pratiques data product émergentes.
+Octo Technology — data mesh, plateforme data, organisation produit tech/data.
+Cabinets très techniques / data platform
+Zenika — expertise engineering + data platform + product thinking.
+Datakori — gouvernance et valorisation produit de la donnée.
+Ekimetrics — AI/data products orientés business performance.
+Ce qu’un bon cabinet “Data Product Management” doit savoir faire
+Cherchez des équipes capables de couvrir :
+Discovery des use cases data
+Product ownership de plateformes data
+Data mesh / data products
+Gouvernance & data quality
+KPI produit et adoption
+AI product management
+Alignement métier / tech / data engineering
+Organisation produit data à l’échelle
+Questions utiles en appel d’offres
+Ont-ils déjà staffé des Data Product Managers ?
+Savent-ils travailler avec des équipes Data Engineering + Analytics Engineering ?
+Ont-ils des références sur :
+data platform
+self-service analytics
+AI products
+data monetization
+Leur approche est-elle :
+projet
+produit
+plateforme
+domain-oriented (data mesh)
+Si vous voulez, je peux aussi vous aider à :
+identifier les meilleurs cabinets selon votre secteur (banque, retail, SaaS, luxe, industrie…)
+trouver des cabinets plus “premium”, “boutique”, ou “freelance collectif”
+rédiger un brief/RFP pour sélectionner un cabinet
+comparer TJM et modèles de staffing Data PM à Paris.

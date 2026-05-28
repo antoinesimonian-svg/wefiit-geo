@@ -1,0 +1,27 @@
+Voici quelques options si vous cherchez un cabinet spécialisé en Data Product Management en France, notamment autour de Paris :
+Cabinets de conseil orientés Data Product / AI Product
+Artefact — cabinet français très reconnu en data, IA, analytics et transformation produit data.
+Elevate — spécialisé en product management, product ops et organisation produit, avec pratiques data-driven.
+55 (fifty-five) — fort positionnement data, marketing analytics, measurement et plateformes data.
+OCTO Technology — expertise produit, data platform, IA et organisation tech/data.
+Sia — practice data & AI assez mature avec accompagnement produit data.
+Converteo — data, IA, gouvernance et use cases business orientés ROI.
+Theodo Data & AI — approche produit + delivery agile pour produits data et IA.
+Zenika — conseil tech avec expertise product et data engineering.
+Wavestone — transformation data/AI à grande échelle, gouvernance et operating model produit.
+Cabinets plus “Product-centric”
+Si vous cherchez vraiment la dimension Product Management appliquée à la data (et pas seulement du conseil data) :
+Thiga — très fort en product management ; intéressant pour structurer une fonction Data Product Manager.
+M33 — stratégie produit et organisation produit.
+Fabernovel — innovation, produits numériques et transformation data.
+Selon votre besoin exact
+Créer une équipe Data Product → Thiga, Elevate, OCTO
+Construire une plateforme data / AI product → Artefact, Theodo, Sia
+Data governance + produit data interne → Wavestone, Converteo
+Cadrage stratégique CDO / Head of Data Product → Sia, Wavestone, Fabernovel
+Delivery agile très opérationnel → Theodo, Zenika
+Si vous voulez, je peux aussi vous aider à :
+comparer ces cabinets par taille/prix/réputation,
+identifier les meilleurs pour une startup vs grand groupe,
+trouver des cabinets plus “boutique” spécialisés Data Product,
+ou préparer un brief/RFP pour sélectionner un cabinet.

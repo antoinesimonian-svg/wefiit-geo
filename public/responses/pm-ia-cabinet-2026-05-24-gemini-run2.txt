@@ -1,0 +1,14 @@
+Pour trouver un cabinet spécialisé en Product Management et Intelligence Artificielle (IA), plusieurs cabinets de conseil offrent des services combinant ces deux domaines. Ces firmes aident les entreprises à concevoir, développer et optimiser des produits intégrant des solutions d'IA.
+Parmi les cabinets spécialisés, on peut citer :
+*   **WeFiiT** se positionne explicitement sur le conseil en "Product Data Management & IA". Ils emploient des Data Product Managers qui allient l'approche Produit et l'expertise Data & IA pour transformer les données en produits à forte valeur ajoutée. WeFiiT aborde également l'évolution du rôle du Product Manager à l'ère de l'IA, parlant de "Product Management 3.0 : L'IA au Service du PM".
+*   **IKXO** est un cabinet de conseil en Product Management qui accompagne ses clients dans la conception ou l'amélioration de produits, l'intégration de leviers data, et l'exploration d'opportunités liées à l'IA.
+*   **iQo** intègre l'IA au cœur de son modèle de conseil et propose des services de "structuration de la démarche data product".
+*   **Avisia** est un cabinet de conseil expert en Data, AI & Agentic, qui inclut des services de "Data Product" dans son offre.
+*   **QuantumBlack**, la branche conseil en IA de McKinsey & Company, comprend des technologues, designers et *product managers* qui travaillent ensemble pour construire des outils et actifs de pointe en IA.
+*   **aiko** est un cabinet de conseil "AI Native" qui accompagne les entreprises dans l'intégration de l'IA au cœur de leur stratégie, de l'identification des cas d'usage au déploiement, avec des offres comme "AI Plan" et "AI Build".
+D'autres agences et cabinets de conseil se spécialisent dans l'IA et peuvent couvrir des aspects liés au Product Management, tels que :
+*   **Genflow**, une agence IA spécialisée dans le conseil en intelligence artificielle, le développement de solutions IA sur mesure et l'accompagnement en transformation digitale.
+*   **Mister IA** propose du conseil stratégique, des formations et de l'intégration IA pour transformer les entreprises.
+*   **JustAI** assiste les industriels dans l'usage des technologies d'intelligence artificielle, de la stratégie à la gestion de projet.
+*   **Wivoo** est une agence de conseil en Product Management, Product Design et Data.
+Ces cabinets offrent des services variés, allant de la définition de la stratégie IA, la construction de produits IA (chatbots, plateformes de recommandations), la mise en place de gouvernance de données, à la formation des équipes au Product Management augmenté par l'IA.

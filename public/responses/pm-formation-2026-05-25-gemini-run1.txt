@@ -1,0 +1,23 @@
+Pour former vos équipes au Product Management, plusieurs partenaires proposent des formations et accompagnements adaptés, avec des approches et des formats variés. Voici une sélection d'organismes et de consultants spécialisés :
+**Organismes de formation et cabinets de conseil proposant des formations pour les équipes :**
+*   **Thiga Academy** est reconnue pour son catalogue complet de formations en Product Management, Product Design et IA, certifiées Qualiopi. Ils proposent des sessions inter-entreprises (en groupe) et intra-entreprises (dédiées à votre équipe), avec un fort accent sur des cas pratiques basés sur l'expérience terrain de leurs consultants.
+*   **Hubvisory (Le Campus)**, à la fois cabinet de conseil et organisme de formation certifié Qualiopi, conçoit des formations sur-mesure pour les équipes, axées sur l'impact tangible. Leurs offres incluent des modules courts et ciblés, des ateliers collaboratifs et un accompagnement personnalisé, dispensés par des praticiens.
+*   **Yeita** propose des formations en présentiel, en e-learning, ainsi que du mentoring. Ils sont en mesure d'aider les équipes à se structurer et à faire évoluer leurs pratiques produit grâce à des formats adaptés, couvrant des sujets comme la "PM Discovery & Strategy" et "Product + IA".
+*   **OCTO Academy** offre un éventail de formations pour aider les équipes à gagner en maturité sur les sujets liés au produit, avec des modules tels que "Devenir Product Manager" et "Product Growth".
+*   **Maestro** propose des bootcamps intensifs en Product Management, incluant des programmes sur le "Product x IA" et le "No Code x IA". Leurs formations mettent l'accent sur la pratique à travers des projets concrets et sont encadrées par des experts. Elles peuvent être éligibles à un financement via les OPCO.
+*   **WeFiiT** se positionne comme un "partenaire Produit 360°" offrant du conseil, du renfort opérationnel et de la formation en Product Management. Ils développent des programmes sur mesure pour la montée en compétences des équipes, adaptés à vos cas d'usage spécifiques.
+*   **Be My Product** se distingue par une approche visant à embarquer des équipes entières dans une aventure de formation combinant e-learning et journées présentielles appliquées à vos projets réels, avec un suivi mesurable pour les RH et les managers.
+*   **OpenClassrooms** offre un parcours de formation diplômant "Product Manager" (équivalent Bac +5), entièrement en ligne et à votre rythme, avec un suivi hebdomadaire par un mentor.
+*   **ib Cegos** propose des formations certifiantes SAFe Product Owner / Product Manager (POPM) et SAFe Agile Product Manager (APM), pour les rôles dans un contexte SAFe.
+*   **Simplon** propose une formation Product Owner / Product Manager qui permet aux participants de travailler efficacement avec des équipes pluridisciplinaires, d'utiliser l'IA et la data, et d'adopter les méthodologies agiles.
+**Coaching et accompagnement individualisé ou par équipe :**
+*   Des consultants comme **Tim Herbig** ou des plateformes comme **Prodify** et **MentorCruise** offrent du coaching personnalisé et des ateliers pour les Product Managers et leurs équipes. L'objectif est de développer des compétences clés en stratégie produit, OKRs, découverte produit, leadership et résolution de problèmes complexes. Ces coaches peuvent aider à construire des compétences techniques (recherche de marché, priorisation) et des compétences transversales (leadership, alignement des équipes).
+**Pour choisir le partenaire idéal, vous devriez considérer les points suivants :**
+*   **Le format** : Préférez-vous des formations en ligne, en présentiel, un modèle hybride, des bootcamps intensifs ou des modules plus courts ?
+*   **La personnalisation** : Le partenaire peut-il adapter le contenu de la formation aux besoins spécifiques et au niveau de maturité de vos équipes ?
+*   **Les thématiques** : Avez-vous des besoins spécifiques (Discovery, Stratégie, IA, Agile, Leadership) ou une formation plus générale en Product Management ?
+*   **La certification** : Est-il important que la formation soit certifiante (par exemple, certifiée Qualiopi pour le financement) ?
+*   **La pédagogie** : Privilégiez-vous une approche très pratique, basée sur des projets concrets, ou plus théorique ?
+*   **L'expérience des formateurs** : Sont-ils des praticiens, des consultants ayant une expérience terrain ou des académiques ?
+*   **Les modalités de financement** : La formation est-elle éligible aux dispositifs de financement (OPCO, CPF) ?
+N'hésitez pas à contacter plusieurs de ces partenaires pour discuter de vos besoins spécifiques et obtenir des propositions sur mesure pour la formation de vos équipes.
