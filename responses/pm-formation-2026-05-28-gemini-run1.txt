@@ -1,0 +1,28 @@
+Pour former vos équipes au Product Management, plusieurs partenaires spécialisés proposent des formations et du coaching adaptés aux entreprises. Ces entités peuvent vous aider à renforcer les compétences de vos Product Managers, Product Owners et autres membres d'équipes produit.
+Voici une sélection de partenaires potentiels et les types de services qu'ils offrent :
+**Organismes de formation et cabinets de conseil spécialisés en Product Management :**
+*   **Thiga Academy** : Reconnu comme un pionnier du produit en France, Thiga Academy propose un catalogue complet de formations de courte durée (2 jours) pour différents niveaux de séniorité (PO, PM, Head of Product, CPO) et expertises (data, product marketing, product designer). Leurs formations sont dispensées par des consultants de Thiga, en groupe ou directement en entreprise.
+*   **Hubvisory (Le Campus par Hubvisory)** : Ce cabinet de conseil en Product Management propose des formations certifiées Qualiopi, incluant des formats sur-mesure pour les équipes. Leurs offres couvrent le Product Management, la discovery, l'IA et le leadership produit.
+*   **WiAcadémy par Wivoo** : Ce cabinet de conseil en product management offre un format de formation original, structuré en trois demi-journées de 4h, espacées sur trois semaines. Cela permet aux participants de mettre en pratique leurs apprentissages en entreprise.
+*   **Monsieur Guiz** : Société de conseil en product management, Monsieur Guiz propose également des formations courtes (2 jours, 14h) pour les Product Managers souhaitant se perfectionner, abordant le design thinking, le lean management et le growth.
+*   **OCTO Academy** : Les experts d'OCTO Academy ont conçu un panel de formations pour accompagner les équipes dans leur montée en maturité sur les sujets liés au produit, couvrant notamment les fondamentaux du Product Manager, le Product Growth et la conception de produits responsables.
+*   **WeFiiT** : Ce cabinet de conseil et organisme de formation propose une offre de formation "fullstack" en Product Management, avec un catalogue 2025-2026 construit autour de six axes de compétences produit (Stratégie, Discovery, Delivery, Data & IA, Influence, Bien-être). Ils mettent l'accent sur des formats proches du terrain et adaptés aux cas d'usage des entreprises.
+*   **IKXO** : Cabinet de conseil en Product Management, IKXO est spécialisé dans le renfort opérationnel, la formation et le conseil en organisation produit. Ils s'adaptent aux enjeux business et technologiques de leurs clients.
+*   **Yeita** : Yeita propose des formations en Product Management, y compris des formats en présentiel et e-learning, pour aider les équipes à se structurer et faire évoluer leurs pratiques. Leurs formations sont souvent en format intimiste pour favoriser les échanges et la mise en pratique.
+*   **Maestro (Maria Schools)** : Maestro propose une formation intensive en Product Management, y compris un programme à temps partiel compatible avec une activité professionnelle et un travail sur des cas concrets apportés par des experts.
+*   **One Point** : Ce groupe spécialisé dans la transformation des entreprises a lancé un programme produit depuis 2020, incluant la préparation à des certifications reconnues comme Scrum PSPO 1, SAFe 5.0 Agile Product Manager et Management 3.0.
+**Plateformes de coaching et de formation en ligne :**
+*   **Reforge** : Référence américaine en Growth et en Produit, Reforge propose des contenus en ligne et une communauté de PMs, avec des cours animés par d'anciens leaders d'entreprises renommées.
+*   **MentorCruise et Toptal** : Ces plateformes peuvent vous aider à trouver des coachs en Product Management freelance, spécialisés dans divers domaines (B2B, consumer, enterprise) et avec des niveaux d'expérience variés.
+*   **Product People** : Cette équipe offre du coaching personnalisé en Product Management, allant de l'accompagnement individuel à la formation de leaders pour diriger des équipes produit performantes.
+*   **Tim Herbig** : En tant que coach en Product Management, Tim Herbig travaille avec des Product Managers et des équipes à l'échelle mondiale pour améliorer leur façon de travailler, leur stratégie produit, leurs objectifs et leur découverte produit.
+**Conseils pour choisir votre partenaire :**
+Pour sélectionner le partenaire idéal, considérez les éléments suivants :
+*   **Objectifs de formation** : Définissez clairement les compétences que vos équipes doivent acquérir (discovery, delivery, stratégie produit, OKR, IA, agilité, etc.).
+*   **Format d'apprentissage** : Préférez-vous des formations en présentiel, en ligne, des bootcamps intensifs, ou un accompagnement plus long ? Certaines offres combinent plusieurs formats.
+*   **Expérience des formateurs** : Privilégiez les partenaires dont les formateurs sont des experts terrain, ayant une expérience concrète en Product Management.
+*   **Approche pédagogique** : Recherchez des approches pratiques, avec des cas concrets et des mises en situation, pour favoriser l'application directe des apprentissages.
+*   **Certification** : Si la reconnaissance des compétences est importante pour vos équipes, renseignez-vous sur les certifications proposées (par exemple, Scrum PSPO 1).
+*   **Personnalisation** : Certains partenaires proposent des programmes sur-mesure ou adaptent leurs ateliers aux cas spécifiques de votre entreprise.
+*   **Taille du groupe** : Des formats intimistes peuvent favoriser les échanges et un accompagnement plus personnalisé.
+N'hésitez pas à contacter plusieurs de ces organismes pour discuter de vos besoins spécifiques et obtenir des propositions adaptées à la taille et aux objectifs de vos équipes.
