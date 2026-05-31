@@ -1,0 +1,8 @@
+Plusieurs cabinets de conseil sont spécialisés dans le Product Management avec une expertise en Intelligence Artificielle (IA) :
+*   **IKXO** est un cabinet de conseil en Product Management qui intègre l'exploration des opportunités liées à l'IA et les leviers data dans ses accompagnements.
+*   **Converteo** propose du conseil en Product Management augmenté par la data et possède une expertise en IA générative. Ils abordent également le rôle de "Product Manager IA" et de "Product Builder".
+*   **WeFiiT** est un cabinet de conseil en Product Management qui offre spécifiquement des services de "Conseil Product Data Management & IA". Ils explorent l'évolution du rôle du Product Manager face à l'IA et proposent des formations dédiées.
+*   **AVISIA**, un cabinet indépendant spécialisé dans la Data, dispose de consultants en "Project Manager Data/IA" et "Product Owner Data/IA" pour accompagner les projets.
+*   **Thiga** compte des experts en Data & IA, comme Abdessamad Benhalima, Principal Data & IA, qui partagent leur expertise sur l'optimisation du Product Management grâce à l'IA.
+Des cabinets de conseil en management plus larges comme **McKinsey & Company** et **Bain & Company** intègrent également les technologies et l'IA dans leurs services, pouvant ainsi couvrir les aspects de Product Management liés à l'intelligence artificielle.
+Il existe aussi d'autres firmes de conseil en IA plus généralistes qui peuvent intervenir sur des aspects de Product Management pour des produits basés sur l'IA, telles que Koïno, Palmer Consulting, et AI Builders.

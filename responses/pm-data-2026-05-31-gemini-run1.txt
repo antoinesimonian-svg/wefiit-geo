@@ -1,0 +1,12 @@
+Voici quelques cabinets spécialisés en data product management, principalement en France, offrant des services allant du conseil stratégique à la mise en œuvre opérationnelle et à la formation :
+*   **WeFiiT** est un cabinet de conseil parisien spécialisé en Product Management, incluant le Product Data & IA. Ils proposent du conseil stratégique, du renfort opérationnel et de la formation, accompagnant des grandes entreprises et des scale-ups sur l'ensemble de leurs enjeux Produit.
+*   **TAK** est une agence de conseil en management IT spécialisée en Product et Data. Elle se concentre sur la livraison fiable et rapide de produits sur mesure et propose également des formations en Product Management.
+*   **Onepoint** est un cabinet de conseil qui propose une approche hybridée du Product Management via son offre "Product Management Data", grâce à des experts ayant une double compétence en Data et Produit.
+*   **Agence 5 Degrés** se spécialise dans le conseil en Product Data et IA, aidant les organisations à transformer leurs données produit en un outil de gestion stratégique et à construire une architecture de données au service du produit.
+*   **AVISIA** se présente comme le premier cabinet indépendant Data & IA en France, avec plus de 300 consultants experts. Ils proposent des services incluant des rôles de Product Owner Data/IA.
+*   **Elevate** est une agence axée sur les Data & Technologies Marketing, qui accompagne la gestion de produits data pour assurer la création de valeur et la satisfaction des attentes business.
+*   **Unnest** se distingue par ses consultants spécialisés en Product Management avec une solide expertise en data et une vision innovante du rôle de Data Product Owner, intervenant sur la gouvernance et l'optimisation des processus data.
+*   **Clarkston Consulting** propose une méthodologie et des formations en Data Product Management pour aider les équipes à considérer la donnée comme un produit.
+*   **Data Products LLC** offre des services de conseil en stratégie de données et d'analyse, gouvernance des données et architecture de données moderne.
+*   **Gradiant** est un cabinet de conseil expert en Data, Intelligence Artificielle (IA), Data Management, Data Gouvernance et Analytics.
+Des cabinets de conseil plus importants comme **Boston Consulting Group (BCG)** et **Bain & Company** proposent également des services en Data Analytics et stratégie digitale, qui peuvent inclure des aspects du data product management.
