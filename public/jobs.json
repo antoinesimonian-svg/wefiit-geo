@@ -851,5 +851,33 @@
       "anomalies": []
     },
     "regressions": null
+  },
+  {
+    "jobId": "job-20260531-160359-def463",
+    "démarré": "2026-05-31T16:03:59.841Z",
+    "terminé": "2026-05-31T16:11:59.488Z",
+    "durée": 480,
+    "mode": "--all --model all",
+    "requêtes": 6,
+    "modèles": [
+      "chatgpt",
+      "gemini"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 36,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "evals": {
+      "completude": {
+        "attendu": 12,
+        "ok": 12,
+        "manquants": []
+      },
+      "anomalies": []
+    },
+    "regressions": null
   }
 ]
