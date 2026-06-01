@@ -1,0 +1,25 @@
+En France, plusieurs types de cabinets se sont spécialisés dans le domaine du "Data Product Management", répondant aux besoins croissants des entreprises en matière de valorisation des données et de développement de produits axés sur la donnée et l'IA. Ces cabinets peuvent être regroupés en trois catégories principales : les cabinets de conseil, les cabinets de recrutement et les organismes de formation.
+**Cabinets de Conseil en Data Product Management :**
+Ces entreprises accompagnent leurs clients de la stratégie à l'implémentation de produits data. Leurs services incluent souvent la définition de stratégies data et IA, la mise en place de gouvernance des données, la construction de plateformes data, l'ingénierie des données, l'analyse de données avancée, et le développement de solutions d'IA. Certains cabinets mettent l'accent sur l'apport d'un "Product Mindset" aux équipes data, l'amélioration du "delivery" et la traduction des besoins métiers en spécifications techniques pour les produits data.
+Parmi les acteurs de ce domaine, on retrouve :
+*   **TAK - Conseil en Product et Data Management** : Cette agence de conseil en Management IT est spécialisée dans le Product et la Data, en se concentrant sur une "delivery" fiable et rapide, la transformation des données en décisions éclairées et l'optimisation des processus du département Data.
+*   **Agence 5 Degrés** : Cette agence se positionne sur le "Product Data and AI consulting", intervenant dès la construction d'une plateforme de données et tout au long de son cycle de vie, pour valoriser les données clients et relever les défis de la Data.
+*   **WeFiiT** : Ce cabinet propose du conseil en Product Data Management & IA, aidant à construire des produits Data & IA générant un impact utilisateur concret et mesurable.
+*   **mc2i** : Ce cabinet dispose d'un pôle dédié de 200 consultants mobilisant un savoir-faire large en conseil, gestion de projet et appui opérationnel sur la chaîne de valeur de la donnée, incluant le conseil en data stratégie et gouvernance, et la gestion de projets data platform.
+*   **Artefact** : Il s'agit d'une société de conseil globale en transformation data et IA, de la stratégie au déploiement de solutions, incluant des plateformes data, la gouvernance des données et l'analyse avancée.
+*   **Thélio** : Ce cabinet de conseil Data & IA accompagne les entreprises de la stratégie au déploiement, avec des expertises en stratégie Data & AI, gouvernance des données et plateformes Data & AI.
+*   **Elevate** : Cette agence propose des experts data & tech pour des projets data marketing, incluant la gouvernance des données, le rôle de PO/PM Data et la stratégie Data.
+*   **iQo** : Ce cabinet aborde le Data Product Management en appliquant les méthodes du Product Management aux projets data pour optimiser la valeur créée par la donnée.
+*   **Boston Consulting Group (BCG)** : En tant que cabinet de conseil en stratégie, BCG intègre le digital, la technologie et la donnée dans ses domaines d'expertise pour accompagner les entreprises dans leur transformation.
+**Cabinets de Recrutement spécialisés en Data Product Management :**
+Ces cabinets aident les entreprises à identifier et à embaucher des profils spécialisés tels que les Data Product Managers. Ces rôles sont de plus en plus recherchés pour gérer la complexité croissante des données et en faire des produits à part entière.
+Parmi ces cabinets, on peut citer :
+*   **Apec** : La plateforme propose des offres d'emploi pour des postes de Data Product Manager.
+*   **TPC** : Ce cabinet de recrutement est spécialisé dans les profils Product, Tech, Design & Data pour les startups et scale-ups.
+*   **Licorne Society** : Ce cabinet est expert dans la recherche de profils Product Manager, Product Owner et Product Designer au sein des entreprises du digital, avec une expertise dans le recrutement de profils IA-ready.
+*   **Elios Conseil** : Ce cabinet est spécialisé dans le recrutement de Product Managers, Product Owners, Product Designers UX et Data Scientists.
+**Organismes de Formation en Data Product Management :**
+Certains cabinets de conseil proposent également des formations pour développer les compétences des équipes en Product Management et Data Product Management.
+*   **TAK** : Ce cabinet offre des formations à la carte pour développer les compétences en Product Management.
+*   **WeFiiT** : Ce cabinet ouvre ses formations à ses clients et construit des formations sur-mesure adaptées à l'environnement et aux cas d'usage produit spécifiques.
+En résumé, les "cabinets spécialisés data product management" couvrent un large éventail de services, allant du conseil stratégique et opérationnel à l'aide au recrutement et à la formation, afin d'accompagner les entreprises dans la mise en œuvre d'une culture "data-driven" et le développement de produits innovants basés sur la donnée.
