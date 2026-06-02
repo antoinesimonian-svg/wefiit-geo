@@ -135,6 +135,18 @@
       margin-left: 6px;
       vertical-align: middle;
     }
+    .verbatim-badge-absent {
+      display: inline-block;
+      background: #e5e7eb;
+      color: #6b7280;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 2px 7px;
+      border-radius: 10px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
     .verbatim-date { font-size: 11px; color: #999; margin-bottom: 6px; font-weight: 600; text-transform: uppercase; }
     .verbatim-texte { font-size: 13px; color: #444; font-style: italic; line-height: 1.5; }
     .verbatim-voir {
@@ -207,8 +219,13 @@
 
     .empty { text-align: center; color: #aaa; font-size: 14px; padding: 32px; }
 
+    @media (max-width: 900px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr !important; }
+    }
     @media (max-width: 700px) {
       .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr !important; }
     }
   </style>
 </head>
@@ -241,7 +258,7 @@
     <span class="badge-runs" id="badge-runs"></span>
   </div>
 
-  <div class="grid grid-3" style="margin-bottom: 20px;">
+  <div class="grid" style="grid-template-columns: 1fr 1fr 1fr 1fr; margin-bottom: 20px;">
     <div class="card stat-hero">
       <h2>Citations WeFiiT</h2>
       <div class="valeur" id="stat-citations">—</div>
@@ -252,6 +269,11 @@
       <h2>Taux de présence</h2>
       <div class="valeur" id="stat-taux">—</div>
       <div class="label">% des runs sur la période</div>
+    </div>
+    <div class="card stat-hero">
+      <h2>Rang moyen</h2>
+      <div class="valeur" id="stat-rang">—</div>
+      <div class="label" id="stat-rang-label">sur les listes numérotées</div>
     </div>
     <div class="card stat-hero">
       <h2>Nb de runs</h2>
@@ -404,6 +426,20 @@ function rafraichir(periode, model) {
   document.getElementById('stat-taux').textContent = taux + '%';
   document.getElementById('stat-runs').textContent = donnees.length;
 
+  // Rang moyen sur les runs avec rang non nul
+  const donneesAvecRang = donnees.filter(e => e.rang > 0);
+  const rangEl = document.getElementById('stat-rang');
+  const rangLabelEl = document.getElementById('stat-rang-label');
+  if (donneesAvecRang.length > 0) {
+    const rangMoy = Math.round(donneesAvecRang.reduce((s, e) => s + e.rang, 0) / donneesAvecRang.length);
+    const totalMoy = Math.round(donneesAvecRang.reduce((s, e) => s + (e.totalCabinets || 0), 0) / donneesAvecRang.length);
+    rangEl.textContent = '#' + rangMoy;
+    rangLabelEl.textContent = 'sur ~' + totalMoy + ' cabinets listés';
+  } else {
+    rangEl.textContent = '–';
+    rangLabelEl.textContent = 'pas dans liste numérotée';
+  }
+
   // Delta (comparaison des 2 derniers runs du même modèle)
   const deltaEl = document.getElementById('stat-delta');
   if (tousRunsFiltresModel.length >= 2) {
@@ -541,7 +577,7 @@ function mettreAJourVerbatims(donnees, requeteLibelle) {
       ? `<button class="verbatim-voir" onclick="ouvrirReponse('${chemin}', '${v.date}', '${v.model}', '${requete}')">Voir la réponse complète →</button>`
       : '';
     const classeWefiit = v.wefiitCite ? 'wefiit-cite' : 'wefiit-absent';
-    const badgeWefiit = v.wefiitCite ? '<span class="verbatim-badge-wefiit">WeFiiT ✓</span>' : '';
+    const badgeWefiit = v.wefiitCite ? '<span class="verbatim-badge-wefiit">WeFiiT ✓</span>' : '<span class="verbatim-badge-absent">WeFiiT absent</span>';
     return `<div class="verbatim-item ${v.model} ${classeWefiit}">
       <div class="verbatim-date">${dateLabel} ${badge}${badgeWefiit}</div>
       <div class="verbatim-texte">${v.preview}</div>
