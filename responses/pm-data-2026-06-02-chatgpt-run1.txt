@@ -1,0 +1,19 @@
+Si vous cherchez un cabinet spécialisé en Data Product Management, voici quelques acteurs reconnus en France selon leur positionnement :
+Cabinets orientés Product + Data
+Wivoo — Expertise Product Management, Data et IA, avec accompagnement sur la discovery, la roadmap et les produits data. wivoo.fr
+TAK — Cabinet spécialisé en Product Management et Data Management, avec une forte approche delivery et Product Ops. tak.fr
+IKXO — Conseil en Product Management, incluant les enjeux data et IA dans les stratégies produit. IKXO
+SOMA Smart — Cabinet 100 % Data & IA intégrant une dimension Product sur les produits data et les plateformes. soma-smart.com
+Cabinets orientés Data Strategy / Data Governance
+Cenisis — Spécialiste de la stratégie data, de la gouvernance et du pilotage de produits data. Cenisis
+Limpida — Accompagnement de bout en bout sur la stratégie data, la gouvernance et les équipes data product. limpida.com
+Lincoln — Conseil Data & IA avec expertise en data platforms, gouvernance et industrialisation de produits data. Lincoln
+Cabinets spécialisés Data Management / MDM / PIM
+DATAL — Très orienté gouvernance de données produit (PIM, DAM, MDM) et organisation data. DATAL
+TRIMANE — Expertise Data Intelligence, gouvernance et architecture data. Trimane
+Pour vous orienter plus précisément, pouvez-vous préciser votre besoin :
+recrutement d’un Data Product Manager ;
+accompagnement à la création d’un Data Product Office ;
+mise en place d’une stratégie Data Product ;
+coaching/formation des équipes produit ;
+ou recherche d’un cabinet pour une mission de conseil ponctuelle ?
