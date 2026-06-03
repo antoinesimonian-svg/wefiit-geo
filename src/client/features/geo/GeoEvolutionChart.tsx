@@ -8,6 +8,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import type { Payload } from "recharts/types/component/DefaultTooltipContent";
 import type { GeoData } from "./useGeoData";
 
 type Props = { evolutionParRun: GeoData["evolutionParRun"]; modele: string };
@@ -58,8 +59,8 @@ export function GeoEvolutionChart({ evolutionParRun, modele }: Props) {
               cursor={{ stroke: "currentColor", strokeOpacity: 0.2 }}
               labelFormatter={(label, payload) => {
                 const date = (
-                  payload as Array<{ payload?: { date?: string } }>
-                )?.[0]?.payload?.date;
+                  payload as ReadonlyArray<Payload<number, string>>
+                )?.[0]?.payload?.date as string | undefined;
                 return date ?? String(label);
               }}
               formatter={(value: number | string | undefined) => [
