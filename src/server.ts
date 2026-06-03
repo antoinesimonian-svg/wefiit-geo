@@ -21,13 +21,21 @@ const handleAppFetch = (request: Request): Response | Promise<Response> =>
   appFetch(request);
 const openSeoOAuthProvider = createOpenSeoOAuthProvider(handleAppFetch);
 
-function fetch(
+async function fetch(
   request: Request,
   env: Env,
   ctx: ExecutionContext,
-): Response | Promise<Response> {
+): Promise<Response> {
   const authMode = getAuthMode(env.AUTH_MODE);
   const publicRequest = requestWithPublicOrigin(request);
+  const pathname = new URL(publicRequest.url).pathname;
+
+  if (pathname === "/historique.json") {
+    const upstream = await handleAppFetch(request);
+    const response = new Response(upstream.body, upstream);
+    response.headers.set("Cache-Control", "no-store");
+    return response;
+  }
 
   if (isHostedAuthMode(authMode)) {
     return openSeoOAuthProvider.fetch(
@@ -39,7 +47,7 @@ function fetch(
 
   if (
     (authMode === "cloudflare_access" || authMode === "local_noauth") &&
-    new URL(publicRequest.url).pathname === MCP_ROUTE
+    pathname === MCP_ROUTE
   ) {
     return handleSelfHostedOpenSeoMcpRequest(publicRequest, authMode, env, ctx);
   }
