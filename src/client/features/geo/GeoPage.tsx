@@ -49,9 +49,9 @@ export function GeoPage({ projectId: _projectId, tab: _tab }: Props) {
             {/* Filtres */}
             <div className="space-y-2">
               {/* Chips Requête */}
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" style={{ scrollbarWidth: "none" }}>
                 <button
-                  className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
+                  className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
                     filtres.requeteId === ""
                       ? "bg-[#f98f03] border-[#f98f03] text-white"
                       : "bg-white border-base-300 text-base-content/70 hover:border-[#f98f03]/50 hover:text-[#f98f03]"
@@ -63,7 +63,7 @@ export function GeoPage({ projectId: _projectId, tab: _tab }: Props) {
                 {data?.toutesRequetes.map((r) => (
                   <button
                     key={r.id}
-                    className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
+                    className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
                       filtres.requeteId === r.id
                         ? "bg-[#f98f03] border-[#f98f03] text-white"
                         : "bg-white border-base-300 text-base-content/70 hover:border-[#f98f03]/50 hover:text-[#f98f03]"
