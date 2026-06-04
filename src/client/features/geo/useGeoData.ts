@@ -208,28 +208,37 @@ function transforme(data: Historique): Omit<GeoData, "toutesRequetes"> {
       }
     }
   }
-  const topConcurrents = Object.entries(totauxConcurrents)
+  const concurrentsTriés = Object.entries(totauxConcurrents)
     .map(([nom, total]) => ({
       nom,
       total,
       freq: totalRunsOk > 0 ? Math.round((total / totalRunsOk) * 100) : 0,
     }))
     .toSorted((a, b) => b.total - a.total);
-  const maxConcurrent = topConcurrents[0]?.total ?? 1;
+
+  const wefiitEntry = {
+    nom: "WeFiiT",
+    total: totalCitations,
+    freq: totalRunsOk > 0 ? Math.round((totalCitations / totalRunsOk) * 100) : 0,
+  };
+  const topConcurrents = [wefiitEntry, ...concurrentsTriés];
+  const maxConcurrent = Math.max(wefiitEntry.total, concurrentsTriés[0]?.total ?? 1);
 
   // Verbatims
   const verbatims: GeoData["verbatims"] = [];
   for (const [, { libelle, runs }] of Object.entries(data)) {
     for (const run of runs) {
       const textes = run.verbatims ?? run.wefiit.verbatims ?? [];
+      const previews: (string | null | undefined)[] = run.wefiit?.previews ?? [];
       const chemins: string[] = run.wefiit?.reponsesChemins ?? [];
+      const hasPreviews = previews.length > 0;
       textes.forEach((texte: string, i: number) => {
         verbatims.push({
           texte,
           modele: run.model,
           requete: libelle,
           date: run.date,
-          wefiitCite: run.wefiit.citations > 0,
+          wefiitCite: hasPreviews ? previews[i] != null : run.wefiit.citations > 0,
           cheminReponse: chemins[i],
         });
       });

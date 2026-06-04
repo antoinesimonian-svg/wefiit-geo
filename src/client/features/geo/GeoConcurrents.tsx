@@ -32,7 +32,7 @@ export function GeoConcurrents({ topConcurrents, maxConcurrent }: Props) {
                     width: `${(total / maxConcurrent) * 100}%`,
                     background: isWefiit
                       ? "linear-gradient(90deg, #f98f03, #e95400)"
-                      : "linear-gradient(90deg, #f98f03cc, #e95400aa)",
+                      : "#9ca3af",
                   }}
                 />
               </div>

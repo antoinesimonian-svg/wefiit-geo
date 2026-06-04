@@ -47,55 +47,68 @@ export function GeoPage({ projectId: _projectId, tab: _tab }: Props) {
         {
           <>
             {/* Filtres */}
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="flex items-center gap-2">
-                <label className="text-xs text-base-content/50">Requête</label>
-                <select
-                  className="select select-sm select-bordered text-xs"
-                  value={filtres.requeteId}
-                  onChange={(e) =>
-                    setFiltres((f) => ({ ...f, requeteId: e.target.value }))
-                  }
+            <div className="space-y-2">
+              {/* Chips Requête */}
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs text-base-content/50 shrink-0">Requête</span>
+                <button
+                  className={`badge badge-sm cursor-pointer border transition-colors ${
+                    filtres.requeteId === ""
+                      ? "badge-neutral text-neutral-content"
+                      : "badge-ghost border-base-300 text-base-content/60 hover:badge-neutral hover:text-neutral-content"
+                  }`}
+                  onClick={() => setFiltres((f) => ({ ...f, requeteId: "" }))}
                 >
-                  <option value="">Toutes les requêtes</option>
-                  {data?.toutesRequetes.map((r) => (
-                    <option key={r.id} value={r.id}>
-                      {r.libelle}
-                    </option>
-                  ))}
-                </select>
+                  Toutes
+                </button>
+                {data?.toutesRequetes.map((r) => (
+                  <button
+                    key={r.id}
+                    className={`badge badge-sm cursor-pointer border transition-colors ${
+                      filtres.requeteId === r.id
+                        ? "border-warning/60 bg-warning/15 text-warning font-medium"
+                        : "badge-ghost border-base-300 text-base-content/60 hover:border-warning/40 hover:bg-warning/10 hover:text-warning"
+                    }`}
+                    onClick={() => setFiltres((f) => ({ ...f, requeteId: r.id }))}
+                  >
+                    {r.libelle}
+                  </button>
+                ))}
               </div>
 
-              <div className="flex items-center gap-2">
-                <label className="text-xs text-base-content/50">Modèle</label>
-                <select
-                  className="select select-sm select-bordered text-xs"
-                  value={filtres.modele}
-                  onChange={(e) =>
-                    setFiltres((f) => ({ ...f, modele: e.target.value }))
-                  }
-                >
-                  <option value="">Tous les modèles</option>
-                  <option value="chatgpt">ChatGPT</option>
-                  <option value="gemini">Gemini</option>
-                </select>
-              </div>
+              {/* Modèle + Période */}
+              <div className="flex flex-wrap items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-base-content/50">Modèle</label>
+                  <select
+                    className="select select-sm select-bordered text-xs"
+                    value={filtres.modele}
+                    onChange={(e) =>
+                      setFiltres((f) => ({ ...f, modele: e.target.value }))
+                    }
+                  >
+                    <option value="">Tous les modèles</option>
+                    <option value="chatgpt">ChatGPT</option>
+                    <option value="gemini">Gemini</option>
+                  </select>
+                </div>
 
-              <div className="flex items-center gap-2">
-                <label className="text-xs text-base-content/50">Période</label>
-                <select
-                  className="select select-sm select-bordered text-xs"
-                  value={filtres.jours}
-                  onChange={(e) =>
-                    setFiltres((f) => ({ ...f, jours: Number(e.target.value) }))
-                  }
-                >
-                  {PERIODES.map((p) => (
-                    <option key={p.jours} value={p.jours}>
-                      {p.label}
-                    </option>
-                  ))}
-                </select>
+                <div className="flex items-center gap-2">
+                  <label className="text-xs text-base-content/50">Période</label>
+                  <select
+                    className="select select-sm select-bordered text-xs"
+                    value={filtres.jours}
+                    onChange={(e) =>
+                      setFiltres((f) => ({ ...f, jours: Number(e.target.value) }))
+                    }
+                  >
+                    {PERIODES.map((p) => (
+                      <option key={p.jours} value={p.jours}>
+                        {p.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
