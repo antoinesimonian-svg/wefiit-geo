@@ -31,7 +31,7 @@ export function GeoPage({ projectId: _projectId, tab: _tab }: Props) {
         {/* Header */}
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
-            <h1 className="text-lg font-semibold">GEO Visibility</h1>
+            <h1 className="text-lg font-semibold">Visibilité GEO : WeFiiT est-il cité ?</h1>
             <p className="text-sm text-base-content/60">
               Présence de WeFiiT dans les réponses des IA génératives
             </p>
@@ -43,13 +43,14 @@ export function GeoPage({ projectId: _projectId, tab: _tab }: Props) {
           )}
         </div>
 
-        {/* Onglet GEO Visibility */}
+        {/* Onglet Visibilité GEO */}
         {
           <>
             {/* Filtres */}
             <div className="space-y-2">
               {/* Chips Requête */}
               <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" style={{ scrollbarWidth: "none" }}>
+                <span className="shrink-0 text-xs text-base-content/50">Requête</span>
                 <button
                   className={`shrink-0 px-3 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
                     filtres.requeteId === ""
