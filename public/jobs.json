@@ -1326,5 +1326,32 @@
         "dateApres": "2026-06-09"
       }
     ]
+  },
+  {
+    "jobId": "job-20260609-071610-7a698d",
+    "démarré": "2026-06-09T07:16:10.265Z",
+    "terminé": "2026-06-09T07:17:45.510Z",
+    "durée": 95,
+    "mode": "pm-formation --model chatgpt --force",
+    "requêtes": 1,
+    "modèles": [
+      "chatgpt"
+    ],
+    "statut": "succès",
+    "résumé": {
+      "ok": 3,
+      "timeout": 0,
+      "erreur": 0,
+      "ignoré": 0
+    },
+    "evals": {
+      "completude": {
+        "attendu": 1,
+        "ok": 1,
+        "manquants": []
+      },
+      "anomalies": []
+    },
+    "regressions": null
   }
 ]

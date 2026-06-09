@@ -8208,6 +8208,30 @@
         },
         "rang": null,
         "totalCabinets": null
+      },
+      {
+        "date": "2026-06-09",
+        "model": "chatgpt",
+        "runsOk": 3,
+        "wefiit": {
+          "citations": 0,
+          "previews": [],
+          "reponsesChemins": [
+            "responses/pm-formation-2026-06-09-chatgpt-run1.txt",
+            "responses/pm-formation-2026-06-09-chatgpt-run2.txt",
+            "responses/pm-formation-2026-06-09-chatgpt-run3.txt"
+          ]
+        },
+        "verbatims": [
+          "Si vous cherchez un partenaire pour former des équipes (PM, PO, Tech Leads, Design, managers, etc.), le bon choix dépend surtout de votre niveau de maturité produit, de la taille de l'équipe et de votre objectif (acculturation, montée en compétences, transformation produit, IA appliquée au Product Management, etc.).\nVoici quelques acteurs reconnus en France :\n1. Hubvisory Campus\nHubvisory\nTrès orienté pratique et transformation produit.\nFormations intra-entreprise et parcours sur mesure.\nBon choix si vous souhaitez professionnaliser une organisation produit existante ou faire évoluer des Product Managers expérimentés. Hubvisory\n2. WiAcademy\nWiAcademy\nForte expertise Product, Data et IA.\nPropose du sur-mesure, du mentoring et de l'accompagnement organisationnel.\nAdapté aux entreprises qui veulent lier Product Management, mesure d'impact et IA. WiAcademy\n3. Be My Product\nBe My Product\nParcours structurés (fondamentaux, discovery, delivery, data).\nOrganisme certifié Qualiopi.\nPositionnement très opérationnel avec cas réels et outils IA. Be My Product\n4. Tasmane Product Management Academy\nTasmane\nApproche centrée sur l'ancrage dans le contexte métier.\nFormateurs issus du terrain.\nPertinent pour des équipes PO/PM qui doivent monter rapidement en compétence. Tasmane\n5. PLB Formation Product Management\nPLB\nFormat plus classique de formation professionnelle.\nConvient bien pour acquérir ou harmoniser les fondamentaux du Product Management. PLB\nPour vous orienter\nPouvez-vous me préciser :\nCombien de personnes sont à former ?\nQuels profils : PM, PO, chefs de projet, développeurs, managers, direction ?\nVotre entreprise est-elle une startup, PME, ETI ou grand groupe ?\nCherchez-vous :\nune simple formation,\nun accompagnement de transformation produit,\nou du coaching/mentoring sur plusieurs mois ?\nAvec ces éléments, je peux vous recommander 2 ou 3 partenaires particulièrement adaptés à votre contexte.",
+          "Parfait ! Pour que je puisse vous orienter au mieux, pouvez-vous me préciser :\nLa taille de vos équipes et leur niveau actuel en product management (débutant, intermédiaire, avancé).\nVos objectifs : formation générale, ateliers pratiques, coaching individuel, ou certification spécifique.\nPréférence pour un partenaire : cabinet de formation, freelance expert, ou cours en ligne accompagnés.\nAvec ces infos, je pourrai vous proposer des partenaires et approches adaptés.",
+          "Parfait ! Pour bien cibler votre recherche, j’ai besoin de clarifier quelques points :\nProfil du partenaire : cherchez-vous plutôt une consultance externe spécialisée, une agence de formation, ou un freelance expert en product management ?\nType de formation : est-ce pour un niveau débutant, intermédiaire, ou avancé ? Est-ce plutôt théorique, pratique, ou un mix des deux ?\nFormat : en présentiel, en ligne, ou hybride ?\nDurée / cadence : une session courte (quelques heures/journée), ou un programme long (plusieurs semaines/mois) ?\nAvec ces précisions, je pourrai vous proposer des options très concrètes et adaptées à vos besoins.\nVous voulez que je vous fasse directement une liste de partenaires et options de formation après ça ?"
+        ],
+        "concurrents": {
+          "Hubvisory": 1
+        },
+        "rang": null,
+        "totalCabinets": null
       }
     ]
   },
