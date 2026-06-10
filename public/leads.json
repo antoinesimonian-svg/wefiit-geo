@@ -1,0 +1,137 @@
+{
+  "generatedAt": "2026-06-10T08:27:10.792Z",
+  "leads": [
+    {
+      "id": "b3c3ef5d892f",
+      "date": "2026-06-09T11:01:36Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "kyara@comenregions.com",
+      "telephone": "0743384071",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Kyara Nom: Boudriaa Email: kyara@comenregions.com Phone: 0743384071 Entreprise: comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de notre rubrique sponsorisée “Portraits d’Entreprises&quot;, diffusée sur le",
+      "statut": "à traiter"
+    },
+    {
+      "id": "6db828dd5660",
+      "date": "2026-05-27T08:30:24Z",
+      "type": "Candidat",
+      "source": "Bookings",
+      "nom": null,
+      "email": "cedric.lozach@wefiit.com",
+      "telephone": "06 83 80 85 88",
+      "message": "Salut Matthis, J’espère que tu vas bien. Au retour d’Antoine S, (début Juin), peux tu planifier une synchro sur la gestion de l’inbound et préparer le rdv : Nbre de lead entrants sur les 3 dernières Périodes. Split Business / Recrutement Gestion du suivi via Boond ? Gestion de l’adresse leadGen et n",
+      "statut": "à traiter"
+    },
+    {
+      "id": "86edeeab1f63",
+      "date": "2026-05-21T15:44:28Z",
+      "type": "Business",
+      "source": "Bookings",
+      "nom": null,
+      "email": null,
+      "telephone": null,
+      "message": "Nouvelle réservation de Samina THEEPATHILAGAN Partenaire Produit 360° avec Anne LACROIX lundi 25 mai 2026 15:30 - 16:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet",
+      "statut": "à traiter"
+    },
+    {
+      "id": "1073277b738e",
+      "date": "2026-05-18T15:47:04Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "o-benoit@autodistribution.com",
+      "telephone": "0678032887",
+      "message": "Bonjour, Pouvez-vous me communiquer le coût de cette formation ? Je vous remercie. Cdt, ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
+      "statut": "à traiter"
+    },
+    {
+      "id": "42dc2c271e5c",
+      "date": "2026-05-13T08:55:11Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "typhainemutombo@akieni.com",
+      "telephone": "0664294611",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Typhaine Nom: Mutombo Email: typhainemutombo@akieni.com Phone: 0664294611 Entreprise: AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager junior au sein d'une start up spécialisée dans la transformation di",
+      "statut": "à traiter"
+    },
+    {
+      "id": "fd2ff33b0360",
+      "date": "2026-04-09T12:46:07Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "nadineliza708@gmail.com",
+      "telephone": "0762713364",
+      "message": "Bonjour, Je vous contacte pour avoir des informations concernant la formation PO. Cordialement ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
+      "statut": "à traiter"
+    },
+    {
+      "id": "c87d3e0ec061",
+      "date": "2026-04-09T12:45:50Z",
+      "type": "Business",
+      "source": "Bookings",
+      "nom": null,
+      "email": null,
+      "telephone": null,
+      "message": "Nouvelle réservation de Alaoui, Ghita Partenaire Produit 360° avec Anne LACROIX lundi 13 avril 2026 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette not",
+      "statut": "à traiter"
+    },
+    {
+      "id": "4a42b5ce5288",
+      "date": "2026-04-08T07:07:00Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "no-reply-forms@webflow.com",
+      "telephone": "0632851246",
+      "message": "Je voudrais plus d’informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
+      "statut": "à traiter"
+    },
+    {
+      "id": "5aae1117cc9d",
+      "date": "2026-04-07T21:48:29Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "belkalebik@gmail.com",
+      "telephone": "0632851246",
+      "message": "Je voudrais plus d’informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
+      "statut": "à traiter"
+    },
+    {
+      "id": "1bfb4e7a3859",
+      "date": "2026-04-03T07:36:33Z",
+      "type": "Business",
+      "source": "Bookings",
+      "nom": null,
+      "email": null,
+      "telephone": null,
+      "message": "Nouvelle réservation de DAVID Rémy Partenaire Produit 360° avec Anne LACROIX mardi 7 avril 2026 14:00 - 14:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette notific",
+      "statut": "à traiter"
+    },
+    {
+      "id": "41b61cb2e96e",
+      "date": "2026-04-01T18:32:18Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "m.goulesque@gaia-lyon.org",
+      "telephone": null,
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Manon Nom: GOULESQUE Email: m.goulesque@gaia-lyon.org Phone: Entreprise: Association Gaïa Lyon Poste: Cheffe de projet Message: Bonjour, Je vous contacte suite à nôtre partenariat sur l'application Komeet. Nous tenons à vous remerci",
+      "statut": "à traiter"
+    },
+    {
+      "id": "328e16669eba",
+      "date": "2026-03-16T12:25:08Z",
+      "type": "Candidat",
+      "source": "Webflow",
+      "nom": null,
+      "email": "pepochon@gmail.com",
+      "telephone": "0682999396",
+      "message": "Je cherche à me former sur le métier de PO, avec certification et une formation complémentaire IA. ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
+      "statut": "à traiter"
+    }
+  ]
+}
