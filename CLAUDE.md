@@ -61,10 +61,20 @@ open-seo/
 │   │       ├── GeoConcurrents.tsx
 │   │       ├── GeoVerbatims.tsx
 │   │       └── useGeoData.ts
+│   │   └── features/leads/     ← MODULE LEADS (voir section ci-dessous)
+│   │       ├── LeadsPage.tsx
+│   │       ├── LeadsKpiCards.tsx
+│   │       ├── LeadsTable.tsx
+│   │       ├── LeadsFilters.tsx
+│   │       └── useLeadsData.ts
 │   ├── routes/
-│   │   └── _project/p/$projectId/geo.tsx   ← route /p/:id/geo
+│   │   └── _project/p/$projectId/geo.tsx    ← route /p/:id/geo
+│   │   └── _project/p/$projectId/leads.tsx  ← route /p/:id/leads
 │   ├── server/                 ← handlers Cloudflare Workers
 │   └── db/                     ← schémas Drizzle
+├── public/
+│   ├── historique.json         ← données GEO (copié depuis geo-monitoring/)
+│   └── leads.json              ← données Leads (produit par leads-scraper/)
 ├── docs/
 │   ├── SPECS.md                ← specs métier (lire avant toute modif GEO)
 │   └── PLAN-geo-integration.md ← plan d'intégration GEO (archivé)
@@ -72,6 +82,29 @@ open-seo/
 ├── wrangler.jsonc              ← config Cloudflare
 └── adr/                        ← Architecture Decision Records
 ```
+
+---
+
+## Module Leads — Règles importantes
+
+Le module Leads est **en lecture seule** côté open-seo : il consomme `public/leads.json` produit par `leads-scraper/scraper.mjs` (ou `imap-scraper.mjs` à venir).
+
+**Flux de données :**
+
+```
+leads-scraper/scraper.mjs
+  → collecte emails Outlook (Bookings + Webflow)
+  → open-seo/public/leads.json
+  → fetch("/leads.json") par useLeadsData.ts
+  → onglet "Leads" du dashboard
+```
+
+**Ne jamais :**
+- Modifier `leads.json` à la main (sauf corriger un statut manuellement)
+- Stocker des leads en base D1 — le JSON statique suffit
+- Ajouter un backend API pour les leads
+
+**⚠️ Problème en cours :** le scraper Playwright ne maintient pas la session Microsoft entre deux lancements (cookies cross-domain). Migration vers IMAP (`imapflow`) prévue — voir [leads-scraper/CLAUDE.md](../leads-scraper/CLAUDE.md).
 
 ---
 

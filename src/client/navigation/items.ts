@@ -4,6 +4,7 @@ import {
   ClipboardCheck,
   Globe,
   Link2,
+  Mail,
   MessageSquare,
   Search,
   Sparkles,
@@ -107,10 +108,23 @@ export function getProjectNavGroups(projectId: string) {
     search: { domain: "wefiit.com" },
   });
 
+  const leadsItem = linkOptions({
+    to: "/p/$projectId/leads" as const,
+    label: "Leads",
+    icon: Mail,
+    matchSegment: "/leads",
+    params: { projectId },
+    search: {},
+  });
+
   return [
     {
       type: "standalone" as const,
       item: geoItem,
+    },
+    {
+      type: "standalone" as const,
+      item: leadsItem,
     },
     {
       type: "group" as const,
