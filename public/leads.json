@@ -1,6 +1,339 @@
 {
-  "generatedAt": "2026-06-11T00:00:00.000Z",
+  "generatedAt": "2026-06-11T13:27:37.329Z",
   "leads": [
+    {
+      "id": "ef7f8d08ca5c",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "jbperrin@betomorrow.com",
+      "entreprise": "BeTomorrow",
+      "message": "Poste : chargé de projets RH | Formation - IA & Data product managers "
+    },
+    {
+      "id": "ed56130b8914",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "",
+      "entreprise": null,
+      "message": "Service : Annulé: Annulé: Guilde Produit - Save the date"
+    },
+    {
+      "id": "0ba75e67c4e8",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "",
+      "entreprise": null,
+      "message": "Service : [Guilde QA] IA x Qualité"
+    },
+    {
+      "id": "d991bea11921",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "celine@phagos.org",
+      "entreprise": "Head of People chez Phagos",
+      "message": "Je cherche un parcours de formation et ou du coaching pour notre Head of Product qui découvre le métier."
+    },
+    {
+      "id": "18927f86ac9c",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "",
+      "entreprise": null,
+      "message": "Service : GUILDE QA - 3 AMIGOS"
+    },
+    {
+      "id": "3865d47ceaa9",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "sandrine.fostinelli@wttj.co",
+      "entreprise": "Welcome to the Jungle",
+      "message": "Recherche de renfort opérationnel pour une mission d'encadrement Product Marketing"
+    },
+    {
+      "id": "cbcc49255a82",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "medjber.ines@gmail.com",
+      "entreprise": "Fin d'études, anciennement alternante chef de projet en sourcing excellence chez VEEPEE",
+      "message": "Je souhaiterais échanger à propos de : Accès aux formations product Data & IA, conseils métiers et insertions professionnelles "
+    },
+    {
+      "id": "7f8dc5d9b585",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "tarek.zaigouche@amadeus.com",
+      "entreprise": "Amadeus SAS, Director Product and R&D",
+      "message": "Product Management in High Uncertainty environment (Product Led Growth, hypothesis, magical user experience design, minimum lovable product)"
+    },
+    {
+      "id": "cf1ab5282ca1",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "djoliot.ephi@gmail.com",
+      "entreprise": "Indépendant",
+      "message": "PM Tool : un projet de plateforme 360° de Product Management"
+    },
+    {
+      "id": "7b81eaa72143",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "manon.leppert@gmail.com",
+      "entreprise": "Product Owner senior",
+      "message": "Je suis à la recherche d'une mission en tant que Product Owner indépendante (freelance) "
+    },
+    {
+      "id": "1a9aa50d8774",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "chloe.marek@saft.com",
+      "entreprise": "Saft",
+      "message": "Poste : Strategy & planning Manager | Evoquer mon besoin et comprendre l'ordre de grandeur de votre tarif pour y répondre"
+    },
+    {
+      "id": "ba46d839a7a5",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "charline.gustave@vinci-autoroutes.com",
+      "entreprise": "Head of GTM",
+      "message": "Mission ponctuelle PMM 5 mois"
+    },
+    {
+      "id": "a7fd088270c6",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "cedric.lozach@wefiit.com",
+      "entreprise": "WeFiiT Test",
+      "message": "j'ai cliqué sur prendre un RDV FORMATION"
+    },
+    {
+      "id": "ead500ec3954",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Candidat",
+      "typeLead": "réservation booking",
+      "email": "valentin.valere@visma.com",
+      "entreprise": "Inqom",
+      "message": "Poste : Head of Product | Recrutement PMs"
+    },
+    {
+      "id": "2ed4eab1b0f9",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "remy.david@veolia.com",
+      "entreprise": "Veolia",
+      "message": "Régie PO/PPM pour un projet à la DSI"
+    },
+    {
+      "id": "e05ac1a8434b",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "Ghita.Alaoui@dell.com",
+      "entreprise": "Dell",
+      "message": "Poste : Gestionnaire de compte wefiit | Besoin en achat informatique "
+    },
+    {
+      "id": "b09bfb414873",
+      "date": "2026-06-11T13:27:37.017Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "theepathilagans@gmail.com",
+      "entreprise": "TT Consulting",
+      "message": "Poste : Testeuse QA | Bonjour, Je suis à la recherche d’un emploi et j’aimerais échanger avec vous concernant les opportunités disponibles chez WeFit. Merci pour votre retour."
+    },
+    {
+      "id": "0efa7d893190",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "WeFiiT",
+      "message": "Je veux me renseigner sur "
+    },
+    {
+      "id": "ca94e68f8d47",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "julien@delicorner.co",
+      "entreprise": "Delicorner",
+      "message": "Poste : Head of product | Besoin consultant(e) PM pour mission 3 - 6 mois sujet refonte. "
+    },
+    {
+      "id": "a3f32a7780b4",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "fousseynidiaby6325@gmail.com",
+      "entreprise": "Professionnelles votre expérience et vos qualités représentent un véritable atout",
+      "message": "Professionnels "
+    },
+    {
+      "id": "b7b50069ea02",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "kbbourama@gmail.com",
+      "entreprise": "Avicultures je suis le directeur",
+      "message": "J’aimerais bien savoir comment faire avancer mon entreprise "
+    },
+    {
+      "id": "35f7da5d1373",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "bassiroukaran@gmail.com",
+      "entreprise": "Sapeurs pompiers",
+      "message": "Rien pour l’instant "
+    },
+    {
+      "id": "cdff266d9922",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "fabien.demaestri@gmail.com",
+      "entreprise": "Docai",
+      "message": "Poste : Fondateur | Améliorer la productivité des équipes produits"
+    },
+    {
+      "id": "a71c5ed64dcf",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "mcorrea@onestock-retail.com",
+      "entreprise": "Onestock Lead PM",
+      "message": "Notre équipe produit grandit à la fois en effectif et en maturité. Avant de poursuivre cette croissance, nous aimerions réaliser un audit de notre organisation afin d’identifier les aspects à renforcer, ajuster ou éventuellement supprimer. Ensuite, nous serions intéressés par des ateliers pour nous accompagner dans cette démarche.  Taille de l'équipe : 6 PM, 2 UX, 1 CPO Budget : 2-4k"
+    },
+    {
+      "id": "77755c5ffb37",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.leclercq@estreem.eu",
+      "entreprise": "Estreem",
+      "message": "Poste : CEO | nous devons  mener une transformation produit de l'entreprise. J'aurais aimé échanger avec vous sur votre capacité à nous accompagner ce type de transformation (B2B, Saas, System2System, très gros client). "
+    },
+    {
+      "id": "cc49716bd997",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "Thomas@airporting.com",
+      "entreprise": "Chief of Staff @Airporting",
+      "message": "Product owner part time"
+    },
+    {
+      "id": "3459d6abb56d",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "fernandaduchenrodriguez@gmail.com",
+      "entreprise": "BIGGIE",
+      "message": "Poste : DIGITAL KEY ACCOUNT MANAGER | Weefit a été un véritable coup de cœur pour moi. Lors de cet échange, j’aimerais savoir si ce sentiment peut être partagé de votre côté, autour des rôles de Partenaire Produit 360 ou Business Developer. J’ai hâte de voir si nos visions et ambitions résonnent mutuellement."
+    },
+    {
+      "id": "e9ab4879d974",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.simonian@icloud.com",
+      "entreprise": "test",
+      "message": "test"
+    },
+    {
+      "id": "da92f364de8b",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "a.simonian@tbs-education.org",
+      "entreprise": "WAVESTONE",
+      "message": "PO"
+    },
+    {
+      "id": "432050391a0a",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "prisca.denizeau@wefiit.com",
+      "entreprise": "test",
+      "message": "test"
+    },
+    {
+      "id": "841192615e87",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.simonian@icloud.com",
+      "entreprise": "test",
+      "message": "test"
+    },
+    {
+      "id": "774a683b2583",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "olivier.duchochois@april.com",
+      "entreprise": "APRIL",
+      "message": "Poste : Group PM | Trouver une formation pour ma team hyper focus sur le : Delivery, Découpage MVP,  Storymap, Construire des US invest + démystifier les APIs "
+    },
+    {
+      "id": "8d7de6a46c41",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "cedric.lozach@wefiit.com",
+      "entreprise": "test",
+      "message": "test"
+    },
+    {
+      "id": "55de01282899",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "Test",
+      "message": "Test"
+    },
+    {
+      "id": "b958c7b72bd9",
+      "date": "2026-06-11T13:27:37.016Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "deryakale1993@gmail.com",
+      "entreprise": "Demandeuse d'emploi en reconversion",
+      "message": "Demande d'une journée d'immersion pour découvrir les métiers"
+    },
+    {
+      "id": "1a765fb19dd2",
+      "date": "2026-06-11T13:27:37.015Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "Wefiit",
+      "message": "Test"
+    },
+    {
+      "id": "43da35a38d2e",
+      "date": "2026-06-11T13:27:37.015Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "test",
+      "message": "test"
+    },
     {
       "id": "b3c3ef5d892f",
       "date": "2026-06-09T11:01:36Z",
@@ -9,6 +342,15 @@
       "email": "kyara@comenregions.com",
       "entreprise": "comenregions",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Kyara Nom: Boudriaa Email: kyara@comenregions.com Phone: 0743384071 Entreprise: comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de notre rubrique sponsorisée \"Portraits d'Entreprises\", diffusée sur le"
+    },
+    {
+      "id": "2aaaf158dbaf",
+      "date": "2026-06-09T11:01:36Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "kyara@comenregions.com",
+      "entreprise": "comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de no",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Kyara Nom: Boudriaa Email: kyara@comenregions.com Phone: 0743384071 Entreprise: comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de notre rubrique sponsorisée “Portraits d’Entreprises&quot;, diffusée sur le"
     },
     {
       "id": "86edeeab1f63",
@@ -29,6 +371,15 @@
       "message": "Bonjour, Pouvez-vous me communiquer le coût de cette formation ? Je vous remercie. Cdt, ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
+      "id": "7f062457ad92",
+      "date": "2026-05-18T15:47:04Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "o-benoit@autodistribution.com",
+      "entreprise": "AUTODISTRIBUTION Poste: CHEF DE PROJET FORMATION Message: Bonjour, Pouvez-vous m",
+      "message": "Bonjour, Pouvez-vous me communiquer le coût de cette formation ? Je vous remercie. Cdt, ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
       "id": "42dc2c271e5c",
       "date": "2026-05-13T08:55:11Z",
       "type": "Candidat",
@@ -38,12 +389,30 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Typhaine Nom: Mutombo Email: typhainemutombo@akieni.com Phone: 0664294611 Entreprise: AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager junior au sein d'une start up spécialisée dans la transformation di"
     },
     {
+      "id": "63df5658be46",
+      "date": "2026-05-13T08:55:11Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "typhainemutombo@akieni.com",
+      "entreprise": "AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager j",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Typhaine Nom: Mutombo Email: typhainemutombo@akieni.com Phone: 0664294611 Entreprise: AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager junior au sein d'une start up spécialisée dans la transformation di"
+    },
+    {
       "id": "fd2ff33b0360",
       "date": "2026-04-09T12:46:07Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "nadineliza708@gmail.com",
       "entreprise": null,
+      "message": "Bonjour, Je vous contacte pour avoir des informations concernant la formation PO. Cordialement ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
+      "id": "05fc16de1916",
+      "date": "2026-04-09T12:46:07Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "nadineliza708@gmail.com",
+      "entreprise": "Particulier Poste: Licence Anglais Message: Bonjour, Je vous contacte pour avoir",
       "message": "Bonjour, Je vous contacte pour avoir des informations concernant la formation PO. Cordialement ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
@@ -65,6 +434,15 @@
       "message": "Je voudrais plus d'informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
+      "id": "6196f423ec82",
+      "date": "2026-04-08T07:07:00Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "C Poste: Test lead Message: Je voudrais plus d’informations sur votre formation",
+      "message": "Je voudrais plus d’informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
       "id": "5aae1117cc9d",
       "date": "2026-04-07T21:48:29Z",
       "type": "Candidat",
@@ -72,6 +450,15 @@
       "email": "belkalebik@gmail.com",
       "entreprise": null,
       "message": "Je voudrais plus d'informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
+      "id": "b17cb07cc772",
+      "date": "2026-04-07T21:48:29Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "belkalebik@gmail.com",
+      "entreprise": "C Poste: Test lead Message: Je voudrais plus d’informations sur votre formation",
+      "message": "Je voudrais plus d’informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "1bfb4e7a3859",
@@ -92,12 +479,30 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Manon Nom: GOULESQUE Email: m.goulesque@gaia-lyon.org Phone: Entreprise: Association Gaïa Lyon Poste: Cheffe de projet Message: Bonjour, Je vous contacte suite à nôtre partenariat sur l'application Komeet. Nous tenons à vous remerci"
     },
     {
+      "id": "8d774c904d37",
+      "date": "2026-04-01T18:32:18Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "m.goulesque@gaia-lyon.org",
+      "entreprise": "Association Gaïa Lyon Poste: Cheffe de projet Message: Bonjour, Je vous contacte",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Manon Nom: GOULESQUE Email: m.goulesque@gaia-lyon.org Phone: Entreprise: Association Gaïa Lyon Poste: Cheffe de projet Message: Bonjour, Je vous contacte suite à nôtre partenariat sur l'application Komeet. Nous tenons à vous remerci"
+    },
+    {
       "id": "328e16669eba",
       "date": "2026-03-16T12:25:08Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "pepochon@gmail.com",
       "entreprise": null,
+      "message": "Je cherche à me former sur le métier de PO, avec certification et une formation complémentaire IA. ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
+      "id": "4887c77d33aa",
+      "date": "2026-03-16T12:25:08Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "pepochon@gmail.com",
+      "entreprise": "Nextlane Poste: Product Owner Message: Je cherche à me former sur le métier de P",
       "message": "Je cherche à me former sur le métier de PO, avec certification et une formation complémentaire IA. ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
@@ -110,6 +515,15 @@
       "message": "Découvrir le product IA ---------------------------------------------------------- Number of submissions received 31/unlimited this month March 1st – March 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
+      "id": "5e194e73204d",
+      "date": "2026-03-05T06:31:34Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "delphine@leneva.com",
+      "entreprise": "Extia Poste: PM Message: Découvrir le product IA -------------------------------",
+      "message": "Découvrir le product IA ---------------------------------------------------------- Number of submissions received 31/unlimited this month March 1st – March 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
       "id": "b38dcea357f9",
       "date": "2026-01-29T13:31:30Z",
       "type": "Candidat",
@@ -119,6 +533,15 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maxime Nom: Lignereux Email: maxime.lignereux@teamjoin.fr Phone: 0643119982 Entreprise: JOIN Poste: Mobile Engineer Message: Bonjour, Je vous contacte dans le cadre d'une réflexion sur le renforcement de notre dispositif QA pour un"
     },
     {
+      "id": "3c1e44f65599",
+      "date": "2026-01-29T13:31:30Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "maxime.lignereux@teamjoin.fr",
+      "entreprise": "JOIN Poste: Mobile Engineer Message: Bonjour, Je vous contacte dans le cadre d’u",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maxime Nom: Lignereux Email: maxime.lignereux@teamjoin.fr Phone: 0643119982 Entreprise: JOIN Poste: Mobile Engineer Message: Bonjour, Je vous contacte dans le cadre d’une réflexion sur le renforcement de notre dispositif QA pour un"
+    },
+    {
       "id": "fb3d8c1a6fad",
       "date": "2026-01-26T08:37:08Z",
       "type": "Business",
@@ -126,6 +549,15 @@
       "email": null,
       "entreprise": null,
       "message": "Nouvelle réservation de Valentin Valere Partenaire Produit 360° avec Anne LACROIX mardi 27 janvier 2026 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette"
+    },
+    {
+      "id": "c786b6224340",
+      "date": "2026-01-19T07:47:29Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "maja@editsbyexperts.com",
+      "entreprise": "Edits by Experts Poste: 10000 Message: Bonjour, J'espère que vous allez bien. Je",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maja Nom: Zeljak Email: maja@editsbyexperts.com Phone: 5555551234 Entreprise: Edits by Experts Poste: 10000 Message: Bonjour, J'espère que vous allez bien. Je suis Maja d'Edits by Experts et j’ai découvert votre site en recherchant"
     },
     {
       "id": "24e9ee4b2c1e",
@@ -146,6 +578,15 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Johan Nom: CHAULIAGUET Email: johan.chauliaguet@gmail.com Phone: 0782832342 Entreprise: Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre entreprise par hasard, la vision produit est un domaine qui m'in"
     },
     {
+      "id": "3505b1fbb5de",
+      "date": "2026-01-13T10:58:25Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "johan.chauliaguet@gmail.com",
+      "entreprise": "Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Johan Nom: CHAULIAGUET Email: johan.chauliaguet@gmail.com Phone: 0782832342 Entreprise: Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre entreprise par hasard, la vision produit est un domaine qui m'in"
+    },
+    {
       "id": "72f0ef204194",
       "date": "2025-12-18T10:56:04Z",
       "type": "Business",
@@ -155,12 +596,39 @@
       "message": "Nouvelle réservation de GUSTAVE Charline Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 22 décembre 2025 10:30 - 11:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recev"
     },
     {
+      "id": "ec1b6073937d",
+      "date": "2025-12-10T04:03:33Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "gokul26222@gmail.com",
+      "entreprise": "Octopus Era Poste: pm Message: s -----------------------------------------------",
+      "message": "s ---------------------------------------------------------- Number of submissions received 31/unlimited this month December 1st – December 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
+      "id": "0c7c4cc38f02",
+      "date": "2025-12-05T11:05:17Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "gokul26222@gmail.com",
+      "entreprise": "Octopus Era Poste: pm Message: na ----------------------------------------------",
+      "message": "na ---------------------------------------------------------- Number of submissions received 31/unlimited this month December 1st – December 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
       "id": "23fc886ea964",
       "date": "2025-12-01T23:20:29Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "abdelwahid.hamtine@gmail.com",
       "entreprise": "LONGi Solar",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Abdelwahid Nom: Hamtine Email: abdelwahid.hamtine@gmail.com Phone: 0609265214 Entreprise: LONGi Solar Poste: PMM Message: Je vais bientôt terminer mon contrat dans mon entreprise actuelle, où j'occupe le poste de PMM. Je souhaite éc"
+    },
+    {
+      "id": "bb49067b0ab8",
+      "date": "2025-12-01T23:20:29Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "abdelwahid.hamtine@gmail.com",
+      "entreprise": "LONGi Solar Poste: PMM Message: Je vais bientôt terminer mon contrat dans mon en",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Abdelwahid Nom: Hamtine Email: abdelwahid.hamtine@gmail.com Phone: 0609265214 Entreprise: LONGi Solar Poste: PMM Message: Je vais bientôt terminer mon contrat dans mon entreprise actuelle, où j'occupe le poste de PMM. Je souhaite éc"
     },
     {
@@ -182,12 +650,57 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Paul-Henri Nom: Chalret du Rieu Email: paulhenri.chalretdurieu@manpowergroup.fr Phone: 0140029364 Entreprise: Manpower Poste: CIP Message: Bonjour Madame, Monsieur, Je travaille chez Manpower et j'accompagne des personnes dans leur"
     },
     {
+      "id": "4821eaefbf99",
+      "date": "2025-11-21T10:10:37Z",
+      "type": "Candidat",
+      "typeLead": "demande de contact",
+      "email": "paulhenri.chalretdurieu@manpowergroup.fr",
+      "entreprise": "Manpower Poste: CIP Message: Bonjour Madame, Monsieur, Je travaille chez Manpowe",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Paul-Henri Nom: Chalret du Rieu Email: paulhenri.chalretdurieu@manpowergroup.fr Phone: 0140029364 Entreprise: Manpower Poste: CIP Message: Bonjour Madame, Monsieur, Je travaille chez Manpower et j’accompagne des personnes dans leur"
+    },
+    {
+      "id": "5d8dace88d5a",
+      "date": "2025-11-12T02:10:34Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "kelvin.blake85@yahoo.com",
+      "entreprise": "Byis Oemwmd Poste: Hyt p Message: Hey there, Your website is losing customers. Y",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. 0: Envoyer Prenom: Kelvin Nom: Kelvin Email: kelvin.blake85@yahoo.com Phone: 08212711224 Entreprise: Byis Oemwmd Poste: Hyt p Message: Hey there, Your website is losing customers. Your homepage is silent. Your competitors aren’t. Customers"
+    },
+    {
+      "id": "fd3f873398dd",
+      "date": "2025-11-04T23:07:40Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "leonore.perkins@gmail.com",
+      "entreprise": "At Aleybdx Poste: Jbod yeyuyz Message: Hey, Amir here from Letstok. I came acros",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. 0: Envoyer Prenom: Leonore Nom: Leonore Email: leonore.perkins@gmail.com Phone: 08592578843 Entreprise: At Aleybdx Poste: Jbod yeyuyz Message: Hey, Amir here from Letstok. I came across your store and noticed your product catalog — really g"
+    },
+    {
+      "id": "9a729d77cdbf",
+      "date": "2025-11-01T01:41:45Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "eaoyjpnj@fringmail.com",
+      "entreprise": "NAEWTRER470627NEHTYHYHTR Poste: NARETGR470627NEHTYHYHTR Message: MERYTRH470627MA",
+      "message": "MERYTRH470627MARTHHDF ---------------------------------------------------------- Number of submissions received 31/unlimited this month November 1st – November 30th If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
       "id": "637f96c1c141",
       "date": "2025-10-13T10:48:57Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "isafaguer@hotmail.fr",
       "entreprise": "Freelance",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Isabelle Nom: Faguer Email: isafaguer@hotmail.fr Phone: 0676705603 Entreprise: Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis freelance en Product Marketing Management et souhaiterai savoir si vous av"
+    },
+    {
+      "id": "ae47edf02806",
+      "date": "2025-10-13T10:48:57Z",
+      "type": "Candidat",
+      "typeLead": "demande de contact",
+      "email": "isafaguer@hotmail.fr",
+      "entreprise": "Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis f",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Isabelle Nom: Faguer Email: isafaguer@hotmail.fr Phone: 0676705603 Entreprise: Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis freelance en Product Marketing Management et souhaiterai savoir si vous av"
     },
     {
@@ -207,6 +720,51 @@
       "email": null,
       "entreprise": null,
       "message": "Nouvelle réservation de Manon Leppert Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 13 octobre 2025 15:30 - 16:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
+    },
+    {
+      "id": "5dfa8d2d8260",
+      "date": "2025-10-07T10:45:08Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "cedric.lozach@wefiit.com",
+      "entreprise": "BEYMEDIAS Poste: CXO Message: Bonjour, Bey Médias (maison LVMH) cherche un parte",
+      "message": "Super merci ! Cédric Lozac’h Co-Fondateur & CEO Conseil en Product Management fullstack 06 83 80 85 88 cedric.lozach@wefiit.com www.wefiit.com 82 Avenue du Maine, 75014 Paris De : Antoine SIMONIAN <antoine.simonian@wefiit.com> Date : lundi, 6 octobre 2025 à 09:04 À : Matthis HUET <Matthis.huet@wefii"
+    },
+    {
+      "id": "e9200c89ffb5",
+      "date": "2025-10-06T07:03:00Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "leadgen@wefiit.com",
+      "entreprise": "BEYMEDIAS Poste: CXO Message: Bonjour, Bey Médias (maison LVMH) cherche un parte",
+      "message": "Hello Cédric et Matthis, Très bonne nouvelle ce 1 er lead depuis ChatGPT. Génération de leads depuis WeFiiT.com Pour rappel, nous avons 2 modes de contact depuis notre site : « Prendre RDV maintenant » : prise de RDV via Microsoft Bookings Le prospect prend RDV dans notre calendrier Le RDV est affec"
+    },
+    {
+      "id": "58b7d1c5dc5d",
+      "date": "2025-10-06T06:58:25Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "Matthis.huet@wefiit.com",
+      "entreprise": "BEYMEDIAS Poste: CXO Message: Bonjour, Bey Médias (maison LVMH) cherche un parte",
+      "message": "Hello De : Matthis HUET <Matthis.huet@wefiit.com> Envoyé : jeudi 2 octobre 2025 08:39 À : Cedric Lozac'h <cedric.lozach@wefiit.com>; Antoine SIMONIAN <antoine.simonian@wefiit.com> Objet : Re: Nouvelle demande de contact sur WeFiiT com Salut Cedric ! Antoine est sur le coup pour comprendre pourquoi c"
+    },
+    {
+      "id": "16e7d1f9201d",
+      "date": "2025-10-02T06:39:21Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "cedric.lozach@wefiit.com",
+      "entreprise": "BEYMEDIAS Poste: CXO Message: Bonjour, Bey Médias (maison LVMH) cherche un parte",
+      "message": "Salut Cedric ! Antoine est sur le coup pour comprendre pourquoi car cela aurait dû bien marcher 😊 J’ai créé la société + mis à jour le contact sur Boond et crée l’action « Note/Info » avec son message. Dis-moi s’il faut faire différemment la prochaine fois comme créer un besoin ou autre ! On te tie"
+    },
+    {
+      "id": "b2ed8f6bf496",
+      "date": "2025-10-01T17:56:05Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "cedric.lozach@wefiit.com",
+      "entreprise": "BEYMEDIAS Poste: CXO Message: Bonjour, Bey Médias (maison LVMH) cherche un parte",
+      "message": "Salut Top nouvelle ce lead !!!!!! Normalement dans le parcours qu’Antoine a conçu (avec Pierre Blaise sur la partie Bookings) ce lead aurait du être instantanément transmis pour info à la team Sales + prise de RDV dans un agenda. Pouvez vous investiguer afin que l’on revienne à ce standard. @Matthis"
     },
     {
       "id": "a5111a20aecb",
@@ -245,6 +803,15 @@
       "message": "Nouvelle réservation de Fostinelli Sandrine Partenaire Produit 360° avec Hermine DU VIGNAUX vendredi 8 août 2025 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rece"
     },
     {
+      "id": "12275de447bb",
+      "date": "2025-07-24T13:52:46Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "form-spam-reports@support.webflow.com",
+      "entreprise": "Support",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. field: ---------------------------------------------------------- Number of submissions received 31/unlimited this month July 1st – July 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com"
+    },
+    {
       "id": "5390769f7eab",
       "date": "2025-07-22T16:28:56Z",
       "type": "Business",
@@ -252,6 +819,24 @@
       "email": null,
       "entreprise": null,
       "message": "Nouvelle réservation de Céline Lallemang Partenaire Produit 360° avec Anne LACROIX mercredi 23 juillet 2025 10:15 - 10:45 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
+    },
+    {
+      "id": "771fdb170c7d",
+      "date": "2025-07-16T13:53:14Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "erfe&quot;rg² Poste: erger -----------------------------------------------------",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prénom*: Antoine Nom: Simonian Email: antoine.simonian@wefiit.com Phone: 0642727831 Entreprise: erfe&quot;rg² Poste: erger ---------------------------------------------------------- Number of submissions received 31/unlimited this month Jul"
+    },
+    {
+      "id": "8af032ad8d85",
+      "date": "2025-06-30T11:57:06Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "mae.dussert@sunr.com",
+      "entreprise": "SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer une fo",
+      "message": "Je m’en occupe :) Envoyé à partir de Outlook pour iOS De : Leads WeFiiT.com Envoyé : Monday, June 30, 2025 11:03:50 AM À : Lead Gen NOTORIETE Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sun"
     },
     {
       "id": "ef56ac8322b4",
@@ -263,6 +848,24 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer une formation Product Marketing Management à un de nos salariés. Pour ce faire, pou"
     },
     {
+      "id": "7d56a3551efe",
+      "date": "2025-06-30T09:03:55Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "mae.dussert@sunr.com",
+      "entreprise": "SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer une fo",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer une formation Product Marketing Management à un de nos salariés. Pour ce faire, pou"
+    },
+    {
+      "id": "08d3eb0ee671",
+      "date": "2025-06-27T13:56:45Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la for",
+      "message": "Je m’en occupe. Merci Antoine De : Leads WeFiiT.com <no-reply-forms@webflow.com> Date : vendredi, 27 juin 2025 à 15:55 À : Lead Gen NOTORIETE <LeadGen@wefiit.com> Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT E"
+    },
+    {
       "id": "2cf3c54d80f8",
       "date": "2025-06-27T13:55:23Z",
       "type": "Candidat",
@@ -272,12 +875,75 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la formation pour un de nos collaborateurs. A cet effet, pouvez-vous me communiquer"
     },
     {
+      "id": "9d5b42e4f178",
+      "date": "2025-06-27T13:55:23Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "mae.dussert@sunr.com",
+      "entreprise": "SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la for",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la formation pour un de nos collaborateurs. A cet effet, pouvez-vous me communiquer"
+    },
+    {
+      "id": "0709660756de",
+      "date": "2025-06-20T01:14:46Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "yawiviseya67@gmail.com",
+      "entreprise": "Leetheap Poste: Leetheap Message: Hi, მინდოდა ვიცოდე თქვენი ფასი. --------------",
+      "message": "Hi, მინდოდა ვიცოდე თქვენი ფასი. ---------------------------------------------------------- Number of submissions received 31/unlimited this month June 1st – June 30th If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "12c9299e3554",
+      "date": "2025-06-18T09:39:42Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "info@speed-seo.net",
+      "entreprise": "Qazq q Poste: Lzmms Message: Hit them back https://www.speed-seo.net/product/neg",
+      "message": "Hit them back https://www.speed-seo.net/product/negative-seo-service/ whatsapp: +1 (833) 454-8622 ---------------------------------------------------------- Number of submissions received 31/unlimited this month June 1st – June 30th If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "f1d138e09ec3",
+      "date": "2025-06-15T06:02:39Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "yawiviseya67@gmail.com",
+      "entreprise": "Simontheap Poste: Simontheap Message: Kaixo, zure prezioa jakin nahi nuen. -----",
+      "message": "Kaixo, zure prezioa jakin nahi nuen. ---------------------------------------------------------- Number of submissions received 31/unlimited this month June 1st – June 30th If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "e12f2757835a",
+      "date": "2025-06-14T01:20:26Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "yawiviseya67@gmail.com",
+      "entreprise": "Charlietheap Poste: Charlietheap Message: Kaixo, zure prezioa jakin nahi nuen. -",
+      "message": "Kaixo, zure prezioa jakin nahi nuen. ---------------------------------------------------------- Number of submissions received 31/unlimited this month June 1st – June 30th If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "b396b7aa510f",
+      "date": "2025-06-08T23:11:14Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "andreas.woodard@googlemail.com",
+      "entreprise": "Kwfsxulzl Cw Poste: Dq ecccngbso f Message: Stay ahead of the season in style! L",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. 0: Envoyer Prenom: Lucas Nom: Paige Email: andreas.woodard@googlemail.com Phone: 08945379510 Entreprise: Kwfsxulzl Cw Poste: Dq ecccngbso f Message: Stay ahead of the season in style! Looking to upgrade your fall and winter wardrobe? Native"
+    },
+    {
       "id": "7a2ae244e7c7",
       "date": "2025-05-12T10:28:31Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "louis.poitevin@hotmail.fr",
       "entreprise": "Zenpark",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Louis Nom: Poitevin Email: louis.poitevin@hotmail.fr Phone: 0638184246 Entreprise: Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de Weefitt recemment j'aimerai en savoir plus. Cela semble correspondent e"
+    },
+    {
+      "id": "31cd2d383f42",
+      "date": "2025-05-12T10:28:31Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "louis.poitevin@hotmail.fr",
+      "entreprise": "Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de We",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Louis Nom: Poitevin Email: louis.poitevin@hotmail.fr Phone: 0638184246 Entreprise: Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de Weefitt recemment j'aimerai en savoir plus. Cela semble correspondent e"
     },
     {
@@ -308,12 +974,48 @@
       "message": "Nouvelle réservation de Fernanda Duchen Rodriguez Partenaire Produit 360° avec Anne LACROIX jeudi 17 avril 2025 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recev"
     },
     {
+      "id": "f8e6641e1f7a",
+      "date": "2025-04-10T08:29:35Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "info@bmwmir.ru",
+      "entreprise": "Bmwmir",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Name 2: Pirojokinile Surname 2: Pirojokinile Email 3: info@bmwmir.ru T L Phone 2: 86289117624 Entreprise 2: Pirojokinile Poste 2: Pirojokinile Additional Message 3: dark market onion onion dark website --------------------------------------"
+    },
+    {
+      "id": "617a73cadcdf",
+      "date": "2025-03-27T17:55:00Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une comm",
+      "message": "De : Leads WeFiiT.com <no-reply-forms@webflow.com> Envoyé : jeudi 27 mars 2025 14:20 À : Lead Gen NOTORIETE <LeadGen@wefiit.com> Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Vincent Nom: Lalizout Email: Vincent.lalizout@lapost"
+    },
+    {
+      "id": "401929304d20",
+      "date": "2025-03-27T17:06:42Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "corentin.barczyk@wefiit.com",
+      "entreprise": "La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une comm",
+      "message": "Hello ! Recherche Google &quot;Product Management&quot;. PS : tu peux ajouter @Pablo dans la mailing liste ? Il ne reçoit pas les éléments, le temps qu'on définisse des règles d'attributions Corentin Barczyk Product Account Developper Conseil en Product Management fullstack 06 40 40 96 19 corentin.b"
+    },
+    {
       "id": "e35933444fa5",
       "date": "2025-03-27T13:20:08Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "Vincent.lalizout@laposte.fr",
       "entreprise": "La Poste",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Vincent Nom: Lalizout Email: Vincent.lalizout@laposte.fr Phone: Entreprise: La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une communauté de pratique autour des produits data et souhaiterions échanger avec v"
+    },
+    {
+      "id": "828e8e60f28f",
+      "date": "2025-03-27T13:20:08Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "Vincent.lalizout@laposte.fr",
+      "entreprise": "La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une comm",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Vincent Nom: Lalizout Email: Vincent.lalizout@laposte.fr Phone: Entreprise: La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une communauté de pratique autour des produits data et souhaiterions échanger avec v"
     },
     {
@@ -324,6 +1026,105 @@
       "email": null,
       "entreprise": null,
       "message": "Nouvelle réservation de Lemaire Thomas Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 17 mars 2025 17:00 - 17:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet"
+    },
+    {
+      "id": "9eaf29730553",
+      "date": "2025-03-07T15:40:34Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "ma@gmail.com",
+      "entreprise": "The Poste: The Message: Tet ----------------------------------------------------",
+      "message": "Tet ---------------------------------------------------------- Number of submissions received 31/1e+100 this month March 1st – March 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​ Click on me"
+    },
+    {
+      "id": "17f8177ccda7",
+      "date": "2025-03-07T15:39:40Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "matthis.huet@wefiit.com",
+      "entreprise": "gsdqffgsqd Poste: fdsqfdsq Message: (Test Formation UX) ------------------------",
+      "message": "(Test Formation UX) ---------------------------------------------------------- Number of submissions received 31/1e+100 this month March 1st – March 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "144afa2d2dae",
+      "date": "2025-02-27T18:54:12Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": null,
+      "entreprise": null,
+      "message": "Nouvelle réservation de LECLERCQ Antoine Partenaire Produit 360° avec Anne LACROIX vendredi 28 février 2025 17:30 - 18:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
+    },
+    {
+      "id": "b1bd7867a926",
+      "date": "2025-02-25T14:34:26Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": null,
+      "entreprise": "OneStock",
+      "message": "Nouvelle réservation de Product OneStock Partenaire Produit 360° avec Hermine DU VIGNAUX mercredi 26 février 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rec"
+    },
+    {
+      "id": "2a441593dac7",
+      "date": "2025-02-13T17:54:50Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une missio",
+      "message": "Hello Antoine, C’est prévu. Je te tiens informé :) Envoyé à partir de Outlook pour iOS De : Antoine SIMONIAN <antoine.simonian@wefiit.com> Envoyé : Thursday, February 13, 2025 6:51:19 PM À : Leads WeFiiT.com <no-reply-forms@webflow.com>; Lead Gen NOTORIETE <LeadGen@wefiit.com> Objet : Re: Nouvelle d"
+    },
+    {
+      "id": "fbe94bcd773c",
+      "date": "2025-02-13T17:51:24Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "Webflow",
+      "message": "Votre message envoyé à no-reply-forms@webflow.com n’a pas pu être remis. Nous n’avons pas trouvé no-reply-forms sur webflow.com . antoine.simonian Office 365 no-reply-forms Action requise Destinataire Adresse de destinataire inconnue Résolution L’adresse est peut-être mal orthographiée, ou celle-ci"
+    },
+    {
+      "id": "aa877a0a9d28",
+      "date": "2025-02-13T17:51:21Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une missio",
+      "message": "Pour le PAD qui prendra ce lead : cela serait intéressant de savoir la source réelle de ce lead (bouche à oreille ou 100% digital) —> Valable pour tous les leads Merci beaucoup ! From: Leads WeFiiT.com <no-reply-forms@webflow.com> Sent: Thursday, February 13, 2025 6:05:25 PM To: Lead Gen NOTORIETE <"
+    },
+    {
+      "id": "f73be0e091a2",
+      "date": "2025-02-13T17:51:20Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une missio",
+      "message": "Pour le PAD qui prendra ce lead : cela serait intéressant de savoir la source réelle de ce lead (bouche à oreille ou 100% digital) —> Valable pour tous les leads Merci beaucoup ! From: Leads WeFiiT.com <no-reply-forms@webflow.com> Sent: Thursday, February 13, 2025 6:05:25 PM To: Lead Gen NOTORIETE <"
+    },
+    {
+      "id": "029f19edb3e9",
+      "date": "2025-02-13T17:05:29Z",
+      "type": "Candidat",
+      "typeLead": "demande de contact",
+      "email": "clement.caillol@rakuten.com",
+      "entreprise": "Rakuten",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Clément Nom: Caillol Email: clement.caillol@rakuten.com Phone: 0616792542 Entreprise: Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une mission de 6 mois sur le scope Checkout (ajout panier, livraison, paieme"
+    },
+    {
+      "id": "4b93a0b4bda0",
+      "date": "2025-02-13T17:05:29Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "clement.caillol@rakuten.com",
+      "entreprise": "Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une missio",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Clément Nom: Caillol Email: clement.caillol@rakuten.com Phone: 0616792542 Entreprise: Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une mission de 6 mois sur le scope Checkout (ajout panier, livraison, paieme"
+    },
+    {
+      "id": "81ebdb82e2fc",
+      "date": "2025-02-10T12:30:04Z",
+      "type": "Candidat",
+      "typeLead": "demande de contact",
+      "email": "theo.gacouin@wefiit.com",
+      "entreprise": "Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations",
+      "message": "Merci pour le partage Antoine Après investigation il semblerait que @Anne l’ait vu fin Janvier en Préqual, non concluante. --- Théo Gacouin Lead Talent Recruiter +33 6 42 41 41 46 theo.gacouin@wefiit.com &#128073; Découvre ta future mission ici ! www.wefiit.com 82 avenue du Maine, 75014 Paris De : A"
     },
     {
       "id": "dce3c4faa214",
@@ -344,6 +1145,15 @@
       "message": "PI 😊 De : Leads WeFiiT.com Envoyé : mardi 21 janvier 2025 11:44 À : Lead Gen NOTORIETE Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis"
     },
     {
+      "id": "57df9f929d5c",
+      "date": "2025-02-03T19:45:00Z",
+      "type": "Candidat",
+      "typeLead": "demande de contact",
+      "email": "eguyonnet.pro@gmail.com",
+      "entreprise": "Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations",
+      "message": "PI 😊 De : Leads WeFiiT.com Envoyé : mardi 21 janvier 2025 11:44 À : Lead Gen NOTORIETE Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis"
+    },
+    {
       "id": "a12cbcc9bcc3",
       "date": "2025-02-02T15:08:09Z",
       "type": "Business",
@@ -353,12 +1163,39 @@
       "message": "Nouvelle réservation de Konaté Bourama Partenaire Produit 360° avec Anne LACROIX lundi 3 février 2025 14:00 - 14:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette n"
     },
     {
+      "id": "1ee3690bb2d1",
+      "date": "2025-01-31T01:26:06Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "traorebarda@gmail.com",
+      "entreprise": "Traoré service Poste: Employé Message: Je veux travailler en France je suis dipl",
+      "message": "Je veux travailler en France je suis diplômé et je suis disponible pour tout travaille ---------------------------------------------------------- Number of submissions received 8/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "d19cd6b9b48b",
+      "date": "2025-01-24T23:34:51Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "kenayanzasi@gmail.com",
+      "entreprise": "Fabrication de produits et tout Poste: Je ne sais pas dbr Message: Je vous prie",
+      "message": "Je vous prie de m'angager svp ---------------------------------------------------------- Number of submissions received 8/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
       "id": "3807610395d5",
       "date": "2025-01-21T10:44:25Z",
       "type": "Candidat",
       "typeLead": "demande de contact",
       "email": "eguyonnet.pro@gmail.com",
       "entreprise": "Ex Electis",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations Message: Bonjour, Après 3 ans passé chez Electis en tant que 1st PM,"
+    },
+    {
+      "id": "796c7e52681e",
+      "date": "2025-01-21T10:44:25Z",
+      "type": "Candidat",
+      "typeLead": "demande de contact",
+      "email": "eguyonnet.pro@gmail.com",
+      "entreprise": "Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations Message: Bonjour, Après 3 ans passé chez Electis en tant que 1st PM,"
     },
     {
@@ -371,6 +1208,69 @@
       "message": "Projet de transformation ---------------------------------------------------------- Number of submissions received 6/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
     },
     {
+      "id": "a732acebebff",
+      "date": "2025-01-15T18:16:36Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "eab@outsight.tech",
+      "entreprise": "Outsight Poste: PM Message: Projet de transformation ---------------------------",
+      "message": "Projet de transformation ---------------------------------------------------------- Number of submissions received 6/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "6c9bdb5ad1c8",
+      "date": "2025-01-15T08:09:25Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "WeFiiT Poste: Co-fondateur Message: Blabla test, qui a reçu ce message ? -------",
+      "message": "Blabla test, qui a reçu ce message ? ---------------------------------------------------------- Number of submissions received 5/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "504b6295a526",
+      "date": "2025-01-14T16:24:02Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "matthieu.pecheul@gmail.com",
+      "entreprise": "WeFiiT Poste: Co-fondateur Message: Blabla test, qui a reçu ce message ? -------",
+      "message": "Blabla test, qui a reçu ce message ? ---------------------------------------------------------- Number of submissions received 5/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "8e93f1479424",
+      "date": "2025-01-14T11:35:51Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "no-reply-forms@webflow.com",
+      "entreprise": "WeFiIT Poste: Co-fondateur Message: blabla test --------------------------------",
+      "message": "blabla test ---------------------------------------------------------- Number of submissions received 4/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "4dabba98932a",
+      "date": "2025-01-14T11:15:47Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "matthieu.pecheul@gmail.com",
+      "entreprise": "WeFiIT Poste: Co-fondateur Message: blabla test --------------------------------",
+      "message": "blabla test ---------------------------------------------------------- Number of submissions received 4/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "92fa83d43954",
+      "date": "2024-12-30T09:07:25Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "Jerri.Martins@uniqueadvertising.pro",
+      "entreprise": "Uniqueadvertising",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. 0: Envoyer rating-overall-exp: 1 additional-feedback: I can blast your ad text to millions of website contact forms. One flat rate, never any per click costs. People will read your message just like you're reading this one that I just sent"
+    },
+    {
+      "id": "25ccd99caa98",
+      "date": "2024-12-25T23:39:03Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": null,
+      "entreprise": null,
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. 0: Envoyer rating-overall-exp: 1 additional-feedback: Boost sales with DAC's customer financing programs—turn ‘maybe’ into ‘yes’ today! http://76ta96.dac-capital.top/ ---------------------------------------------------------- Number of subm"
+    },
+    {
       "id": "a8a10dd2f8fe",
       "date": "2024-12-23T08:52:33Z",
       "type": "Business",
@@ -378,6 +1278,60 @@
       "email": null,
       "entreprise": null,
       "message": "Nouvelle réservation de Herrero Julien Partenaire Produit 360° avec Louis DALLEAU jeudi 26 décembre 2024 10:00 - 10:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cett"
+    },
+    {
+      "id": "acd14f4bb889",
+      "date": "2024-12-17T17:15:13Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": null,
+      "entreprise": null,
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. 0: Envoyer rating-overall-exp: 1 additional-feedback: Hi, I just visited wefiit.com and wondered if you'd ever thought about having an engaging video to explain what you do? Our prices start from just $195. Let me know if you're interested"
+    },
+    {
+      "id": "d8840c327dc0",
+      "date": "2024-12-09T11:19:56Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "fezfze Poste: ezfz Message: fze ------------------------------------------------",
+      "message": "fze ---------------------------------------------------------- Number of submissions received 6/1000 this month December 1st – December 31st If you believe this is a spam submission, please forward to Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "26315b084508",
+      "date": "2024-12-09T11:16:53Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": "antoine.simonian@wefiit.com",
+      "entreprise": "Wefiit",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom 10: Antoine Nom 10: Simonian Email 10: antoine.simonian@wefiit.com Phone 10: 0642727831 Entreprise 10: ezfze Poste 10: ezfzf Message 10: zefzef ---------------------------------------------------------- Number of submissions received"
+    },
+    {
+      "id": "fbbb7e351303",
+      "date": "2024-12-09T11:14:25Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": null,
+      "entreprise": null,
+      "message": "{{ Message 10 }} ---------------------------------------------------------- Number of submissions received 4/1000 this month December 1st – December 31st If you believe this is a spam submission, please forward to Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "66dad77269a1",
+      "date": "2024-12-09T11:08:52Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": null,
+      "entreprise": null,
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. ---------------------------------------------------------- Number of submissions received 3/1000 this month December 1st – December 31st If you believe this is a spam submission, please forward to Unsubscribe from notifications for this sit"
+    },
+    {
+      "id": "c9425f74a874",
+      "date": "2024-12-09T11:06:56Z",
+      "type": "Business",
+      "typeLead": "demande de contact",
+      "email": null,
+      "entreprise": null,
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. ---------------------------------------------------------- Number of submissions received 2/1000 this month December 1st – December 31st If you believe this is a spam submission, please forward to Unsubscribe from notifications for this sit"
     },
     {
       "id": "d384de406b35",
@@ -396,33 +1350,6 @@
       "email": null,
       "entreprise": null,
       "message": "Nouvelle réservation de KALE Derya Partenaire Produit 360° avec Louis DALLEAU jeudi 5 décembre 2024 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings Prendre RDV http://www.wefiit.com/ Optimisé par Micr"
-    },
-    {
-      "id": "029f19edb3e9",
-      "date": "2025-02-13T17:05:29Z",
-      "type": "Candidat",
-      "typeLead": "demande de contact",
-      "email": "clement.caillol@rakuten.com",
-      "entreprise": "Rakuten",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Clément Nom: Caillol Email: clement.caillol@rakuten.com Phone: 0616792542 Entreprise: Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une mission de 6 mois sur le scope Checkout (ajout panier, livraison, paieme"
-    },
-    {
-      "id": "144afa2d2dae",
-      "date": "2025-02-27T18:54:12Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": null,
-      "entreprise": null,
-      "message": "Nouvelle réservation de LECLERCQ Antoine Partenaire Produit 360° avec Anne LACROIX vendredi 28 février 2025 17:30 - 18:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
-    },
-    {
-      "id": "b1bd7867a926",
-      "date": "2025-02-25T14:34:26Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": null,
-      "entreprise": "OneStock",
-      "message": "Nouvelle réservation de Product OneStock Partenaire Produit 360° avec Hermine DU VIGNAUX mercredi 26 février 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rec"
     }
   ]
 }
