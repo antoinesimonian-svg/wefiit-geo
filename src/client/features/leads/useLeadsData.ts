@@ -4,12 +4,10 @@ export type Lead = {
   id: string;
   date: string;
   type: "Business" | "Candidat";
-  source: "Bookings" | "Webflow" | "Inconnu";
-  nom: string | null;
+  typeLead: "demande de contact" | "réservation booking";
   email: string | null;
-  telephone: string | null;
+  entreprise: string | null;
   message: string | null;
-  statut: "à traiter" | "traité";
 };
 
 type LeadsJson = {
@@ -19,15 +17,13 @@ type LeadsJson = {
 
 export type LeadsFiltres = {
   type: "" | "Business" | "Candidat";
-  source: "" | "Bookings" | "Webflow";
-  statut: "" | "à traiter" | "traité";
+  typeLead: "" | "demande de contact" | "réservation booking";
 };
 
 function filtrer(leads: Lead[], filtres: LeadsFiltres): Lead[] {
   return leads.filter((l) => {
     if (filtres.type && l.type !== filtres.type) return false;
-    if (filtres.source && l.source !== filtres.source) return false;
-    if (filtres.statut && l.statut !== filtres.statut) return false;
+    if (filtres.typeLead && l.typeLead !== filtres.typeLead) return false;
     return true;
   });
 }

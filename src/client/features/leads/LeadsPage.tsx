@@ -8,8 +8,7 @@ type Props = { projectId: string };
 
 const FILTRES_DEFAUT: LeadsFiltres = {
   type: "",
-  source: "",
-  statut: "",
+  typeLead: "",
 };
 
 export function LeadsPage({ projectId: _projectId }: Props) {

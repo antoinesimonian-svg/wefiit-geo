@@ -5,518 +5,424 @@
       "id": "b3c3ef5d892f",
       "date": "2026-06-09T11:01:36Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "kyara@comenregions.com",
-      "telephone": "0743384071",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Kyara Nom: Boudriaa Email: kyara@comenregions.com Phone: 0743384071 Entreprise: comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de notre rubrique sponsorisée \"Portraits d'Entreprises\", diffusée sur le",
-      "statut": "à traiter"
+      "entreprise": "comenregions",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Kyara Nom: Boudriaa Email: kyara@comenregions.com Phone: 0743384071 Entreprise: comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de notre rubrique sponsorisée \"Portraits d'Entreprises\", diffusée sur le"
     },
     {
       "id": "86edeeab1f63",
       "date": "2026-05-21T15:44:28Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Samina THEEPATHILAGAN Partenaire Produit 360° avec Anne LACROIX lundi 25 mai 2026 15:30 - 16:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Samina THEEPATHILAGAN Partenaire Produit 360° avec Anne LACROIX lundi 25 mai 2026 15:30 - 16:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet"
     },
     {
       "id": "1073277b738e",
       "date": "2026-05-18T15:47:04Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "o-benoit@autodistribution.com",
-      "telephone": "0678032887",
-      "message": "Bonjour, Pouvez-vous me communiquer le coût de cette formation ? Je vous remercie. Cdt, ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
-      "statut": "à traiter"
+      "entreprise": "Autodistribution",
+      "message": "Bonjour, Pouvez-vous me communiquer le coût de cette formation ? Je vous remercie. Cdt, ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "42dc2c271e5c",
       "date": "2026-05-13T08:55:11Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "typhainemutombo@akieni.com",
-      "telephone": "0664294611",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Typhaine Nom: Mutombo Email: typhainemutombo@akieni.com Phone: 0664294611 Entreprise: AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager junior au sein d'une start up spécialisée dans la transformation di",
-      "statut": "à traiter"
+      "entreprise": "AKIENI",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Typhaine Nom: Mutombo Email: typhainemutombo@akieni.com Phone: 0664294611 Entreprise: AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager junior au sein d'une start up spécialisée dans la transformation di"
     },
     {
       "id": "fd2ff33b0360",
       "date": "2026-04-09T12:46:07Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "nadineliza708@gmail.com",
-      "telephone": "0762713364",
-      "message": "Bonjour, Je vous contacte pour avoir des informations concernant la formation PO. Cordialement ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Bonjour, Je vous contacte pour avoir des informations concernant la formation PO. Cordialement ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "c87d3e0ec061",
       "date": "2026-04-09T12:45:50Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Alaoui, Ghita Partenaire Produit 360° avec Anne LACROIX lundi 13 avril 2026 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette not",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Alaoui, Ghita Partenaire Produit 360° avec Anne LACROIX lundi 13 avril 2026 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette not"
     },
     {
       "id": "4a42b5ce5288",
       "date": "2026-04-08T07:07:00Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "no-reply-forms@webflow.com",
-      "telephone": "0632851246",
-      "message": "Je voudrais plus d'informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Je voudrais plus d'informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "5aae1117cc9d",
       "date": "2026-04-07T21:48:29Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "belkalebik@gmail.com",
-      "telephone": "0632851246",
-      "message": "Je voudrais plus d'informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Je voudrais plus d'informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "1bfb4e7a3859",
       "date": "2026-04-03T07:36:33Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de DAVID Rémy Partenaire Produit 360° avec Anne LACROIX mardi 7 avril 2026 14:00 - 14:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette notific",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de DAVID Rémy Partenaire Produit 360° avec Anne LACROIX mardi 7 avril 2026 14:00 - 14:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette notific"
     },
     {
       "id": "41b61cb2e96e",
       "date": "2026-04-01T18:32:18Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "m.goulesque@gaia-lyon.org",
-      "telephone": null,
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Manon Nom: GOULESQUE Email: m.goulesque@gaia-lyon.org Phone: Entreprise: Association Gaïa Lyon Poste: Cheffe de projet Message: Bonjour, Je vous contacte suite à nôtre partenariat sur l'application Komeet. Nous tenons à vous remerci",
-      "statut": "à traiter"
+      "entreprise": "Association Gaïa Lyon",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Manon Nom: GOULESQUE Email: m.goulesque@gaia-lyon.org Phone: Entreprise: Association Gaïa Lyon Poste: Cheffe de projet Message: Bonjour, Je vous contacte suite à nôtre partenariat sur l'application Komeet. Nous tenons à vous remerci"
     },
     {
       "id": "328e16669eba",
       "date": "2026-03-16T12:25:08Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "pepochon@gmail.com",
-      "telephone": "0682999396",
-      "message": "Je cherche à me former sur le métier de PO, avec certification et une formation complémentaire IA. ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Je cherche à me former sur le métier de PO, avec certification et une formation complémentaire IA. ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "45d12edeaa85",
       "date": "2026-03-05T06:31:34Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "delphine@leneva.com",
-      "telephone": "0621823758",
-      "message": "Découvrir le product IA ---------------------------------------------------------- Number of submissions received 31/unlimited this month March 1st – March 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​",
-      "statut": "à traiter"
+      "entreprise": "Leneva",
+      "message": "Découvrir le product IA ---------------------------------------------------------- Number of submissions received 31/unlimited this month March 1st – March 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
     },
     {
       "id": "b38dcea357f9",
       "date": "2026-01-29T13:31:30Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "maxime.lignereux@teamjoin.fr",
-      "telephone": "0643119982",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maxime Nom: Lignereux Email: maxime.lignereux@teamjoin.fr Phone: 0643119982 Entreprise: JOIN Poste: Mobile Engineer Message: Bonjour, Je vous contacte dans le cadre d'une réflexion sur le renforcement de notre dispositif QA pour un",
-      "statut": "à traiter"
+      "entreprise": "JOIN",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maxime Nom: Lignereux Email: maxime.lignereux@teamjoin.fr Phone: 0643119982 Entreprise: JOIN Poste: Mobile Engineer Message: Bonjour, Je vous contacte dans le cadre d'une réflexion sur le renforcement de notre dispositif QA pour un"
     },
     {
       "id": "fb3d8c1a6fad",
       "date": "2026-01-26T08:37:08Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Valentin Valere Partenaire Produit 360° avec Anne LACROIX mardi 27 janvier 2026 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Valentin Valere Partenaire Produit 360° avec Anne LACROIX mardi 27 janvier 2026 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette"
     },
     {
       "id": "24e9ee4b2c1e",
       "date": "2026-01-13T14:50:25Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de cedric LOZACH Partenaire Produit 360° avec Hermine DU VIGNAUX mercredi 14 janvier 2026 17:45 - 18:15 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous receve",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de cedric LOZACH Partenaire Produit 360° avec Hermine DU VIGNAUX mercredi 14 janvier 2026 17:45 - 18:15 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous receve"
     },
     {
       "id": "cc5b8acf2f44",
       "date": "2026-01-13T10:58:25Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "johan.chauliaguet@gmail.com",
-      "telephone": "0782832342",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Johan Nom: CHAULIAGUET Email: johan.chauliaguet@gmail.com Phone: 0782832342 Entreprise: Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre entreprise par hasard, la vision produit est un domaine qui m'in",
-      "statut": "à traiter"
+      "entreprise": "Sopra Steria",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Johan Nom: CHAULIAGUET Email: johan.chauliaguet@gmail.com Phone: 0782832342 Entreprise: Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre entreprise par hasard, la vision produit est un domaine qui m'in"
     },
     {
       "id": "72f0ef204194",
       "date": "2025-12-18T10:56:04Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de GUSTAVE Charline Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 22 décembre 2025 10:30 - 11:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recev",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de GUSTAVE Charline Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 22 décembre 2025 10:30 - 11:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recev"
     },
     {
       "id": "23fc886ea964",
       "date": "2025-12-01T23:20:29Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "abdelwahid.hamtine@gmail.com",
-      "telephone": "0609265214",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Abdelwahid Nom: Hamtine Email: abdelwahid.hamtine@gmail.com Phone: 0609265214 Entreprise: LONGi Solar Poste: PMM Message: Je vais bientôt terminer mon contrat dans mon entreprise actuelle, où j'occupe le poste de PMM. Je souhaite éc",
-      "statut": "à traiter"
+      "entreprise": "LONGi Solar",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Abdelwahid Nom: Hamtine Email: abdelwahid.hamtine@gmail.com Phone: 0609265214 Entreprise: LONGi Solar Poste: PMM Message: Je vais bientôt terminer mon contrat dans mon entreprise actuelle, où j'occupe le poste de PMM. Je souhaite éc"
     },
     {
       "id": "7739f6538f36",
       "date": "2025-11-24T09:19:00Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de mona gassou Partenaire Produit 360° avec Anne LACROIX mercredi 26 novembre 2025 09:00 - 09:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de mona gassou Partenaire Produit 360° avec Anne LACROIX mercredi 26 novembre 2025 09:00 - 09:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette"
     },
     {
       "id": "5db289a19208",
       "date": "2025-11-21T10:10:37Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "paulhenri.chalretdurieu@manpowergroup.fr",
-      "telephone": null,
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Paul-Henri Nom: Chalret du Rieu Email: paulhenri.chalretdurieu@manpowergroup.fr Phone: 0140029364 Entreprise: Manpower Poste: CIP Message: Bonjour Madame, Monsieur, Je travaille chez Manpower et j'accompagne des personnes dans leur",
-      "statut": "à traiter"
+      "entreprise": "Manpower",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Paul-Henri Nom: Chalret du Rieu Email: paulhenri.chalretdurieu@manpowergroup.fr Phone: 0140029364 Entreprise: Manpower Poste: CIP Message: Bonjour Madame, Monsieur, Je travaille chez Manpower et j'accompagne des personnes dans leur"
     },
     {
       "id": "637f96c1c141",
       "date": "2025-10-13T10:48:57Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "isafaguer@hotmail.fr",
-      "telephone": "0676705603",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Isabelle Nom: Faguer Email: isafaguer@hotmail.fr Phone: 0676705603 Entreprise: Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis freelance en Product Marketing Management et souhaiterai savoir si vous av",
-      "statut": "à traiter"
+      "entreprise": "Freelance",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Isabelle Nom: Faguer Email: isafaguer@hotmail.fr Phone: 0676705603 Entreprise: Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis freelance en Product Marketing Management et souhaiterai savoir si vous av"
     },
     {
       "id": "a2c3d44aa275",
       "date": "2025-10-10T09:27:15Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Marek Chloé Partenaire Produit 360° avec Hermine DU VIGNAUX mardi 14 octobre 2025 10:30 - 11:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Marek Chloé Partenaire Produit 360° avec Hermine DU VIGNAUX mardi 14 octobre 2025 10:30 - 11:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet"
     },
     {
       "id": "fedbd15827a0",
       "date": "2025-10-09T15:58:44Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Manon Leppert Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 13 octobre 2025 15:30 - 16:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Manon Leppert Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 13 octobre 2025 15:30 - 16:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
     },
     {
       "id": "a5111a20aecb",
       "date": "2025-09-06T09:35:08Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de JOLIOT Didier Partenaire Produit 360° avec Louis DALLEAU mardi 9 septembre 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de JOLIOT Didier Partenaire Produit 360° avec Louis DALLEAU mardi 9 septembre 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette"
     },
     {
       "id": "72cd1fce3bf3",
       "date": "2025-08-26T15:47:19Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Zaigouche Tarek Partenaire Produit 360° avec Hermine DU VIGNAUX jeudi 28 août 2025 12:30 - 13:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez ce",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Zaigouche Tarek Partenaire Produit 360° avec Hermine DU VIGNAUX jeudi 28 août 2025 12:30 - 13:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez ce"
     },
     {
       "id": "2d89718c89c4",
       "date": "2025-08-18T09:42:35Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Inès Medjber Partenaire Produit 360° avec Anne LACROIX lundi 18 août 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette notif",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Inès Medjber Partenaire Produit 360° avec Anne LACROIX lundi 18 août 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette notif"
     },
     {
       "id": "41eeb98049dc",
       "date": "2025-08-06T12:53:03Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Fostinelli Sandrine Partenaire Produit 360° avec Hermine DU VIGNAUX vendredi 8 août 2025 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rece",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Fostinelli Sandrine Partenaire Produit 360° avec Hermine DU VIGNAUX vendredi 8 août 2025 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rece"
     },
     {
       "id": "5390769f7eab",
       "date": "2025-07-22T16:28:56Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Céline Lallemang Partenaire Produit 360° avec Anne LACROIX mercredi 23 juillet 2025 10:15 - 10:45 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Céline Lallemang Partenaire Produit 360° avec Anne LACROIX mercredi 23 juillet 2025 10:15 - 10:45 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
     },
     {
       "id": "ef56ac8322b4",
       "date": "2025-06-30T09:03:55Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "mae.dussert@sunr.com",
-      "telephone": "0622839264",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer une formation Product Marketing Management à un de nos salariés. Pour ce faire, pou",
-      "statut": "à traiter"
+      "entreprise": "SUN'R GROUPE",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer une formation Product Marketing Management à un de nos salariés. Pour ce faire, pou"
     },
     {
       "id": "2cf3c54d80f8",
       "date": "2025-06-27T13:55:23Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "mae.dussert@sunr.com",
-      "telephone": "0622839264",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la formation pour un de nos collaborateurs. A cet effet, pouvez-vous me communiquer",
-      "statut": "à traiter"
+      "entreprise": "SUN'R GROUPE",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la formation pour un de nos collaborateurs. A cet effet, pouvez-vous me communiquer"
     },
     {
       "id": "7a2ae244e7c7",
       "date": "2025-05-12T10:28:31Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "louis.poitevin@hotmail.fr",
-      "telephone": "0638184246",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Louis Nom: Poitevin Email: louis.poitevin@hotmail.fr Phone: 0638184246 Entreprise: Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de Weefitt recemment j'aimerai en savoir plus. Cela semble correspondent e",
-      "statut": "à traiter"
+      "entreprise": "Zenpark",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Louis Nom: Poitevin Email: louis.poitevin@hotmail.fr Phone: 0638184246 Entreprise: Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de Weefitt recemment j'aimerai en savoir plus. Cela semble correspondent e"
     },
     {
       "id": "cc0b93c96aca",
       "date": "2025-04-22T07:34:54Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Perrin Jean-Baptiste Partenaire Produit 360° avec Anne LACROIX mercredi 23 avril 2025 09:00 - 09:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Perrin Jean-Baptiste Partenaire Produit 360° avec Anne LACROIX mercredi 23 avril 2025 09:00 - 09:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez"
     },
     {
       "id": "63a8f542984e",
       "date": "2025-04-17T10:12:53Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Fernanda Duchen Rodriguez Partenaire Produit 360° avec Anne LACROIX vendredi 18 avril 2025 14:30 - 15:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous re",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Fernanda Duchen Rodriguez Partenaire Produit 360° avec Anne LACROIX vendredi 18 avril 2025 14:30 - 15:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous re"
     },
     {
       "id": "68a1e47ab3c1",
       "date": "2025-04-16T08:31:12Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Fernanda Duchen Rodriguez Partenaire Produit 360° avec Anne LACROIX jeudi 17 avril 2025 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recev",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Fernanda Duchen Rodriguez Partenaire Produit 360° avec Anne LACROIX jeudi 17 avril 2025 12:00 - 12:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recev"
     },
     {
       "id": "e35933444fa5",
       "date": "2025-03-27T13:20:08Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "Vincent.lalizout@laposte.fr",
-      "telephone": null,
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Vincent Nom: Lalizout Email: Vincent.lalizout@laposte.fr Phone: Entreprise: La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une communauté de pratique autour des produits data et souhaiterions échanger avec v",
-      "statut": "à traiter"
+      "entreprise": "La Poste",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Vincent Nom: Lalizout Email: Vincent.lalizout@laposte.fr Phone: Entreprise: La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une communauté de pratique autour des produits data et souhaiterions échanger avec v"
     },
     {
       "id": "dbcc87d23fe5",
       "date": "2025-03-14T17:32:43Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Lemaire Thomas Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 17 mars 2025 17:00 - 17:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Lemaire Thomas Partenaire Produit 360° avec Hermine DU VIGNAUX lundi 17 mars 2025 17:00 - 17:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cet"
     },
     {
       "id": "dce3c4faa214",
       "date": "2025-02-05T15:18:44Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Fabien de Maestri Partenaire Produit 360° avec Anne LACROIX jeudi 6 février 2025 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cett",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Fabien de Maestri Partenaire Produit 360° avec Anne LACROIX jeudi 6 février 2025 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cett"
     },
     {
       "id": "b5d6036733f1",
       "date": "2025-02-03T19:45:00Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "eguyonnet.pro@gmail.com",
-      "telephone": "0635448193",
-      "message": "PI 😊 De : Leads WeFiiT.com Envoyé : mardi 21 janvier 2025 11:44 À : Lead Gen NOTORIETE Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis",
-      "statut": "à traiter"
+      "entreprise": "Ex Electis",
+      "message": "PI 😊 De : Leads WeFiiT.com Envoyé : mardi 21 janvier 2025 11:44 À : Lead Gen NOTORIETE Objet : Nouvelle demande de contact sur WeFiiT.com Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis"
     },
     {
       "id": "a12cbcc9bcc3",
       "date": "2025-02-02T15:08:09Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Konaté Bourama Partenaire Produit 360° avec Anne LACROIX lundi 3 février 2025 14:00 - 14:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette n",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Konaté Bourama Partenaire Produit 360° avec Anne LACROIX lundi 3 février 2025 14:00 - 14:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cette n"
     },
     {
       "id": "3807610395d5",
       "date": "2025-01-21T10:44:25Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "eguyonnet.pro@gmail.com",
-      "telephone": "0635448193",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations Message: Bonjour, Après 3 ans passé chez Electis en tant que 1st PM,",
-      "statut": "à traiter"
+      "entreprise": "Ex Electis",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Etienne Nom: Guyonnet Email: eguyonnet.pro@gmail.com Phone: 0635448193 Entreprise: Ex Electis / Actuellement en formation à Noé Poste: 1st PM / Head of operations Message: Bonjour, Après 3 ans passé chez Electis en tant que 1st PM,"
     },
     {
       "id": "3add0ffa9baf",
       "date": "2025-01-15T18:16:36Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "eab@outsight.tech",
-      "telephone": "0775735578",
-      "message": "Projet de transformation ---------------------------------------------------------- Number of submissions received 6/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site.",
-      "statut": "à traiter"
+      "entreprise": "Outsight",
+      "message": "Projet de transformation ---------------------------------------------------------- Number of submissions received 6/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
     },
     {
       "id": "a8a10dd2f8fe",
       "date": "2024-12-23T08:52:33Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Herrero Julien Partenaire Produit 360° avec Louis DALLEAU jeudi 26 décembre 2024 10:00 - 10:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cett",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de Herrero Julien Partenaire Produit 360° avec Louis DALLEAU jeudi 26 décembre 2024 10:00 - 10:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez cett"
     },
     {
       "id": "d384de406b35",
       "date": "2024-12-04T14:53:15Z",
       "type": "Candidat",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "deryakale1993@gmail.com",
-      "telephone": "0698250500",
-      "message": "Pi, j'ai bien reçu le rappel. Après avoir creusé, voici le besoin : nformations client KALE Derya deryakale1993@gmail.com 0698250500 Quelle est votre entreprise et votre poste ? Demandeuse d'emploi en reconversion Quels sujets souhaitez-vous aborder pendant cet échange ? Demande d'une journée d'imme",
-      "statut": "à traiter"
+      "entreprise": "Demandeuse d'emploi en reconversion",
+      "message": "Pi, j'ai bien reçu le rappel. Après avoir creusé, voici le besoin : nformations client KALE Derya deryakale1993@gmail.com 0698250500 Quelle est votre entreprise et votre poste ? Demandeuse d'emploi en reconversion Quels sujets souhaitez-vous aborder pendant cet échange ? Demande d'une journée d'imme"
     },
     {
       "id": "29359e2057ce",
       "date": "2024-12-04T14:14:07Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de KALE Derya Partenaire Produit 360° avec Louis DALLEAU jeudi 5 décembre 2024 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings Prendre RDV http://www.wefiit.com/ Optimisé par Micr",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de KALE Derya Partenaire Produit 360° avec Louis DALLEAU jeudi 5 décembre 2024 11:00 - 11:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings Prendre RDV http://www.wefiit.com/ Optimisé par Micr"
     },
     {
       "id": "029f19edb3e9",
       "date": "2025-02-13T17:05:29Z",
       "type": "Candidat",
-      "source": "Webflow",
-      "nom": null,
+      "typeLead": "demande de contact",
       "email": "clement.caillol@rakuten.com",
-      "telephone": "0616792542",
-      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Clément Nom: Caillol Email: clement.caillol@rakuten.com Phone: 0616792542 Entreprise: Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une mission de 6 mois sur le scope Checkout (ajout panier, livraison, paieme",
-      "statut": "à traiter"
+      "entreprise": "Rakuten",
+      "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Clément Nom: Caillol Email: clement.caillol@rakuten.com Phone: 0616792542 Entreprise: Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une mission de 6 mois sur le scope Checkout (ajout panier, livraison, paieme"
     },
     {
       "id": "144afa2d2dae",
       "date": "2025-02-27T18:54:12Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de LECLERCQ Antoine Partenaire Produit 360° avec Anne LACROIX vendredi 28 février 2025 17:30 - 18:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c",
-      "statut": "à traiter"
+      "entreprise": null,
+      "message": "Nouvelle réservation de LECLERCQ Antoine Partenaire Produit 360° avec Anne LACROIX vendredi 28 février 2025 17:30 - 18:00 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous recevez c"
     },
     {
       "id": "b1bd7867a926",
       "date": "2025-02-25T14:34:26Z",
       "type": "Business",
-      "source": "Bookings",
-      "nom": null,
+      "typeLead": "réservation booking",
       "email": null,
-      "telephone": null,
-      "message": "Nouvelle réservation de Product OneStock Partenaire Produit 360° avec Hermine DU VIGNAUX mercredi 26 février 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rec",
-      "statut": "à traiter"
+      "entreprise": "OneStock",
+      "message": "Nouvelle réservation de Product OneStock Partenaire Produit 360° avec Hermine DU VIGNAUX mercredi 26 février 2025 16:00 - 16:30 (UTC+01:00) Brussels, Copenhagen, Madrid, Paris Participer à votre rendez-vous par le biais de Microsoft Teams Afficher dans Bookings WeFiiT http://www.wefiit.com/ Vous rec"
     }
   ]
 }

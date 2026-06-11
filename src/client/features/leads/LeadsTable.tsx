@@ -7,15 +7,9 @@ const BADGE_TYPE: Record<Lead["type"], string> = {
   Candidat: "badge-secondary",
 };
 
-const BADGE_SOURCE: Record<Lead["source"], string> = {
-  Bookings: "badge-info",
-  Webflow: "badge-accent",
-  Inconnu: "badge-ghost",
-};
-
-const BADGE_STATUT: Record<Lead["statut"], string> = {
-  "à traiter": "badge-warning",
-  traité: "badge-success",
+const BADGE_TYPE_LEAD: Record<Lead["typeLead"], string> = {
+  "demande de contact": "badge-accent",
+  "réservation booking": "badge-info",
 };
 
 function formatDate(iso: string) {
@@ -46,12 +40,10 @@ export function LeadsTable({ leads }: Props) {
           <tr className="text-xs text-base-content/50">
             <th>Date</th>
             <th>Type</th>
-            <th>Source</th>
-            <th>Nom</th>
+            <th>Canal</th>
+            <th>Entreprise</th>
             <th>Email</th>
-            <th>Téléphone</th>
             <th>Message</th>
-            <th>Statut</th>
           </tr>
         </thead>
         <tbody>
@@ -66,12 +58,12 @@ export function LeadsTable({ leads }: Props) {
                 </span>
               </td>
               <td>
-                <span className={`badge badge-sm badge-outline ${BADGE_SOURCE[lead.source]}`}>
-                  {lead.source}
+                <span className={`badge badge-sm badge-outline ${BADGE_TYPE_LEAD[lead.typeLead]}`}>
+                  {lead.typeLead}
                 </span>
               </td>
-              <td className="max-w-[140px] truncate text-sm font-medium">
-                {lead.nom ?? <span className="text-base-content/30">—</span>}
+              <td className="max-w-[160px] truncate text-sm font-medium">
+                {lead.entreprise ?? <span className="text-base-content/30">—</span>}
               </td>
               <td className="max-w-[180px]">
                 {lead.email ? (
@@ -85,9 +77,6 @@ export function LeadsTable({ leads }: Props) {
                   <span className="text-base-content/30 text-xs">—</span>
                 )}
               </td>
-              <td className="text-xs text-base-content/70">
-                {lead.telephone ?? <span className="text-base-content/30">—</span>}
-              </td>
               <td className="max-w-[240px]">
                 {lead.message ? (
                   <span
@@ -99,11 +88,6 @@ export function LeadsTable({ leads }: Props) {
                 ) : (
                   <span className="text-base-content/30 text-xs">—</span>
                 )}
-              </td>
-              <td>
-                <span className={`badge badge-sm ${BADGE_STATUT[lead.statut]}`}>
-                  {lead.statut}
-                </span>
               </td>
             </tr>
           ))}

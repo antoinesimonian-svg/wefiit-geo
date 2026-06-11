@@ -6,7 +6,7 @@ export function LeadsKpiCards({ leads }: Props) {
   const total = leads.length;
   const business = leads.filter((l) => l.type === "Business").length;
   const candidats = leads.filter((l) => l.type === "Candidat").length;
-  const aTraiter = leads.filter((l) => l.statut === "à traiter").length;
+  const avecEntreprise = leads.filter((l) => l.entreprise !== null).length;
 
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
@@ -30,9 +30,9 @@ export function LeadsKpiCards({ leads }: Props) {
         </p>
       </div>
       <div className="card bg-base-100 border border-base-200 p-4">
-        <p className="text-xs text-base-content/60">À traiter</p>
-        <p className="mt-1 text-2xl font-bold text-warning">{aTraiter}</p>
-        <p className="mt-1 text-xs text-base-content/40">en attente de suivi</p>
+        <p className="text-xs text-base-content/60">Avec entreprise</p>
+        <p className="mt-1 text-2xl font-bold text-accent">{avecEntreprise}</p>
+        <p className="mt-1 text-xs text-base-content/40">entreprise identifiée</p>
       </div>
     </div>
   );

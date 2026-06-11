@@ -24,38 +24,20 @@ export function LeadsFilters({ filtres, onChange }: Props) {
       </div>
 
       <div className="flex items-center gap-2">
-        <label className="text-xs text-base-content/50">Source</label>
+        <label className="text-xs text-base-content/50">Canal</label>
         <select
           className="select select-sm select-bordered text-xs"
-          value={filtres.source}
+          value={filtres.typeLead}
           onChange={(e) =>
             onChange({
               ...filtres,
-              source: e.target.value as LeadsFiltres["source"],
-            })
-          }
-        >
-          <option value="">Toutes</option>
-          <option value="Bookings">Bookings</option>
-          <option value="Webflow">Webflow</option>
-        </select>
-      </div>
-
-      <div className="flex items-center gap-2">
-        <label className="text-xs text-base-content/50">Statut</label>
-        <select
-          className="select select-sm select-bordered text-xs"
-          value={filtres.statut}
-          onChange={(e) =>
-            onChange({
-              ...filtres,
-              statut: e.target.value as LeadsFiltres["statut"],
+              typeLead: e.target.value as LeadsFiltres["typeLead"],
             })
           }
         >
           <option value="">Tous</option>
-          <option value="à traiter">À traiter</option>
-          <option value="traité">Traité</option>
+          <option value="demande de contact">Demande de contact</option>
+          <option value="réservation booking">Réservation booking</option>
         </select>
       </div>
     </div>
