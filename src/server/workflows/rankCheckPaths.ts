@@ -26,7 +26,8 @@ function mapResultsToSnapshotRows(
     device: r.device,
     position: r.position,
     url: r.url,
-    serpFeatures: r.serpFeatures.length > 0 ? JSON.stringify(r.serpFeatures) : null,
+    serpFeatures:
+      r.serpFeatures.length > 0 ? JSON.stringify(r.serpFeatures) : null,
   }));
 }
 
@@ -41,6 +42,12 @@ interface CheckContext {
   runId: string;
 }
 
+/**
+ * Check keywords via Live API, parallel devices per keyword, real-time progress.
+ * Snapshots are written incrementally after each batch so partial results
+ * survive batch failures. ~6s per keyword batch.
+ * Billing is handled per-call by the metered client.
+ */
 export async function runLiveCheck(
   step: WorkflowStep,
   ctx: CheckContext,
@@ -50,50 +57,64 @@ export async function runLiveCheck(
   let checked = 0;
   let totalFailed = 0;
 
-  // 1 step.do = 1 subrequest = 1 keyword+device combo
-  // Each step.do gets a fresh subrequest budget (free plan: 50/invocation)
-  for (let i = 0; i < ctx.keywords.length; i++) {
-    const kw = ctx.keywords[i];
+  for (let i = 0; i < ctx.keywords.length; i += KEYWORDS_PER_BATCH) {
+    const batch = ctx.keywords.slice(i, i + KEYWORDS_PER_BATCH);
+    const batchIndex = Math.floor(i / KEYWORDS_PER_BATCH);
 
-    for (const device of deviceList) {
-      const result = await step.do(
-        `kw-${ctx.runId}-${i}-${device}`,
-        SINGLE_ATTEMPT_STEP_CONFIG,
-        async () => {
-          try {
-            const r = await ctx.client.serp.rankCheck({
-              keyword: kw.keyword,
-              keywordId: kw.id,
-              locationCode: ctx.locationCode,
-              languageCode: ctx.languageCode,
-              device,
-              targetDomain: ctx.domain,
-              depth: ctx.serpDepth,
-            });
-            await RankTrackingRepository.insertSnapshots(
-              mapResultsToSnapshotRows(ctx.runId, [{ ...r, device }]),
-            );
-            return { ok: true };
-          } catch (err) {
-            console.error(`Rank check failed [${kw.keyword}/${device}]:`, err);
-            return { ok: false };
+    // Pause between batches to avoid DataForSEO SERP Live rate limits (~2 req/s)
+    if (batchIndex > 0) {
+      await step.sleep(`rate-limit-pause-${ctx.runId}-${batchIndex}`, "3 seconds");
+    }
+
+    const batchResults = await step.do(
+      `live-batch-${ctx.runId}-${batchIndex}`,
+      SINGLE_ATTEMPT_STEP_CONFIG,
+      async () => {
+        const promises = batch.flatMap((kw) =>
+          deviceList.map((device) =>
+            ctx.client.serp
+              .rankCheck({
+                keyword: kw.keyword,
+                keywordId: kw.id,
+                locationCode: ctx.locationCode,
+                languageCode: ctx.languageCode,
+                device,
+                targetDomain: ctx.domain,
+                depth: ctx.serpDepth,
+              })
+              .then((r) => ({ ...r, device })),
+          ),
+        );
+        const settled = await Promise.allSettled(promises);
+        const results: RankCheckResultWithDevice[] = [];
+        let batchFailed = 0;
+        for (const outcome of settled) {
+          if (outcome.status === "fulfilled") {
+            results.push(outcome.value);
+          } else {
+            batchFailed++;
+            console.error("Rank check call failed:", outcome.reason);
           }
-        },
-      );
+        }
+        checked += batch.length;
+        await RankTrackingRepository.updateRun(ctx.runId, {
+          keywordsChecked: checked,
+        });
 
-      if (!result.ok) totalFailed++;
-    }
+        if (results.length > 0) {
+          await RankTrackingRepository.insertSnapshots(
+            mapResultsToSnapshotRows(ctx.runId, results),
+          );
+        }
+        return { batchFailed };
+      },
+    );
 
-    checked++;
-    if (checked % 10 === 0) {
-      await RankTrackingRepository.updateRun(ctx.runId, { keywordsChecked: checked });
-    }
+    totalFailed += batchResults.batchFailed;
   }
 
-  await RankTrackingRepository.updateRun(ctx.runId, { keywordsChecked: checked });
-
   if (totalFailed > 0) {
-    console.warn(`Rank check completed with ${totalFailed} failed keyword(s)`);
+    console.warn(`Rank check completed with ${totalFailed} failed API call(s)`);
   }
 
   return { totalFailed };
