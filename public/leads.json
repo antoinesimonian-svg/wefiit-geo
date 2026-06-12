@@ -1,249 +1,6 @@
 {
-  "generatedAt": "2026-06-12T06:40:05.533Z",
+  "generatedAt": "2026-06-12T12:30:04.877Z",
   "leads": [
-    {
-      "id": "a3f32a7780b4",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "fousseynidiaby6325@gmail.com",
-      "entreprise": "Professionnelles votre expérience et vos qualités représentent un véritable atout",
-      "message": "Professionnels "
-    },
-    {
-      "id": "b7b50069ea02",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "kbbourama@gmail.com",
-      "entreprise": "Avicultures je suis le directeur",
-      "message": "J’aimerais bien savoir comment faire avancer mon entreprise "
-    },
-    {
-      "id": "35f7da5d1373",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "bassiroukaran@gmail.com",
-      "entreprise": "Sapeurs pompiers",
-      "message": "Rien pour l’instant "
-    },
-    {
-      "id": "cdff266d9922",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "fabien.demaestri@gmail.com",
-      "entreprise": "Docai",
-      "message": "Poste : Fondateur | Améliorer la productivité des équipes produits"
-    },
-    {
-      "id": "a71c5ed64dcf",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "mcorrea@onestock-retail.com",
-      "entreprise": "Onestock Lead PM",
-      "message": "Notre équipe produit grandit à la fois en effectif et en maturité. Avant de poursuivre cette croissance, nous aimerions réaliser un audit de notre organisation afin d’identifier les aspects à renforcer, ajuster ou éventuellement supprimer. Ensuite, nous serions intéressés par des ateliers pour nous accompagner dans cette démarche.  Taille de l'équipe : 6 PM, 2 UX, 1 CPO Budget : 2-4k"
-    },
-    {
-      "id": "77755c5ffb37",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "antoine.leclercq@estreem.eu",
-      "entreprise": "Estreem",
-      "message": "Poste : CEO | nous devons  mener une transformation produit de l'entreprise. J'aurais aimé échanger avec vous sur votre capacité à nous accompagner ce type de transformation (B2B, Saas, System2System, très gros client). "
-    },
-    {
-      "id": "cc49716bd997",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "Thomas@airporting.com",
-      "entreprise": "Chief of Staff @Airporting",
-      "message": "Product owner part time"
-    },
-    {
-      "id": "3459d6abb56d",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "fernandaduchenrodriguez@gmail.com",
-      "entreprise": "BIGGIE",
-      "message": "Poste : DIGITAL KEY ACCOUNT MANAGER | Weefit a été un véritable coup de cœur pour moi. Lors de cet échange, j’aimerais savoir si ce sentiment peut être partagé de votre côté, autour des rôles de Partenaire Produit 360 ou Business Developer. J’ai hâte de voir si nos visions et ambitions résonnent mutuellement."
-    },
-    {
-      "id": "ef7f8d08ca5c",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "jbperrin@betomorrow.com",
-      "entreprise": "BeTomorrow",
-      "message": "Poste : chargé de projets RH | Formation - IA & Data product managers "
-    },
-    {
-      "id": "ed56130b8914",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "",
-      "entreprise": null,
-      "message": "Service : Annulé: Annulé: Guilde Produit - Save the date"
-    },
-    {
-      "id": "0ba75e67c4e8",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "",
-      "entreprise": null,
-      "message": "Service : [Guilde QA] IA x Qualité"
-    },
-    {
-      "id": "d991bea11921",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "celine@phagos.org",
-      "entreprise": "Head of People chez Phagos",
-      "message": "Je cherche un parcours de formation et ou du coaching pour notre Head of Product qui découvre le métier."
-    },
-    {
-      "id": "18927f86ac9c",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "",
-      "entreprise": null,
-      "message": "Service : GUILDE QA - 3 AMIGOS"
-    },
-    {
-      "id": "3865d47ceaa9",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "sandrine.fostinelli@wttj.co",
-      "entreprise": "Welcome to the Jungle",
-      "message": "Recherche de renfort opérationnel pour une mission d'encadrement Product Marketing"
-    },
-    {
-      "id": "cbcc49255a82",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "medjber.ines@gmail.com",
-      "entreprise": "Fin d'études, anciennement alternante chef de projet en sourcing excellence chez VEEPEE",
-      "message": "Je souhaiterais échanger à propos de : Accès aux formations product Data & IA, conseils métiers et insertions professionnelles "
-    },
-    {
-      "id": "7f8dc5d9b585",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "tarek.zaigouche@amadeus.com",
-      "entreprise": "Amadeus SAS, Director Product and R&D",
-      "message": "Product Management in High Uncertainty environment (Product Led Growth, hypothesis, magical user experience design, minimum lovable product)"
-    },
-    {
-      "id": "cf1ab5282ca1",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "djoliot.ephi@gmail.com",
-      "entreprise": "Indépendant",
-      "message": "PM Tool : un projet de plateforme 360° de Product Management"
-    },
-    {
-      "id": "7b81eaa72143",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "manon.leppert@gmail.com",
-      "entreprise": "Product Owner senior",
-      "message": "Je suis à la recherche d'une mission en tant que Product Owner indépendante (freelance) "
-    },
-    {
-      "id": "1a9aa50d8774",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "chloe.marek@saft.com",
-      "entreprise": "Saft",
-      "message": "Poste : Strategy & planning Manager | Evoquer mon besoin et comprendre l'ordre de grandeur de votre tarif pour y répondre"
-    },
-    {
-      "id": "ba46d839a7a5",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "charline.gustave@vinci-autoroutes.com",
-      "entreprise": "Head of GTM",
-      "message": "Mission ponctuelle PMM 5 mois"
-    },
-    {
-      "id": "ead500ec3954",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Candidat",
-      "typeLead": "réservation booking",
-      "email": "valentin.valere@visma.com",
-      "entreprise": "Inqom",
-      "message": "Poste : Head of Product | Recrutement PMs"
-    },
-    {
-      "id": "2ed4eab1b0f9",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "remy.david@veolia.com",
-      "entreprise": "Veolia",
-      "message": "Régie PO/PPM pour un projet à la DSI"
-    },
-    {
-      "id": "e05ac1a8434b",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "Ghita.Alaoui@dell.com",
-      "entreprise": "Dell",
-      "message": "Poste : Gestionnaire de compte wefiit | Besoin en achat informatique "
-    },
-    {
-      "id": "b09bfb414873",
-      "date": "2026-06-12T06:40:04.682Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "theepathilagans@gmail.com",
-      "entreprise": "TT Consulting",
-      "message": "Poste : Testeuse QA | Bonjour, Je suis à la recherche d’un emploi et j’aimerais échanger avec vous concernant les opportunités disponibles chez WeFit. Merci pour votre retour."
-    },
-    {
-      "id": "774a683b2583",
-      "date": "2026-06-12T06:40:04.681Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "olivier.duchochois@april.com",
-      "entreprise": "APRIL",
-      "message": "Poste : Group PM | Trouver une formation pour ma team hyper focus sur le : Delivery, Découpage MVP,  Storymap, Construire des US invest + démystifier les APIs "
-    },
-    {
-      "id": "b958c7b72bd9",
-      "date": "2026-06-12T06:40:04.681Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "deryakale1993@gmail.com",
-      "entreprise": "Demandeuse d'emploi en reconversion",
-      "message": "Demande d'une journée d'immersion pour découvrir les métiers"
-    },
-    {
-      "id": "ca94e68f8d47",
-      "date": "2026-06-12T06:40:04.681Z",
-      "type": "Business",
-      "typeLead": "réservation booking",
-      "email": "julien@delicorner.co",
-      "entreprise": "Delicorner",
-      "message": "Poste : Head of product | Besoin consultant(e) PM pour mission 3 - 6 mois sujet refonte. "
-    },
     {
       "id": "2aaaf158dbaf",
       "date": "2026-06-09T11:01:36Z",
@@ -252,6 +9,15 @@
       "email": "kyara@comenregions.com",
       "entreprise": "comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de no",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Kyara Nom: Boudriaa Email: kyara@comenregions.com Phone: 0743384071 Entreprise: comenregions Poste: Directrice de Rubrique Message: Bonjour, Dans le cadre de notre rubrique sponsorisée “Portraits d’Entreprises&quot;, diffusée sur le"
+    },
+    {
+      "id": "b09bfb414873",
+      "date": "2026-05-25T13:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "theepathilagans@gmail.com",
+      "entreprise": "TT Consulting",
+      "message": "Poste : Testeuse QA | Bonjour, Je suis à la recherche d’un emploi et j’aimerais échanger avec vous concernant les opportunités disponibles chez WeFit. Merci pour votre retour."
     },
     {
       "id": "7f062457ad92",
@@ -272,6 +38,15 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Typhaine Nom: Mutombo Email: typhainemutombo@akieni.com Phone: 0664294611 Entreprise: AKIENI Poste: Product manager junior Message: Bonjour, Je suis product manager junior au sein d'une start up spécialisée dans la transformation di"
     },
     {
+      "id": "e05ac1a8434b",
+      "date": "2026-04-13T10:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "Ghita.Alaoui@dell.com",
+      "entreprise": "Dell",
+      "message": "Poste : Gestionnaire de compte wefiit | Besoin en achat informatique "
+    },
+    {
       "id": "05fc16de1916",
       "date": "2026-04-09T12:46:07Z",
       "type": "Business",
@@ -288,6 +63,15 @@
       "email": "belkalebik@gmail.com",
       "entreprise": "C Poste: Test lead Message: Je voudrais plus d’informations sur votre formation",
       "message": "Je voudrais plus d’informations sur votre formation QA IA ---------------------------------------------------------- If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site. ​"
+    },
+    {
+      "id": "2ed4eab1b0f9",
+      "date": "2026-04-07T12:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "remy.david@veolia.com",
+      "entreprise": "Veolia",
+      "message": "Régie PO/PPM pour un projet à la DSI"
     },
     {
       "id": "8d774c904d37",
@@ -326,6 +110,15 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maxime Nom: Lignereux Email: maxime.lignereux@teamjoin.fr Phone: 0643119982 Entreprise: JOIN Poste: Mobile Engineer Message: Bonjour, Je vous contacte dans le cadre d’une réflexion sur le renforcement de notre dispositif QA pour un"
     },
     {
+      "id": "ead500ec3954",
+      "date": "2026-01-27T11:00:00.000Z",
+      "type": "Candidat",
+      "typeLead": "réservation booking",
+      "email": "valentin.valere@visma.com",
+      "entreprise": "Inqom",
+      "message": "Poste : Head of Product | Recrutement PMs"
+    },
+    {
       "id": "3505b1fbb5de",
       "date": "2026-01-13T10:58:25Z",
       "type": "Business",
@@ -333,6 +126,15 @@
       "email": "johan.chauliaguet@gmail.com",
       "entreprise": "Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Johan Nom: CHAULIAGUET Email: johan.chauliaguet@gmail.com Phone: 0782832342 Entreprise: Sopra Steria Poste: Business Analyst Message: Bonjour ! Je suis tombé sur votre entreprise par hasard, la vision produit est un domaine qui m'in"
+    },
+    {
+      "id": "ba46d839a7a5",
+      "date": "2025-12-22T09:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "charline.gustave@vinci-autoroutes.com",
+      "entreprise": "Head of GTM",
+      "message": "Mission ponctuelle PMM 5 mois"
     },
     {
       "id": "bb49067b0ab8",
@@ -353,6 +155,24 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Paul-Henri Nom: Chalret du Rieu Email: paulhenri.chalretdurieu@manpowergroup.fr Phone: 0140029364 Entreprise: Manpower Poste: CIP Message: Bonjour Madame, Monsieur, Je travaille chez Manpower et j’accompagne des personnes dans leur"
     },
     {
+      "id": "1a9aa50d8774",
+      "date": "2025-10-14T08:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "chloe.marek@saft.com",
+      "entreprise": "Saft",
+      "message": "Poste : Strategy & planning Manager | Evoquer mon besoin et comprendre l'ordre de grandeur de votre tarif pour y répondre"
+    },
+    {
+      "id": "7b81eaa72143",
+      "date": "2025-10-13T13:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "manon.leppert@gmail.com",
+      "entreprise": "Product Owner senior",
+      "message": "Je suis à la recherche d'une mission en tant que Product Owner indépendante (freelance) "
+    },
+    {
       "id": "ae47edf02806",
       "date": "2025-10-13T10:48:57Z",
       "type": "Candidat",
@@ -360,6 +180,60 @@
       "email": "isafaguer@hotmail.fr",
       "entreprise": "Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis f",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Isabelle Nom: Faguer Email: isafaguer@hotmail.fr Phone: 0676705603 Entreprise: Freelance Poste: Product Marketing Manager Freelance Message: Bonjour, je suis freelance en Product Marketing Management et souhaiterai savoir si vous av"
+    },
+    {
+      "id": "cf1ab5282ca1",
+      "date": "2025-09-09T14:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "djoliot.ephi@gmail.com",
+      "entreprise": "Indépendant",
+      "message": "PM Tool : un projet de plateforme 360° de Product Management"
+    },
+    {
+      "id": "7f8dc5d9b585",
+      "date": "2025-08-28T10:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "tarek.zaigouche@amadeus.com",
+      "entreprise": "Amadeus SAS, Director Product and R&D",
+      "message": "Product Management in High Uncertainty environment (Product Led Growth, hypothesis, magical user experience design, minimum lovable product)"
+    },
+    {
+      "id": "cbcc49255a82",
+      "date": "2025-08-18T14:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "medjber.ines@gmail.com",
+      "entreprise": "Fin d'études, anciennement alternante chef de projet en sourcing excellence chez VEEPEE",
+      "message": "Je souhaiterais échanger à propos de : Accès aux formations product Data & IA, conseils métiers et insertions professionnelles "
+    },
+    {
+      "id": "3865d47ceaa9",
+      "date": "2025-08-08T10:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "sandrine.fostinelli@wttj.co",
+      "entreprise": "Welcome to the Jungle",
+      "message": "Recherche de renfort opérationnel pour une mission d'encadrement Product Marketing"
+    },
+    {
+      "id": "18927f86ac9c",
+      "date": "2025-07-30T16:15:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "",
+      "entreprise": null,
+      "message": "Service : GUILDE QA - 3 AMIGOS"
+    },
+    {
+      "id": "d991bea11921",
+      "date": "2025-07-23T14:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "celine@phagos.org",
+      "entreprise": "Head of People chez Phagos",
+      "message": "Je cherche un parcours de formation et ou du coaching pour notre Head of Product qui découvre le métier."
     },
     {
       "id": "7d56a3551efe",
@@ -380,6 +254,24 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Maé Nom: DUSSERT Email: mae.dussert@sunr.com Phone: 0622839264 Entreprise: SUN'R GROUPE Poste: CHARGEE RH Message: Bonjour, Nous souhaitons proposer la formation pour un de nos collaborateurs. A cet effet, pouvez-vous me communiquer"
     },
     {
+      "id": "0ba75e67c4e8",
+      "date": "2025-05-28T16:15:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "",
+      "entreprise": null,
+      "message": "Service : [Guilde QA] IA x Qualité"
+    },
+    {
+      "id": "ed56130b8914",
+      "date": "2025-05-14T16:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "",
+      "entreprise": null,
+      "message": "Service : Annulé: Annulé: Guilde Produit - Save the date"
+    },
+    {
       "id": "31cd2d383f42",
       "date": "2025-05-12T10:28:31Z",
       "type": "Business",
@@ -387,6 +279,24 @@
       "email": "louis.poitevin@hotmail.fr",
       "entreprise": "Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de We",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Louis Nom: Poitevin Email: louis.poitevin@hotmail.fr Phone: 0638184246 Entreprise: Zenpark Poste: Poruct owner / manager Message: Bonjour, J'ai entendu parlé de Weefitt recemment j'aimerai en savoir plus. Cela semble correspondent e"
+    },
+    {
+      "id": "ef7f8d08ca5c",
+      "date": "2025-04-23T07:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "jbperrin@betomorrow.com",
+      "entreprise": "BeTomorrow",
+      "message": "Poste : chargé de projets RH | Formation - IA & Data product managers "
+    },
+    {
+      "id": "3459d6abb56d",
+      "date": "2025-04-17T10:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "fernandaduchenrodriguez@gmail.com",
+      "entreprise": "BIGGIE",
+      "message": "Poste : DIGITAL KEY ACCOUNT MANAGER | Weefit a été un véritable coup de cœur pour moi. Lors de cet échange, j’aimerais savoir si ce sentiment peut être partagé de votre côté, autour des rôles de Partenaire Produit 360 ou Business Developer. J’ai hâte de voir si nos visions et ambitions résonnent mutuellement."
     },
     {
       "id": "828e8e60f28f",
@@ -398,6 +308,33 @@
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Vincent Nom: Lalizout Email: Vincent.lalizout@laposte.fr Phone: Entreprise: La poste Poste: Responsbale PMT Message: Bonjour, nous mettons en place une communauté de pratique autour des produits data et souhaiterions échanger avec v"
     },
     {
+      "id": "cc49716bd997",
+      "date": "2025-03-17T16:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "Thomas@airporting.com",
+      "entreprise": "Chief of Staff @Airporting",
+      "message": "Product owner part time"
+    },
+    {
+      "id": "77755c5ffb37",
+      "date": "2025-02-28T16:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "antoine.leclercq@estreem.eu",
+      "entreprise": "Estreem",
+      "message": "Poste : CEO | nous devons  mener une transformation produit de l'entreprise. J'aurais aimé échanger avec vous sur votre capacité à nous accompagner ce type de transformation (B2B, Saas, System2System, très gros client). "
+    },
+    {
+      "id": "a71c5ed64dcf",
+      "date": "2025-02-26T15:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "mcorrea@onestock-retail.com",
+      "entreprise": "Onestock Lead PM",
+      "message": "Notre équipe produit grandit à la fois en effectif et en maturité. Avant de poursuivre cette croissance, nous aimerions réaliser un audit de notre organisation afin d’identifier les aspects à renforcer, ajuster ou éventuellement supprimer. Ensuite, nous serions intéressés par des ateliers pour nous accompagner dans cette démarche.  Taille de l'équipe : 6 PM, 2 UX, 1 CPO Budget : 2-4k"
+    },
+    {
       "id": "4b93a0b4bda0",
       "date": "2025-02-13T17:05:29Z",
       "type": "Business",
@@ -405,6 +342,42 @@
       "email": "clement.caillol@rakuten.com",
       "entreprise": "Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une missio",
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. Prenom: Clément Nom: Caillol Email: clement.caillol@rakuten.com Phone: 0616792542 Entreprise: Rakuten Poste: CPO Message: Hello Je suis à la recherche d'un PM pour une mission de 6 mois sur le scope Checkout (ajout panier, livraison, paieme"
+    },
+    {
+      "id": "cdff266d9922",
+      "date": "2025-02-06T10:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "fabien.demaestri@gmail.com",
+      "entreprise": "Docai",
+      "message": "Poste : Fondateur | Améliorer la productivité des équipes produits"
+    },
+    {
+      "id": "35f7da5d1373",
+      "date": "2025-02-03T13:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "bassiroukaran@gmail.com",
+      "entreprise": "Sapeurs pompiers",
+      "message": "Rien pour l’instant "
+    },
+    {
+      "id": "b7b50069ea02",
+      "date": "2025-02-03T13:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "kbbourama@gmail.com",
+      "entreprise": "Avicultures je suis le directeur",
+      "message": "J’aimerais bien savoir comment faire avancer mon entreprise "
+    },
+    {
+      "id": "a3f32a7780b4",
+      "date": "2025-02-03T11:30:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "fousseynidiaby6325@gmail.com",
+      "entreprise": "Professionnelles votre expérience et vos qualités représentent un véritable atout",
+      "message": "Professionnels "
     },
     {
       "id": "796c7e52681e",
@@ -423,6 +396,15 @@
       "email": "eab@outsight.tech",
       "entreprise": "Outsight Poste: PM Message: Projet de transformation ---------------------------",
       "message": "Projet de transformation ---------------------------------------------------------- Number of submissions received 6/1e+100 this month January 1st – January 31st If you believe this is a spam submission, please forward to form-spam-reports@support.webflow.com Unsubscribe from notifications for this site."
+    },
+    {
+      "id": "ca94e68f8d47",
+      "date": "2024-12-26T09:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "julien@delicorner.co",
+      "entreprise": "Delicorner",
+      "message": "Poste : Head of product | Besoin consultant(e) PM pour mission 3 - 6 mois sujet refonte. "
     },
     {
       "id": "25ccd99caa98",
@@ -450,6 +432,24 @@
       "email": null,
       "entreprise": null,
       "message": "Un lead vient de nous envoyer un message depuis WeFiiT.com. ---------------------------------------------------------- Number of submissions received 2/1000 this month December 1st – December 31st If you believe this is a spam submission, please forward to Unsubscribe from notifications for this sit"
+    },
+    {
+      "id": "b958c7b72bd9",
+      "date": "2024-12-05T10:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "deryakale1993@gmail.com",
+      "entreprise": "Demandeuse d'emploi en reconversion",
+      "message": "Demande d'une journée d'immersion pour découvrir les métiers"
+    },
+    {
+      "id": "774a683b2583",
+      "date": "2024-11-22T09:00:00.000Z",
+      "type": "Business",
+      "typeLead": "réservation booking",
+      "email": "olivier.duchochois@april.com",
+      "entreprise": "APRIL",
+      "message": "Poste : Group PM | Trouver une formation pour ma team hyper focus sur le : Delivery, Découpage MVP,  Storymap, Construire des US invest + démystifier les APIs "
     }
   ]
 }
