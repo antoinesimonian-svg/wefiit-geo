@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 export type Lead = {
   id: string;
-  date: string;
+  date: string | null;
   type: "Business" | "Candidat";
   typeLead: "demande de contact" | "réservation booking";
   email: string | null;

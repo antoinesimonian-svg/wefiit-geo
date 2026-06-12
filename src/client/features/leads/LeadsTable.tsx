@@ -1,3 +1,4 @@
+import type React from "react";
 import type { Lead } from "./useLeadsData";
 
 type Props = { leads: Lead[] };
@@ -12,7 +13,8 @@ const BADGE_TYPE_LEAD: Record<Lead["typeLead"], string> = {
   "réservation booking": "badge-info",
 };
 
-function formatDate(iso: string) {
+function formatDate(iso: string | null): React.ReactNode {
+  if (!iso) return <span className="text-base-content/30">—</span>;
   try {
     return new Date(iso).toLocaleDateString("fr-FR", {
       day: "2-digit",
