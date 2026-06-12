@@ -536,8 +536,9 @@ export async function fetchRankCheckSerpRaw(input: {
     .parse(parsedTask.data.result?.[0]?.items ?? []);
 
   const target = input.targetDomain.toLowerCase();
+  const RANKED_ITEM_TYPES = new Set(["organic", "featured_snippet"]);
   const organicMatch = items.find((item) => {
-    if (item.type !== "organic" || item.domain == null) return false;
+    if (!RANKED_ITEM_TYPES.has(item.type ?? "") || item.domain == null) return false;
     const d = item.domain.toLowerCase();
     return d === target || d.endsWith(`.${target}`);
   });
